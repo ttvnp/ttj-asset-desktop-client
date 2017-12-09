@@ -4,10 +4,10 @@ import { remote } from 'electron'
 let AppConfig = {}
 
 const commonConfig = {
-  assets: {
-    SNC: { name: 'SNC' },
-    SNP: { name: 'SNP' }
-  },
+  assets: [
+    { name: 'SNC' },
+    { name: 'SNP' }
+  ],
   dbFilePath: path.join(remote.app.getPath('userData'), '/ttj-desktop-client-database'),
   recaptchaApiSiteKey: '6LeXSDwUAAAAANKknJNfFqYSeffUl3UnCj-d5vAT'
 }

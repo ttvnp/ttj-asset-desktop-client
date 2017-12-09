@@ -1,8 +1,12 @@
+import config from '@/config'
 import userDB from '@/database/user'
+import balanceDB from '@/database/balance'
+import userApi from '@/api/user'
 import defaultProfileImage from '@/assets/user_default_profile.png'
 
 const state = {
-  user: null
+  user: null,
+  balances: []
 }
 
 const getters = {
@@ -44,13 +48,58 @@ const actions = {
   },
   save ({ commit, state }, user) {
     userDB.refresh(user)
-    commit('setUser', userDB)
+    commit('setUser', user)
+  },
+  getBalances ({ commit, state }, { forceRefresh, callback }) {
+    const fromLocal = function () {
+      balanceDB.getBalances().then(function (balances) {
+        commit('setBalances', balances)
+        callback(balances)
+      }).catch(function (error) {
+        throw error
+      })
+    }
+    if (!forceRefresh) {
+      fromLocal(callback)
+    } else {
+      userApi.getBalances().then(function (data) {
+        if (data.exitCode !== 0) {
+          fromLocal()
+          return
+        }
+        const balances = []
+        const targetAssetTypes = config.assets
+        for (let i = 0; i < targetAssetTypes.length; i++) {
+          const def = targetAssetTypes[i]
+          let target = null
+          for (let j = 0; j < data.balances.length; j++) {
+            const b = data.balances[j]
+            if (b.assetType === def.name) {
+              target = b
+              break
+            }
+          }
+          balances.push({
+            assetType: def.name,
+            amount: target === null ? '0' : (target.amount + '')
+          })
+        }
+        balanceDB.refresh(balances)
+        commit('setBalances', balances)
+        callback(balances)
+      }).catch(function () {
+        fromLocal()
+      })
+    }
   }
 }
 
 const mutations = {
   setUser (state, user) {
     state.user = user
+  },
+  setBalances (state, balances) {
+    state.balances = balances
   }
 }
 
