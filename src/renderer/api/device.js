@@ -6,6 +6,9 @@ export default {
     const url = util.getApiRoot() + '/devices'
     let formData = new FormData()
     formData.append('deviceCode', deviceCode)
+    console.log(credential)
+    credential = util.encrypt(credential)
+    console.log(credential)
     formData.append('credential', credential)
     formData.append('recaptchaToken', recaptchaToken)
     return util.call(function () {

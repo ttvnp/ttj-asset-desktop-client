@@ -27,14 +27,13 @@ const actions = {
       })
     }
   },
-  register ({ commit, state }, { emailAddress, password, onSuccess, onError }) {
+  register ({ commit, state }, { recaptchaToken, onSuccess, onError }) {
     const deviceCode = util.generateToken68(128)
     const credential = util.generateToken68(128)
     deviceApi.register({
       deviceCode,
       credential,
-      emailAddress,
-      password
+      recaptchaToken
     }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message, null)

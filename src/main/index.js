@@ -1,19 +1,22 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, protocol } from 'electron'
+import fs from 'fs'
+import path from 'path'
 
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
  */
 if (process.env.NODE_ENV !== 'development') {
-  global.__static = require('path').join(__dirname, '/static').replace(/\\/g, '\\\\')
+  global.__static = path.join(__dirname, '/static').replace(/\\/g, '\\\\')
+  protocol.registerStandardSchemes(['app'])
 }
 
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
-  : `file://${__dirname}/index.html`
+  : `app://ttj-asset-desktop-client/index.html`
 
 function createWindow () {
   /**
@@ -27,6 +30,18 @@ function createWindow () {
       webSecurity: false
     }
   })
+
+  if (process.env.NODE_ENV !== 'development') {
+    protocol.registerFileProtocol('app', (request, callback) => {
+      const url = request.url.substr('app://ttj-asset-desktop-client/'.length)
+      console.log(request)
+      callback({path: path.normalize(`${__dirname}/${url}`)})
+    }, (error) => {
+      if (error) console.error('Failed to register protocol')
+    })
+    // for debug
+    // mainWindow.webContents.openDevTools()
+  }
 
   mainWindow.loadURL(winURL)
 
