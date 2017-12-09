@@ -9,6 +9,7 @@ export default {
   methods: {
   },
   mounted () {
+    this.$store.dispatch('app/setShowDrawer', true)
   }
 }
 </script>

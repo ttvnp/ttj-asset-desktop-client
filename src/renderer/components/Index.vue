@@ -11,14 +11,14 @@ export default {
   },
   mounted () {
     const self = this
-    this.$store.dispatch('device/init', function (isDeviceReady) {
+    this.$store.dispatch('device/init', { callback: function (isDeviceReady) {
       if (isDeviceReady) {
         self.$store.dispatch('app/setShowDrawer', true)
         router.push({ name: 'home' })
       } else {
         router.push({ name: 'signup' })
       }
-    })
+    }})
   }
 }
 </script>

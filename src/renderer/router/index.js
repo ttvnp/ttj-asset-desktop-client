@@ -16,6 +16,21 @@ export default new Router({
       component: require('@/components/Signup').default
     },
     {
+      path: '/signup_email',
+      name: 'signup_email',
+      component: require('@/components/SignupEmail').default
+    },
+    {
+      path: '/signup_code/:isEmailInUse',
+      name: 'signup_code',
+      component: require('@/components/SignupCode').default
+    },
+    {
+      path: '/signup_end',
+      name: 'signup_end',
+      component: require('@/components/SignupEnd').default
+    },
+    {
       path: '/home',
       name: 'home',
       component: require('@/components/Home').default

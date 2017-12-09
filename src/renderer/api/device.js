@@ -2,14 +2,29 @@ import util from './util'
 import client from './client'
 
 export default {
+  get () {
+    const url = util.getApiRoot() + '/devices'
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).get(url)
+    })
+  },
   register ({ deviceCode, credential, recaptchaToken }) {
     const url = util.getApiRoot() + '/devices'
     let formData = new FormData()
     formData.append('deviceCode', deviceCode)
+    credential = util.encrypt(credential)
     formData.append('credential', credential)
     formData.append('recaptchaToken', recaptchaToken)
     return util.call(function () {
       return client.noAuth().post(url, formData)
+    })
+  },
+  registerEmail ({ emailAddress }) {
+    const url = util.getApiRoot() + '/devices/email'
+    let formData = new FormData()
+    formData.append('emailAddress', emailAddress)
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).post(url, formData)
     })
   },
   verifyEmail ({ verificationCode, passwordOnImport }) {
@@ -25,6 +40,7 @@ export default {
     const url = util.getApiRoot() + '/devices/access_token'
     let formData = new FormData()
     formData.append('deviceCode', deviceCode)
+    credential = util.encrypt(credential)
     formData.append('credential', credential)
     return util.call(function () {
       return client.noAuth().post(url, formData)

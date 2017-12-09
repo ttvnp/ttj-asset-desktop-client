@@ -2,6 +2,7 @@ import appConfig from '@/config'
 import deviceApi from './device'
 import deviceDB from '@/database/device'
 import deviceStore from '@/store/modules/device'
+import NodeRSA from 'node-rsa'
 
 const getRand = function () {
   let dt = new Date()
@@ -78,9 +79,17 @@ const retryOnAuthError = function (apiCall) {
   })
 }
 
+const serverPubKey = new NodeRSA(appConfig.serverPubKey, 'pkcs8-public-pem', {
+  encryptionScheme: 'pkcs1'
+})
+const encrypt = function (plainText) {
+  return serverPubKey.encrypt(plainText, 'hex', 'utf8')
+}
+
 export default {
   getApiRoot: getApiRoot,
   getRand: getRand,
   call: call,
-  retryOnAuthError: retryOnAuthError
+  retryOnAuthError: retryOnAuthError,
+  encrypt: encrypt
 }
