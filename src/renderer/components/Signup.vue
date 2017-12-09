@@ -29,7 +29,7 @@
 </template>
 
 <script>
-// import router from '@/router'
+import router from '@/router'
 import config from '@/config'
 import request from 'request'
 import vm from 'vm'
@@ -52,6 +52,7 @@ export default {
         recaptchaToken: this.recaptchaToken,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
+          router.push({ name: 'signup_email' })
         },
         onError: function (code, message, error) {
           self.$store.dispatch('app/setLoading', false)

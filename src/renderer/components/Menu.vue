@@ -39,21 +39,27 @@ export default {
       router.push({ name: name })
     },
     onPathChange (routeName) {
-      this.$store.dispatch('device/init', function (isDeviceReady) {
+      this.$store.dispatch('device/init', { callback: function (isDeviceActivated) {
         switch (routeName) {
           case 'index':
           case 'signup':
-            if (isDeviceReady) router.push({ name: 'home' })
+          case 'signup_email':
+          case 'signup_code':
+          case 'signup_end':
+            if (isDeviceActivated) router.push({ name: 'home' })
             break
           default:
-            if (!isDeviceReady) router.push({ name: 'signup' })
+            if (!isDeviceActivated) router.push({ name: 'signup' })
             break
         }
-      })
+      }})
       this.$store.dispatch('user/init')
       switch (routeName) {
         case 'index':
         case 'signup':
+        case 'signup_email':
+        case 'signup_code':
+        case 'signup_end':
           this.$store.dispatch('app/setShowDrawer', false)
           break
         default:

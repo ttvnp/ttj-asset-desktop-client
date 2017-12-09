@@ -26,6 +26,10 @@ const actions = {
         throw error
       })
     }
+  },
+  save ({ commit, state }, user) {
+    userDB.refresh(user)
+    commit('setUser', userDB)
   }
 }
 

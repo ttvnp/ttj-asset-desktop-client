@@ -13,21 +13,53 @@ const getters = {
 }
 
 const actions = {
-  init ({ commit, state }, cb) {
+  init ({ commit, state }, { callback }) {
     if (state.device !== null) {
-      cb(state.isActivated)
+      callback(state.isActivated)
     } else {
       deviceDB.getDevice().then(function (device) {
-        if (device && device.isActivated === true) {
-          commit('setDevice', device)
+        let isDeviceActivated = false
+        if (device === null) {
+          callback(isDeviceActivated)
+          return
         }
-        cb(state.isActivated)
+        commit('setDevice', device)
+        if (device.isActivated === true) {
+          callback(device.isActivated)
+        } else {
+          deviceApi.get().then(function (data) {
+            if (data.exitCode !== 0) {
+              callback(isDeviceActivated)
+              return
+            }
+            const newDevice = {
+              deviceCode: device.deviceCode,
+              credential: device.credential,
+              accessToken: data.accessToken,
+              accessTokenExpiry: data.accessTokenExpiry,
+              isActivated: data.isActivated,
+              deviceToken: data.deviceToken,
+              grantPushNotification: data.grantPushNotification,
+              grantEmailNotification: data.grantEmailNotification
+            }
+            deviceDB.refresh(newDevice)
+            commit('setDevice', newDevice)
+            isDeviceActivated = newDevice.isActivated
+            callback(isDeviceActivated)
+          }).catch(function (error) {
+            throw error
+          })
+        }
       }).catch(function (error) {
         throw error
       })
     }
   },
   register ({ commit, state }, { recaptchaToken, onSuccess, onError }) {
+    if (state.device !== null) {
+      onSuccess()
+      return
+    }
     const deviceCode = util.generateToken68(128)
     const credential = util.generateToken68(128)
     deviceApi.register({
@@ -56,8 +88,19 @@ const actions = {
       onError(null, null, error)
     })
   },
-  vefiry ({ commit, state }, { verificationCode, onSuccess, onError }) {
-    deviceApi.verifyCode({ verificationCode }).then(function (data) {
+  registerEmail ({ commit, state }, { emailAddress, onSuccess, onError }) {
+    deviceApi.registerEmail({ emailAddress }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      onSuccess(data.isEmailInUse)
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  verifyEmail ({ commit, state }, { verificationCode, passwordOnImport, onSuccess, onError }) {
+    deviceApi.verifyEmail({ verificationCode, passwordOnImport }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message)
         return
