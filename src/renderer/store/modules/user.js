@@ -6,7 +6,22 @@ const state = {
 }
 
 const getters = {
-  name: state => state.user === null ? '' : state.user.name,
+  name: state => {
+    if (state.user === null) return ''
+    let name = ''
+    if (state.user.firstName) {
+      name += state.user.firstName
+    }
+    if (state.user.middleName) {
+      if (name.length > 0) name += ' '
+      name += state.user.middleName
+    }
+    if (state.user.lastName) {
+      if (name.length > 0) name += ' '
+      name += state.user.lastName
+    }
+    return name
+  },
   emailAddress: state => state.user === null ? '' : state.user.emailAddress,
   profileImageURL: state => {
     let url = state.user === null ? '' : state.user.profileImageURL
