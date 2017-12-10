@@ -36,6 +36,14 @@ const actions = {
     appDB.refresh(newApp)
     commit('setApp', newApp)
   },
+  setPaymentHistoryLoaded ({ commit, state }) {
+    const newApp = {
+      loadBalances: state.app.loadBalances,
+      loadPaymentHistory: true
+    }
+    appDB.refresh(newApp)
+    commit('setApp', newApp)
+  },
   setShowDrawer ({ commit, state }, value) {
     commit('setShowDrawer', value)
   },

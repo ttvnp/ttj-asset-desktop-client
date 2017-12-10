@@ -35,10 +35,10 @@ export default {
       return client.withAuth(accessToken).get(url)
     })
   },
-  getTransactions ({ page }) {
+  getTransactions ({ pageNum }) {
     let url = util.getApiRoot() + '/users/transactions'
-    if (page && page > 0) {
-      url += '?page=' + page
+    if (pageNum && pageNum > 0) {
+      url += '?page=' + pageNum
     }
     return util.retryOnAuthError(function (accessToken) {
       return client.withAuth(accessToken).get(url)

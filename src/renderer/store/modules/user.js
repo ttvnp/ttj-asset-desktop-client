@@ -1,6 +1,7 @@
 import config from '@/config'
 import userDB from '@/database/user'
 import balanceDB from '@/database/balance'
+import userTransactionDB from '@/database/user_transaction'
 import userApi from '@/api/user'
 import defaultProfileImage from '@/assets/user_default_profile.png'
 
@@ -33,7 +34,9 @@ const getters = {
       url = defaultProfileImage
     }
     return url
-  }
+  },
+  transactionsSearchResult: state => state.transactions.searchResult,
+  transactionsPagerInfo: state => state.transactions.pagerInfo
 }
 
 const actions = {
@@ -89,6 +92,49 @@ const actions = {
         callback(balances)
       }).catch(function () {
         fromLocal()
+      })
+    }
+  },
+  getTransactions ({ commit, state }, { forceRefresh, pageNum, onSuccess, onError }) {
+    const fromApi = function (onError) {
+      userApi.getTransactions({ pageNum }).then(function (data) {
+        if (data.exitCode !== 0) {
+          onError(new Error(data.message))
+        }
+        const userTransactions = data.userTransactions
+        const totalCnt = data.totalCnt
+        const totalPageNum = data.totalPageNum
+        const currentPageNum = data.currentPageNum
+        userTransactionDB.upsert(userTransactions)
+        userTransactionDB.updateTotalCnt(totalCnt)
+        onSuccess({ userTransactions, totalCnt, totalPageNum, currentPageNum })
+      }).catch(function (error) {
+        onError(error)
+      })
+    }
+    const fromLocal = function (onError) {
+      const pageSize = 20
+      userTransactionDB.getTransactions(pageNum, pageSize).then(function (dbData) {
+        const userTransactions = dbData.userTransactions
+        const totalCnt = dbData.totalCnt
+        const totalPageNum = Math.floor(totalCnt / pageSize)
+        const currentPageNum = pageNum
+        onSuccess({ userTransactions, totalCnt, totalPageNum, currentPageNum })
+      }).catch(function (error) {
+        onError(error)
+      })
+    }
+    if (!forceRefresh) {
+      fromLocal(function () {
+        fromApi(function (error) {
+          onError(error)
+        })
+      })
+    } else {
+      fromApi(function () {
+        fromLocal(function (error) {
+          onError(error)
+        })
       })
     }
   }
