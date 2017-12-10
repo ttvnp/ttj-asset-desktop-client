@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-list two-line>
+    <v-list class="primary" two-line>
       <v-list-tile avatar @click="">
         <v-list-tile-avatar>
           <img :src="profileImageURL">
         </v-list-tile-avatar>
         <v-list-tile-content>
-          <v-list-tile-title v-html="name"></v-list-tile-title>
-          <v-list-tile-sub-title v-html="emailAddress"></v-list-tile-sub-title>
+          <v-list-tile-title class="white--text" v-html="name.length > 0 ? name : 'Name Not Set'"></v-list-tile-title>
+          <v-list-tile-sub-title class="secondary--text" v-html="emailAddress"></v-list-tile-sub-title>
         </v-list-tile-content>
       </v-list-tile>
     </v-list>
@@ -20,6 +20,25 @@
           <v-list-tile-title>Home</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
+      <v-divider></v-divider>
+      <v-list-tile @click="navTo('send')">
+        <v-list-tile-action>
+          <v-icon>send</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Send</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+      <v-divider></v-divider>
+      <v-list-tile @click="navTo('settings')">
+        <v-list-tile-action>
+          <v-icon>settings</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+          <v-list-tile-title>Settings</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+      <v-divider></v-divider>
     </v-list>
   </div>
 </template>
