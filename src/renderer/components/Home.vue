@@ -14,7 +14,7 @@
         </v-card>
       </v-flex>
     </v-layout>
-    <v-layout>
+    <v-layout class="mt-4">
       <v-flex xs12 sm10>
         <v-card>
           <v-card-title class="primary white--text" primary-title>

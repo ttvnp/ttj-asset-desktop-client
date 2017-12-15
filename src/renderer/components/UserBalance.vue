@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   props: {
     forceRefresh: Boolean
@@ -21,31 +22,17 @@ export default {
       headers: [
         { text: 'SNC', align: 'center', value: 'snc', sortable: false },
         { text: 'SNP', align: 'center', value: 'snp', sortable: false }
-      ],
-      balances: [ { snc: '', snp: '' } ]
+      ]
     }
   },
+  computed: mapGetters({
+    balances: 'user/balances4table'
+  }),
   mounted () {
     const self = this
-    this.$store.dispatch('user/getBalances', {
+    this.$store.dispatch('user/loadBalances', {
       forceRefresh: this.forceRefresh,
-      callback: function (balances) {
-        const item = {
-          snc: '',
-          snp: ''
-        }
-        for (let i = 0; i < balances.length; i++) {
-          const b = balances[i]
-          switch (b.assetType) {
-            case 'SNC':
-              item.snc = b.amount
-              break
-            case 'SNP':
-              item.snp = b.amount
-              break
-          }
-        }
-        self.balances = [ item ]
+      callback: function () {
         if (self.forceRefresh) {
           self.$emit('loaded')
         }

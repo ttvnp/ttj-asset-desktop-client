@@ -43,6 +43,9 @@ export default {
     })
   },
   upsert (userTransactions) {
+    if (!Array.isArray(userTransactions)) {
+      userTransactions = [ userTransactions ]
+    }
     return new Promise(function (resolve, reject) {
       let upserted = 0
       let errors = []

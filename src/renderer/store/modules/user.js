@@ -36,7 +36,23 @@ const getters = {
     return url
   },
   transactionsSearchResult: state => state.transactions.searchResult,
-  transactionsPagerInfo: state => state.transactions.pagerInfo
+  transactionsPagerInfo: state => state.transactions.pagerInfo,
+  balances: state => state.balances,
+  balances4table: state => {
+    let result = { snc: '0', snp: '0' }
+    for (let i = 0; i < state.balances.length; i++) {
+      const b = state.balances[i]
+      switch (b.assetType) {
+        case 'SNC':
+          result.snc = b.amount
+          break
+        case 'SNP':
+          result.snp = b.amount
+          break
+      }
+    }
+    return [ result ]
+  }
 }
 
 const actions = {
@@ -53,17 +69,17 @@ const actions = {
     userDB.refresh(user)
     commit('setUser', user)
   },
-  getBalances ({ commit, state }, { forceRefresh, callback }) {
+  loadBalances ({ commit, state }, { forceRefresh, callback }) {
     const fromLocal = function () {
       balanceDB.getBalances().then(function (balances) {
         commit('setBalances', balances)
-        callback(balances)
+        callback()
       }).catch(function (error) {
         throw error
       })
     }
     if (!forceRefresh) {
-      fromLocal(callback)
+      fromLocal()
     } else {
       userApi.getBalances().then(function (data) {
         if (data.exitCode !== 0) {
@@ -89,7 +105,7 @@ const actions = {
         }
         balanceDB.refresh(balances)
         commit('setBalances', balances)
-        callback(balances)
+        callback()
       }).catch(function () {
         fromLocal()
       })
@@ -100,6 +116,7 @@ const actions = {
       userApi.getTransactions({ pageNum }).then(function (data) {
         if (data.exitCode !== 0) {
           onError(new Error(data.message))
+          return
         }
         const userTransactions = data.userTransactions
         const totalCnt = data.totalCnt
@@ -137,6 +154,39 @@ const actions = {
         })
       })
     }
+  },
+  getTargetUser ({ commit, state }, { emailAddress, onSuccess, onError }) {
+    userApi.getTargetUser({ emailAddress }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      onSuccess({ data })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  createTransaction ({ commit, state }, { emailAddress, assetType, amount, onSuccess, onError }) {
+    userApi.createTransaction({ emailAddress, assetType, amount }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      const userTransaction = data.userTransaction
+      userTransactionDB.upsert(userTransaction)
+      for (let i = 0; i < data.balances.length; i++) {
+        const b = data.balances[i]
+        const balance = {
+          assetType: b.assetType,
+          amount: b.amount + ''
+        }
+        balanceDB.updateBalance(balance)
+        commit('setBalance', balance)
+      }
+      onSuccess({ data })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
   }
 }
 
@@ -146,6 +196,19 @@ const mutations = {
   },
   setBalances (state, balances) {
     state.balances = balances
+  },
+  setBalance (state, balance) {
+    const newBalances = []
+    const balances = state.balances
+    for (let i = 0; i < balances.length; i++) {
+      const b = balances[i]
+      if (b.assetType === balance.assetType) {
+        newBalances.push(balance)
+      } else {
+        newBalances.push(b)
+      }
+    }
+    state.balances = newBalances
   }
 }
 
