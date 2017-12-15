@@ -19,6 +19,17 @@ export default {
       })
     })
   },
+  updateBalance (balance) {
+    return new Promise(function (resolve, reject) {
+      db.update({ assetType: balance.assetType }, { $set: { amount: balance.amount } }, { multi: false }, function (err, numReplaced) {
+        if (err) {
+          reject(err)
+        } else {
+          resolve(balance)
+        }
+      })
+    })
+  },
   refresh (balances) {
     return new Promise(function (resolve, reject) {
       db.remove({}, { multi: true }, function (err, numRemoved) {
