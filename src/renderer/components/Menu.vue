@@ -23,7 +23,7 @@
       <v-divider></v-divider>
       <v-list-tile @click="navTo('qrcode')">
         <v-list-tile-action>
-          <v-icon>qrcode</v-icon>
+          <v-icon>fa-qrcode</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
           <v-list-tile-title>QR Code</v-list-tile-title>
