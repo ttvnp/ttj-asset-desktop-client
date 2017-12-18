@@ -46,6 +46,11 @@ export default new Router({
       component: require('@/components/Settings').default
     },
     {
+      path: '/settings/profile_edit',
+      name: 'settingsProfileEdit',
+      component: require('@/components/SettingsProfileEdit').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

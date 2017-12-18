@@ -3,7 +3,8 @@ import userDB from '@/database/user'
 import balanceDB from '@/database/balance'
 import userTransactionDB from '@/database/user_transaction'
 import userApi from '@/api/user'
-import defaultProfileImage from '@/assets/user_default_profile.png'
+import defaultProfileImagePrimary from '@/assets/user_default_profile.png'
+import defaultProfileImageNormal from '@/assets/user_default_profile_grey.png'
 
 const state = {
   user: null,
@@ -28,10 +29,17 @@ const getters = {
     return name
   },
   emailAddress: state => state.user === null ? '' : state.user.emailAddress,
+  primaryProfileImageURL: state => {
+    let url = state.user === null ? '' : state.user.profileImageURL
+    if (!url) {
+      url = defaultProfileImagePrimary
+    }
+    return url
+  },
   profileImageURL: state => {
     let url = state.user === null ? '' : state.user.profileImageURL
     if (!url) {
-      url = defaultProfileImage
+      url = defaultProfileImageNormal
     }
     return url
   },
@@ -72,6 +80,30 @@ const actions = {
   save ({ commit, state }, user) {
     userDB.refresh(user)
     commit('setUser', user)
+  },
+  update ({ commit, state }, { profileImageFile, firstName, middleName, lastName, address, onSuccess, onError }) {
+    userApi.update({ profileImageFile, firstName, middleName, lastName, address }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message)
+        return
+      }
+      const user = {
+        emailAddress: data.emailAddress,
+        profileImageID: data.profileImageID,
+        profileImageURL: data.profileImageURL,
+        firstName: data.firstName,
+        middleName: data.middleName,
+        lastName: data.lastName,
+        address: data.address,
+        isIdentified: data.isIdentified,
+        isEmailVerified: data.isEmailVerified
+      }
+      userDB.refresh(user)
+      commit('setUser', user)
+      onSuccess()
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
   },
   loadBalances ({ commit, state }, { forceRefresh, callback }) {
     const fromLocal = function () {

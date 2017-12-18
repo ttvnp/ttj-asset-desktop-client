@@ -51,7 +51,7 @@ export default {
   computed: mapGetters({
     name: 'user/name',
     emailAddress: 'user/emailAddress',
-    profileImageURL: 'user/profileImageURL'
+    profileImageURL: 'user/primaryProfileImageURL'
   }),
   methods: {
     navTo (name) {
