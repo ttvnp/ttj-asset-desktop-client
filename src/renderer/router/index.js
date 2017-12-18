@@ -41,6 +41,11 @@ export default new Router({
       component: require('@/components/Send').default
     },
     {
+      path: '/settings',
+      name: 'settings',
+      component: require('@/components/Settings').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

@@ -35,6 +35,10 @@ const getters = {
     }
     return url
   },
+  firstName: state => state.user === null ? '' : state.user.firstName,
+  middleName: state => state.user === null ? '' : state.user.middleName,
+  lastName: state => state.user === null ? '' : state.user.lastName,
+  address: state => state.user === null ? '' : state.user.address,
   transactionsSearchResult: state => state.transactions.searchResult,
   transactionsPagerInfo: state => state.transactions.pagerInfo,
   balances: state => state.balances,

@@ -45,5 +45,14 @@ export default {
     return util.call(function () {
       return client.noAuth().post(url, formData)
     })
+  },
+  updateNotificationSettings ({ grantPushNotification, grantEmailNotification }) {
+    const url = util.getApiRoot() + '/devices/notification_settings'
+    let formData = new FormData()
+    formData.append('grantPushNotification', grantPushNotification)
+    formData.append('grantEmailNotification', grantEmailNotification)
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).patch(url, formData)
+    })
   }
 }

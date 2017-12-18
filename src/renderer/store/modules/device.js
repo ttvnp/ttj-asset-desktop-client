@@ -9,7 +9,8 @@ const state = {
 
 const getters = {
   isActivated: state => state.isActivated,
-  isDeviceLoaded: state => state.device !== null
+  isDeviceLoaded: state => state.device !== null,
+  device: state => state.device
 }
 
 const actions = {
@@ -106,20 +107,52 @@ const actions = {
         return
       }
       const user = {
-        emailAddress: data.emailAddress,
-        profileImageID: data.profileImageID,
-        profileImageURL: data.profileImageURL,
-        firstName: data.firstName,
-        middleName: data.middleName,
-        lastName: data.lastName,
-        address: data.address,
-        isIdentified: data.isIdentified,
-        isEmailVerified: data.isEmailVerified
+        emailAddress: data.user.emailAddress,
+        profileImageID: data.user.profileImageID,
+        profileImageURL: data.user.profileImageURL,
+        firstName: data.user.firstName,
+        middleName: data.user.middleName,
+        lastName: data.user.lastName,
+        address: data.user.address,
+        isIdentified: data.user.isIdentified,
+        isEmailVerified: data.user.isEmailVerified
       }
-      const device = state.device
-      commit('setIsActivated', user.isEmailVerified)
+      const device = {
+        deviceCode: state.device.deviceCode,
+        credential: state.device.credential,
+        accessToken: data.device.accessToken,
+        accessTokenExpiry: data.device.accessTokenExpiry,
+        isActivated: data.device.isActivated,
+        deviceToken: data.device.deviceToken,
+        grantPushNotification: data.device.grantPushNotification,
+        grantEmailNotification: data.device.grantEmailNotification
+      }
+      commit('setDevice', device)
       deviceDB.refresh(device)
       onSuccess(user)
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  updateNotificationSettings ({ commit, state }, { grantPushNotification, grantEmailNotification, onSuccess, onError }) {
+    deviceApi.updateNotificationSettings({ grantPushNotification, grantEmailNotification }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message)
+        return
+      }
+      const device = {
+        deviceCode: state.device.deviceCode,
+        credential: state.device.credential,
+        accessToken: data.accessToken,
+        accessTokenExpiry: data.accessTokenExpiry,
+        isActivated: data.isActivated,
+        deviceToken: data.deviceToken,
+        grantPushNotification: data.grantPushNotification,
+        grantEmailNotification: data.grantEmailNotification
+      }
+      commit('setDevice', device)
+      deviceDB.refresh(device)
+      onSuccess()
     }).catch(function (error) {
       onError(null, null, error)
     })
@@ -130,10 +163,6 @@ const mutations = {
   setDevice (state, device) {
     state.device = device
     state.isActivated = device.isActivated
-  },
-  setIsActivated (state, isActivated) {
-    state.device.isActivated = isActivated
-    state.isActivated = isActivated
   }
 }
 
