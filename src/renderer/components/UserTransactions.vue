@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-list three-line>
+    <v-list three-line v-if="userTransactions.length > 0">
       <template v-for="item, idx in userTransactions">
         <v-divider v-if="idx > 0"></v-divider>
         <v-list-tile avatar>
@@ -14,6 +14,9 @@
         </v-list-tile>
       </template>
     </v-list>
+    <v-alert outline color="info" icon="info" value="true" v-else>
+      No data.
+    </v-alert>
     <div class="text-xs-center" v-if="totalPageNum > 1">
       <v-pagination :length="totalPageNum" v-model="currentPageNum" :total-visible="7"></v-pagination>
     </div>
