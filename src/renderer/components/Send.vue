@@ -56,7 +56,8 @@
             </v-form>
           </v-container>
           <v-card-actions class="px-4 pb-4">
-            <v-btn block color="primary" @click.stop="confirm()" :disabled="!valid">SEND</v-btn>
+            <v-spacer></v-spacer>
+            <v-btn flat color="primary" @click.stop="confirm()" :disabled="!valid">SEND</v-btn>
           </v-card-actions>
         </v-card>
         <v-dialog v-model="dialog" max-width="290">

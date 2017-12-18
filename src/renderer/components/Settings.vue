@@ -8,7 +8,7 @@
               <h3 class="headline mb-0">Profile</h3>
             </div>
             <v-spacer></v-spacer>
-            <v-btn dark icon>
+            <v-btn dark icon @click="toEdit">
               <v-icon>edit</v-icon>
             </v-btn>
           </v-card-title>
@@ -84,6 +84,7 @@
 </template>
 
 <script>
+import router from '@/router'
 import { mapGetters } from 'vuex'
 export default {
   data () {
@@ -101,6 +102,9 @@ export default {
     device: 'device/device'
   }),
   methods: {
+    toEdit () {
+      router.push({ name: 'settingsProfileEdit' })
+    }
   },
   watch: {
     'grantEmailNotification': function (to, from) {
