@@ -36,6 +36,11 @@ export default new Router({
       component: require('@/components/Home').default
     },
     {
+      path: '/qrcode',
+      name: 'qrcode',
+      component: require('@/components/QRCode').default
+    },
+    {
       path: '/send',
       name: 'send',
       component: require('@/components/Send').default

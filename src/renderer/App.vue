@@ -45,4 +45,5 @@ export default {
 <!-- global css settings -->
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 </style>
