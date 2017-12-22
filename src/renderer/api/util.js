@@ -49,7 +49,7 @@ const retryOnAuthError = function (apiCall) {
     let accessToken = device.accessToken
     let deviceCode = device.deviceCode
     let credential = device.credential
-    apiCall(accessToken).then(function (response) {
+    apiCall(accessToken, credential).then(function (response) {
       resolve(response.data)
     }).catch(function (error) {
       if (error && error.response && error.response.status === 401) {
@@ -60,7 +60,7 @@ const retryOnAuthError = function (apiCall) {
             device.accessToken = data.accessToken
             device.accessTokenExpiry = data.accessTokenExpiry
             deviceDB.updateAccessToken(data.accessToken, data.accessTokenExpiry)
-            apiCall(data.accessToken).then(function (response) {
+            apiCall(data.accessToken, credential).then(function (response) {
               resolve(response.data)
             }).catch(function (error) {
               commonErrorHandler(error)
