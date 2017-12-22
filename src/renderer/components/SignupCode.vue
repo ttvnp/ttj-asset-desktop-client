@@ -26,6 +26,7 @@
                 required
               ></v-text-field>
               <v-text-field label="Password on import"
+                v-if="isEmailInUse"
                 v-model="passwordOnImport"
                 :rules="passwordOnImportRules"
                 hint="Password which was sent by email when you created an account on the first time."
