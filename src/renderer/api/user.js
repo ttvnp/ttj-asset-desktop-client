@@ -50,8 +50,12 @@ export default {
     formData.append('emailAddress', emailAddress)
     formData.append('assetType', assetType)
     formData.append('amount', amount)
-    return util.retryOnAuthError(function (accessToken) {
-      return client.withAuth(accessToken).post(url, formData)
+    return util.retryOnAuthError(function (accessToken, credential) {
+      const cli = client.withAuth(accessToken)
+      if (credential) {
+        cli.defaults.headers.common['credential'] = util.encrypt(credential)
+      }
+      return cli.post(url, formData)
     })
   }
 }
