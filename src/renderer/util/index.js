@@ -13,5 +13,16 @@ export default {
       result += availables[Math.floor(Math.random() * cl)]
     }
     return result
+  },
+  toDate (str) {
+    // support RFC 3339 format only
+    return new Date(str)
+  },
+  toLocaleString (date) {
+    return [
+      date.getFullYear(),
+      date.getMonth() + 1,
+      date.getDate()
+    ].join('/') + ' ' + date.toLocaleTimeString()
   }
 }

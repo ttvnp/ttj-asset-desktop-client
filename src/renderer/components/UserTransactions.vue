@@ -30,6 +30,7 @@
 import defaultProfileImage from '@/assets/user_default_profile_grey.png'
 import receiveIconImage from '@/assets/ic_receive_arrow.png'
 import sendIconImage from '@/assets/ic_send_arrow.png'
+import util from '@/util'
 export default {
   props: {
     forceRefresh: Boolean
@@ -68,7 +69,7 @@ export default {
       return name
     },
     getSubTitle (userTransaction) {
-      return userTransaction.amount + ' ' + userTransaction.assetType + '<br />(' + userTransaction.loggedAt + ')'
+      return userTransaction.amount + ' ' + userTransaction.assetType + '<br />(' + util.toLocaleString(util.toDate(userTransaction.loggedAt)) + ')'
     },
     loadUserTransactions (pageNum) {
       const self = this
