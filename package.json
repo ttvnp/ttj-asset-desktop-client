@@ -20,7 +20,7 @@
   },
   "build": {
     "productName": "ttj-asset-desktop-client",
-    "appId": "org.simulatedgreg.electron-vue",
+    "appId": "com.ttvnp.ttj_asset_desktop_client",
     "directories": {
       "output": "build"
     },
