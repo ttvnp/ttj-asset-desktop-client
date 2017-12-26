@@ -1,7 +1,6 @@
 'use strict'
 
 import { app, BrowserWindow, protocol } from 'electron'
-import fs from 'fs'
 import path from 'path'
 
 /**
@@ -34,7 +33,6 @@ function createWindow () {
   if (process.env.NODE_ENV !== 'development') {
     protocol.registerFileProtocol('app', (request, callback) => {
       const url = request.url.substr('app://ttj-asset-desktop-client/'.length)
-      console.log(request)
       callback({path: path.normalize(`${__dirname}/${url}`)})
     }, (error) => {
       if (error) console.error('Failed to register protocol')
