@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-list class="primary" two-line>
-      <v-list-tile avatar @click="">
+      <v-list-tile avatar @click="navTo('settings')">
         <v-list-tile-avatar>
           <img :src="profileImageURL">
         </v-list-tile-avatar>
