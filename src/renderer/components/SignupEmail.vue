@@ -33,7 +33,8 @@
               <span>I agree with <a @click="openTermsAndConditions()">terms and conditions</a></span>
             </div>
           </v-container>
-          <textViewModal ref="refTextViewModal" :title="'Terms Of Conditions'" :body="termsOfConditions"></textViewModal>
+          <textViewModal ref="refTextViewModal" :title="'Terms Of Conditions'"
+                         :body="termsOfConditions"></textViewModal>
         </v-card>
       </v-flex>
     </v-layout>
