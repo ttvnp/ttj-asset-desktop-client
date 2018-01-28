@@ -14,7 +14,7 @@ const commonConfig = {
 
 const debugConfig = {
   api: {
-    url: 'http://api-testnet.sencoin.com', // http://localhost:1324,
+    url: 'https://api-testnet.sencoin.com', // http://localhost:1324,
     rootPath: 'api',
     version: 'v1'
   },
