@@ -38,6 +38,7 @@
                 v-model="email"
                 :rules="emailRules"
                 required
+                :disabled="!isIdentified"
               ></v-text-field>
               <v-select
                 label="Asset Code"
@@ -45,6 +46,7 @@
                 :items="assetCodes"
                 :rules="[v => !!v || 'Item is required']"
                 required
+                :disabled="!isIdentified"
               ></v-select>
               <v-text-field label="Amount"
                 v-model="amount"
@@ -52,12 +54,14 @@
                 type="number"
                 :rules="amountRules"
                 required
+                :disabled="!isIdentified"
               ></v-text-field>
             </v-form>
+            <p class="text-xs-center note-id-verified" v-show="!isIdentified">You cannot use this function until your ID is verified.</p>
           </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click.stop="confirm()" :disabled="!valid">SEND</v-btn>
+            <v-btn flat color="primary" @click.stop="confirm()" :disabled="!valid || !isIdentified">SEND</v-btn>
           </v-card-actions>
         </v-card>
         <v-dialog v-model="dialog" max-width="290">
@@ -83,7 +87,7 @@ import bigInt from 'big-integer'
 export default {
   data () {
     return {
-      valid: true,
+      valid: false,
       email: '',
       emailRules: [
         (v) => !!v || 'Email Address is required',
@@ -117,6 +121,7 @@ export default {
   },
   computed: mapGetters({
     loadBalances: 'app/loadBalances',
+    isIdentified: 'user/isIdentified',
     balances: 'user/balances',
     userEmailAddress: 'user/emailAddress'
   }),
@@ -128,7 +133,7 @@ export default {
       this.$store.dispatch('app/setBalancesLoaded')
     },
     confirm () {
-      if (!this.valid) return
+      if (!this.valid || !this.isIdentified) return
       const self = this
       this.$store.dispatch('app/setLoading', true)
       this.$store.dispatch('user/getTargetUser', {
@@ -148,7 +153,7 @@ export default {
       })
     },
     submit () {
-      if (!this.valid) return
+      if (!this.valid || !this.isIdentified) return
       this.dialog = false
       const self = this
       this.$store.dispatch('app/setLoading', true)
@@ -178,4 +183,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .note-id-verified {
+    color: red;
+  }
 </style>

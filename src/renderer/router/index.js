@@ -56,6 +56,11 @@ export default new Router({
       component: require('@/components/SettingsProfileEdit').default
     },
     {
+      path: '/settings/id_document_upload',
+      name: 'settingsIdUploader',
+      component: require('@/components/SettingsIdUploader').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

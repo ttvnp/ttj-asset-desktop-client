@@ -5,6 +5,7 @@ import userTransactionDB from '@/database/user_transaction'
 import userApi from '@/api/user'
 import defaultProfileImagePrimary from '@/assets/user_default_profile.png'
 import defaultProfileImageNormal from '@/assets/user_default_profile_grey.png'
+import defaultIdDocumentImage from '@/assets/id_document_attach_button.png'
 
 const state = {
   user: null,
@@ -47,6 +48,52 @@ const getters = {
   middleName: state => state.user === null ? '' : state.user.middleName,
   lastName: state => state.user === null ? '' : state.user.lastName,
   address: state => state.user === null ? '' : state.user.address,
+  genderType: state => state.user === null ? '' : state.user.genderType,
+  genderTypeText: state => {
+    if (state.user === null || state.user.genderType === null) return ''
+
+    if (state.user.genderType === 1) return 'Female'
+    return 'Male'
+  },
+  dateOfBirth: state => state.user === null ? '' : state.user.dateOfBirth,
+  cellphoneFullNumber: state => {
+    if (state.user === null) return ''
+
+    var cellphoneNumber = ''
+
+    if (state.user.cellphoneNumberNationalCode) {
+      cellphoneNumber = '+'
+      cellphoneNumber += state.user.cellphoneNumberNationalCode
+    }
+
+    if (state.user.cellphoneNumber) {
+      if (cellphoneNumber) {
+        cellphoneNumber += ' '
+      }
+
+      cellphoneNumber += state.user.cellphoneNumber
+    }
+
+    return cellphoneNumber
+  },
+  cellphoneNumberNationalCode: state => state.user === null ? '' : state.user.cellphoneNumberNationalCode,
+  cellphoneNumber: state => state.user === null ? '' : state.user.cellphoneNumber,
+  idDocument1ImageURL: state => {
+    let url = state.user === null ? '' : state.user.idDocument1ImageURL
+    if (!url) {
+      url = defaultIdDocumentImage
+    }
+    return url
+  },
+  idDocument2ImageURL: state => {
+    let url = state.user === null ? '' : state.user.idDocument2ImageURL
+    if (!url) {
+      url = defaultIdDocumentImage
+    }
+    return url
+  },
+  isIdentified: state => state.user === null ? false : state.user.isIdentified,
+  identificationStatus: state => state.user === null ? false : state.user.identificationStatus,
   transactionsSearchResult: state => state.transactions.searchResult,
   transactionsPagerInfo: state => state.transactions.pagerInfo,
   balances: state => state.balances,
@@ -63,7 +110,7 @@ const getters = {
           break
       }
     }
-    return [ result ]
+    return [result]
   }
 }
 
@@ -81,8 +128,18 @@ const actions = {
     userDB.refresh(user)
     commit('setUser', user)
   },
-  update ({ commit, state }, { profileImageFile, firstName, middleName, lastName, address, onSuccess, onError }) {
-    userApi.update({ profileImageFile, firstName, middleName, lastName, address }).then(function (data) {
+  update ({ commit, state }, { profileImageFile, firstName, middleName, lastName, address, genderType, dateOfBirth, cellphoneNumberNationalCode, cellphoneNumber, onSuccess, onError }) {
+    userApi.update({
+      profileImageFile,
+      firstName,
+      middleName,
+      lastName,
+      address,
+      genderType,
+      dateOfBirth,
+      cellphoneNumberNationalCode,
+      cellphoneNumber
+    }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message)
         return
@@ -91,15 +148,42 @@ const actions = {
         emailAddress: data.emailAddress,
         profileImageID: data.profileImageID,
         profileImageURL: data.profileImageURL,
+        idDocument1ImageURL: data.idDocument1ImageURL,
+        idDocument2ImageURL: data.idDocument2ImageURL,
         firstName: data.firstName,
         middleName: data.middleName,
         lastName: data.lastName,
         address: data.address,
+        genderType: data.genderType,
+        dateOfBirth: data.dateOfBirth,
+        cellphoneNumberNationalCode: data.cellphoneNumberNationalCode,
+        cellphoneNumber: data.cellphoneNumber,
         isIdentified: data.isIdentified,
+        identificationStatus: data.identificationStatus,
         isEmailVerified: data.isEmailVerified
       }
       userDB.refresh(user)
       commit('setUser', user)
+      onSuccess()
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  updateIdDocument ({ commit, state }, { faceImageFile, addressImageFile, onSuccess, onError }) {
+    userApi.updateIdDocument({
+      faceImageFile,
+      addressImageFile
+    }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message)
+        return
+      }
+      state.user.idDocument1ImageURL = data.idDocument1ImageURL
+      state.user.idDocument2ImageURL = data.idDocument2ImageURL
+      state.user.isIdentified = data.isIdentified
+      state.user.identificationStatus = data.identificationStatus
+      userDB.refresh(state.user)
+      commit('setUser', state.user)
       onSuccess()
     }).catch(function (error) {
       onError(null, null, error)
