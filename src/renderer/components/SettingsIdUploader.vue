@@ -143,8 +143,8 @@ export default {
       const self = this
       this.$store.dispatch('app/setLoading', true)
       this.$store.dispatch('user/updateIdDocument', {
-        faceImageFile: this.idDocument1ImageFile,
-        addressImageFile: this.idDocument2ImageFile,
+        idDocument1: this.idDocument1ImageFile,
+        idDocument2: this.idDocument2ImageFile,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
           self.dialogDesc = 'Saved!'

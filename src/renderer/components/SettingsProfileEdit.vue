@@ -82,7 +82,7 @@
                 </v-menu>
               </v-flex>
               <v-layout row wrap>
-                <v-flex xs12 sm2>
+                <v-flex xs12 sm4>
                   <v-select
                     v-bind:items="[{ text: '84 (Vietnam)', value: '84' }, { text: '81 (Japan)', value: '81' }]"
                     v-model="cellphoneNumberNationalCode"
@@ -91,7 +91,7 @@
                     label="Country"
                   ></v-select>
                 </v-flex>
-                <v-flex xs12 sm9>
+                <v-flex xs12 sm8>
                   <v-text-field
                     label="Phone number"
                     v-model="cellphoneNumber"

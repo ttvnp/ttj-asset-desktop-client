@@ -111,13 +111,13 @@
           </v-card-title>
           <v-container class="px-4">
             <v-list two-line>
-              <v-list-tile @click="toIdUploader" :ripple="!isIdentified">
+              <v-list-tile @click="toIdUploader" :ripple="identificationStatus === 0">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{ textIdDocument }}</v-list-tile-title>
                 </v-list-tile-content>
                 <v-list-tile-action>
-                  <v-icon>keyboard_arrow_right</v-icon>
+                  <v-icon v-show="identificationStatus === 0">keyboard_arrow_right</v-icon>
                 </v-list-tile-action>
               </v-list-tile>
             </v-list>
@@ -149,6 +149,7 @@ export default {
     dateOfBirth: 'user/dateOfBirth',
     cellphoneNumber: 'user/cellphoneFullNumber',
     isIdentified: 'user/isIdentified',
+    identificationStatus: 'user/identificationStatus',
     device: 'device/device'
   }),
   methods: {
@@ -156,6 +157,7 @@ export default {
       router.push({ name: 'settingsProfileEdit' })
     },
     toIdUploader () {
+      if (this.identificationStatus !== 0) { return }
       router.push({ name: 'settingsIdUploader' })
     }
   },
@@ -189,6 +191,32 @@ export default {
         self.grantEmailNotification = self.device.grantEmailNotification
       }
     }})
+
+    this.$store.dispatch('app/setLoading', true)
+    this.$store.dispatch('user/getUser', {
+      onSuccess: function (data) {
+        self.$store.dispatch('app/setLoading', false)
+      },
+      onError: function (code, message, error) {
+        self.$store.dispatch('app/setLoading', false)
+        if (message) {
+          alert(message)
+        }
+      }
+    })
+
+    console.log(this.identificationStatus)
+    switch (this.identificationStatus) {
+      case 1:
+        this.textIdDocument = 'Under review for ID Document'
+        break
+      case 2:
+        this.textIdDocument = 'ID Document was approved'
+        break
+      default:
+        this.textIdDocument = 'Upload Your ID Document'
+        break
+    }
   }
 }
 </script>

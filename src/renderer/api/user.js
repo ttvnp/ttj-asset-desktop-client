@@ -27,12 +27,11 @@ export default {
       return client.withAuth(accessToken).patch(url, formData, config)
     })
   },
-  updateIdDocument ({ faceImageFile, addressImageFile }) {
+  updateIdDocument ({ idDocument1, idDocument2 }) {
     const url = util.getApiRoot() + '/users/id_document'
     let formData = new FormData()
-    console.log(faceImageFile)
-    formData.append('faceImageFile', faceImageFile)
-    formData.append('addressImageFile', addressImageFile)
+    formData.append('idDocument1', idDocument1)
+    formData.append('idDocument2', idDocument2)
     const config = {
       headers: { 'content-type': 'multipart/form-data' }
     }

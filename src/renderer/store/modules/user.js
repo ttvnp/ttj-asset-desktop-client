@@ -93,7 +93,7 @@ const getters = {
     return url
   },
   isIdentified: state => state.user === null ? false : state.user.isIdentified,
-  identificationStatus: state => state.user === null ? false : state.user.identificationStatus,
+  identificationStatus: state => state.user === null ? 0 : state.user.identificationStatus,
   transactionsSearchResult: state => state.transactions.searchResult,
   transactionsPagerInfo: state => state.transactions.pagerInfo,
   balances: state => state.balances,
@@ -116,13 +116,43 @@ const getters = {
 
 const actions = {
   init ({ commit, state }) {
-    if (state.user === null) {
-      userDB.getUser().then(function (user) {
-        if (user !== null) commit('setUser', user)
-      }).catch(function (error) {
-        throw error
-      })
-    }
+    if (state.user !== null) { return }
+    userDB.getUser().then(function (user) {
+      if (user !== null) commit('setUser', user)
+    }).catch(function (error) {
+      throw error
+    })
+  },
+  getUser ({ commit, state }, { onSuccess, onError }) {
+    userApi.get().then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      const user = {
+        emailAddress: data.emailAddress,
+        profileImageID: data.profileImageID,
+        profileImageURL: data.profileImageURL,
+        idDocument1ImageURL: data.idDocument1ImageURL,
+        idDocument2ImageURL: data.idDocument2ImageURL,
+        firstName: data.firstName,
+        middleName: data.middleName,
+        lastName: data.lastName,
+        address: data.address,
+        genderType: data.genderType,
+        dateOfBirth: data.dateOfBirth,
+        cellphoneNumberNationalCode: data.cellphoneNumberNationalCode,
+        cellphoneNumber: data.cellphoneNumber,
+        isIdentified: data.isIdentified,
+        identificationStatus: data.identificationStatus,
+        isEmailVerified: data.isEmailVerified
+      }
+      userDB.refresh(user)
+      commit('setUser', user)
+      onSuccess({ data })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
   },
   save ({ commit, state }, user) {
     userDB.refresh(user)
@@ -169,10 +199,10 @@ const actions = {
       onError(null, null, error)
     })
   },
-  updateIdDocument ({ commit, state }, { faceImageFile, addressImageFile, onSuccess, onError }) {
+  updateIdDocument ({ commit, state }, { idDocument1, idDocument2, onSuccess, onError }) {
     userApi.updateIdDocument({
-      faceImageFile,
-      addressImageFile
+      idDocument1,
+      idDocument2
     }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message)

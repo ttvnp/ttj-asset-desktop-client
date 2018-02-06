@@ -56,6 +56,20 @@ export default {
   mounted () {
     this.$store.dispatch('app/setShowDrawer', true)
     this.$store.dispatch('app/init')
+
+    const self = this
+    this.$store.dispatch('app/setLoading', true)
+    this.$store.dispatch('user/getUser', {
+      onSuccess: function (data) {
+        self.$store.dispatch('app/setLoading', false)
+      },
+      onError: function (code, message, error) {
+        self.$store.dispatch('app/setLoading', false)
+        if (message) {
+          alert(message)
+        }
+      }
+    })
   }
 }
 </script>
