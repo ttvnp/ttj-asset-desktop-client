@@ -8,7 +8,7 @@ export default {
       return client.withAuth(accessToken).get(url)
     })
   },
-  update ({ profileImageFile, firstName, middleName, lastName, address }) {
+  update ({ profileImageFile, firstName, middleName, lastName, address, genderType, dateOfBirth, cellphoneNumberNationalCode, cellphoneNumber }) {
     const url = util.getApiRoot() + '/users'
     let formData = new FormData()
     formData.append('profileImageFile', profileImageFile)
@@ -16,11 +16,27 @@ export default {
     formData.append('middleName', middleName)
     formData.append('lastName', lastName)
     formData.append('address', address)
+    formData.append('genderType', genderType)
+    formData.append('dateOfBirth', dateOfBirth)
+    formData.append('cellphoneNumberNationalCode', cellphoneNumberNationalCode)
+    formData.append('cellphoneNumber', cellphoneNumber)
     const config = {
       headers: { 'content-type': 'multipart/form-data' }
     }
     return util.retryOnAuthError(function (accessToken) {
       return client.withAuth(accessToken).patch(url, formData, config)
+    })
+  },
+  updateIdDocument ({ idDocument1, idDocument2 }) {
+    const url = util.getApiRoot() + '/users/id_document'
+    let formData = new FormData()
+    formData.append('idDocument1', idDocument1)
+    formData.append('idDocument2', idDocument2)
+    const config = {
+      headers: { 'content-type': 'multipart/form-data' }
+    }
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).post(url, formData, config)
     })
   },
   getTargetUser ({ emailAddress }) {

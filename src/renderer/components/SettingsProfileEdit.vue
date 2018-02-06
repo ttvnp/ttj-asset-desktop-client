@@ -46,11 +46,65 @@
                 counter="1000"
                 multi-line
               ></v-text-field>
+              <v-select
+                label="Gender"
+                v-model="genderType"
+                :items="genderTypes"
+              ></v-select>
+              <v-flex xs12 sm6>
+                <v-menu
+                  lazy
+                  :close-on-content-click="false"
+                  v-model="menu"
+                  transition="scale-transition"
+                  offset-y
+                  full-width
+                  :nudge-right="40"
+                  max-width="290px"
+                  min-width="290px"
+                >
+                  <v-text-field
+                    slot="activator"
+                    label="Date of birth"
+                    v-model="dateOfBirth"
+                    :rules="dateOfBirthRules"
+                    readonly
+                  ></v-text-field>
+                  <v-date-picker v-model="date" @input="dateOfBirth = formatDate($event)" no-title scrollable actions>
+                    <template slot-scope="{ save, cancel }">
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn flat color="primary" @click="cancel">Cancel</v-btn>
+                        <v-btn flat color="primary" @click="save">OK</v-btn>
+                      </v-card-actions>
+                    </template>
+                  </v-date-picker>
+                </v-menu>
+              </v-flex>
+              <v-layout row wrap>
+                <v-flex xs12 sm4>
+                  <v-select
+                    v-bind:items="[{ text: '84 (Vietnam)', value: '84' }, { text: '81 (Japan)', value: '81' }]"
+                    v-model="cellphoneNumberNationalCode"
+                    :rules="cellphoneNumberNationalCodeRules"
+                    prepend-icon="phone"
+                    label="Country"
+                  ></v-select>
+                </v-flex>
+                <v-flex xs12 sm8>
+                  <v-text-field
+                    label="Phone number"
+                    v-model="cellphoneNumber"
+                    :rules="cellphoneNumberRules"
+                    single-line
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
             </v-form>
           </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click.stop="submit" :disabled="!valid">SAVE</v-btn>
+            <v-btn flat color="primary" @click.stop="submit" :disabled="!valid || isIdentified">SAVE</v-btn>
           </v-card-actions>
         </v-card>
         <v-dialog v-model="dialog" max-width="290">
@@ -93,6 +147,27 @@ export default {
       addressRules: [
         (v) => (!v || v.length <= 1000) || 'Address must be less than 1000 characters'
       ],
+      genderType: '',
+      genderTypes: [
+        { text: 'Female', value: 1 },
+        { text: 'Male', value: 2 }
+      ],
+      date: null,
+      menu: false,
+      dateOfBirth: '',
+      dateOfBirthRules: [
+        (v) => (!v || v.length <= 11) || 'Date of birth is incorrect format'
+      ],
+      cellphoneNumberNationalCode: '',
+      cellphoneNumberNationalCodeRules: [
+        (v) => (!v || !isNaN(v)) || 'National code of cellphone must include only digit',
+        (v) => (!v || v === '81' || v === '84') || 'National code of cellphone you chosen is incorrect'
+      ],
+      cellphoneNumber: '',
+      cellphoneNumberRules: [
+        (v) => (!v || v.length <= 12) || 'Cellphone number must be less than 12 characters',
+        (v) => (!v || !isNaN(v)) || 'Cellphone number must include only digit'
+      ],
       dialog: false,
       dialogDesc: '',
       dialogOnClose: function () { }
@@ -103,7 +178,12 @@ export default {
     currentFirstName: 'user/firstName',
     currentMiddleName: 'user/middleName',
     currentLastName: 'user/lastName',
-    currentAddress: 'user/address'
+    currentAddress: 'user/address',
+    currentGenderType: 'user/genderType',
+    currentDateOfBirth: 'user/dateOfBirth',
+    currentCellphoneNumberNationalCode: 'user/cellphoneNumberNationalCode',
+    currentCellphoneNumber: 'user/cellphoneNumber',
+    isIdentified: 'user/isIdentified'
   }),
   methods: {
     back () {
@@ -147,6 +227,10 @@ export default {
         middleName: this.middleName,
         lastName: this.lastName,
         address: this.address,
+        genderType: this.genderType,
+        dateOfBirth: this.dateOfBirth,
+        cellphoneNumberNationalCode: this.cellphoneNumberNationalCode,
+        cellphoneNumber: this.cellphoneNumber,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
           self.dialogDesc = 'Saved!'
@@ -164,6 +248,32 @@ export default {
           }
         }
       })
+    },
+    formatDate (date) {
+      if (!date) { return null }
+
+      const [year, month, day] = date.split('-')
+      if (month === null) { return '' }
+
+      let monthNames = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+      ]
+
+      let parsedDate = new Date(date + ' UTC')
+      let shortMonth = monthNames[parsedDate.getMonth()]
+
+      return `${day}/${shortMonth}/${year}`
+    },
+    parseDate (date) {
+      if (!date) { return null }
+
+      let parsedDate = Date.parse(date + 'UTC')
+
+      let year = parsedDate.getFullYear()
+      let month = parsedDate.getMonth() + 1
+      let day = parsedDate.getDate()
+      return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`
     }
   },
   mounted () {
@@ -174,6 +284,10 @@ export default {
     this.middleName = this.currentMiddleName
     this.lastName = this.currentLastName
     this.address = this.currentAddress
+    this.genderType = this.currentGenderType
+    this.dateOfBirth = this.currentDateOfBirth
+    this.cellphoneNumberNationalCode = this.currentCellphoneNumberNationalCode
+    this.cellphoneNumber = this.currentCellphoneNumber
   }
 }
 </script>
