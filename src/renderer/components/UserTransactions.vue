@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-list three-line v-if="userTransactions.length > 0">
-      <template v-for="item, idx in userTransactions">
+    <v-list three-line v-if="transactionData.userTransactions.length > 0">
+      <template v-for="item, idx in transactionData.userTransactions">
         <v-divider v-if="idx > 0"></v-divider>
         <v-list-tile avatar :class="'transaction-status-' + item.transactionStatus">
           <v-list-tile-avatar>
@@ -20,8 +20,8 @@
     <v-alert outline color="info" icon="info" value="true" v-else>
       No data.
     </v-alert>
-    <div class="text-xs-center" v-if="totalPageNum > 1">
-      <v-pagination :length="totalPageNum" v-model="currentPageNum" :total-visible="7"></v-pagination>
+    <div class="text-xs-center" v-if="transactionData.totalPageNum > 0">
+      <v-pagination :length="transactionData.totalPageNum" v-model="currentPageNum" :total-visible="20"></v-pagination>
     </div>
   </div>
 </template>
@@ -33,14 +33,18 @@ import sendIconImage from '@/assets/ic_send_arrow.png'
 import util from '@/util'
 export default {
   props: {
-    forceRefresh: Boolean
+    transactionData: Object
   },
   data () {
     return {
-      userTransactions: [],
-      totalCnt: 0,
-      totalPageNum: 0,
-      currentPageNum: 1
+      currentPageNum: this.transactionData.currentPageNum
+    }
+  },
+  watch: {
+    'currentPageNum': function (to, from) {
+      if (to !== from) {
+        this.$emit('changePage', from, to)
+      }
     }
   },
   methods: {
@@ -70,35 +74,9 @@ export default {
     },
     getSubTitle (userTransaction) {
       return userTransaction.amount + ' ' + userTransaction.assetType + '<br />(' + util.toLocaleString(util.toDate(userTransaction.loggedAt)) + ')'
-    },
-    loadUserTransactions (pageNum) {
-      const self = this
-      this.$store.dispatch('user/getTransactions', {
-        forceRefresh: this.forceRefresh,
-        pageNum: pageNum > 0 ? pageNum : 1,
-        onSuccess: function ({ userTransactions, totalCnt, totalPageNum, currentPageNum }) {
-          self.userTransactions = userTransactions
-          self.totalCnt = totalCnt
-          self.totalPageNum = totalPageNum
-          if (self.forceRefresh) {
-            self.$emit('loaded')
-          }
-        },
-        onError: function (error) {
-          console.log(error)
-        }
-      })
-    }
-  },
-  watch: {
-    'currentPageNum': function (to, from) {
-      if (to !== from) {
-        this.loadUserTransactions(to)
-      }
     }
   },
   mounted () {
-    this.loadUserTransactions(1)
   }
 }
 </script>

@@ -23,7 +23,8 @@
             </div>
           </v-card-title>
           <v-container>
-            <user-transactions :forceRefresh="!loadPaymentHistory" v-on:loaded="onPaymentHistoryLoaded"></user-transactions>
+            <user-transactions :transactionData="transactionData"
+                               v-on:changePage="onChangePage"></user-transactions>
           </v-container>
         </v-card>
       </v-flex>
@@ -32,46 +33,76 @@
 </template>
 
 <script>
-import UserBalance from '@/components/UserBalance'
-import UserTransactions from '@/components/UserTransactions'
-import { mapGetters } from 'vuex'
-export default {
-  name: 'home',
-  components: {
-    UserBalance: UserBalance,
-    UserTransactions: UserTransactions
-  },
-  computed: mapGetters({
-    loadBalances: 'app/loadBalances',
-    loadPaymentHistory: 'app/loadPaymentHistory'
-  }),
-  methods: {
-    onUserBalanceLoaded () {
-      this.$store.dispatch('app/setBalancesLoaded')
-    },
-    onPaymentHistoryLoaded () {
-      this.$store.dispatch('app/setPaymentHistoryLoaded')
-    }
-  },
-  mounted () {
-    this.$store.dispatch('app/setShowDrawer', true)
-    this.$store.dispatch('app/init')
+  import UserBalance from '@/components/UserBalance'
+  import UserTransactions from '@/components/UserTransactions'
+  import { mapGetters } from 'vuex'
 
-    const self = this
-    this.$store.dispatch('app/setLoading', true)
-    this.$store.dispatch('user/getUser', {
-      onSuccess: function (data) {
-        self.$store.dispatch('app/setLoading', false)
-      },
-      onError: function (code, message, error) {
-        self.$store.dispatch('app/setLoading', false)
-        if (message) {
-          alert(message)
+  export default {
+    name: 'home',
+    components: {
+      UserBalance: UserBalance,
+      UserTransactions: UserTransactions
+    },
+    computed: mapGetters({
+      loadBalances: 'app/loadBalances',
+      loadPaymentHistory: 'app/loadPaymentHistory'
+    }),
+    data () {
+      return {
+        transactionData: {
+          userTransactions: [],
+          totalCnt: 0,
+          totalPageNum: 0,
+          currentPageNum: 1
         }
       }
-    })
+    },
+    methods: {
+      onUserBalanceLoaded () {
+        this.$store.dispatch('app/setBalancesLoaded')
+      },
+      onChangePage (from, to) {
+        this.transactionData.currentPageNum = to
+        this.loadUserTransactions(to)
+      },
+      loadUserTransactions (pageNum) {
+        const self = this
+        this.$store.dispatch('app/setLoading', true)
+
+        this.$store.dispatch('user/getTransactions', {
+          pageNum: pageNum > 0 ? pageNum : 1,
+          onSuccess: function ({ userTransactions, totalCnt, totalPageNum, currentPageNum }) {
+            self.transactionData.userTransactions = userTransactions
+            self.transactionData.totalCnt = totalCnt
+            self.transactionData.totalPageNum = totalPageNum
+            self.$store.dispatch('app/setPaymentHistoryLoaded')
+            self.$store.dispatch('app/setLoading', false)
+          },
+          onError: function (error) {
+            console.log(error)
+          }
+        })
+      }
+    },
+    mounted () {
+      this.$store.dispatch('app/setShowDrawer', true)
+      this.$store.dispatch('app/init')
+
+      const self = this
+      this.$store.dispatch('app/setLoading', true)
+      this.$store.dispatch('user/getUser', {
+        onSuccess: function (data) {
+        },
+        onError: function (code, message, error) {
+          self.$store.dispatch('app/setLoading', false)
+          if (message) {
+            alert(message)
+          }
+        }
+      })
+      this.loadUserTransactions(this.transactionData.currentPageNum)
+    }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
