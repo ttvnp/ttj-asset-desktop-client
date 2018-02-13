@@ -61,6 +61,16 @@ export default new Router({
       component: require('@/components/SettingsIdUploader').default
     },
     {
+      path: '/settings/terms_of_service',
+      name: 'settingsTermsOfService',
+      component: require('@/components/SettingsTermsOfService').default
+    },
+    {
+      path: '/settings/privacy_policy',
+      name: 'settingsPrivacyPolicy',
+      component: require('@/components/SettingsPrivacyPolicy').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

@@ -125,6 +125,34 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <v-layout class="mt-4">
+      <v-flex xs12 sm10>
+        <v-card>
+          <v-container class="px-4">
+            <v-list two-line>
+              <v-list-tile @click="toTermsOfService" ripple>
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>Terms of Service</v-list-tile-title>
+                </v-list-tile-content>
+                <v-list-tile-action>
+                  <v-icon>keyboard_arrow_right</v-icon>
+                </v-list-tile-action>
+              </v-list-tile>
+              <v-list-tile @click="toPrivacyPolicy" ripple>
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>Privacy Policy</v-list-tile-title>
+                </v-list-tile-content>
+                <v-list-tile-action>
+                  <v-icon>keyboard_arrow_right</v-icon>
+                </v-list-tile-action>
+              </v-list-tile>
+            </v-list>
+          </v-container>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
@@ -159,6 +187,12 @@ export default {
     toIdUploader () {
       if (this.identificationStatus !== 0) { return }
       router.push({ name: 'settingsIdUploader' })
+    },
+    toTermsOfService () {
+      router.push({ name: 'settingsTermsOfService' })
+    },
+    toPrivacyPolicy () {
+      router.push({ name: 'settingsPrivacyPolicy' })
     }
   },
   watch: {
