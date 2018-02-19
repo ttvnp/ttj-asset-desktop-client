@@ -3,6 +3,7 @@ import deviceApi from './device'
 import deviceDB from '@/database/device'
 import deviceStore from '@/store/modules/device'
 import NodeRSA from 'node-rsa'
+import router from '@/router'
 
 const getRand = function () {
   let dt = new Date()
@@ -23,9 +24,17 @@ const commonErrorHandler = function (error) {
   }
 }
 
+const maintenanceHandler = function (response) {
+  if (response.status === 503) {
+    self.$store.dispatch('app/setShowDrawer', false)
+    router.push({ name: 'maintenance' })
+  }
+}
+
 const call = function (apiCall) {
   return new Promise(function (resolve, reject) {
     apiCall().then(function (response) {
+      maintenanceHandler(response)
       resolve(response.data)
     }).catch(function (error) {
       commonErrorHandler(error)
@@ -50,6 +59,7 @@ const retryOnAuthError = function (apiCall) {
     let deviceCode = device.deviceCode
     let credential = device.credential
     apiCall(accessToken, credential).then(function (response) {
+      maintenanceHandler(response)
       resolve(response.data)
     }).catch(function (error) {
       if (error && error.response && error.response.status === 401) {
