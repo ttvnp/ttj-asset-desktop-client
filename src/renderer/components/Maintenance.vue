@@ -1,7 +1,7 @@
 <template>
   <div class="maintenance_container">
     <div class="maintenance">
-      <img src="@/assets/ic_maintenance.png"/>
+      <img src="static/ic_maintenance.png"/>
       <br/><br/>
       <p>We are currently undergoing maintenance. This will not take long :)</p>
     </div>
@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 div.maintenance_container {
-  width: 100%;  
+  width: 100%;
   height: 100vh;
   background-color: #03a9f4;
   display: table;
