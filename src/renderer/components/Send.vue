@@ -5,7 +5,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">Balances</h3>
+              <h3 class="headline mb-0">{{ $t('send.balances') }}</h3>
             </div>
           </v-card-title>
           <v-container>
@@ -19,7 +19,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">Send</h3>
+              <h3 class="headline mb-0">{{ $t('send.sendLabel') }}</h3>
             </div>
           </v-card-title>
           <v-container v-if="infoMessage.length > 0">
@@ -34,34 +34,35 @@
           </v-container>
           <v-container class="px-4">
             <v-form v-model="valid">
-              <v-text-field label="Email Address"
+              <v-text-field 
+                 :label="$t('profile.emailAddress')"
                 v-model="email"
                 :rules="emailRules"
                 required
                 :disabled="!isIdentified"
               ></v-text-field>
               <v-select
-                label="Asset Code"
+                 :label="$t('send.assetCode')"
                 v-model="assetCode"
                 :items="assetCodes"
-                :rules="[v => !!v || 'Item is required']"
+                :rules="[v => !!v || $t('require.itemIsRequired')]"
                 required
                 :disabled="!isIdentified"
               ></v-select>
-              <v-text-field label="Amount"
+              <v-text-field :label="$t('send.amount')"
                 v-model="amount"
-                hint="enter how much you want to send."
+                :hint="$t('send.enterHowMuchYouWantTosend')"
                 type="number"
                 :rules="amountRules"
                 required
                 :disabled="!isIdentified"
               ></v-text-field>
             </v-form>
-            <p class="text-xs-center note-id-verified" v-show="!isIdentified">You cannot use this function until your ID is verified.</p>
+            <p class="text-xs-center note-id-verified" v-show="!isIdentified">{{ $t('send.youCannotUseThisFunctionUntilYourIdIsVerified') }}</p>
           </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click.stop="confirm()" :disabled="!valid || !isIdentified">SEND</v-btn>
+            <v-btn flat color="primary" @click.stop="confirm()" :disabled="!valid || !isIdentified">{{ $t('send.sendLabel') }}</v-btn>
           </v-card-actions>
         </v-card>
         <v-dialog v-model="dialog" max-width="290">
@@ -69,8 +70,8 @@
             <v-card-text>{{dialogDesc}}</v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="darken-1" flat="flat" @click.native="dialog = false">CANCEL</v-btn>
-              <v-btn color="primary" flat="flat" @click.native="submit()">OK</v-btn>
+              <v-btn color="darken-1" flat="flat" @click.native="dialog = false">{{ $t('general.send') }}L</v-btn>
+              <v-btn color="primary" flat="flat" @click.native="submit()">{{ $t('general.cancel') }}</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -91,14 +92,14 @@ export default {
       email: '',
       emailRules: [
         (v) => !!v || 'Email Address is required',
-        (v) => util.isValidEmailAddress(v) || 'Email Address must be valid',
-        (v) => v !== this.userEmailAddress || 'You cannot send to yourself'
+        (v) => util.isValidEmailAddress(v) || this.$t('validate.emailMustBeValid'),
+        (v) => v !== this.userEmailAddress || this.$t('send.youCannotSendToYourSelf')
       ],
       assetCode: '',
       assetCodes: ['SNP', 'SNC'],
       amount: '',
       amountRules: [
-        (v) => util.isValidAmountFormat(v) || 'Amount must be valid',
+        (v) => util.isValidAmountFormat(v) || this.$t('validate.amountMustBeValid'),
         (v) => {
           const amnt = bigInt(v)
           let limit = bigInt(0)
@@ -109,7 +110,7 @@ export default {
               }
             }
           }
-          return limit.compare(amnt) >= 0 || 'Amount must be less than total'
+          return limit.compare(amnt) >= 0 || this.$t('send.amountMustBeLessThanTotal')
         }
       ],
       infoMessage: '',
@@ -140,7 +141,7 @@ export default {
         emailAddress: this.email,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
-          self.dialogDesc = 'Are you sure you want to send ' + self.amount + self.assetCode + ' to ' + self.email + '?'
+          self.dialogDesc = this.$t('send.areYouSureYouWantToSend') + self.amount + self.assetCode + ' to ' + self.email + '?'
           self.dialog = true
         },
         onError: function (code, message, error) {

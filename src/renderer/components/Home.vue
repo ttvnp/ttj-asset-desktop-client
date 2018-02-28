@@ -5,7 +5,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">Balances</h3>
+              <h3 class="headline mb-0">{{ $t('home.balanceLabel') }}</h3>
             </div>
           </v-card-title>
           <v-container>
@@ -19,7 +19,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">Payment History</h3>
+              <h3 class="headline mb-0">{{ $t('home.paymentHistory') }}</h3>
             </div>
           </v-card-title>
           <v-container>

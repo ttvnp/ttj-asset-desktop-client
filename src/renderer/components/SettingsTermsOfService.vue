@@ -8,7 +8,7 @@
               <v-icon>chevron_left</v-icon>
             </v-btn>
             <div>
-              <h3 class="headline mb-0">Terms of Service</h3>
+              <h3 class="headline mb-0">{{ $t('settings.termOfService') }}</h3>
             </div>
           </v-card-title>
           <v-card-text class="desc-terms-of-service">
