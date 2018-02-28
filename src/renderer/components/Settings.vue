@@ -184,8 +184,10 @@
 </template>
 
 <script>
+import util from '@/util'
 import router from '@/router'
 import { mapGetters } from 'vuex'
+const langCookieName = 'lang'
 export default {
   data () {
     return {
@@ -209,8 +211,12 @@ export default {
   }),
   methods: {
     toEnglish () {
+      this.$i18n.set('en')
+      util.setCookie(langCookieName, 'en', 365)
     },
     toJapanese () {
+      this.$i18n.set('ja')
+      util.setCookie(langCookieName, 'ja', 365)
     },
     toEdit () {
       router.push({ name: 'settingsProfileEdit' })
