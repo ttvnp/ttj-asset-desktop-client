@@ -115,36 +115,36 @@ const en = {
 // for Japanese
 const ja = {
   validate: {
-    emailMustBeValid: 'Email address must be valid.',
-    amountMustBeValid: 'Amount must be valid'
+    emailMustBeValid: 'メールアドレスの形式が正しくありません',
+    amountMustBeValid: 'Point/Coinが正しくありません'
   },
   require: {
-    itemIsRequired: 'Item is required',
-    passwordIsRequired: 'Password is required.',
-    codeIsRequired: 'Code is required.',
-    emailIsRequired: 'Email Address is required'
+    itemIsRequired: '必須項目',
+    passwordIsRequired: 'パスワードを入力してください',
+    codeIsRequired: '認証コードを入力してください',
+    emailIsRequired: 'メールアドレスを入力してください'
   },
   signUp: {
-    pleaseSetUpYourWalletFirst: 'Please set up your wallet first.'
+    pleaseSetUpYourWalletFirst: 'ウォレットを有効にしてください'
   },
   signUpCode: {
-    verifyEmail: 'Verify Email',
-    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Please provide verification code which was sent by email.',
-    code: 'Code',
-    verificationCodeWhichWasSentByEmail: 'Verification code which was sent by email.',
+    verifyEmail: 'メールアドレスを有効にする',
+    pleaseProvideVerificationCodeWhichWasSentByEmail: 'メールに記載されたVerification code（認証コード）を入力してください',
+    code: 'コード',
+    verificationCodeWhichWasSentByEmail: 'Verification code（認証コード）.',
     passwordOnImport: 'Password on import',
-    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Password which was sent by email when you created an account on the first time.'
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: '登録時に送付されたメールに記載されているパスワードを入力してください'
   },
   signUpEmail: {
-    registerEmail: 'Register Email',
-    pleaseProvideYourEmailAddresToActivateYourAccount: 'Please provide your email address to activate your account.',
-    onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Once you submit this form, then we will send you a confirmation email.',
-    iAgressWith: 'I agress with ',
-    termOfServices: 'terms of services.'
+    registerEmail: 'メールアドレスを登録する',
+    pleaseProvideYourEmailAddresToActivateYourAccount: '登録されるメールアドレスを入力してください',
+    onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: '入力フォームを送信されましたらメールをお送りいたします',
+    iAgressWith: '同意する',
+    termOfServices: '利用規約に '
   },
   signUpEnd: {
-    accountActivated: 'Account activated',
-    yourAccountHasBeenActivatedPleaseEnjoy: 'Your account has been activated.Please enjoy!'
+    accountActivated: 'アカウントが有効になりました。',
+    yourAccountHasBeenActivatedPleaseEnjoy: 'サービスをご利用ください。'
   },
   home: {
     balanceLabel: '残高',
@@ -161,7 +161,7 @@ const ja = {
     assetCode: 'アセットコード',
     amount: '量',
     enterHowMuchYouWantToBeReceived: '受取額を入力して下さい',
-    AmountMustBeValid: '受取額を入力して下さい'
+    AmountMustBeValid: 'Point/Coinを入力して下さい'
   },
   send: {
     balances: '残高',
@@ -169,22 +169,22 @@ const ja = {
     emailAdress: 'メールアドレス',
     assetCode: 'アセットコード',
     amount: '量',
-    youCannotUseThisFunctionUntilYourIdIsVerified: 'IDが承認されるまでこのサービスは利用できません。/nプロフィールページからIDを申請してください。',
-    enterHowMuchYouWantTosend: 'enter how much you want to send.'
+    youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。/nプロフィールページからご本人確認(ID)を申請してください。',
+    enterHowMuchYouWantTosend: '送信額を入力してください'
   },
   settings: {
     language: '言語設定',
     profile: 'プロフィール',
     notification: '通知設定',
     emailNotification: 'メール通知',
-    idDocument: 'ID Document',
+    idDocument: 'ご本人確認資料',
     termOfService: '利用規約',
     privacyPolicy: 'プライバシーポリシー'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
     theFollowingItemsMustBeClearlyVisible: '以下の項目が確認できるようにしてください。',
-    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'IDを申請されますとプロフィールは変更できません。'
+    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'ご本人確認を申請されますとプロフィールは変更できません。'
   },
   profile: {
     profileLabel: 'プロフィール',
@@ -200,14 +200,14 @@ const ja = {
     cellPhone: '電話番号',
     facePhoto: '顔写真',
     uploadIdDocument: '本人確認書類(ID)のアップロード',
-    idDoucmentApproved: 'ID審査中',
-    idDocumentUnderReview: 'ID承認済'
+    idDoucmentApproved: 'ご本人確認資料(ID)審査中',
+    idDocumentUnderReview: 'ご本人確認資料(ID)承認済'
   },
   general: {
     noData: 'データが存在しません',
-    start: 'START',
+    start: '始める',
     ok: 'OK',
-    cancel: 'CANCEL'
+    cancel: 'キャンセル'
   }
 }
 
