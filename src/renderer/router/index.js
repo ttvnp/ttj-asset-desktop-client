@@ -11,6 +11,11 @@ export default new Router({
       component: require('@/components/Index').default
     },
     {
+      path: '/maintenance',
+      name: 'maintenance',
+      component: require('@/components/Maintenance').default
+    },
+    {
       path: '/signup',
       name: 'signup',
       component: require('@/components/Signup').default
@@ -66,9 +71,19 @@ export default new Router({
       component: require('@/components/SettingsTermsOfService').default
     },
     {
+      path: '/settings/ja_terms_of_service',
+      name: 'settingsJaTermsOfService',
+      component: require('@/components/SettingsJaTermsOfService').default
+    },
+    {
       path: '/settings/privacy_policy',
       name: 'settingsPrivacyPolicy',
       component: require('@/components/SettingsPrivacyPolicy').default
+    },
+    {
+      path: '/settings/ja_privacy_policy',
+      name: 'settingsJaPrivacyPolicy',
+      component: require('@/components/SettingsJaPrivacyPolicy').default
     },
     {
       path: '*',

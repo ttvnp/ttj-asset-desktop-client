@@ -210,6 +210,14 @@ export default {
     device: 'device/device'
   }),
   methods: {
+    getLang () {
+      var lang = 'en'
+      const cookieLang = util.getCookie(langCookieName)
+      if (cookieLang) {
+        lang = cookieLang
+      }
+      return lang
+    },
     toEnglish () {
       this.$i18n.set('en')
       util.setCookie(langCookieName, 'en', 365)
@@ -226,10 +234,18 @@ export default {
       router.push({ name: 'settingsIdUploader' })
     },
     toTermsOfService () {
-      router.push({ name: 'settingsTermsOfService' })
+      if (this.getLang() === 'en') {
+        router.push({ name: 'settingsTermsOfService' })
+        return
+      }
+      router.push({ name: 'settingsJaTermsOfService' })
     },
     toPrivacyPolicy () {
-      router.push({ name: 'settingsPrivacyPolicy' })
+      if (this.getLang() === 'en') {
+        router.push({ name: 'settingsPrivacyPolicy' })
+        return
+      }
+      router.push({ name: 'settingsJaPrivacyPolicy' })
     }
   },
   watch: {

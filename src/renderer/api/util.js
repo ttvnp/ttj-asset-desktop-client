@@ -3,6 +3,7 @@ import deviceApi from './device'
 import deviceDB from '@/database/device'
 import deviceStore from '@/store/modules/device'
 import NodeRSA from 'node-rsa'
+import router from '@/router'
 
 const getRand = function () {
   let dt = new Date()
@@ -21,6 +22,14 @@ const commonErrorHandler = function (error) {
   if (error.message && error.message === 'Network Error') {
     alert('Error occurred due to network error.Please confirm your network works.')
   }
+}
+
+const maintenanceHandler = function (error) {
+  if (error.response.status === 503) {
+    router.push({ name: 'maintenance' })
+    return true
+  }
+  return false
 }
 
 const call = function (apiCall) {
@@ -52,6 +61,9 @@ const retryOnAuthError = function (apiCall) {
     apiCall(accessToken, credential).then(function (response) {
       resolve(response.data)
     }).catch(function (error) {
+      if (maintenanceHandler(error)) {
+        return
+      }
       if (error && error.response && error.response.status === 401) {
         deviceApi.issueAccessToken({ deviceCode, credential }).then(function (data) {
           if (data.exitCode !== 0) {
