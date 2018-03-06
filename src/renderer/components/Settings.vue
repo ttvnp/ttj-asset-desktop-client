@@ -218,13 +218,28 @@ export default {
       }
       return lang
     },
+    changeTextButtonIdDocument () {
+      switch (this.identificationStatus) {
+        case 1:
+          this.textIdDocument = this.$t('profile.uploadIdDocument')
+          break
+        case 2:
+          this.textIdDocument = this.$t('profile.idDoucmentApproved')
+          break
+        default:
+          this.textIdDocument = this.$t('profile.idDocumentUnderReview')
+          break
+      }
+    },
     toEnglish () {
       this.$i18n.set('en')
       util.setCookie(langCookieName, 'en', 365)
+      this.changeTextButtonIdDocument()
     },
     toJapanese () {
       this.$i18n.set('ja')
       util.setCookie(langCookieName, 'ja', 365)
+      this.changeTextButtonIdDocument()
     },
     toEdit () {
       router.push({ name: 'settingsProfileEdit' })
@@ -293,17 +308,7 @@ export default {
     })
 
     console.log(this.identificationStatus)
-    switch (this.identificationStatus) {
-      case 1:
-        this.textIdDocument = this.$t('profile.uploadIdDocument')
-        break
-      case 2:
-        this.textIdDocument = this.$t('profile.idDoucmentApproved')
-        break
-      default:
-        this.textIdDocument = this.$t('profile.idDocumentUnderReview')
-        break
-    }
+    this.changeTextButtonIdDocument()
   }
 }
 </script>
