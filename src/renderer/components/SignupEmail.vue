@@ -5,10 +5,10 @@
         <v-card>
           <v-card-title primary-title>
             <div>
-              <h3 class="headline mb-0">Register Email</h3>
+              <h3 class="headline mb-0">{{ $t('signUpEmail.registerEmail') }}</h3>
               <div>
-                <span>Please provide your email address to activate your account.</span><br/>
-                <span>Once you submit this form, then we will send you a confirmation email.</span>
+                <span>{{ $t('signUpEmail.pleaseProvideYourEmailAddresToActivateYourAccount') }}</span><br/>
+                <span>{{ $t('signUpEmail.onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail') }}</span>
               </div>
             </div>
           </v-card-title>
@@ -19,7 +19,8 @@
           </v-container>
           <v-container class="px-4">
             <v-form v-model="valid">
-              <v-text-field label="Email Address"
+              <v-text-field 
+                            :label="$t('profile.emailAddress')"
                             v-model="email"
                             :rules="emailRules"
                             required
@@ -27,13 +28,13 @@
             </v-form>
           </v-container>
           <v-container class="px-4 pb-4">
-            <v-btn block color="primary" @click.stop="submit()" :disabled="!isValidSignup">SEND</v-btn>
+            <v-btn block color="primary" @click.stop="submit()" :disabled="!isValidSignup">{{ $t('general.send') }}</v-btn>
             <div class="terms-container">
               <input type="checkbox" name="terms" v-model="isCheckedTerms"/>
-              <span>I agree with <a @click="openTermsAndConditions()">terms and conditions</a></span>
+              <span>{{ $t('signUpEmail.iAgressWith') }}<a @click="openTermsAndConditions()">{{ $t('signUpEmail.termOfServices:') }}</a></span>
             </div>
           </v-container>
-          <textViewModal ref="refTextViewModal" :title="'Terms Of Conditions'"
+          <textViewModal ref="refTextViewModal" :title="$t('settings.termOfService')"
                          :body="termsOfConditions"></textViewModal>
         </v-card>
       </v-flex>
@@ -62,8 +63,8 @@
         valid: true,
         email: '',
         emailRules: [
-          (v) => !!v || 'Email Address is required',
-          (v) => util.isValidEmailAddress(v) || 'Email Address must be valid'
+          (v) => !!v || this.$t('require.emailIsRequired'),
+          (v) => util.isValidEmailAddress(v) || this.$t('validate.emailMustBeValid')
         ],
         termsOfConditions: '<p>The software you are about to use functions as a free, and open source.</p>' +
         '<p>While the software has undergone beta testing and continues to be improved by feedback from the open-source user and developer community, we cannot guarantee that there will be no bugs in the software. You acknowledge that your use of this software is at your own discretion and in compliance with all applicable laws. You are responsible for safekeeping your passwords, and any other codes you use to access the software.\n</p>' +

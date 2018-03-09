@@ -5,7 +5,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">QR Code</h3>
+              <h3 class="headline mb-0">{{ $t('qrCode.qrCodeLabel') }}</h3>
             </div>
           </v-card-title>
           <v-container>
@@ -16,14 +16,15 @@
           <v-container class="px-4">
             <v-form>
               <v-select
-                label="Asset Code"
+                :label="$t('qrCode.assetCode')"
                 v-model="assetCode"
                 :items="assetCodes"
                 required
               ></v-select>
-              <v-text-field label="Amount"
+              <v-text-field
+                :label="$t('qrCode.assetCode')"
                 v-model="amount"
-                hint="enter how much you want to be received."
+                :hint="$t('qrCode.enterHowMuchYouWantToBeReceived')"
                 type="number"
                 :rules="amountRules"
                 required
@@ -47,7 +48,7 @@ export default {
       assetCodes: ['SNP', 'SNC'],
       amount: '0',
       amountRules: [
-        (v) => util.isValidAmountFormat(v) || 'Amount must be valid'
+        (v) => util.isValidAmountFormat(v) || this.$t('qrCode.AmountMustBeValid')
       ]
     }
   },

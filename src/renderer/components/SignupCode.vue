@@ -5,9 +5,9 @@
         <v-card>
           <v-card-title primary-title>
             <div>
-              <h3 class="headline mb-0">Verify Email</h3>
+              <h3 class="headline mb-0">{{ $t('signUpCode.verifyEmail') }}</h3>
               <div>
-                <span>Please provide vefirication code which was sent by email.</span><br />
+                <span>{{ $t('signUpCode.pleaseProvideVerificationCodeWhichWasSentByEmail') }}</span><br />
               </div>
             </div>
           </v-card-title>
@@ -18,25 +18,27 @@
           </v-container>
           <v-container class="px-4">
             <v-form v-model="valid">
-              <v-text-field label="Code"
+              <v-text-field 
+                :label="$t('signUpCode.code')"
                 v-model="code"
                 :rules="codeRules"
-                hint="Vefirication code which was sent by email."
+                :hint="$t('signUpCode.verificationCodeWhichWasSentByEmail')"
                 type="number"
                 required
               ></v-text-field>
-              <v-text-field label="Password on import"
+              <v-text-field 
+                :label="$t('signUpCode.passwordOnImport')"
                 v-if="isEmailInUse"
                 v-model="passwordOnImport"
                 :rules="passwordOnImportRules"
-                hint="Password which was sent by email when you created an account on the first time."
+                :hint="$t('signUpCode.passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime')"
                 type="number"
                 required
               ></v-text-field>
             </v-form>
           </v-container>
           <v-card-actions class="px-4 pb-4">
-            <v-btn block color="primary" @click.stop="submit()" :disabled="!valid">SEND</v-btn>
+            <v-btn block color="primary" @click.stop="submit()" :disabled="!valid">{{ $t('general.send') }}</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -54,11 +56,11 @@ export default {
       valid: true,
       code: '',
       codeRules: [
-        (v) => !!v || 'Code is required'
+        (v) => !!v || this.$t('require.codeIsRequired')
       ],
       passwordOnImport: '',
       passwordOnImportRules: [
-        (v) => (this.isEmailInUse && !!v) || 'Password is required'
+        (v) => (this.isEmailInUse && !!v) || this.$t('require.passwordIsRequired')
       ]
     }
   },

@@ -18,7 +18,7 @@
       </template>
     </v-list>
     <v-alert outline color="info" icon="info" value="true" v-else>
-      No data.
+      {{ $t('general.noData') }}
     </v-alert>
     <div class="text-xs-center" v-if="transactionData.totalPageNum > 0">
       <v-pagination :length="transactionData.totalPageNum" v-model="currentPageNum" :total-visible="20"></v-pagination>
