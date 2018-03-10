@@ -5,14 +5,14 @@
         <v-card>
           <v-card-title primary-title>
             <div>
-              <h3 class="headline mb-0">Account activated</h3>
+              <h3 class="headline mb-0">{{ $t('signUpEnd.accountActivated') }}</h3>
               <div>
-                <span>Your account has been activated.Please enjoy!</span><br />
+                <span>{{ $t('signUpEnd.yourAccountHasBeenActivatedPleaseEnjoy') }}</span><br />
               </div>
             </div>
           </v-card-title>
           <v-card-actions class="pa-4">
-            <v-btn block color="primary" @click.stop="start()">START</v-btn>
+            <v-btn block color="primary" @click.stop="start()">{{ $t('general.start') }}</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>

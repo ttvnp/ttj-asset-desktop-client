@@ -8,7 +8,7 @@
               <v-icon>chevron_left</v-icon>
             </v-btn>
             <div>
-              <h3 class="headline mb-0">Upload Your ID Document</h3>
+              <h3 class="headline mb-0">{{ $t('profile.uploadIdDocument') }}</h3>
             </div>
           </v-card-title>
           <v-container v-if="errMessage.length > 0">
@@ -17,20 +17,20 @@
             </v-alert>
           </v-container>
           <v-card-text>
-            <p>Please upload photo of your travel document.</p>
-            <p>The following items must be clearly visible</p>
+            <p>{{ $t('settingsUploader.pleaseUploadPhotoOfTravelDocument') }}</p>
+            <p>{{ $t('settingsUploader.theFollowingItemsMustBeClearlyVisible') }}</p>
             <ul class="things-required-id-upload">
-              <li>face photo</li>
-              <li>name</li>
-              <li>address</li>
-              <li>date of birth</li>
-              <li>date of expiry</li>
+              <li>{{ $t('profile.facePhoto') }}</li>
+              <li>{{ $t('profile.name') }}</li>
+              <li>{{ $t('profile.address') }}</li>
+              <li>{{ $t('profile.dob') }}</li>
+              <li>{{ $t('profile.doe') }}</li>
             </ul>
           </v-card-text>
           <v-container class="px-4">
             <v-layout row wrap>
               <v-flex xs12 sm6>
-                <p>Face Photo</p>
+                <p>{{ $t('profile.facePhoto') }}</p>
                 <div class="image-picker-wrapper">
                   <div>
                     <img class="image-avatar" :src="idDocument1ImageURL">
@@ -39,7 +39,7 @@
                 </div>
               </v-flex>
               <v-flex xs12 sm6>
-                <p>Address</p>
+                <p>{{ $t('profile.address') }}</p>
                 <div class="image-picker-wrapper">
                   <div>
                     <img class="image-avatar" :src="idDocument2ImageURL">
@@ -50,7 +50,7 @@
             </v-layout>
           </v-container>
           <v-container class="px-4">
-            <div class="text-xs-center note-id-verified">Once you upload images, you will not be able to edit your profile.</div>
+            <div class="text-xs-center note-id-verified">{{ $t('settingsUploader.onceYouUploadImagesYouWilNotBeAbleToEditYourProfile') }}</div>
           </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>

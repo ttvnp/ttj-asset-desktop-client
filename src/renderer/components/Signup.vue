@@ -6,7 +6,7 @@
           <v-card-title primary-title>
             <div>
               <h3 class="headline mb-0">Welcome</h3>
-              <div>Please set up your wallet first.</div>
+              <div>{{ $t('signUp.pleaseSetUpYourWalletFirst') }}</div>
             </div>
           </v-card-title>
           <v-container v-if="message.length > 0">
@@ -20,7 +20,7 @@
             </v-form>
           </v-container>
           <v-card-actions class="pa-4">
-            <v-btn block color="primary" @click.stop="start()" :disabled="recaptchaToken.length === 0">START</v-btn>
+            <v-btn block color="primary" @click.stop="start()" :disabled="recaptchaToken.length === 0">{{ $t('general.start') }}</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
