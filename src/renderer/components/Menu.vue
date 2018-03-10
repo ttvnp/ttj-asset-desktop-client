@@ -17,7 +17,7 @@
           <v-icon>home</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-          <v-list-tile-title>Home</v-list-tile-title>
+          <v-list-tile-title>{{ $t('menu.home') }}</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
       <v-divider></v-divider>
@@ -26,7 +26,7 @@
           <v-icon>fa-qrcode</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-          <v-list-tile-title>QR Code</v-list-tile-title>
+          <v-list-tile-title>{{ $t('menu.qrCode') }}</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
       <v-divider></v-divider>
@@ -35,7 +35,7 @@
           <v-icon>send</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-          <v-list-tile-title>Send</v-list-tile-title>
+          <v-list-tile-title>{{ $t('menu.send') }}</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
       <v-divider></v-divider>
@@ -44,7 +44,7 @@
           <v-icon>settings</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-          <v-list-tile-title>Settings</v-list-tile-title>
+          <v-list-tile-title>{{ $t('menu.settings') }}</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
       <v-divider></v-divider>

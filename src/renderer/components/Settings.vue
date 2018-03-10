@@ -5,7 +5,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">Profile</h3>
+              <h3 class="headline mb-0">{{ $t('settings.profile') }}</h3>
             </div>
             <v-spacer></v-spacer>
             <v-btn dark icon @click="toEdit" :disabled="isIdentified">
@@ -20,56 +20,56 @@
                 </v-list-tile-avatar>
                 <v-list-tile-content>
                   <v-list-tile-title>{{emailAddress}}</v-list-tile-title>
-                  <v-list-tile-sub-title>email address</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.emailAddress') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{firstName}}</v-list-tile-title>
-                  <v-list-tile-sub-title>first name</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.firstName') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{middleName}}</v-list-tile-title>
-                  <v-list-tile-sub-title>middle name</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.middleName') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{lastName}}</v-list-tile-title>
-                  <v-list-tile-sub-title>last name</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.lastName') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{address}}</v-list-tile-title>
-                  <v-list-tile-sub-title>address</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.address') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{genderType}}</v-list-tile-title>
-                  <v-list-tile-sub-title>genderType</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.genderType') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{dateOfBirth}}</v-list-tile-title>
-                  <v-list-tile-sub-title>dateOfBirth</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.dob') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{cellphoneNumber}}</v-list-tile-title>
-                  <v-list-tile-sub-title>cellphoneNumber</v-list-tile-sub-title>
+                  <v-list-tile-sub-title>{{ $t('profile.cellPhone') }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
             </v-list>
@@ -82,7 +82,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">Notification</h3>
+              <h3 class="headline mb-0">{{ $t('settings.notification') }}</h3>
             </div>
           </v-card-title>
           <v-container class="px-4">
@@ -90,7 +90,7 @@
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>Email Notification</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('settings.emailNotification') }}</v-list-tile-title>
                 </v-list-tile-content>
                 <v-list-tile-action>
                   <v-switch v-model="grantEmailNotification"></v-switch>
@@ -101,12 +101,39 @@
         </v-card>
       </v-flex>
     </v-layout>
+        <v-layout class="mt-4">
+      <v-flex xs12 sm10>
+        <v-card>
+          <v-card-title class="primary white--text" primary-title>
+            <div>
+              <h3 class="headline mb-0">{{ $t('settings.language') }}</h3>
+            </div>
+          </v-card-title>
+          <v-container class="px-4">
+            <v-list two-line>
+              <v-list-tile @click="toEnglish">
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>English</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+              <v-list-tile @click="toJapanese">
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>Japanese</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+            </v-list>
+          </v-container>
+        </v-card>
+      </v-flex>
+    </v-layout>
     <v-layout class="mt-4">
       <v-flex xs12 sm10>
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">ID Document</h3>
+              <h3 class="headline mb-0">{{ $t('settings.idDocument') }}</h3>
             </div>
           </v-card-title>
           <v-container class="px-4">
@@ -133,7 +160,7 @@
               <v-list-tile @click="toTermsOfService" ripple>
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>Terms of Service</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('settings.termOfService') }}</v-list-tile-title>
                 </v-list-tile-content>
                 <v-list-tile-action>
                   <v-icon>keyboard_arrow_right</v-icon>
@@ -142,7 +169,7 @@
               <v-list-tile @click="toPrivacyPolicy" ripple>
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>Privacy Policy</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('settings.privacyPolicy') }}</v-list-tile-title>
                 </v-list-tile-content>
                 <v-list-tile-action>
                   <v-icon>keyboard_arrow_right</v-icon>
@@ -157,8 +184,10 @@
 </template>
 
 <script>
+import util from '@/util'
 import router from '@/router'
 import { mapGetters } from 'vuex'
+const langCookieName = 'lang'
 export default {
   data () {
     return {
@@ -181,6 +210,37 @@ export default {
     device: 'device/device'
   }),
   methods: {
+    getLang () {
+      var lang = 'en'
+      const cookieLang = util.getCookie(langCookieName)
+      if (cookieLang) {
+        lang = cookieLang
+      }
+      return lang
+    },
+    changeTextButtonIdDocument () {
+      switch (this.identificationStatus) {
+        case 1:
+          this.textIdDocument = this.$t('profile.uploadIdDocument')
+          break
+        case 2:
+          this.textIdDocument = this.$t('profile.idDoucmentApproved')
+          break
+        default:
+          this.textIdDocument = this.$t('profile.idDocumentUnderReview')
+          break
+      }
+    },
+    toEnglish () {
+      this.$i18n.set('en')
+      util.setCookie(langCookieName, 'en', 365)
+      this.changeTextButtonIdDocument()
+    },
+    toJapanese () {
+      this.$i18n.set('ja')
+      util.setCookie(langCookieName, 'ja', 365)
+      this.changeTextButtonIdDocument()
+    },
     toEdit () {
       router.push({ name: 'settingsProfileEdit' })
     },
@@ -189,10 +249,18 @@ export default {
       router.push({ name: 'settingsIdUploader' })
     },
     toTermsOfService () {
-      router.push({ name: 'settingsTermsOfService' })
+      if (this.getLang() === 'en') {
+        router.push({ name: 'settingsTermsOfService' })
+        return
+      }
+      router.push({ name: 'settingsJaTermsOfService' })
     },
     toPrivacyPolicy () {
-      router.push({ name: 'settingsPrivacyPolicy' })
+      if (this.getLang() === 'en') {
+        router.push({ name: 'settingsPrivacyPolicy' })
+        return
+      }
+      router.push({ name: 'settingsJaPrivacyPolicy' })
     }
   },
   watch: {
@@ -240,17 +308,7 @@ export default {
     })
 
     console.log(this.identificationStatus)
-    switch (this.identificationStatus) {
-      case 1:
-        this.textIdDocument = 'Under review for ID Document'
-        break
-      case 2:
-        this.textIdDocument = 'ID Document was approved'
-        break
-      default:
-        this.textIdDocument = 'Upload Your ID Document'
-        break
-    }
+    this.changeTextButtonIdDocument()
   }
 }
 </script>

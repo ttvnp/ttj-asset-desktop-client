@@ -8,7 +8,7 @@
               <v-icon>chevron_left</v-icon>
             </v-btn>
             <div>
-              <h3 class="headline mb-0">Profile</h3>
+              <h3 class="headline mb-0">{{ $t('profile.profileLabel') }}</h3>
             </div>
           </v-card-title>
           <v-container v-if="errMessage.length > 0">
