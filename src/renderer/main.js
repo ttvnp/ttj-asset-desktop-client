@@ -212,103 +212,105 @@ const ja = {
 }
 
 // for Vietnamese
-const en = {
-    validate: {
-        emailMustBeValid: 'Địa chỉ mail không đúng.',
-        amountMustBeValid: 'Số điểm không đúng.'
-    },
-    require: {
-        itemIsRequired: 'Mục bắt buộc',
-        passwordIsRequired: 'Hãy nhập mật khẩu',
-        codeIsRequired: 'Hãy nhập mã xác nhận.',
-        emailIsRequired: 'Hãy nhập địa chỉ mail.'  },
-    signUp: {
-        pleaseSetUpYourWalletFirst: 'Hãy tạo ví tiền có giá trị'
-    },
-    signUpCode: {
-        verifyEmail: 'Hãy tạo mail có giá trị',
-        pleaseProvideVerificationCodeWhichWasSentByEmail: 'Hãy nhập mã xác nhận đã được ghi trong mail.',
-        code: 'Mã xác nhận',
-        verificationCodeWhichWasSentByEmail: 'Mã xác nhận đã được gửi bằng mail.',
-        passwordOnImport: 'Mật khẩu khi nhập',
-        passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Mật khẩu đã được gửi bằng email khi bạn tạo một tài khoản vào lần đầu tiên.'
-    },
-    signUpEmail: {
-        registerEmail: 'Mail đăng ký',
-        pleaseProvideYourEmailAddresToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
-        onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Sau khi bạn gửi mẫu đơn này, sau đó chúng tôi sẽ gửi cho bạn email xác nhận.',
-        iAgressWith: 'Tôi đồng ý.',
-        termOfServices: 'điều khoản dịch vụ.'
-    },
-    signUpEnd: {
-        accountActivated: 'Đã kích hoạt tài khoản',
-        yourAccountHasBeenActivatedPleaseEnjoy: 'Tài khoản của bạn đã được kích hoạt. Hãy tận hưởng!'
-    },
-    home: {
-        balanceLabel: 'Số dư tài khoản.',
-        paymentHistory: 'Lịch sử thanh toán.'
-    },
-    menu: {
-        home: 'Nhà',
-        qrCode: 'Mã QR',
-        send: 'Gửi',
-        settings: 'Cài đặt'
-    },
-    qrCode: {
-        qrCodeLabel: ' Mã QR',
-        assetCode: 'Mã tài sản',
-        amount: 'Số lượng',
-        enterHowMuchYouWantToBeReceived: 'Nhập số tiền bạn muốn nhận được.',
-        AmountMustBeValid: 'Số lượng ko đúng.'
-    },
-    send: {
-        balances: 'Số dư',    sendLabel: 'Gửi',
-        emailAdress: 'Địa chỉ mail',
-        assetCode: 'Mã tài khoản',
-        amount: 'Số lượng',
-        youCannotUseThisFunctionUntilYourIdIsVerified: 'Bạn không thể sử dụng chức năng này cho đến khi ID của bạn được xác minh.',
-        youCannotSendToYourSelf: 'Bạn không thể gửi cho chính mình.',
-        amountMustBeLessThanTotal: 'Số tiền phải nhỏ hơn tổng.',
-        areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi. '
-    },
-    settings: {
-        language: 'Ngôn ngữ',
-        profile: 'Hồ sơ',
-        notification: 'Thông báo',
-        emailNotification: 'Thông báo email',
-        idDocument: 'Tài liệu ID',
-        termOfService: 'Điều khoản Dịch vụ',
-        privacyPolicy: 'Chính sách Bảo mật'
-    },
-    settingsUploader: {
-        pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh du lịch của bạn lên.',
-        theFollowingItemsMustBeClearlyVisible: 'Các mục sau đây phải được rõ ràng.',
-        onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'Khi bạn tải ảnh lên, bạn sẽ không thể chỉnh sửa hồ sơ của mình.'
-    },
-    profile: {
-        profileLabel: 'Hồ sơ',
-        emailAddress: 'Địa chỉ mail',
-        name: 'Tên',
-        firstName: 'Họ',
-        middleName: 'Tên đệm',
-        lastName: 'Tên chính',
-        address: 'Địa chỉ',
-        genderType: 'Giới tính',
-        dob: 'Ngày lập',
-        doe: Ngày hết hạn'',
-        cellPhone: 'Số điện thoại di động',
-        facePhoto: 'Ảnh đại diện',
-        uploadIdDocument: 'Tải dữ liệu ID của bạn lên',
-        idDoucmentApproved: 'Dữ liệu ID đã được phê duyệt',
-        idDocumentUnderReview: 'Đang xem xét dữ liệu ID'
-    },
-    general: {
-        noData: 'Không có dữ liệu',
-        start: 'Bắt đầu',
-        ok: 'OK',
-        cancel: 'Hủy',
-        send: 'Gửi'
-    }
+const vi = {
+  validate: {
+    emailMustBeValid: 'Địa chỉ mail không đúng.',
+    amountMustBeValid: 'Số điểm không đúng.'
+  },
+  require: {
+    itemIsRequired: 'Mục bắt buộc',
+    passwordIsRequired: 'Hãy nhập mật khẩu',
+    codeIsRequired: 'Hãy nhập mã xác nhận.',
+    emailIsRequired: 'Hãy nhập địa chỉ mail.'
+  },
+  signUp: {
+    pleaseSetUpYourWalletFirst: 'Hãy tạo ví tiền có giá trị'
+  },
+  signUpCode: {
+    verifyEmail: 'Hãy tạo mail có giá trị',
+    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Hãy nhập mã xác nhận đã được ghi trong mail.',
+    code: 'Mã xác nhận',
+    verificationCodeWhichWasSentByEmail: 'Mã xác nhận đã được gửi bằng mail.',
+    passwordOnImport: 'Mật khẩu khi nhập',
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Mật khẩu đã được gửi bằng email khi bạn tạo một tài khoản vào lần đầu tiên.'
+  },
+  signUpEmail: {
+    registerEmail: 'Mail đăng ký',
+    pleaseProvideYourEmailAddresToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
+    onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Sau khi bạn gửi mẫu đơn này, sau đó chúng tôi sẽ gửi cho bạn email xác nhận.',
+    iAgressWith: 'Tôi đồng ý.',
+    termOfServices: 'điều khoản dịch vụ.'
+  },
+  signUpEnd: {
+    accountActivated: 'Đã kích hoạt tài khoản',
+    yourAccountHasBeenActivatedPleaseEnjoy: 'Tài khoản của bạn đã được kích hoạt. Hãy tận hưởng!'
+  },
+  home: {
+    balanceLabel: 'Số dư tài khoản.',
+    paymentHistory: 'Lịch sử thanh toán.'
+  },
+  menu: {
+    home: 'Nhà',
+    qrCode: 'Mã QR',
+    send: 'Gửi',
+    settings: 'Cài đặt'
+  },
+  qrCode: {
+    qrCodeLabel: ' Mã QR',
+    assetCode: 'Mã tài sản',
+    amount: 'Số lượng',
+    enterHowMuchYouWantToBeReceived: 'Nhập số tiền bạn muốn nhận được.',
+    AmountMustBeValid: 'Số lượng ko đúng.'
+  },
+  send: {
+    balances: 'Số dư',
+    sendLabel: 'Gửi',
+    emailAdress: 'Địa chỉ mail',
+    assetCode: 'Mã tài khoản',
+    amount: 'Số lượng',
+    youCannotUseThisFunctionUntilYourIdIsVerified: 'Bạn không thể sử dụng chức năng này cho đến khi ID của bạn được xác minh.',
+    youCannotSendToYourSelf: 'Bạn không thể gửi cho chính mình.',
+    amountMustBeLessThanTotal: 'Số tiền phải nhỏ hơn tổng.',
+    areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi. '
+  },
+  settings: {
+    language: 'Ngôn ngữ',
+    profile: 'Hồ sơ',
+    notification: 'Thông báo',
+    emailNotification: 'Thông báo email',
+    idDocument: 'Tài liệu ID',
+    termOfService: 'Điều khoản Dịch vụ',
+    privacyPolicy: 'Chính sách Bảo mật'
+  },
+  settingsUploader: {
+    pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh du lịch của bạn lên.',
+    theFollowingItemsMustBeClearlyVisible: 'Các mục sau đây phải được rõ ràng.',
+    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'Khi bạn tải ảnh lên, bạn sẽ không thể chỉnh sửa hồ sơ của mình.'
+  },
+  profile: {
+    profileLabel: 'Hồ sơ',
+    emailAddress: 'Địa chỉ mail',
+    name: 'Tên',
+    firstName: 'Họ',
+    middleName: 'Tên đệm',
+    lastName: 'Tên chính',
+    address: 'Địa chỉ',
+    genderType: 'Giới tính',
+    dob: 'Ngày lập',
+    doe: 'Ngày hết hạn',
+    cellPhone: 'Số điện thoại di động',
+    facePhoto: 'Ảnh đại diện',
+    uploadIdDocument: 'Tải dữ liệu ID của bạn lên',
+    idDoucmentApproved: 'Dữ liệu ID đã được phê duyệt',
+    idDocumentUnderReview: 'Đang xem xét dữ liệu ID'
+  },
+  general: {
+    noData: 'Không có dữ liệu',
+    start: 'Bắt đầu',
+    ok: 'OK',
+    cancel: 'Hủy',
+    send: 'Gửi'
+  }
 }
 
 // install plugin
@@ -318,6 +320,7 @@ Vue.use(vuexI18n.plugin, storeVuex)
 
 Vue.i18n.add('en', en)
 Vue.i18n.add('ja', ja)
+Vue.i18n.add('vi', vi)
 
 Vue.i18n.set('en')
 
