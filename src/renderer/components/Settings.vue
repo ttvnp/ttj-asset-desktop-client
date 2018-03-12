@@ -114,13 +114,19 @@
               <v-list-tile @click="toEnglish">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>English</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('language.english') }}</v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="toJapanese">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>Japanese</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('language.japanese') }}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+               <v-list-tile @click="toVietnamese">
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ $t('language.vietnamese') }}</v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
             </v-list>
@@ -239,6 +245,11 @@ export default {
     toJapanese () {
       this.$i18n.set('ja')
       util.setCookie(langCookieName, 'ja', 365)
+      this.changeTextButtonIdDocument()
+    },
+    toVietnamese () {
+      this.$i18n.set('vi')
+      util.setCookie(langCookieName, 'vi', 365)
       this.changeTextButtonIdDocument()
     },
     toEdit () {
