@@ -82,7 +82,7 @@
             <p>&nbsp;</p>
 
             <p>We may collect information from other sources and combine that with the information
-             collected through SEN POINT .</p>
+             collected through SEN POINT.</p>
 
             <p>e.g. We collect your nonpublic personal information from third parties including
              identity verification services.</p>
@@ -264,7 +264,7 @@
 
             <p>&nbsp;</p>
 
-            <p><b>Analysis service provided by others companies</b></p>
+            <p><b>Analysis service provided by other companies</b></p>
 
             <p>&nbsp;</p>
 
