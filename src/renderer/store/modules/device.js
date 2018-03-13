@@ -4,13 +4,15 @@ import util from '@/util'
 
 const state = {
   isActivated: false,
-  device: null
+  device: null,
+  lang: 'en'
 }
 
 const getters = {
   isActivated: state => state.isActivated,
   isDeviceLoaded: state => state.device !== null,
-  device: state => state.device
+  device: state => state.device,
+  lang: state => state.lang
 }
 
 const actions = {
@@ -156,6 +158,21 @@ const actions = {
     }).catch(function (error) {
       onError(null, null, error)
     })
+  },
+  getLanguage ({ commit, state }, { callback }) {
+    deviceDB.getLanguageState().then(function (language) {
+      let lang = state.lang
+      if (language === null) {
+        callback(lang)
+        return
+      }
+      commit('setLanguage', language.lang)
+      callback(language.lang)
+    })
+  },
+  changeLanguage ({ commit, state }, { language }) {
+    deviceDB.setLanguageState(language)
+    commit('setLanguage', language)
   }
 }
 
@@ -163,6 +180,9 @@ const mutations = {
   setDevice (state, device) {
     state.device = device
     state.isActivated = device.isActivated
+  },
+  setLanguage (state, language) {
+    state.lang = language
   }
 }
 
