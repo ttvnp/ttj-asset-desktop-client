@@ -4,21 +4,16 @@
 </template>
 
 <script>
-import util from '@/util'
 import router from '@/router'
-const langCookieName = 'lang'
 export default {
   name: 'index',
   methods: {
   },
   mounted () {
-    var lang = 'en'
-    const cookieLang = util.getCookie(langCookieName)
-    if (cookieLang) {
-      lang = cookieLang
-    }
-    this.$i18n.set(lang)
     const self = this
+    this.$store.dispatch('device/getLanguage', { callback: function (lang) {
+      self.$i18n.set(lang)
+    }})
     this.$store.dispatch('device/init', { callback: function (isDeviceReady) {
       if (isDeviceReady) {
         self.$store.dispatch('app/setShowDrawer', true)

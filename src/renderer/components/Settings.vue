@@ -114,13 +114,19 @@
               <v-list-tile @click="toEnglish">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>English</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('language.english') }}</v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile @click="toJapanese">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>Japanese</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('language.japanese') }}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+               <v-list-tile @click="toVietnamese">
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ $t('language.vietnamese') }}</v-list-tile-title>
                 </v-list-tile-content>
               </v-list-tile>
             </v-list>
@@ -184,10 +190,8 @@
 </template>
 
 <script>
-import util from '@/util'
 import router from '@/router'
 import { mapGetters } from 'vuex'
-const langCookieName = 'lang'
 export default {
   data () {
     return {
@@ -210,14 +214,6 @@ export default {
     device: 'device/device'
   }),
   methods: {
-    getLang () {
-      var lang = 'en'
-      const cookieLang = util.getCookie(langCookieName)
-      if (cookieLang) {
-        lang = cookieLang
-      }
-      return lang
-    },
     changeTextButtonIdDocument () {
       switch (this.identificationStatus) {
         case 1:
@@ -231,14 +227,27 @@ export default {
           break
       }
     },
+    changeLang (lang) {
+      const newLanguage = {
+        lang: lang
+      }
+      this.$store.dispatch('device/changeLanguage', {
+        language: newLanguage
+      })
+    },
     toEnglish () {
       this.$i18n.set('en')
-      util.setCookie(langCookieName, 'en', 365)
+      this.changeLang('en')
       this.changeTextButtonIdDocument()
     },
     toJapanese () {
       this.$i18n.set('ja')
-      util.setCookie(langCookieName, 'ja', 365)
+      this.changeLang('ja')
+      this.changeTextButtonIdDocument()
+    },
+    toVietnamese () {
+      this.$i18n.set('vi')
+      this.changeLang('vi')
       this.changeTextButtonIdDocument()
     },
     toEdit () {
@@ -249,18 +258,18 @@ export default {
       router.push({ name: 'settingsIdUploader' })
     },
     toTermsOfService () {
-      if (this.getLang() === 'en') {
-        router.push({ name: 'settingsTermsOfService' })
+      if (this.$i18n.locale() === 'ja') {
+        router.push({ name: 'settingsJaTermsOfService' })
         return
       }
-      router.push({ name: 'settingsJaTermsOfService' })
+      router.push({ name: 'settingsTermsOfService' })
     },
     toPrivacyPolicy () {
-      if (this.getLang() === 'en') {
-        router.push({ name: 'settingsPrivacyPolicy' })
+      if (this.$i18n.locale() === 'ja') {
+        router.push({ name: 'settingsJaPrivacyPolicy' })
         return
       }
-      router.push({ name: 'settingsJaPrivacyPolicy' })
+      router.push({ name: 'settingsPrivacyPolicy' })
     }
   },
   watch: {
