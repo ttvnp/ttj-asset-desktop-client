@@ -7,6 +7,11 @@ const db = new Datastore({
   filename: path.join(config.dbFilePath, '/device.db')
 })
 
+const dbLanguage = new Datastore({
+  autoload: true,
+  filename: path.join(config.dbFilePath, '/device_language.db')
+})
+
 export default {
   getDevice () {
     return new Promise(function (resolve, reject) {
@@ -41,6 +46,34 @@ export default {
               reject(err)
             } else {
               resolve(newDevice)
+            }
+          })
+        }
+      })
+    })
+  },
+  getLanguageState () {
+    return new Promise(function (resolve, reject) {
+      dbLanguage.findOne({}, function (err, language) {
+        if (err) {
+          reject(err)
+        } else {
+          resolve(language)
+        }
+      })
+    })
+  },
+  setLanguageState (language) {
+    return new Promise(function (resolve, reject) {
+      dbLanguage.remove({}, { multi: true }, function (err, languageRemoved) {
+        if (err) {
+          reject(err)
+        } else {
+          dbLanguage.insert(language, function (err, newLanguage) {
+            if (err) {
+              reject(err)
+            } else {
+              resolve(newLanguage)
             }
           })
         }
