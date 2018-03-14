@@ -12,6 +12,11 @@ import('vuetify/dist/vuetify.min.css')
 
 // for English
 const en = {
+  language: {
+    english: 'English',
+    japanese: 'Japanese',
+    vietnamese: 'Vietnamese'
+  },
   validate: {
     emailMustBeValid: 'Email address must be valid.',
     amountMustBeValid: 'Amount must be valid'
@@ -114,6 +119,11 @@ const en = {
 
 // for Japanese
 const ja = {
+  language: {
+    english: '英語',
+    japanese: '日本語',
+    vietnamese: 'ベトナム語'
+  },
   validate: {
     emailMustBeValid: 'メールアドレスの形式が正しくありません',
     amountMustBeValid: 'Point/Coinが正しくありません'
@@ -213,6 +223,11 @@ const ja = {
 
 // for Vietnamese
 const vi = {
+  language: {
+    english: 'Tiếng Anh',
+    japanese: 'Tiếng Nhật',
+    vietnamese: 'Tiếng Việt'
+  },
   validate: {
     emailMustBeValid: 'Địa chỉ mail không đúng.',
     amountMustBeValid: 'Số điểm không đúng.'
