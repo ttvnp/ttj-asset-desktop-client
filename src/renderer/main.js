@@ -63,7 +63,7 @@ const en = {
     qrCodeLabel: 'QR Code',
     assetCode: 'Asset Code',
     amount: 'Amount',
-    enterHowMuchYouWantToBeReceived: 'enter how much you want to be received.',
+    enterHowMuchYouWantToBeReceived: 'Enter how much you want to be received.',
     AmountMustBeValid: 'Amount must be valid'
   },
   send: {
@@ -75,7 +75,8 @@ const en = {
     youCannotUseThisFunctionUntilYourIdIsVerified: 'You cannot use this function until your ID is verified.',
     youCannotSendToYourSelf: 'You cannot send to yourself',
     amountMustBeLessThanTotal: 'Amount must be less than total',
-    areYouSureYouWantToSend: 'Are you sure you want to send '
+    areYouSureYouWantToSend: 'Are you sure you want to send ',
+    enterHowMuchYouWantToSend: 'Enter how much you want to send.'
   },
   settings: {
     language: 'Languages',
