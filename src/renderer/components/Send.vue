@@ -34,7 +34,7 @@
           </v-container>
           <v-container class="px-4">
             <v-form v-model="valid">
-              <v-text-field 
+              <v-text-field
                  :label="$t('profile.emailAddress')"
                 v-model="email"
                 :rules="emailRules"
@@ -141,7 +141,11 @@ export default {
         emailAddress: this.email,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
-          self.dialogDesc = self.$t('send.areYouSureYouWantToSend') + self.amount + ' ' + self.assetCode + ' to ' + self.email + '?'
+          self.dialogDesc = self.$t('send.areYouSureYouWantToSend', {
+            amount: self.amount,
+            assetCode: self.assetCode,
+            email: self.email
+          })
           self.dialog = true
         },
         onError: function (code, message, error) {
