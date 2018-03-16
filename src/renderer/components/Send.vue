@@ -34,7 +34,7 @@
           </v-container>
           <v-container class="px-4">
             <v-form v-model="valid">
-              <v-text-field 
+              <v-text-field
                  :label="$t('profile.emailAddress')"
                 v-model="email"
                 :rules="emailRules"
@@ -51,7 +51,7 @@
               ></v-select>
               <v-text-field :label="$t('send.amount')"
                 v-model="amount"
-                :hint="$t('send.enterHowMuchYouWantTosend')"
+                :hint="$t('send.enterHowMuchYouWantToSend')"
                 type="number"
                 :rules="amountRules"
                 required
@@ -70,8 +70,8 @@
             <v-card-text>{{dialogDesc}}</v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="darken-1" flat="flat" @click.native="dialog = false">{{ $t('general.send') }}L</v-btn>
-              <v-btn color="primary" flat="flat" @click.native="submit()">{{ $t('general.cancel') }}</v-btn>
+              <v-btn color="darken-1" flat="flat" @click.native="dialog = false">{{ $t('general.cancel') }}</v-btn>
+              <v-btn color="primary" flat="flat" @click.native="submit()">{{ $t('general.send') }}</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -141,7 +141,11 @@ export default {
         emailAddress: this.email,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
-          self.dialogDesc = this.$t('send.areYouSureYouWantToSend') + self.amount + self.assetCode + ' to ' + self.email + '?'
+          self.dialogDesc = self.$t('send.areYouSureYouWantToSend', {
+            amount: self.amount,
+            assetCode: self.assetCode,
+            email: self.email
+          })
           self.dialog = true
         },
         onError: function (code, message, error) {

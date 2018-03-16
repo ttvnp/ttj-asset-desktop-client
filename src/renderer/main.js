@@ -63,7 +63,7 @@ const en = {
     qrCodeLabel: 'QR Code',
     assetCode: 'Asset Code',
     amount: 'Amount',
-    enterHowMuchYouWantToBeReceived: 'enter how much you want to be received.',
+    enterHowMuchYouWantToBeReceived: 'Enter how much you want to be received.',
     AmountMustBeValid: 'Amount must be valid'
   },
   send: {
@@ -75,7 +75,8 @@ const en = {
     youCannotUseThisFunctionUntilYourIdIsVerified: 'You cannot use this function until your ID is verified.',
     youCannotSendToYourSelf: 'You cannot send to yourself',
     amountMustBeLessThanTotal: 'Amount must be less than total',
-    areYouSureYouWantToSend: 'Are you sure you want to send '
+    areYouSureYouWantToSend: 'Are you sure you want to send {amount} {assetCode} to {email}?',
+    enterHowMuchYouWantToSend: 'Enter how much you want to send.'
   },
   settings: {
     language: 'Languages',
@@ -180,6 +181,9 @@ const ja = {
     assetCode: 'アセットコード',
     amount: '量',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。/nプロフィールページからご本人確認(ID)を申請してください。',
+    youCannotSendToYourSelf: '自身のアカウントには送信できません',
+    amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
+    areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
     enterHowMuchYouWantTosend: '送信額を入力してください'
   },
   settings: {
@@ -210,14 +214,15 @@ const ja = {
     cellPhone: '電話番号',
     facePhoto: '顔写真',
     uploadIdDocument: '本人確認書類(ID)のアップロード',
-    idDoucmentApproved: 'ご本人確認資料(ID)審査中',
-    idDocumentUnderReview: 'ご本人確認資料(ID)承認済'
+    idDoucmentApproved: 'ご本人確認資料(ID)承認済',
+    idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
   general: {
     noData: 'データが存在しません',
     start: '始める',
     ok: 'OK',
-    cancel: 'キャンセル'
+    cancel: 'キャンセル',
+    send: '送信'
   }
 }
 
@@ -286,7 +291,8 @@ const vi = {
     youCannotUseThisFunctionUntilYourIdIsVerified: 'Bạn không thể sử dụng chức năng này cho đến khi ID của bạn được xác minh.',
     youCannotSendToYourSelf: 'Bạn không thể gửi cho chính mình.',
     amountMustBeLessThanTotal: 'Số tiền phải nhỏ hơn tổng.',
-    areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi. '
+    areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi.',
+    enterHowMuchYouWantToSend: ''
   },
   settings: {
     language: 'Ngôn ngữ',
