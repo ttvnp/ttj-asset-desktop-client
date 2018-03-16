@@ -70,6 +70,7 @@
         this.$store.dispatch('app/setLoading', true)
 
         this.$store.dispatch('user/getTransactions', {
+          forceRefresh: true,
           pageNum: pageNum > 0 ? pageNum : 1,
           onSuccess: function ({ userTransactions, totalCnt, totalPageNum, currentPageNum }) {
             self.transactionData.userTransactions = userTransactions

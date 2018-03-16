@@ -217,13 +217,13 @@ export default {
     changeTextButtonIdDocument () {
       switch (this.identificationStatus) {
         case 1:
-          this.textIdDocument = this.$t('profile.uploadIdDocument')
+          this.textIdDocument = this.$t('profile.idDocumentUnderReview')
           break
         case 2:
           this.textIdDocument = this.$t('profile.idDoucmentApproved')
           break
         default:
-          this.textIdDocument = this.$t('profile.idDocumentUnderReview')
+          this.textIdDocument = this.$t('profile.uploadIdDocument')
           break
       }
     },

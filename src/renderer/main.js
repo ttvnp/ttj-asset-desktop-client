@@ -214,8 +214,8 @@ const ja = {
     cellPhone: '電話番号',
     facePhoto: '顔写真',
     uploadIdDocument: '本人確認書類(ID)のアップロード',
-    idDoucmentApproved: 'ご本人確認資料(ID)審査中',
-    idDocumentUnderReview: 'ご本人確認資料(ID)承認済'
+    idDoucmentApproved: 'ご本人確認資料(ID)承認済',
+    idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
   general: {
     noData: 'データが存在しません',
