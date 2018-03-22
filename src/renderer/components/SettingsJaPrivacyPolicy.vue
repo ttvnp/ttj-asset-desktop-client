@@ -248,3 +248,8 @@
     }
   }
 </script>
+<style scoped>
+  div{
+    padding: 8px;
+  }
+</style>
