@@ -269,6 +269,10 @@ export default {
         router.push({ name: 'settingsJaPrivacyPolicy' })
         return
       }
+      if (this.$i18n.locale() === 'vi') {
+        router.push({ name: 'settingsVnPrivacyPolicy' })
+        return
+      }
       router.push({ name: 'settingsPrivacyPolicy' })
     }
   },

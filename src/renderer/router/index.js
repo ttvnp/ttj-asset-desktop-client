@@ -86,6 +86,11 @@ export default new Router({
       component: require('@/components/SettingsJaPrivacyPolicy').default
     },
     {
+      path: '/settings/vn_privacy_policy',
+      name: 'settingsVnPrivacyPolicy',
+      component: require('@/components/SettingsVnPrivacyPolicy').default
+    },
+    {
       path: '*',
       redirect: '/'
     }
