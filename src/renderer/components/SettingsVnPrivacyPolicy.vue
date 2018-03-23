@@ -1,209 +1,247 @@
 <template>
-  <v-card>
-    <v-card-title class="primary white--text" primary-title>
-        <v-btn dark icon @click="back">
-            <v-icon>chevron_left</v-icon>
-        </v-btn>
-        <div>
-            <h3 class="headline mb-0">{{ $t('settings.privacyPolicy') }}</h3>
-        </div>
-    </v-card-title>
-    <div>
-        <p>
-        <strong>
-            Ch&iacute;nh s&aacute;ch bảo mật
-        </strong>
-        </p>
-        <p>
-            Trong ch&iacute;nh s&aacute;ch bảo mật n&agrave;y, C&ocirc;ng ty cổ phần TTJ v&agrave; c&aacute;c c&ocirc;ng ty con đ&oacute; gọi chung l&agrave; "C&ocirc;ng ty t&ocirc;i" sẽ giải th&iacute;ch về l&agrave;m sao để thu thập, sử dụng, c&ocirc;ng khai, bảo vệ th&ocirc;ng tin của kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            Th&ocirc;ng tin được &aacute;p dụng trong ch&iacute;nh s&aacute;ch n&agrave;y l&agrave; những th&ocirc;ng tin c&ocirc;ng ty t&ocirc;i thu thập khi kh&aacute;ch h&agrave;ng truy cập v&agrave;o trang web hay ứng dụng di động của TTJ (gọi chung l&agrave; dự &aacute;n SENtoken), sử dụng những th&ocirc;ng tin đ&oacute; hoặc sẽ trao đổi th&ocirc;ng tin với c&ocirc;ng ty t&ocirc;i bằng một c&aacute;ch kh&aacute;c theo c&aacute;ch thức giải th&iacute;ch ở b&ecirc;n dưới:
-        </p>
-        <p>
-            C&ocirc;ng ty t&ocirc;i đ&ocirc;i l&uacute;c sẽ chỉnh sửa ch&iacute;nh s&aacute;ch bảo mật n&agrave;y. Trường hợp thay đổi, c&ocirc;ng ty t&ocirc;i sẽ th&ocirc;ng b&aacute;o tới kh&aacute;ch h&agrave;ng bằng việc sửa ng&agrave;y của ch&iacute;nh s&aacute;ch n&agrave;y. Hoặc t&ugrave;y v&agrave;o t&igrave;nh huống, v&iacute; dụ như c&ocirc;ng ty t&ocirc;i sẽ li&ecirc;n lạc th&ecirc;m điều khoản bằng việc gửi th&ocirc;ng b&aacute;o qua mail hoặc LINE tới kh&aacute;ch h&agrave;ng l&agrave; sẽ th&ecirc;m những g&igrave; đ&atilde; thay đổi v&agrave;o trang chủ của dự &aacute;n SENtoken.
-        </p>
-        <p>
-            Để duy tr&igrave; t&igrave;nh trạng biết về quyền lợi v&agrave; lựa chọn của kh&aacute;ch h&agrave;ng li&ecirc;n quan tới th&ocirc;ng tin bảo mật, ri&ecirc;ng tư của c&ocirc;ng ty t&ocirc;i th&igrave; ch&uacute;ng t&ocirc;i rất khuyến c&aacute;o kh&aacute;ch h&agrave;ng xem lại ch&iacute;nh s&aacute;ch bảo mật mỗi lần truy cập v&agrave;o dự &aacute;n SENtoken hay mỗi lần sử dụng dịch vụ n&agrave;y.
-        </p>
-        <p>
-            <strong>
-                Thu thập th&ocirc;ng tin
-            </strong>
-        </p>
-        <p>
-            Th&ocirc;ng tin kh&aacute;ch h&agrave;ng cung cấp cho c&ocirc;ng ty t&ocirc;i
-        </p>
-        <p>
-            C&ocirc;ng ty t&ocirc;i sẽ thu thập những th&ocirc;ng tin m&agrave; kh&aacute;ch h&agrave;ng trực tiếp cung cấp cho c&ocirc;ng ty t&ocirc;i. Ch&uacute;ng t&ocirc;i sẽ thu thập th&ocirc;ng tin kh&aacute;ch h&agrave;ng khi kh&aacute;ch h&agrave;ng tạo t&agrave;i khoản, kết th&uacute;c giao dịch, viết v&agrave;o form mẫu, trả lời điều tra, đăng thư v&agrave;o form mẫu của c&ocirc;ng ty t&ocirc;i, hay khi gửi tin cho c&ocirc;ng ty t&ocirc;i bằng c&aacute;ch thức kh&aacute;c.
-        </p>
-        <p>
-            C&aacute;c loại th&ocirc;ng tin c&oacute; thể thu thập l&agrave; những loại như sau:
-        </p>
-        <p>
-            ・Th&ocirc;ng tin li&ecirc;n lạc (t&ecirc;n kh&aacute;ch h&agrave;ng, địa chỉ, số điện thoại, địa chỉ e-mail, ....).
-        </p>
-        <p>
-            ・Th&ocirc;ng tin t&agrave;i ch&iacute;nh (số thẻ t&iacute;n dụng, th&ocirc;ng tin t&agrave;i khoản tiền tệ ảo, v.v ...).
-        </p>
-        <p>
-            ・Số ID ch&iacute;nh phủ ph&aacute;t h&agrave;nh (giấy ph&eacute;p l&aacute;i xe, th&ocirc;ng tin hộ chiếu, v.v ...).
-        </p>
-        <p>
-            ・Th&ocirc;ng tin nh&acirc;n khẩu học (ng&agrave;y sinh, giới t&iacute;nh, nghề nghiệp, t&igrave;nh h&igrave;nh việc l&agrave;m, th&ocirc;ng tin kh&aacute;c).
-        </p>
-        <p>
-            Th&ocirc;ng tin m&agrave; c&ocirc;ng ty t&ocirc;i thu thập từ c&aacute;c nguồn th&ocirc;ng tin kh&aacute;c
-        </p>
-        <p>
-            Cũng c&oacute; trường hợp c&ocirc;ng ty t&ocirc;i thu thập th&ocirc;ng từ nguồn th&ocirc;ng tin kh&aacute;c v&agrave; kết hợp với th&ocirc;ng tin thu thập qua dự &aacute;n SENtoken.V&iacute; dụ, c&oacute; trường hợp c&ocirc;ng ty t&ocirc;i thu thập từ b&ecirc;n thứ 3 bao gồm th&ocirc;ng tin c&aacute; nh&acirc;n kh&ocirc;ng c&ocirc;ng khai, cơ quan dịch vụ x&aacute;c minh danh t&iacute;nh kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            Th&ocirc;ng tin c&ocirc;ng ty tự động thu nhập
-        </p>
-        <p>
-            Khi kh&aacute;ch h&agrave;ng truy cập v&agrave;o dự &aacute;n SENtoken hay khi sử dụng dự &aacute;n n&agrave;y ,C&ocirc;ng ty t&ocirc;i sẽ tự động thu thập th&ocirc;ng tin như sau:
-        </p>
-        <p>
-            ・Th&ocirc;ng tin giao dịch: Thu thập SENtoken, bao gồm c&aacute;c khoản đầu tư tương ứng với giao dịch, loại giao dịch đ&atilde; được thực hiện, v&agrave; c&aacute;c th&ocirc;ng tin giao dịch kh&aacute;c.
-        </p>
-        <p>
-            ・Th&ocirc;ng tin vị tr&iacute;: Nhận được sự đồng &yacute; của kh&aacute;ch h&agrave;ng từ trước, c&oacute; trường hợp ch&uacute;ng t&ocirc;i c&oacute; thể thu thập th&ocirc;ng tin vị tr&iacute; địa l&iacute; cụ thể từ thiết bị di động của kh&aacute;ch h&agrave;ng khi kh&aacute;ch h&agrave;ng truy cập hay sử dụng ứng dụng của c&ocirc;ng ty t&ocirc;i.
-        </p>
-        <p>
-            Chi tiết xin h&atilde;y tham khảo phần " Lựa chọn của kh&aacute;ch h&agrave;ng" viết b&ecirc;n dưới
-        </p>
-        <p>
-            ・Th&ocirc;ng tin thiết bị v&agrave; đăng nhập: C&ocirc;ng ty t&ocirc;i thu thập th&ocirc;ng tin về thiết bị di động hay m&aacute;y t&iacute;nh đang sử dụng để truy cập dịch vụ dự &aacute;n SENtoken bao gồm định danh thiết bị, th&ocirc;ng tin mạng di động, loại hệ điều h&agrave;nh v&agrave; tr&igrave;nh duyệt đang sử dụng.Ngo&agrave;i ra, c&ocirc;ng ty t&ocirc;i sẽ ghi ch&eacute;p cả những th&ocirc;ng tin về t&igrave;nh trạng sử dụng dịch vụ dự &aacute;n SENtoken của kh&aacute;ch h&agrave;ng bao gồm thời gian truy cập, trang web đ&atilde; hiển thị, địa chỉ IP, dữ liệu web tieu chuẩn kh&aacute;c v&agrave; c&aacute;c trang đ&atilde; truy cập trước v&agrave; sau khi chuyển đến c&aacute;c trang web của c&ocirc;ng ty t&ocirc;i.
-        </p>
-        <p>
-            ・Cookie v&agrave; c&ocirc;ng nghệ theo d&otilde;i tương tự: C&oacute; trường hợp c&ocirc;ng ty t&ocirc;i sẽ sử dụng c&ocirc;ng nghệ Cookie v&agrave; c&aacute;c c&ocirc;ng nghệ kh&aacute;c để thu thập th&ocirc;ng tin về kh&aacute;ch h&agrave;ng khi kh&aacute;ch h&agrave;ng li&ecirc;n hệ với dịch vụ dự &aacute;n SENtoken, bao gồm th&ocirc;ng tin về h&agrave;nh động xem tr&ecirc;n dịch vụ dự &aacute;n SENtoken của c&ocirc;ng ty t&ocirc;i. Cookie l&agrave; một tệp dữ liệu nhỏ được gửi từ m&aacute;y chủ web của ch&uacute;ng t&ocirc;i tới m&aacute;y t&iacute;nh hay thiết bị di động của kh&aacute;ch h&agrave;ng. Bằng những tệp dữ liệu n&agrave;y th&igrave; c&oacute; thể nắm bắt được kh&aacute;ch h&agrave;ng v&agrave;o dịch vụ SENtoken như thế n&agrave;o, khi n&agrave;o quay trở lại, đ&atilde; thăm những trang n&agrave;o v&agrave; c&ocirc;ng ty t&ocirc;i cũng c&oacute; thể nhận biết được việc đ&atilde; ho&agrave;n th&agrave;nh đăng nhập khi nhận được y&ecirc;u cầu trang từ tr&igrave;nh duyệt của kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            <strong>
-                Sử dụng th&ocirc;ng tin
-            </strong>
-        </p>
-        <p>
-            C&oacute; trường hợp c&ocirc;ng ty t&ocirc;i sẽ sử dụng th&ocirc;ng tin kh&aacute;ch h&agrave;ng như sau:
-        </p>
-        <p>
-            ・Cung cấp dịch vụ dự &aacute;n SENtoken v&agrave; hỗ trợ kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            ・Xử l&yacute; giao dịch v&agrave; gửi cho kh&aacute;ch h&agrave;ng th&ocirc;ng b&aacute;o về giao dịch của kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            ・Quản l&yacute; t&agrave;i khoản của kh&aacute;ch h&agrave;ng v&agrave; gửi th&ocirc;ng b&aacute;o kỹ thuật, địa chỉ li&ecirc;n hệ, cảnh b&aacute;o an to&agrave;n, hỗ trợ v&agrave; th&ocirc;ng b&aacute;o quản l&yacute;.
-        </p>
-        <p>
-            ・Tiến h&agrave;nh giải quyết c&aacute;c tranh chấp, thu ph&iacute;, v&agrave; khắc phục sự cố.
-        </p>
-        <p>
-            ・Ngăn chặn hoạt động tiềm ẩn đ&atilde; bị cấm hoặc phạm ph&aacute;p, v&agrave; tiến h&agrave;nh thực thi điều khoản sử dụng dịch vụ.
-        </p>
-        <p>
-            ・Tiến h&agrave;nh c&aacute; nh&acirc;n h&oacute;a, đo lường v&agrave; cải tiến dự &aacute;n dịch vụ SENtoken.
-        </p>
-        <p>
-            ・Đại diện của dự &aacute;n SENtoken v&agrave; c&aacute;c c&ocirc;ng ty kh&aacute;c sẽ gửi tiếp thị hoặc khuyến mại gồm c&aacute;c trường hợp bằng SMS, điện thoại, hay e-mail.
-        </p>
-        <p>
-            ・C&ocirc;ng ty t&ocirc;i sẽ li&ecirc;n kết, phối hợp th&ocirc;ng tin c&aacute; nhận của kh&aacute;ch h&agrave;ng với th&ocirc;ng tin nhận được từ c&ocirc;ng ty kh&aacute;c để dễ d&agrave;ng biết được thị hiếu kh&aacute;ch h&agrave;ng v&agrave; cung cấp dịch vụ tốt hơn cho kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            ・Mục địch của c&ocirc;ng ty t&ocirc;i l&agrave; sẽ ho&agrave;n th&agrave;nh mục ti&ecirc;u kh&aacute;c ngo&agrave;i mục ti&ecirc;u th&ocirc;ng tin được thu thập theo nội dung th&ocirc;ng b&aacute;o bằng c&aacute;ch thức kh&aacute;c trong phạm vi buộc phải được xem x&eacute;t bằng thu thập th&ocirc;ng tin c&aacute; nh&acirc;n của kh&aacute;ch h&agrave;ng hay trong dự &aacute;n SENtoken tại thời điểm thu thập th&ocirc;ng tin.
-        </p>
-        <p>
-            <strong>
-                C&ocirc;ng khai th&ocirc;ng tin
-            </strong>
-        </p>
-        <p>
-            C&oacute; trường hợp c&ocirc;ng ty t&ocirc;i sẽ c&ocirc;ng khai cho b&ecirc;n thứ 3 ngo&agrave;i c&ocirc;ng ty li&ecirc;n kết kh&ocirc;ng kể kh&aacute;ch h&agrave;nh l&agrave; kh&aacute;ch h&agrave;ng hiện nay, hay kh&aacute;ch h&agrave;ng trước kia, bao gồm th&ocirc;ng tin kh&ocirc;ng c&ocirc;ng khai hay do c&ocirc;ng ty kh&aacute;c thu thập hay th&ocirc;ng tin c&ocirc;ng ty t&ocirc;i tự thu thập về kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            (1)Đối với c&aacute;c nh&agrave; cung cấp dịch vụ tiến h&agrave;nh c&aacute;c dịch vụ tiếp thị thay cho ch&uacute;ng t&ocirc;i
-        </p>
-        <p>
-            (2)Cũng c&oacute; trường hợp tiến h&agrave;nh v&igrave; mục đ&iacute;ch kinh doanh hằng ng&agrave;y của c&ocirc;ng ty ch&uacute;ng t&ocirc;i như để xử l&yacute; giao dịch, để duy tr&igrave; t&agrave;i khoản, để đ&aacute;p ứng lệnh của t&ograve;a &aacute;n hay điều tra ph&aacute;p l&yacute;, để b&aacute;o c&aacute;o cho cơ quan điều tra t&iacute;n dụng. V&iacute; dụ, về mục ti&ecirc;u kinh doanh hằng ng&agrave;y của c&ocirc;ng ty t&ocirc;i th&igrave; cũng c&oacute; trường hợp cung cấp th&ocirc;ng tin về kh&aacute;ch h&agrave;ng như vậy.
-        </p>
-        <p>
-            ・Đối tượng đại diện cho dự &aacute;n SEN POINT để kh&aacute;ch h&agrave;ng ph&acirc;n chia vốn hay nh&agrave; cung cấp dự định ph&acirc;n chia vốn cho kh&aacute;ch h&agrave;ng ( Bao gồm th&ocirc;ng tin t&agrave;i khoản của kh&aacute;ch h&agrave;ng c&oacute; hoạt động kh&ocirc;ng v&agrave; t&agrave;i khoản đ&atilde; ho&agrave;n tất x&aacute;c minh chưa).
-        </p>
-        <p>
-            ・C&aacute;c nh&agrave; cung cấp, tư vấn v&agrave; c&aacute;c nh&agrave; cung cấp kh&aacute;c cần tiếp cận với th&ocirc;ng tin của kh&aacute;ch h&agrave;ng để thực hiện c&ocirc;ng việc thay mặt cho C&ocirc;ng ty. C&aacute;c nh&agrave; cung cấp dịch vụ n&agrave;y sẽ hỗ trợ nghiệp vụ của ch&uacute;ng t&ocirc;i như ph&ograve;ng chống lừa đảo v&agrave; dịch vụ kỹ thuật.
-        </p>
-        <p>
-            ・Trường hợp c&ocirc;ng ty t&ocirc;i xem x&eacute;t theo quan điểm của m&igrave;nh l&agrave; cần c&ocirc;ng khai th&ocirc;ng tin của kh&aacute;ch h&agrave;ng để ngăn ngừa những tổn thất vật chất hoặc tổn thất t&agrave;i ch&iacute;nh, để b&aacute;o c&aacute;o c&aacute;c hoạt động bị nghi ngờ phạm ph&aacute;p, để điều tra vi phạm đối với mục đồng &yacute; của người d&ugrave;ng hay mục đồng &yacute; hay ch&iacute;nh s&aacute;ch an to&agrave;n kh&aacute;c, hay để thực hiện những điều n&agrave;y.
-        </p>
-        <p>
-            ・Li&ecirc;n quan đến một phần hoặc to&agrave;n bộ nghiệp vụ đối với việc s&aacute;p nhập, mua b&aacute;n, t&agrave;i trợ, thu mua t&agrave;i sản của dự &aacute;n SEN POINT hay đối với c&ocirc;ng ty kh&aacute;c, hoặc đang trong qu&aacute; tr&igrave;nh đ&agrave;m ph&aacute;n.
-        </p>
-        <p>
-            ・Bằng sự đồng &yacute; hoặc theo &yacute; của kh&aacute;ch h&agrave;ng
-        </p>
-        <p>
-            (3)Trong trường hợp c&ocirc;ng ty t&ocirc;i c&oacute; nghĩa vụ c&ocirc;ng khai hoặc chia sẻ th&ocirc;ng tin của kh&aacute;ch h&agrave;ng để tu&acirc;n thủ nghĩa vụ ph&aacute;p l&yacute; của c&ocirc;ng ty t&ocirc;i.
-        </p>
-        <p>
-            Trường hợp kh&ocirc;ng li&ecirc;n quan tới s&aacute;p nhập, b&aacute;n, t&agrave;i trợ, hay thu mua t&agrave;i sản dự &aacute;n SEN POINT th&igrave; kh&ocirc;ng thể b&aacute;n hay cho b&ecirc;n thứ 3 mượn bất cứ th&ocirc;ng tin n&agrave;o của kh&aacute;ch h&agrave;ng với mục đ&iacute;ch tiếp thị c&aacute; nhận của b&ecirc;n thứ 3.
-        </p>
-        <p>
-            C&oacute; trường hợp b&ecirc;n thứ 3 đang hỗ trợ cơ cấu kiểm so&aacute;t gi&uacute;p nhận diện kh&aacute;ch h&agrave;ng của c&ocirc;ng ty t&ocirc;i v&agrave; ph&ograve;ng chống lừa đảo sẽ đại diện cho c&ocirc;ng ty t&ocirc;i giữ v&agrave; sử dụng th&ocirc;ng tin kh&aacute;ch h&agrave;ng để tiến h&agrave;nh dịch vụ v&agrave; cải thiện dịch vụ của c&ocirc;ng ty m&igrave;nh.
-        </p>
-        <p>
-            Bằng việc sử dụng dịch vụ n&agrave;y, kh&aacute;ch h&agrave;ng đ&atilde; đồng &yacute; cho c&aacute;c nh&agrave; cung cấp n&agrave;y giữ v&agrave; sử dụng th&ocirc;ng tin c&aacute; nh&acirc;n của kh&aacute;ch h&agrave;ng để cải thiện c&aacute;c dịch vụ của c&aacute;c nh&agrave; cung cấp n&agrave;y. Sẽ c&oacute; trường hợp c&ocirc;ng ty t&ocirc;i cung cấp th&ocirc;ng tin c&oacute; cường độ cao hay th&ocirc;ng tin kh&ocirc;ng chỉ định với b&ecirc;n thứ 3 ngo&agrave;i c&aacute;c c&ocirc;ng ty li&ecirc;n quan ( Những th&ocirc;ng tin n&agrave;y kh&ocirc;ng thể sử dụng để x&aacute;c nhận kh&aacute;ch hạn).
-        </p>
-        <p>
-            <strong>
-                Dịch vụ ph&acirc;n t&iacute;ch cung cấp do c&ocirc;ng ty kh&aacute;c cung cấp
-            </strong>
-        </p>
-        <p>
-            C&ocirc;ng ty t&ocirc;i sẽ cho ph&eacute;p c&ocirc;ng ty kh&aacute;c đại diện cung cấp dịch vụ ph&acirc;n t&iacute;ch. Cũng c&oacute; trường hợp c&aacute;c thực thể n&agrave;y sẽ sử dụng Cookie, Web beacon v&agrave; c&aacute;c c&ocirc;ng nghệ theo d&otilde;i kh&aacute;c, thu thập th&ocirc;ng tin về t&igrave;nh h&igrave;nh sử dụng của kh&aacute;ch h&agrave;ng của dịch vụ dự &aacute;n SENtoken bao gồm địa chỉ IP, tr&igrave;nh duyệt web, trang đ&atilde; hiển thị, thời gian đ&atilde; d&ugrave;ng cho c&aacute;c trang, v&agrave; c&aacute;c link đ&atilde; k&iacute;ch v&agrave;o. Bằng dự &aacute;n SENPOINT c&oacute; trường hợp th&ocirc;ng tin n&agrave;y sẽ được sử dụng đặc biệt để ph&acirc;n t&iacute;ch, theo d&otilde;i dữ liệu, x&aacute;c định độ được y&ecirc;u th&iacute;ch của nội dung cụ thể để hiểu ch&iacute;nh x&aacute;c hơn, để hiểu ch&iacute;nh x&aacute;c hơn hoạt động trực tuyến của kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            <strong>
-                Bảo mật
-            </strong>
-        </p>
-        <p>
-            C&ocirc;ng ty t&ocirc;i đang thực hiện c&aacute;c ch&iacute;nh s&aacute;ch bảo mật hợp l&yacute; để bảo đảm t&iacute;nh bảo mật v&agrave; bảo an th&ocirc;ng tin của kh&aacute;ch h&agrave;ng bao gồm th&ocirc;ng tin c&aacute; nh&acirc;n kh&ocirc;ng c&ocirc;ng khai. C&ocirc;ng ty t&ocirc;i bảo vệ th&ocirc;ng tin kh&aacute;ch h&agrave;ng bằng những ch&iacute;nh s&aacute;ch hợp l&yacute; tr&ecirc;n mặt vật chất, k&yacute; thuật, quản l&yacute;, v&iacute; dụ như giới hạn cho nh&acirc;n vi&ecirc;n cần biết những th&ocirc;ng tin li&ecirc;n quan đến truy cập v&agrave;o th&ocirc;ng tin kh&aacute;ch h&agrave;ng.
-        </p>
-        <p>
-            <strong>
-                Lựa chọn của kh&aacute;ch h&agrave;ng
-            </strong>
-        </p>
-        <p>
-            Th&ocirc;ng tin t&agrave;i khoản: Bằng c&aacute;ch đăng nhập v&agrave;o t&agrave;i khoản v&agrave; hiển thị hồ sơ th&igrave; c&oacute; thể truy cập v&agrave;o th&ocirc;ng tin t&agrave;i khoản bất cứ l&uacute;c n&agrave;o, c&oacute; thể tiến h&agrave;nh li&ecirc;n hệ với c&ocirc;ng ty t&ocirc;i. Tuy nhi&ecirc;n, trường hợp kh&aacute;ch h&agrave;ng đ&oacute;ng t&agrave;i khoản, th&igrave; xin lưu &yacute; rằng nếu cần thiết cũng c&oacute; trường hợp c&ocirc;ng ty t&ocirc;i giữ lại th&ocirc;ng tin của qu&yacute; kh&aacute;ch với mục đ&iacute;ch hợp l&yacute; của c&ocirc;ng ty t&ocirc;i theo ph&aacute;p luật, để thu ph&iacute; chưa nộp, giải quyết tranh chấp, khắc phục sự cố, hỗ trợ điều tra, ngăn chặn c&aacute;c h&agrave;nh vi lừa đảo, hay để n&acirc;ng cao th&ecirc;m c&aacute;c điều khoản sử dụng.
-        </p>
-        <p>
-            C&agrave;i đặt nhận tin: Q&uacute;y kh&aacute;ch c&oacute; thể chọn nhận th&ocirc;ng tin quảng c&aacute;o từ dự &aacute;n SEN POINT theo hướng dẫn trong th&ocirc;ng tin truyền th&ocirc;ng quảng c&aacute;o. Trường hợp qu&yacute; kh&aacute;c đ&atilde; chọn nhận th&ocirc;ng tin quảng c&aacute;o, cũng c&oacute; trường hợp c&ocirc;ng ty t&ocirc;i c&oacute; thể gửi cho qu&yacute; kh&aacute;ch "th&ocirc;ng điệp dựa tr&ecirc;n mối quan hệ giao dịch hoặc kinh doanh" chẳng hạn như th&ocirc;ng b&aacute;o về t&agrave;i khoản của qu&yacute; kh&aacute;ch hoặc c&aacute;c mục li&ecirc;n quan đến việc kinh doanh hiện tại.
-        </p>
-        <p>
-            Vị tr&iacute;: Ứng dụng di động của c&ocirc;ng ty t&ocirc;i sau khi nhận được sự đồng &yacute; của qu&yacute; kh&aacute;ch th&igrave; c&oacute; thể biết được vị tr&iacute; địa l&yacute; chi tiết từ thiết bị di động của qu&yacute; kh&aacute;ch. Trường hợp đ&atilde; c&oacute; sự đồng &yacute; cho ph&aacute;p thu thập th&ocirc;ng tin vị tr&iacute; từ trước của qu&yacute; kh&aacute;ch, t&ugrave;y thuộc v&agrave;o hệ điều h&agrave;nh của thiết bị di động m&agrave; cũng c&oacute; trường hợp sau khi nhận th&ocirc;ng tin n&agrave;y sẽ ngừng. Bằng c&aacute;ch x&oacute;a ứng dụng di động khỏi thiết bị di động theo quy tr&igrave;nh gỡ c&agrave;i đặt ti&ecirc;u chuẩn sẽ c&oacute; thể ngừng thu th&ocirc;ng tin định vị.
-        </p>
-        <p>
-            C&ocirc;ng ty t&ocirc;i sử dụng cookie theo phần v&agrave; cookie li&ecirc;n tục. Cookie theo phần sẽ hết hạn khi qu&yacute; kh&aacute;ch đăng xuất khỏi t&agrave;i khoản hoặc đ&oacute;ng tr&igrave;nh duyệt. Chừng n&agrave;o qu&yacute; kh&aacute;ch chưa x&oacute;a n&oacute; đi hoặc n&oacute; chưa hết hạn do một nguy&ecirc;n nh&acirc;n kh&aacute;c th&igrave; Cookie li&ecirc;n tục sẽ vẫn c&ograve;n tr&ecirc;n m&aacute;y t&iacute;nh, thiết bị di động của qu&yacute; kh&aacute;ch. Theo mặc định, hầu hết c&aacute;c tr&igrave;nh duyệt web đều chấp nhận Cookie. Tr&igrave;nh bổ sung của tr&igrave;nh duyệt hoặc tr&igrave;nh duyệt của qu&yacute; kh&aacute;ch, th&igrave; c&oacute; thể từ chối hầu hết c&aacute;c cookie một c&aacute;ch tự do. Nếu qu&yacute; kh&aacute;ch chọn xo&aacute; hoặc l&agrave;m mất hiệu lực cookie của c&ocirc;ng ty t&ocirc;i, cũng c&oacute; trường hợp sẽ ảnh hưởng tới việc sử dụng hoặc chức năng của dịch vụ dự &aacute;n SEN POINT. Ngo&agrave;i ra, cũng c&oacute; trường hợp c&ocirc;ng ty t&ocirc;i sẽ sử dụng c&aacute;c cookie cố định vĩnh viễn, Cookie vĩnh viễn n&agrave;y chỉ sử dụng cho mục đ&iacute;ch x&aacute;c minh danh t&iacute;nh v&agrave; ph&ograve;ng chống lừa đảo. Để biết chi tiết về cookie v&agrave; c&aacute;ch chặn, x&oacute;a, hủy bỏ hiệu lực của Cookie, xin vui l&ograve;ng tham khảo hướng dẫn tr&ecirc;n tr&igrave;nh duyệt hoặc li&ecirc;n hệ c&ocirc;ng ty t&ocirc;i.
-        </p>
-        <p>
-            <strong>
-                Li&ecirc;n hệ giải đ&aacute;p thắc mắc
-            </strong>
-        </p>
-        <p>
-            Trường hợp c&oacute; thắc mắc g&igrave; li&ecirc;n quan đến ch&iacute;nh s&aacute;ch bảo mật n&agrave;y xin vui l&ograve;ng li&ecirc;n hệ trang web của TTJ tại
-            <a href="http://www.ttjworld.com/#/contact-us">
-                ContactUs
-            </a>
-            .
-        </p>
-        <br />
-    </div>
-  </v-card>
+  <div>
+    <v-layout>
+      <v-flex xs12 sm10>
+        <v-card>
+          <v-card-title class="primary white--text" primary-title>
+            <v-btn dark icon @click="back">
+              <v-icon>chevron_left</v-icon>
+            </v-btn>
+            <div>
+              <h3 class="headline mb-0">{{ $t('settings.privacyPolicy') }}</h3>
+            </div>
+          </v-card-title>
+          <v-card-text class="desc-privacy-policy">
+            <p>Trong chính sách bảo mật này, Công ty cổ phần TTJ và các công ty con đó gọi chung là "Công ty tôi" sẽ giải thích về làm sao để thu thập, sử dụng, công khai, bảo vệ thông tin của khách hàng.</p>
+
+            <p>Thông tin được áp dụng trong chính sách này là những thông tin công ty tôi thu thập khi khách hàng truy cập vào trang web hay ứng dụng di động của TTJ (gọi chung là dự án SENtoken), sử dụng những thông tin đó hoặc sẽ trao đổi thông tin với công ty tôi bằng một cách khác theo cách thức giải thích ở bên dưới:<p>
+
+            <p>&nbsp;</p>
+
+            <p>Công ty tôi đôi lúc sẽ chỉnh sửa chính sách bảo mật này. Trường hợp thay đổi, công ty tôi sẽ thông báo tới khách hàng bằng việc sửa ngày của chính sách này. Hoặc tùy vào tình huống, ví dụ như công ty tôi sẽ liên lạc thêm điều khoản bằng việc gửi thông báo qua mail hoặc LINE tới khách hàng là sẽ thêm những gì đã thay đổi vào trang chủ của dự án SENtoken.
+            Để duy trì tình trạng biết về quyền lợi và lựa chọn của khách hàng liên quan tới thông tin bảo mật, riêng tư của công ty tôi thì chúng tôi rất khuyến cáo khách hàng xem lại chính sách bảo mật mỗi lần truy cập vào dự án SENtoken hay mỗi lần sử dụng dịch vụ này.
+            <p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            <p><b><span style='font-size:14.0pt;line-height:115%'>Thu thập thông tin</span></b></p>
+
+            <p>&nbsp;</p>
+
+            <p><b>Thông tin khách hàng cung cấp cho công ty tôi</b></p>
+
+            <p><b>&nbsp;</b></p>
+
+            <p>Công ty tôi sẽ thu thập những thông tin mà khách hàng trực tiếp cung cấp cho công ty tôi. Chúng tôi sẽ thu thập thông tin khách hàng khi khách hàng tạo tài khoản, kết thúc giao dịch, viết vào form mẫu, trả lời điều tra, đăng thư vào form mẫu của công ty tôi, hay khi gửi tin cho công ty tôi bằng cách thức khác.</p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            <p><b>Các loại thông tin có thể thu thập là những loại như sau:</b></p>
+
+            <p style='margin-left:36.0pt'>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Thông tin liên lạc (tên khách hàng, địa chỉ, số điện thoại, địa chỉ e-mail, ....).</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Thông tin tài chính (số thẻ tín dụng, thông tin tài khoản tiền tệ ảo, v.v ...).<p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Số ID chính phủ phát hành  (giấy phép lái xe, thông tin hộ chiếu, v.v ...).</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Thông tin nhân khẩu học (ngày sinh, giới tính, nghề nghiệp, tình hình việc làm, thông tin khác).<p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            <p><b>Thông tin mà công ty tôi thu thập từ các nguồn thông tin khác</b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Cũng có trường hợp công ty tôi thu thập thông từ nguồn thông tin khác và kết hợp với thông tin thu thập qua dự án SENtoken.</p>
+
+            <p>Ví dụ, có trường hợp công ty tôi thu thập từ bên thứ 3 bao gồm thông tin cá nhân không công khai, cơ quan dịch vụ xác minh danh tính khách hàng.<p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            <p><b>Thông tin công ty tự động thu nhập</b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Khi khách hàng truy cập vào dự án SENtoken hay khi sử dụng dự án này ,Công ty tôi sẽ tự động thu thập thông tin như sau:</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Thông tin giao dịch</b>: 
+              Thu thập SENtoken, bao gồm các khoản đầu tư tương ứng với giao dịch, loại giao dịch đã được thực hiện, và các thông tin giao dịch khác.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Thông tin vị trí</b>: 
+              Nhận được sự đồng ý của khách hàng từ trước, có trường hợp chúng tôi có thể thu thập thông tin vị trí địa lí cụ thể từ thiết bị di động của khách hàng khi khách hàng truy cập hay sử dụng ứng dụng của công ty tôi. Chi tiết xin hãy tham khảo phần " Lựa chọn của khách hàng" viết bên dưới<p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Thông tin thiết bị và đăng nhập</b>: 
+              Công ty tôi thu thập thông tin về thiết bị di động hay máy tính đang sử dụng để truy cập dịch vụ dự án SENtoken bao gồm định danh thiết bị, thông tin mạng di động, loại hệ điều hành và trình duyệt đang sử dụng.Ngoài ra, công ty tôi sẽ ghi chép cả những thông tin về tình trạng sử dụng dịch vụ dự án SENtoken của khách hàng bao gồm thời gian truy cập, trang web đã hiển thị, địa chỉ IP, dữ liệu web tieu chuẩn khác và các trang đã truy cập trước và sau khi chuyển đến các trang web của công ty tôi.<p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Cookie và công nghệ theo dõi tương tự</b>:
+              Có trường hợp công ty tôi sẽ sử dụng công nghệ Cookie và các công nghệ khác để thu thập thông tin về khách hàng khi khách hàng liên hệ với dịch vụ dự án SENtoken, bao gồm thông tin về hành động xem trên dịch vụ dự án SENtoken của công ty tôi. Cookie là một tệp dữ liệu nhỏ được gửi từ máy chủ web của chúng tôi tới máy tính hay thiết bị di động của khách hàng. Bằng những tệp dữ liệu này thì có thể nắm bắt được khách hàng vào dịch vụ SENtoken như thế nào, khi nào quay trở lại, đã thăm những trang nào và công ty tôi cũng có thể nhận biết được việc đã hoàn thành đăng nhập khi nhận được yêu cầu trang từ trình duyệt của khách hàng.<p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            <p><b>Sử dụng thông tin</b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Có trường hợp công ty tôi sẽ sử dụng thông tin khách hàng như sau:</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Cung cấp dịch vụ dự án SENtoken và hỗ trợ khách hàng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Xử lý giao dịch và gửi cho khách hàng thông báo về giao dịch của khách hàng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Quản lý tài khoản của khách hàng và gửi thông báo kỹ thuật, địa chỉ liên hệ, cảnh báo an toàn, hỗ trợ và thông báo quản lý.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Tiến hành giải quyết các tranh chấp, thu phí, và khắc phục sự cố.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Ngăn chặn hoạt động tiềm ẩn đã bị cấm hoặc phạm pháp, và tiến hành thực thi điều khoản sử dụng dịch vụ.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Tiến hành cá nhân hóa, đo lường và cải tiến dự án dịch vụ SENtoken</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Đại diện của dự án SENtoken và các công ty khác sẽ gửi tiếp thị hoặc khuyến mại gồm các trường hợp bằng SMS, điện thoại, hay e-mail.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Công ty tôi sẽ liên kết, phối hợp thông tin cá nhận của khách hàng với thông tin nhận được từ công ty khác để dễ dàng biết được thị hiếu khách hàng và cung cấp dịch vụ tốt hơn cho khách hàng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Mục địch của công ty tôi là sẽ hoàn thành mục tiêu khác ngoài mục tiêu thông tin được thu thập theo nội dung thông báo bằng cách thức khác trong phạm vi buộc phải được xem xét bằng thu thập thông tin cá nhân của khách hàng hay trong dự án SENtoken tại thời điểm thu thập thông tin.</p>
+
+            <p>&nbsp;</p>
+
+            <p><br>
+              <b>Công khai thông tin</b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Có trường hợp công ty tôi sẽ công khai cho bên thứ 3 ngoài công ty liên kết không kể khách hành là khách hàng hiện nay, hay khách hàng trước kia, bao gồm thông tin không công khai hay do công ty khác thu thập hay thông tin công ty tôi tự thu thập về khách hàng.<p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(1)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp; </span>Đối với các nhà cung cấp dịch vụ tiến hành các dịch vụ tiếp thị thay cho chúng tôi</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(2)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp; </span>Cũng có trường hợp tiến hành vì mục đích kinh doanh hằng ngày của công ty chúng tôi như để xử lý giao dịch, để duy trì tài khoản, để đáp ứng lệnh của tòa án hay điều tra pháp lý, để báo cáo cho cơ quan điều tra tín dụng. Ví dụ, về mục tiêu kinh doanh hằng ngày của công ty tôi thì cũng có trường hợp cung cấp thông tin về khách hàng như vậy.</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Đối tượng đại diện cho dự án SEN POINT để khách hàng phân chia vốn hay nhà cung cấp dự định phân chia vốn cho khách hàng ( Bao gồm thông tin tài khoản của khách hàng có hoạt động không và tài khoản đã hoàn tất xác minh chưa).</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Các nhà cung cấp, tư vấn và các nhà cung cấp khác cần tiếp cận với thông tin của khách hàng để thực hiện công việc thay mặt cho Công ty. Các nhà cung cấp dịch vụ này sẽ hỗ trợ nghiệp vụ của chúng tôi như phòng chống lừa đảo và dịch vụ kỹ thuật.</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Trường hợp công ty tôi xem xét theo quan điểm của mình là cần công khai thông tin của khách hàng để ngăn ngừa những tổn thất vật chất hoặc tổn thất tài chính, để báo cáo các hoạt động bị nghi ngờ phạm pháp, để điều tra vi phạm đối với mục đồng ý của người dùng hay mục đồng ý hay chính sách an toàn khác, hay để thực hiện những điều này.</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Liên quan đến một phần hoặc toàn bộ nghiệp vụ đối với việc sáp nhập, mua bán, tài trợ, thu mua tài sản của dự án SEN POINT hay đối với công ty khác, hoặc đang trong quá trình đàm phán.<p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bằng sự đồng ý hoặc theo ý của khách hàng</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(3)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp; </span>Trong trường hợp công ty tôi có nghĩa vụ công khai hoặc chia sẻ thông tin của khách hàng để tuân thủ nghĩa vụ pháp lý của công ty tôi.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Trường hợp không liên quan tới sáp nhập, bán, tài trợ, hay thu mua tài sản dự án SEN POINT thì không thể bán hay cho bên thứ 3 mượn bất cứ thông tin nào của khách hàng với mục đích tiếp thị cá nhận của bên thứ 3.<br>
+              <br>
+              Có trường hợp bên thứ 3 đang hỗ trợ cơ cấu kiểm soát giúp nhận diện khách hàng của công ty tôi và phòng chống lừa đảo sẽ đại diện cho công ty tôi giữ và sử dụng thông tin khách hàng để tiến hành dịch vụ và cải thiện dịch vụ của công ty mình.<br>
+              <br>
+              Bằng việc sử dụng dịch vụ này, khách hàng đã đồng ý cho các nhà cung cấp này giữ và sử dụng thông tin cá nhân của khách hàng để cải thiện các dịch vụ của các nhà cung cấp này. Sẽ có trường hợp công ty tôi cung cấp thông tin có cường độ cao hay thông tin không chỉ định với bên thứ 3 ngoài các công ty liên quan ( Những thông tin này không thể sử dụng để xác nhận khách hạn).<p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            <p><b>Dịch vụ phân tích cung cấp do công ty khác cung cấp</b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Công ty tôi sẽ cho phép công ty khác đại diện cung cấp dịch vụ phân tích. Cũng có trường hợp các thực thể này sẽ sử dụng Cookie, Web beacon và các công nghệ theo dõi khác, thu thập thông tin về tình hình sử dụng của khách hàng của dịch vụ dự án SENtoken  bao gồm địa chỉ IP, trình duyệt web, trang đã hiển thị, thời gian đã dùng cho các trang, và các link đã kích vào.  Bằng dự án SENPOINT có trường hợp thông tin này sẽ được sử dụng đặc biệt để phân tích, theo dõi dữ liệu, xác định độ được yêu thích của nội dung cụ thể để hiểu chính xác hơn, để hiểu chính xác hơn hoạt động trực tuyến của khách hàng.<br>
+            <br>
+            </p>
+
+            <p><b>Bảo mật</b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Công ty tôi đang thực hiện các chính sách bảo mật hợp lý để bảo đảm tính bảo mật và bảo an thông tin của khách hàng bao gồm thông tin cá nhân không công khai. Công ty tôi bảo vệ thông tin khách hàng bằng những chính sách hợp lý trên mặt vật chất, ký thuật, quản lý, ví dụ như giới hạn cho nhân viên cần biết những thông tin liên quan đến truy cập vào thông tin khách hàng.<br>
+            <br>
+            </p>
+
+            <p><b>Lựa chọn của khách hàng</b></p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Thông tin tài khoản</b>
+              : Bằng cách đăng nhập vào tài khoản và hiển thị hồ sơ thì có thể truy cập vào thông tin tài khoản bất cứ lúc nào, có thể tiến hành liên hệ với công ty tôi. Tuy nhiên, trường hợp khách hàng đóng tài khoản, thì xin lưu ý rằng nếu cần thiết cũng có trường hợp công ty tôi giữ lại thông tin của quý khách với mục đích hợp lý của công ty tôi theo pháp luật, để thu phí chưa nộp, giải quyết tranh chấp, khắc phục sự cố, hỗ trợ điều tra, ngăn chặn các hành vi lừa đảo, hay để nâng cao thêm các điều khoản sử dụng.</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Cài đặt nhận tin</b>
+              : Qúy khách có thể chọn nhận thông tin quảng cáo từ dự án SEN POINT theo hướng dẫn trong thông tin truyền thông quảng cáo. Trường hợp quý khác đã chọn nhận thông tin quảng cáo, cũng có trường hợp công ty tôi có thể gửi cho quý khách "thông điệp dựa trên mối quan hệ giao dịch hoặc kinh doanh" chẳng hạn như thông báo về tài khoản của quý khách hoặc các mục liên quan đến việc kinh doanh hiện tại.<p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Vị trí</b>
+              : Ứng dụng di động của công ty tôi sau khi nhận được sự đồng ý của quý khách thì có thể biết được vị trí địa lý chi tiết từ thiết bị di động của quý khách. Trường hợp đã có sự đồng ý cho pháp thu thập thông tin vị trí từ trước của quý khách, tùy thuộc vào hệ điều hành của thiết bị di động mà cũng có trường hợp sau khi nhận thông tin này sẽ ngừng. Bằng cách xóa ứng dụng di động khỏi thiết bị di động theo quy trình gỡ cài đặt tiêu chuẩn sẽ có thể ngừng thu thông tin định vị.</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Cookies</b>
+              : Công ty tôi sử dụng cookie theo phần và cookie liên tục. Cookie theo phần sẽ hết hạn khi quý khách đăng xuất khỏi tài khoản hoặc đóng trình duyệt.  Chừng nào quý khách chưa xóa nó đi hoặc nó chưa hết hạn do một nguyên nhân khác thì Cookie liên tục sẽ vẫn còn trên máy tính, thiết bị di động của quý khách. Theo mặc định, hầu hết các trình duyệt web đều chấp nhận Cookie.  Trình bổ sung của trình duyệt hoặc trình duyệt của quý khách, thì có thể từ chối hầu hết các cookie một cách tự do. Nếu quý khách chọn xoá hoặc làm mất hiệu lực cookie của công ty tôi, cũng có trường hợp sẽ ảnh hưởng tới việc sử dụng hoặc chức năng của dịch vụ dự án SEN POINT. Ngoài ra, cũng có trường hợp công ty tôi sẽ sử dụng các cookie cố định vĩnh viễn, Cookie vĩnh viễn này chỉ sử dụng cho mục đích xác minh danh tính và phòng chống lừa đảo. Để biết chi tiết về cookie và cách chặn, xóa, hủy bỏ hiệu lực của Cookie, xin vui lòng tham khảo hướng dẫn trên trình duyệt hoặc liên hệ công ty tôi.<br>
+              <br>
+            </p>
+
+            <p>&nbsp;</p>
+
+            <p><b>Liên hệ giải đáp thắc mắc</b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Trường hợp có thắc mắc gì liên quan đến chính sách bảo mật này xin vui lòng liên hệ trang web của TTJ tại http://www.ttjworld.com/#/contact-us.</p>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </div>
 </template>
+
 <script>
   import router from '@/router'
 
@@ -222,8 +260,15 @@
     }
   }
 </script>
-<style scoped>
-    div {
-        padding: 8px;
-    }
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+  .desc-privacy-policy p {
+    margin:0cm;
+    margin-bottom:.0001pt;
+    line-height:115%;
+    font-size:11.0pt;
+    font-family:"Arial",sans-serif;
+    color:black;
+  }
 </style>
