@@ -1,292 +1,332 @@
 <template>
-  <v-card>
-    <v-card-title class="primary white--text" primary-title>
-        <v-btn dark icon @click="back">
-            <v-icon>chevron_left</v-icon>
-        </v-btn>
-        <div>
-            <h3 class="headline mb-0">{{ $t('settings.privacyPolicy') }}</h3>
-        </div>
-    </v-card-title>
-    <br />
-    <div>
-      <p>
-        Dự &aacute;n SEN POINT
-      </p>
-      <p>
-          Hợp đồng sử dụng
-      </p>
-      <p>
-          Hợp đồng n&agrave;y l&agrave; bản hợp đồng quy định về việc xử l&yacute; khi sử dụng dự &aacute;n SEN POINTm&agrave; kh&aacute;ch h&agrave;ng v&agrave; c&ocirc;ng ty cổ phần TTJ cung cấp ( b&ecirc;n dưới l&agrave; dịch vụ n&agrave;y). Q&uacute;y vị sử dụng dịch vụ n&agrave;y (
-          <a href="about:blank">
-              https://www.ttjworld.com
-          </a>
-          v&agrave; Wallet SEN POINT) sau khi đồng &yacute; với điều khoản của bản hợp đồng n&agrave;y.
-      </p>
-      <p>
-          Điều 1 (Định nghĩa)
-      </p>
-      <p>
-          Định nghĩa từ d&ugrave;ng trong bản hợp đồng n&agrave;y, được đưa ra như sau:
-      </p>
-      <p>
-          （1）Dịch vụ n&agrave;y l&agrave; dịch vụ c&ocirc;ng ty ch&uacute;ng t&ocirc;i đang quản l&yacute; v&agrave; c&aacute;c dịch vụ c&oacute; li&ecirc;n quan
-      </p>
-      <p>
-          （2）Trang web n&agrave;y l&agrave; trang web m&agrave; nội dung dịch vụ n&agrave;y được đăng tải
-      </p>
-      <p>
-          （3）Nội dung n&agrave;y gọi chung như l&agrave; chương tr&iacute;nh v&iacute; tiền, m&atilde; code, m&agrave;n h&igrave;nh chữ, m&agrave;n h&igrave;nh tĩnh, m&agrave;n h&igrave;nh động.
-      </p>
-      <p>
-          （4）Người sử dụng l&agrave; tất cả c&aacute;c vị sử dụng dịch vụ n&agrave;y
-      </p>
-      <p>
-          （5）Người d&ugrave;ng đăng nhập l&agrave; những vị đ&atilde; ho&agrave;n tất đăng k&yacute; người d&ugrave;ng tại trang web n&agrave;y
-      </p>
-      <p>
-          （6）Địa chỉ mail l&agrave; d&atilde;y chữ số m&agrave; người người d&ugrave;ng c&oacute; sẵn để sử dụng dịch vụ n&agrave;y
-      </p>
-      <p>
-          （7）Mật khẩu l&agrave; mật m&atilde; m&agrave; người d&ugrave;ng c&agrave;i đặt ph&ugrave; hợp với ID
-      </p>
-      <p>
-          （8）Th&ocirc;ng tin c&aacute; nh&acirc;n gọi chung l&agrave; những th&ocirc;ng tin c&oacute; thế x&aacute;c nhận r&otilde; địa chỉ, t&ecirc;n, nghề nghiệp, số điện thoại, ng&agrave;y th&aacute;ng năm sinh&hellip; của người d&ugrave;ng.
-      </p>
-      <p>
-          （9）Th&ocirc;ng tin đăng k&yacute; gọi chung l&agrave; th&ocirc;ng tin m&agrave; người d&ugrave;ng đ&atilde; đăng k&yacute; tại trang web n&agrave;y.
-      </p>
-      <p>
-          Điều 2 (Đồng &yacute; với bản hợp đồng n&agrave;y)
-      </p>
-      <p>
-          1．Hơp đồng quy định rằng người d&ugrave;ng sau khi đồng &yacute; với c&aacute;c điều khoản sử dụng th&igrave; c&oacute; thể sử dụng dịch vụ n&agrave;y.
-      </p>
-      <p>
-          2．Tại thời điểm người d&ugrave;ng tải dịch vụ n&agrave;y về điện thoại hay c&aacute;c thiết bị th&ocirc;ng tin kh&aacute;c v&agrave; ho&agrave;n tất thủ tục đồng &yacute; của bản hợp đồng n&agrave;y th&igrave; hợp đồng sử dụng theo c&aacute;c quy định của bản hợp đồng n&agrave;y sẽ được th&agrave;nh lập giữa người sử dụng v&agrave; c&ocirc;ng ty ch&uacute;ng t&ocirc;i.
-      </p>
-      <p>
-          3．Trong trường hợp người sử dụng l&agrave; những vị chưa thanh ni&ecirc;n, xin vui l&ograve;ng sử dụng sau khi đ&atilde; nhận được sự đồng &yacute; của bố mẹ hoặc đại diện ph&aacute;p l&yacute;.
-      </p>
-      <p>
-          4．Trong trường hợp người sử dụng l&agrave; vị th&agrave;nh ni&ecirc;n sử dụng dịch vụ n&agrave;y bằng c&aacute;ch giả l&agrave; c&oacute; sự đồng &yacute; của người đại diện mặc d&ugrave; kh&ocirc;ng c&oacute; hoặc giả l&agrave; tuổi l&agrave; th&agrave;nh ni&ecirc;n, hay trường hợp lừa đảo để c&oacute; được t&iacute;n nhiệm l&agrave; người c&oacute; khả năng thực hiện h&agrave;nh động.
-      </p>
-      <p>
-          5．Trường hợp v&agrave;o thời điểm đồng &yacute; điệu khoản hợp đồng, người sử dụng l&agrave; vị chưa th&agrave;nh ni&ecirc;n sử dụng hợp đồng n&agrave;y sau khi th&agrave;nh ni&ecirc;n th&igrave; hợp động quy định người sử dụng c&oacute; li&ecirc;n quan đ&atilde; thừa nhận tất cả h&agrave;nh vi ph&aacute;p l&yacute; li&ecirc;n quan tới dịch vụ n&agrave;y.
-      </p>
-      <p>
-          Điều 3 (Thay đổi điều khoản)
-      </p>
-      <p>
-          1．C&ocirc;ng ty ch&uacute;ng t&ocirc;i kh&ocirc;ng nhận ủy th&aacute;c của người sử dụng, bất cứ l&uacute;c n&agrave;o cũng c&oacute; thể sửa đổi nội dung của bản hợp đồng n&agrave;y．
-      </p>
-      <p>
-          2．C&ocirc;ng ty ch&uacute;ng t&ocirc;i khi sửa đổi hợp đồng n&agrave;y, về nội dung sửa đổi đ&oacute; sẽ th&ocirc;ng b&aacute;o tới người sử dụng bằng c&aacute;ch thức m&agrave; c&ocirc;ng ty quy định.
-      </p>
-      <p>
-          3．Hiệu lực của sửa đổi hợp đồng n&agrave;y như điều tr&ecirc;n sẽ c&oacute; hiệu lực từ thời điểm c&ocirc;ng ty t&ocirc;i tiến h&agrave;nh th&ocirc;ng b&aacute;o bằng mục ph&iacute;a tr&ecirc;n.
-      </p>
-      <p>
-          4．Sau khi thay đổi hợp đồng n&agrave;y, tại thời điểm người sử dụng d&ugrave;ng dịch vụ n&agrave;y th&igrave; được coi như l&agrave; người sử dụng kh&ocirc;ng phản đối m&agrave; đ&atilde; đồng &yacute; với hợp đồng sử dụng dịch vụ n&agrave;y.
-      </p>
-      <p>
-          Điều 4 (Thủ tục đăng k&yacute; th&agrave;nh vi&ecirc;n)
-      </p>
-      <p>
-          1．Những vị c&oacute; mong muốn đăng k&yacute; dịch vụ n&agrave;y (b&ecirc;n dưới l&agrave; &ldquo;người muốn đăng k&yacute;&rdquo; th&igrave; sau khi đồng &yacute; với bản hợp đồng n&agrave;y, th&igrave; h&atilde;y tiến h&agrave;nh đăng k&yacute; bằng c&aacute;ch thức quy định
-      </p>
-      <p>
-          2．Những vị đ&atilde; đăng k&yacute; th&igrave; từ thời điểm c&ocirc;ng ty t&ocirc;i chấp nhận đăng k&yacute;, v&agrave; ho&agrave;n tất ID đăng k&yacute; th&igrave; sẽ trở th&agrave;nh người d&ugrave;ng đăng nhập
-      </p>
-      <p>
-          3．C&ocirc;ng ty t&ocirc;i sẽ tiến h&agrave;nh th&ocirc;ng b&aacute;o li&ecirc;n hệ v&agrave; cung cấp th&ocirc;ng tin kh&aacute;c qua thư cho người d&ugrave;ng.
-      </p>
-      <p>
-          4．Trường hợp người muốn đăng k&yacute; d&ugrave;ng c&oacute; li&ecirc;n quan đến bất cứ trường hợp n&agrave;o sau đ&acirc;y th&igrave; cũng c&oacute; khi c&ocirc;ng ty t&ocirc;i bằng ph&aacute;n đo&aacute;n của m&igrave;nh sẽ kh&ocirc;ng chấp nhận đăng k&yacute;.
-      </p>
-      <p>
-          thứ nhất, trường hợp tiến h&agrave;nh đăng k&yacute; kh&ocirc;ng bằng c&aacute;ch do c&ocirc;ng ty t&ocirc;i quy định
-      </p>
-      <p>
-          Thứ 2, trường hợp người muốn đăng k&yacute; l&agrave; người đ&atilde; nhận h&igrave;nh phạt ra khỏi hội v&igrave; l&iacute; do như vi phạm hợp đồng n&agrave;y trong qu&aacute; khứ hay vi phạm điều khoản sử dụng c&ocirc;ng ty quy định.
-      </p>
-      <p>
-          Thứ 3, trường hợp c&ocirc;ng ty t&ocirc;i biết được l&agrave; tiến h&agrave;nh đăng k&yacute; bằng c&aacute;ch thức bất ch&iacute;nh
-      </p>
-      <p>
-          Thứ 4, trường hợp người muốn sử dụng đăng k&yacute; th&ocirc;ng tin kh&ocirc;ng phải của m&igrave;nh
-      </p>
-      <p>
-          Thứ 5, những trường hợp kh&aacute;c c&ocirc;ng ty t&ocirc;i đ&atilde; biết l&agrave; kh&ocirc;ng hợp l&yacute;
-      </p>
-      <p>
-          Điều 5 (Quản l&yacute; t&agrave;i khoản)
-      </p>
-      <p>
-          1．Về th&ocirc;ng tin đ&atilde; đăng k&yacute; trước khi sử dụng, người d&ugrave;ng sẽ đăng k&yacute;, quản l&yacute; t&ugrave;y &yacute; dưới tr&aacute;ch nhiệm của bản th&acirc;n. Người d&ugrave;ng kh&ocirc;ng được lấy những th&ocirc;ng tin n&agrave;y cho b&ecirc;n thứ 3 sử dụng, hay cho thu&ecirc;, nhượng quyền,thay đổi danh nghĩa, bu&ocirc;n b&aacute;n...
-      </p>
-      <p>
-          2．Trường hợp đ&atilde; sử dụng dịch vụ n&agrave;y bằng th&ocirc;ng tin đăng k&yacute; c&ocirc;ng ty t&ocirc;i quy định người đ&atilde; đăng k&yacute; sử dụng sẽ c&oacute; thể sử dụng, về kết quả do việc sử dụng tạo ra hay tất cả tr&aacute;ch nhiệm c&ugrave;ng với điều đ&oacute; đều thuộc về bản th&acirc;n người đ&atilde; tiến h&agrave;nh đăng k&yacute; sử dụng.
-      </p>
-      <p>
-          3．Trường hợp tổn thất do người sử dụng sử dụng ko ch&iacute;nh đ&aacute;ng th&ocirc;ng tin đăng k&yacute; dẫn đến tổn thất cho c&ocirc;ng ty t&ocirc;i hay b&ecirc;n thứ 3 th&igrave; người sử dụng sẽ bồi thường thiệt hại tương ứng cho c&ocirc;ng ty t&ocirc;i v&agrave; b&ecirc;n thứ 3 c&oacute; li&ecirc;n quan.
-      </p>
-      <p>
-          4．Việc quản l&yacute; th&ocirc;ng tin đăng k&yacute; sẽ thuộc tr&aacute;ch nhiệm của người sử dụng v&agrave; c&ocirc;ng ty t&ocirc;i kh&ocirc;ng chịu tr&aacute;ch nhiệm về bất cứ thiệt hại m&agrave; người sử dụng đ&atilde; g&acirc;y ra v&igrave; th&ocirc;ng tin đăng k&yacute; kh&ocirc;ng ch&iacute;nh x&aacute;c hoặc sai.
-      </p>
-      <p>
-          5．Trong trường hợp th&ocirc;ng tin đăng k&yacute; bị đ&aacute;nh cắp hoặc ph&aacute;t hiện ra bị b&ecirc;n thứ ba đang sử dụng, người sử dụng phải th&ocirc;ng b&aacute;o ngay cho C&ocirc;ng ty v&agrave; l&agrave;m theo chỉ dẫn của c&ocirc;ng ty.
-      </p>
-      <p>
-          Điều 6 (Xử l&yacute; th&ocirc;ng tin c&aacute; nh&acirc;n)
-      </p>
-      <p>
-          Về th&ocirc;ng tin c&aacute; nh&acirc;n hay th&ocirc;ng tin của người d&ugrave;ng, ch&uacute;ng t&ocirc;i sẽ xử l&yacute; n&oacute; một c&aacute;ch ph&ugrave; hợp theo "Ch&iacute;nh s&aacute;ch bảo mật của dự &aacute;n SEN POINT" m&agrave; c&ocirc;ng ty t&ocirc;i quy định.
-      </p>
-      <p>
-          Điều 7 (H&agrave;nh vi cấm）
-      </p>
-      <p>
-          Khi sử dụng dịch vụ n&agrave;y c&ocirc;ng ty nghi&ecirc;m cấm c&aacute;c h&agrave;nh vi sau đ&acirc;y đối với người d&ugrave;ng. C&ocirc;ng ty t&ocirc;i c&oacute; thể c&oacute; những biện ph&aacute;p tạm ngưng d&ugrave;ng cho người d&ugrave;ng, h&igrave;nh thức đ&oacute;ng băng t&agrave;i khoản hoặc thực hiện c&aacute;c biện ph&aacute;p kh&aacute;c nếu c&ocirc;ng ty t&ocirc;i biết rằng người d&ugrave;ng đ&atilde; vi phạm điều cấm.
-      </p>
-      <p>
-          (1) H&agrave;nh vi l&agrave;m tổn hại danh dự hay uy t&iacute;n của c&ocirc;ng ty t&ocirc;i hoặc b&ecirc;n thứ ba, hoặc ph&acirc;n biệt hoặc vu khống kh&ocirc;ng đ&uacute;ng.
-      </p>
-      <p>
-          (2) H&agrave;nh vi chiếm đoạt hoặc h&agrave;nh vi c&oacute; thể chiếm đoạt t&agrave;i sản của c&ocirc;ng ty t&ocirc;i hay b&ecirc;n thứ 3
-      </p>
-      <p>
-          (3) H&agrave;nh vi g&acirc;y ra tổn thất kinh tế cho c&ocirc;ng ty t&ocirc;i hay b&ecirc;n thứ 3
-      </p>
-      <p>
-          (4) H&agrave;nh vi đe dọa đối với c&ocirc;ng ty t&ocirc;i hoặc b&ecirc;n thứ 3
-      </p>
-      <p>
-          (5) H&agrave;nh vi tạo ra vi r&uacute;t m&aacute;y t&iacute;nh, chương tr&igrave;nh độc hại spec hoặc những h&agrave;nh vi g&acirc;y ra những điều n&agrave;y.
-      </p>
-      <p>
-          (6) H&agrave;nh vi tạo ra g&aacute;nh nặng qu&aacute; mức đối với cơ sở hạ tầng d&ugrave;ng trong dịch vụ n&agrave;y.
-      </p>
-      <p>
-          (7) H&agrave;nh vi tấn c&ocirc;ng m&aacute;y chủ, hệ thống, bảo mật trang web của ch&uacute;ng t&ocirc;i
-      </p>
-      <p>
-          (8) H&agrave;nh vi cố truy cập dịch vụ của ch&uacute;ng t&ocirc;i bằng c&aacute;c phương ph&aacute;p ngo&agrave;i giao diện ch&uacute;ng t&ocirc;i cung cấp.
-      </p>
-      <p>
-          (9) Ngo&agrave;i những điều đ&atilde; n&ecirc;u tr&ecirc;n, h&agrave;nh vi m&agrave; c&ocirc;ng ty t&ocirc;i biết được l&agrave; kh&ocirc;ng đ&uacute;ng.
-      </p>
-      <p>
-          Điều 8 (Miễn tr&aacute;ch)
-      </p>
-      <p>
-          1．C&ocirc;ng ty t&ocirc;i sẽ kh&ocirc;ng chịu bất cứ tr&aacute;ch nhiệm về những tổn thất do thay đổi nội dung, ngưng sử dụng, hay kết th&uacute;c dịch vụ n&agrave;y.
-      </p>
-      <p>
-          2．C&ocirc;ng ty t&ocirc;i kh&ocirc;ng c&oacute; bất cứ li&ecirc;n quan hay tr&aacute;ch nhiệm về m&ocirc;i trường sử dụng dịch vụ của người d&ugrave;ng.
-      </p>
-      <p>
-          3．Về những việc như việc dịch vụ n&agrave;y ph&ugrave; hợp với mục đ&iacute;ch của người d&ugrave;ng, việc l&agrave;m cho c&oacute; t&iacute;nh năng mong muốn hay gi&aacute; trị thương mại, t&iacute;nh ch&iacute;nh x&aacute;c, t&iacute;nh hữu dụng, việc sử dụng dịch vụ n&agrave;y bởi người d&ugrave;ng sẽ ph&ugrave; hợp với nghị định th&iacute;ch hợp với người sử dụng hay quy định nội bộ của nghiệp đo&agrave;n, v&agrave; việc kh&ocirc;ng xảy ra lỗi th&igrave; kh&ocirc;ng phải l&agrave; việc c&ocirc;ng ty ch&uacute;ng t&ocirc;i đảm bảo.
-      </p>
-      <p>
-          4．C&ocirc;ng ty t&ocirc;i kh&ocirc;ng đảm bảo dịch vụ n&agrave;y sẽ ph&ugrave; hợp với tất cả thiết bị th&ocirc;ng tin, về việc c&ugrave;ng với n&acirc;ng cấp phi&ecirc;n bản OS của thiết bị th&ocirc;ng tin sử dụng dịch vụ n&agrave;y th&igrave; c&oacute; khả năng ph&aacute;t sinh lỗi trong thao t&aacute;c dịch vụ, người sử dụng đ&atilde; chấp nhận điều n&agrave;y. Trong trường hợp ph&aacute;t sinh lỗi c&ocirc;ng ty t&ocirc;i sẽ tiến h&agrave;nh sửa chữa chương tr&igrave;nh , nhưng việc c&aacute;c lỗi li&ecirc;n quan c&oacute; được loại bỏ th&igrave; c&ocirc;ng ty ch&uacute;ng t&ocirc;i kh&ocirc;ng đảm bảo.
-      </p>
-      <p>
-          5．Người sử dụng chấp nhận trước rằng c&ugrave;ng với thay đổi hợp đồng sử dụng hay phương ch&acirc;m vận dụng tại cửa h&agrave;ng dịch vụ như AppStore、GooglePlay th&igrave; c&oacute; khả năng bị giới hạn to&agrave;n bộ hoặc một phần dịch vụ n&agrave;y.
-      </p>
-      <p>
-          6．C&ocirc;ng ty t&ocirc;i sẽ kh&ocirc;ng chịu bất cứ tr&aacute;ch nhiệm bồi thường về những tổn hại do người sử dụng trực tiếp hay gi&aacute;n tiếp g&acirc;y ra khi sử dụng dịch vụ n&agrave;y.
-      </p>
-      <p>
-          7．C&ocirc;ng ty t&ocirc;i đ&atilde; th&ocirc;ng b&aacute;o trước khả năng tổn thất, c&ocirc;ng ty t&ocirc;i sẽ kh&ocirc;ng chịu tr&aacute;ch nhiệm đối với tổn thất như đ&aacute;nh mất cơ hội, gi&aacute;n đoạn kinh doanh hay những tổn thất kh&aacute;c do người d&ugrave;ng hay b&ecirc;n thứ 3 g&acirc;y ra.
-      </p>
-      <p>
-          8．Quy định từ mục 1 đến mục 7 kh&ocirc;ng &aacute;p dụng với trường hợp c&oacute; sự cố &yacute; hay g&acirc;y tổn thất nặng tới c&ocirc;ng ty t&ocirc;i, hoặc trường hợp bản hợp đồng c&oacute; li&ecirc;n quan tới người ti&ecirc;u d&ugrave;ng tr&ecirc;n mặt luật hợp đồng ti&ecirc;u d&ugrave;ng.
-      </p>
-      <p>
-          9．Về tổn hại từ những trường hợp đặc biệt trong tổn hại do người d&ugrave;ng g&acirc;y ra bằng những h&agrave;nh vi do lỗi ( ngoại trừ lỗi lớn) d&ugrave; l&agrave; trường hợp được &aacute;p dụng ở điều tr&ecirc;n th&igrave; c&ocirc;ng ty t&ocirc;i ho&agrave;n to&agrave;n kh&ocirc;ng c&oacute; tr&aacute;ch nhiệm.
-      </p>
-      <p>
-          10．Trường hợp c&ocirc;ng ty t&ocirc;i chịu tr&aacute;ch nhiệm bồi thường tổn hại về sử dụng dịch vụ n&agrave;y, c&ocirc;ng ty t&ocirc;i sẽ chịu tr&aacute;ch nhiệm bồi thường khoản tiền đ&atilde; nhận từ kh&aacute;ch h&agrave;ng trong th&aacute;ng ph&aacute;t sinh thiệt hại li&ecirc;n quan.
-      </p>
-      <p>
-          11．C&ocirc;ng ty t&ocirc;i kh&ocirc;ng chịu bất cứ tr&aacute;ch nhiệm n&agrave;o về tranh chấp hoặc sự cố n&agrave;o giữa người d&ugrave;ng v&agrave; người d&ugrave;ng kh&aacute;c. D&ugrave; l&agrave; trường hợp đ&atilde; ph&aacute;t sinh sự cố giữa người d&ugrave;ng v&agrave; người d&ugrave;ng kh&aacute;c th&igrave; kh&ocirc;ng thể y&ecirc;u cầu c&ocirc;ng ty t&ocirc;i bất cứ điều g&igrave;, việc giải quyết sự cố l&agrave; tr&aacute;ch nhiệm của 2 b&ecirc;n với nhau.
-      </p>
-      <p>
-          12．Li&ecirc;n quan đến việc sử dụng dịch vụ n&agrave;y, trong trường hợp g&acirc;y tổn hại cho người d&ugrave;ng kh&aacute;c hoặc trong trường hợp c&oacute; tranh chấp với b&ecirc;n thứ ba, người d&ugrave;ng sẽ phải bồi thường thiệt hại li&ecirc;n quan v&agrave; tr&aacute;ch nhiệm giải quyết tranh chấp, v&agrave; kh&ocirc;ng g&acirc;y bất cứ phiền phức hay tổn hại g&igrave; cho c&ocirc;ng ty t&ocirc;i.
-      </p>
-      <p>
-          13．Trường hợp c&ocirc;ng ty t&ocirc;i phải y&ecirc;u cầu b&ecirc;n thứ ba bồi thường thiệt hại do h&agrave;nh động của người d&ugrave;ng, c&ocirc;ng ty t&ocirc;i sẽ giải quyết bằng chi ph&iacute; (ph&iacute; luật sư) v&agrave; tr&aacute;ch nhiệm của người sử dụng. Trong trường hợp c&ocirc;ng ty t&ocirc;i đ&atilde; trả chi ph&iacute; bồi thường cho b&ecirc;n thứ 3 li&ecirc;n quan, người sử dụng sẽ thanh to&aacute;n tất cả c&aacute;c chi ph&iacute; bao gồm ph&iacute; bồi thường thiệt hại li&ecirc;n quan (bao gồm ph&iacute; luật sư v&agrave; lợi nhuận bị mất) cho c&ocirc;ng ty t&ocirc;i.
-      </p>
-      <p>
-          14．Trường hợp về việc sử dụng dịch vụ n&agrave;y người sử dụng đ&atilde; g&acirc;y ra tổn thất cho c&ocirc;ng ty t&ocirc;i, người sử dụng sẽ bồi thường tổn thất cho c&ocirc;ng ty t&ocirc;i bằng chi ph&iacute; v&agrave; tr&aacute;ch nhiệm của người sử dụng (bao gồm chi ph&iacute; kiện c&aacute;o v&agrave; thu&ecirc; luật sư).
-      </p>
-      <p>
-          Điều 9 (Về đăng quảng c&aacute;o)
-      </p>
-      <p>
-          Người sử dụng hiểu v&agrave; chấp nhận rằng c&oacute; trường hợp tr&ecirc;n hệ thống sẽ gồm c&oacute; tất cả c&aacute;c quảng c&aacute;o, v&agrave; c&oacute; trường hợp c&ocirc;ng ty t&ocirc;i hay b&ecirc;n li&ecirc;n kết sẽ đăng tất cả quảng c&aacute;o. H&igrave;nh thức v&agrave; phạm vi của quảng c&aacute;o tr&ecirc;n dịch vụ n&agrave;y sẽ được c&ocirc;ng ty ch&uacute;ng t&ocirc;i thao đổi v&agrave;o t&ugrave;y thời điểm.
-      </p>
-      <p>
-          Điều 10 (Cấm chuyển nhượng quyền)
-      </p>
-      <p>
-          1．Người d&ugrave;ng sẽ kh&ocirc;ng thể nhượng một phần hay tất cả quyền hoặc nghĩa vụ cho b&ecirc;n thứ 3 căn cứ theo điều khoản v&agrave; quy định trong bản hợp đồng n&agrave;y, nếu chưa c&oacute; sự đồng &yacute; trước của c&ocirc;ng ty t&ocirc;i tr&ecirc;n mặt văn bản.
-      </p>
-      <p>
-          2．C&ocirc;ng ty t&ocirc;i c&oacute; thể chuyển nhượng một phần hoặc to&agrave;n bộ dịch vụ n&agrave;y theo c&aacute;ch xử l&yacute; của c&ocirc;ng ty t&ocirc;i. Trường hợp đ&oacute;, tất cả quyền lợi của người sử dụng c&oacute; li&ecirc;n quan đến dịch vụ n&agrave;y bao gồm t&agrave;i khoản của người d&ugrave;ng trong phạm vi quyền hạn đ&atilde; được chuyển nhượng sẽ được chuyển cho b&ecirc;n chuyển nhượng.
-      </p>
-      <p>
-          Điều 11 (Khả năng ph&acirc;n chia)
-      </p>
-      <p>
-          Bất kỳ điều khoản hay phần n&agrave;o của điều luật n&agrave;y, ngay cả khi n&oacute; được x&aacute;c định l&agrave; sai hoặc kh&ocirc;ng thể thực thi theo ph&aacute;p luật hợp đồng ti&ecirc;u d&ugrave;ng hay c&aacute;c luật kh&aacute;c, c&aacute;c điều khoản c&ograve;n lại v&agrave; một số thuật ngữ kh&ocirc;ng hợp lệ hay kh&ocirc;ng thể thực thi của c&aacute;c quy định được x&aacute;c định vẫn c&oacute; hiệu lực đầy đủ để tiếp tục.
-      </p>
-      <p>
-          Điều 12 (C&aacute;ch thức li&ecirc;n lạc với c&ocirc;ng ty t&ocirc;i)
-      </p>
-      <p>
-          Li&ecirc;n lạc hay thắc mắc của người d&ugrave;ng về dịch vụ n&agrave;y tới &ocirc;ng ty t&ocirc;i sẽ được tiến h&agrave;nh bằng c&aacute;ch việc gửi tin hay c&ocirc;ng ty t&ocirc;i đang vận h&agrave;nh theo c&aacute;ch c&ocirc;ng ty t&ocirc;i quy định.
-      </p>
-      <p>
-          Điều 13 (Luật căn cứ, t&ograve;a &aacute;n trực thuộc)
-      </p>
-      <p>
-          1．Về hiệu lực, giải th&iacute;ch v&agrave; thi h&agrave;nh bản hợp điều khoản n&agrave;y, sẽ được căn cứ v&agrave; giải th&iacute;ch theo luật Nhật bản.
-      </p>
-      <p>
-          2．Đối với c&aacute;c cuộc thảo luận, kiện tụng v&agrave; bất kỳ tranh chấp n&agrave;o kh&aacute;c giữa c&ocirc;ng ty
-      </p>
-      <p>
-          t&ocirc;i v&agrave; người sử dụng, To&agrave; &aacute;n ph&aacute;p luật Tokyo hay To&agrave; &aacute;n địa phương Tokyo sẽ l&agrave; t&ograve;a thẩm &aacute;n độc quyền theo khoản kiện c&aacute;o.
-      </p>
-      <p>
-          Thi h&agrave;nh ng&agrave;y 1 th&aacute;ng 1 năm 2018
-      </p>
-      <br />
-    </div>
-  </v-card>
+  <div>
+    <v-layout>
+      <v-flex xs12 sm10>
+        <v-card>
+          <v-card-title class="primary white--text" primary-title>
+            <v-btn dark icon @click="back">
+              <v-icon>chevron_left</v-icon>
+            </v-btn>
+            <div>
+              <h3 class="headline mb-0">{{ $t('settings.termOfService') }}</h3>
+            </div>
+          </v-card-title>
+          <v-card-text class="desc-terms-of-service">
+            <p><b><span style='font-size:12.0pt;line-height:115%'>Dự án SEN POINT</span></b></p>
+
+            <p><b><span style='font-size:12.0pt;line-height:115%'>Hợp đồng sử dụng</span></b></p>
+
+            <p>&nbsp;</p>
+
+            <p>Hợp đồng này là bản hợp đồng quy định về việc xử lý khi sử dụng dự án SEN POINTmà khách hàng và công ty cổ phần TTJ cung cấp ( bên dưới là dịch vụ này). Qúy vị sử dụng dịch vụ này  (<a target="_blank" href="http://www.ttjworld.com"><span
+                style='color:#1155CC'>http://www.ttjworld.com</span></a> và Wallet SEN POINT) sau khi đồng ý với điều khoản của bản hợp đồng này.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 1 (Định nghĩa)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='text-indent:36.0pt'>Định nghĩa từ dùng trong bản hợp đồng này, được đưa ra như sau:p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(1)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Dịch vụ này  là dịch vụ công ty chúng tôi đang quản lý và các dịch vụ có liên quan</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(2)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trang web này  là trang web mà nội dung dịch vụ này được đăng tải</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(3)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Nội dung này  gọi chung như là chương trính ví tiền, mã code, màn hình chữ, màn hình tĩnh, màn hình động.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(4)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người sử dụng   là tất cả các vị sử dụng dịch vụ này</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(5)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người dùng đăng nhập  là những vị đã hoàn tất đăng ký người dùng tại trang web này p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(6)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Địa chỉ mail  là dãy chữ số mà người người dùng có sẵn để sử dụng dịch vụ này</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(7)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Mật khẩu  là mật mã mà người dùng cài đặt phù hợp với ID</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(8)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Thông tin cá nhân    gọi chung là những thông tin có thế xác nhận rõ địa chỉ, tên, nghề nghiệp, số điện thoại, ngày tháng năm sinh… của người dùng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(9)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Thông tin đăng ký    gọi chung là thông tin mà người dùng đã đăng ký tại trang web này.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 2 (Đồng ý với bản hợp đồng này)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hơp đồng quy định rằng người dùng sau khi đồng ý với các điều khoản sử dụng thì có thể sử dụng dịch vụ này.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Tại thời điểm người dùng tải dịch vụ này về điện thoại hay các thiết bị thông tin khác và hoàn tất thủ tục đồng ý của bản hợp đồng này thì hợp đồng sử dụng theo các quy định của bản hợp đồng này sẽ được thành lập giữa người sử dụng và công ty chúng tôi.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trong trường hợp người sử dụng là những vị chưa thanh niên, xin vui lòng sử dụng sau khi đã nhận được sự đồng ý của bố mẹ hoặc đại diện pháp lý.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>4.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trong trường hợp người sử dụng là vị thành niên sử dụng dịch vụ này bằng cách giả là có sự đồng ý của người đại diện mặc dù không có hoặc giả là tuổi là thành niên, hay trường hợp lừa đảo để có được tín nhiệm là người có khả năng thực hiện hành động.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>5.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp vào thời điểm đồng ý điệu khoản hợp đồng, người sử dụng là vị chưa thành niên sử dụng hợp đồng này sau khi thành niên thì hợp động quy định người sử dụng có liên quan đã thừa nhận tất cả hành vi pháp lý liên quan tới dịch vụ này. </p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 3 (Thay đổi điều khoản)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty chúng tôi không nhận ủy thác của người sử dụng, bất cứ lúc nào cũng có thể sửa đổi nội dung của bản hợp đồng này．</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty chúng tôi khi sửa đổi hợp đồng này, về nội dung sửa đổi đó sẽ thông báo tới người sử dụng bằng cách thức mà công ty quy định.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hiệu lực của sửa đổi hợp đồng này như điều trên sẽ có hiệu lực từ thời điểm công ty tôi tiến hành thông báo bằng mục phía trên.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>4.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Sau khi thay đổi hợp đồng này, tại thời điểm người sử dụng dùng dịch vụ này thì được coi như là người sử dụng không phản đối mà đã đồng ý với hợp đồng sử dụng dịch vụ này.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 4 (Thủ tục đăng ký thành viên)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Những vị có mong muốn đăng ký dịch vụ này (bên dưới là “người muốn đăng ký” thì sau khi đồng ý với bản hợp đồng này, thì hãy tiến hành đăng ký bằng cách thức quy định</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Những vị đã đăng ký thì từ thời điểm công ty tôi chấp nhận đăng ký, và hoàn tất ID đăng ký thì sẽ trở thành người dùng đăng nhập</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi sẽ tiến hành thông báo liên hệ và cung cấp thông tin khác qua thư cho người dùng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>4.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp người muốn đăng ký dùng có liên quan đến bất cứ trường hợp nào sau đây thì cũng có khi công ty tôi bằng phán đoán của mình sẽ không chấp nhận đăng ký. </p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>Thứ nhất,<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp tiến hành đăng ký không bằng cách do công ty tôi quy định.</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>Thứ 2,<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp người muốn đăng ký là người đã nhận hình phạt ra khỏi hội vì lí do như vi phạm hợp đồng này trong quá khứ hay vi phạm điều khoản sử dụng công ty quy định.</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>Thứ 3, <span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp công ty tôi biết được là tiến hành đăng ký bằng cách thức bất chính</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>Thứ 4,<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp người muốn sử dụng đăng ký thông tin không phải của mình</p>
+
+            <p style='margin-left:72.0pt;text-indent:-18.0pt'>Thứ 5,<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>những trường hợp khác công ty tôi đã biết là không hợp lý</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 5 (Quản lý tài khoản)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Về thông tin đã đăng ký trước khi sử dụng, người dùng sẽ đăng ký, quản lý tùy ý dưới trách nhiệm của bản thân. Người dùng không được lấy những thông tin này cho bên thứ 3 sử dụng, hay cho thuê, nhượng quyền,thay đổi danh nghĩa, buôn bán...</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp đã sử dụng dịch vụ này bằng thông tin đăng ký công ty tôi quy định người đã đăng ký sử dụng sẽ có thể sử dụng, về kết quả do việc sử dụng tạo ra hay tất cả trách nhiệm cùng với điều đó đều thuộc về bản thân người đã tiến hành đăng ký sử dụng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp tổn thất do người sử dụng sử dụng ko chính đáng thông tin đăng ký dẫn đến tổn thất cho công ty tôi hay bên thứ 3 thì người sử dụng sẽ bồi thường thiệt hại tương ứng cho công ty tôi và bên thứ 3 có liên quan</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>4.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Việc quản lý thông tin đăng ký sẽ thuộc trách nhiệm của người sử dụng và công ty tôi không chịu trách nhiệm về bất cứ thiệt hại mà người sử dụng đã gây ra vì thông tin đăng ký không chính xác hoặc sai.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>5.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trong trường hợp thông tin đăng ký bị đánh cắp hoặc phát hiện ra bị bên thứ ba đang sử dụng, người sử dụng phải thông báo ngay cho Công ty và làm theo chỉ dẫn của công ty.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 6 (Xử lý thông tin cá nhân)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt'>Về thông tin cá nhân hay thông tin của người dùng, chúng tôi sẽ xử lý nó một cách phù hợp theo "Chính sách bảo mật của dự án SEN POINT" mà công ty tôi quy định.</p>
+
+            <p style='margin-left:36.0pt'>&nbsp;</p>
+
+            <p>Điều 7 (Hành vi cấm）</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt'>Khi sử dụng dịch vụ này công ty nghiêm cấm các hành vi sau đây đối với người dùng. Công ty tôi có thể có những biện pháp tạm ngưng dùng cho người dùng, hình thức đóng băng tài khoản hoặc thực hiện các biện pháp khác nếu công ty tôi biết rằng người dùng đã vi phạm điều cấm.</p>
+
+            <p style='margin-left:36.0pt'>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(1)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi làm tổn hại danh dự hay uy tín của công ty tôi hoặc bên thứ ba, hoặc phân biệt hoặc vu khống không đúng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(2)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi chiếm đoạt hoặc hành vi có thể chiếm đoạt tài sản của công ty tôi hay bên thứ 3</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(3)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi gây ra tổn thất kinh tế cho công ty tôi hay bên thứ 3</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(4)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi đe dọa đối với công ty tôi hoặc bên thứ 3</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(5)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tạo ra vi rút máy tính, chương trình độc hại spec hoặc những hành vi gây ra những điều này. </p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(6)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tạo ra gánh nặng quá mức đối với cơ sở hạ tầng dùng trong dịch vụ này.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(7)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tấn công máy chủ, hệ thống, bảo mật trang web của chúng tôi</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(8)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi cố truy cập dịch vụ của chúng tôi bằng các phương pháp ngoài giao diện chúng tôi cung cấp.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(9)<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Ngoài những điều đã nêu trên, hành vi mà công ty tôi biết được là không đúng.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 8 (Miễn trách)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi sẽ không chịu bất cứ trách nhiệm về những tổn thất do thay đổi nội dung, ngưng sử dụng, hay kết thúc dịch vụ này.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi không có bất cứ liên quan hay trách nhiệm về môi trường sử dụng dịch vụ của người dùng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Về những việc như việc dịch vụ này phù hợp với mục đích của người dùng, việc làm cho có tính năng mong muốn hay giá trị thương mại, tính chính xác, tính hữu dụng, việc sử dụng dịch vụ này bởi người dùng sẽ phù hợp với nghị định thích hợp với người sử dụng hay quy định nội bộ của nghiệp đoàn, và việc không xảy ra lỗi thì không phải là việc công ty chúng tôi đảm bảo.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>4.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi không đảm bảo dịch vụ này sẽ phù hợp với tất cả thiết bị thông tin, về việc cùng với nâng cấp phiên bản OS của thiết bị thông tin sử dụng dịch vụ này thì có khả năng phát sinh lỗi trong thao tác dịch vụ, người sử dụng đã chấp nhận điều này. Trong trường hợp phát sinh lỗi công ty tôi sẽ tiến hành sửa chữa chương trình , nhưng việc các lỗi liên quan có được loại bỏ thì công ty chúng tôi không đảm bảo.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>5.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người sử dụng chấp nhận trước rằng cùng với thay đổi hợp đồng sử dụng hay phương châm vận dụng tại cửa hàng dịch vụ như AppStore、GooglePlay thì có khả năng bị giới hạn toàn bộ hoặc một phần dịch vụ này.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>6.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi sẽ không chịu bất cứ trách nhiệm bồi thường về những tổn hại do người sử dụng trực tiếp hay gián tiếp gây ra khi sử dụng dịch vụ này. </p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>7.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi đã thông báo trước khả năng tổn thất, công ty tôi sẽ không chịu trách nhiệm đối với tổn thất như đánh mất cơ hội, gián đoạn kinh doanh hay những tổn thất khác do người dùng hay bên thứ 3 gây ra.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>8.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Quy định từ mục 1 đến mục 7 không áp dụng với trường hợp có sự cố ý hay gây tổn thất nặng tới công ty tôi, hoặc trường hợp bản hợp đồng có liên quan tới người tiêu dùng trên mặt luật hợp đồng tiêu dùng.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>9.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Về tổn hại từ những trường hợp đặc biệt trong tổn hại do người dùng gây ra bằng những hành vi do lỗi ( ngoại trừ lỗi lớn) dù là trường hợp được áp dụng ở điều trên thì công ty tôi hoàn toàn không có trách nhiệm.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>10.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp công ty tôi chịu trách nhiệm bồi thường tổn hại về sử dụng dịch vụ này, công ty tôi sẽ chịu trách nhiệm bồi thường khoản tiền đã nhận từ khách hàng trong tháng phát sinh thiệt hại liên quan.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>11.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi không chịu bất cứ trách nhiệm nào về tranh chấp hoặc sự cố nào giữa người dùng và người dùng khác. Dù là trường hợp đã phát sinh sự cố giữa người dùng và người dùng khác thì không thể yêu cầu công ty tôi bất cứ điều gì, việc giải quyết sự cố là trách nhiệm của 2 bên với nhau.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>12.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Liên quan đến việc sử dụng dịch vụ này, trong trường hợp gây tổn hại cho người dùng khác hoặc trong trường hợp có tranh chấp với bên thứ ba, người dùng sẽ phải bồi thường thiệt hại liên quan và trách nhiệm giải quyết tranh chấp, và không gây bất cứ phiền phức hay tổn hại gì cho công ty tôi.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>13.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp công ty tôi phải yêu cầu bên thứ ba bồi thường thiệt hại do hành động của người dùng, công ty tôi sẽ giải quyết bằng chi phí (phí luật sư) và trách nhiệm của người sử dụng. Trong trường hợp công ty tôi đã trả chi phí bồi thường cho bên thứ 3 liên quan, người sử dụng sẽ thanh toán tất cả các chi phí bao gồm phí bồi thường thiệt hại liên quan (bao gồm phí luật sư và lợi nhuận bị mất) cho công ty tôi.</span></p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>14.<span
+              style='font:7.0pt "Times New Roman"'> &nbsp;&nbsp;&nbsp; </span>Trường hợp về việc sử dụng dịch vụ này người sử dụng đã gây ra tổn thất cho công ty tôi, người sử dụng sẽ bồi thường tổn thất cho công ty tôi bằng chi phí và trách nhiệm của người sử dụng (bao gồm chi phí kiện cáo và thuê luật sư).</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 9 (Về đăng quảng cáo)</p>
+
+            <p>&nbsp;</p>
+
+            <p>Người sử dụng hiểu và chấp nhận rằng có trường hợp trên hệ thống sẽ gồm có tất cả các quảng cáo, và có trường hợp công ty tôi hay bên liên kết sẽ đăng tất cả quảng cáo. Hình thức và phạm vi của quảng cáo trên dịch vụ này sẽ được công ty chúng tôi thao đổi vào tùy thời điểm.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 10 (Cấm chuyển nhượng quyền)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người dùng sẽ không thể nhượng một phần hay tất cả quyền hoặc nghĩa vụ cho bên thứ 3 căn cứ theo điều khoản và quy định trong bản hợp đồng này, nếu chưa có sự đồng ý trước của công ty tôi trên mặt văn bản.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi có thể chuyển nhượng một phần hoặc toàn bộ dịch vụ này theo cách xử lý của công ty tôi. Trường hợp đó, tất cả quyền lợi của người sử dụng có liên quan đến dịch vụ này bao gồm tài khoản của người dùng trong phạm vi quyền hạn đã được chuyển nhượng sẽ được chuyển cho bên chuyển nhượng.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 11 (Khả năng phân chia)</p>
+
+            <p>&nbsp;</p>
+
+            <p>Bất kỳ điều khoản hay phần nào của điều luật này, ngay cả khi nó được xác định là sai hoặc không thể thực thi theo pháp luật hợp đồng tiêu dùng hay các luật khác, các điều khoản còn lại và một số thuật ngữ không hợp lệ hay không thể thực thi của các quy định được xác định vẫn có hiệu lực đầy đủ để tiếp tục.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 12 (Cách thức liên lạc với công ty tôi)</p>
+
+            <p>&nbsp;</p>
+
+            <p>Liên lạc hay thắc mắc của người dùng về dịch vụ này tới ông ty tôi sẽ được tiến hành bằng cách việc gửi tin hay công ty tôi đang vận hành theo cách công ty tôi quy định. </p>
+
+            <p>&nbsp;</p>
+
+            <p>Điều 13 (Luật căn cứ, tòa án trực thuộc)</p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Về hiệu lực, giải thích và thi hành bản hợp điều khoản này, sẽ được căn cứ và giải thích theo luật Nhật bản.</p>
+
+            <p style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Đối với các cuộc thảo luận, kiện tụng và bất kỳ tranh chấp nào khác giữa công ty tôi và người sử dụng, Toà án pháp luật Tokyo hay Toà án địa phương Tokyo sẽ là tòa thẩm án độc quyền theo khoản kiện cáo.</p>
+
+            <p>&nbsp;</p>
+
+            <p>Effective: January 1, 2018</p>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </div>
 </template>
+
 <script>
   import router from '@/router'
 
   export default {
     data () {
-      return {}
-    },
-    methods: {
-      back () {
-        router.go(-1)
+      return {
+        back () {
+          router.go(-1)
+        }
       }
     },
+    methods: {},
     mounted () {
       this.$store.dispatch('app/setShowDrawer', true)
       this.$store.dispatch('app/init')
     }
   }
 </script>
-<style scoped>
-  div{
-    padding: 8px;
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+  .desc-terms-of-service p {
+    margin: 0cm;
+    margin-bottom: .0001pt;
+    line-height: 115%;
+    font-size: 11.0pt;
+    font-family: "Arial", sans-serif;
+    color: black;
   }
 </style>
