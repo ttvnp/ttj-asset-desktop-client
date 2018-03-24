@@ -206,32 +206,32 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:72.0pt;text-indent:-36.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>With
               any party you intend to distribute funds to, or that intends to distribute
               funds to you, via SEN POINT, including information about whether your account
               is active and whether the account has been verified.</p>
 
-            <p style='margin-left:72.0pt;text-indent:-36.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>With
               vendors, consultants and other service providers who need access to your
               information to carry out work on our behalf. These service providers help with
               our business operations such as fraud prevention and technology services.</p>
 
-            <p style='margin-left:72.0pt;text-indent:-36.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>When
               we believe, in our sole discretion, that the disclosure of your information is
               necessary to prevent physical harm or financial loss, to report suspected
               illegal activity, or to investigate violations of or enforce our user
               agreements or other policies and agreements..</p>
 
-            <p style='margin-left:72.0pt;text-indent:-36.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In
               connection with, or during negotiations of, any merger, sale of SEN POINTs
               assets, financing or acquisition or all or a portion of our business to
               another company.</p>
 
-            <p style='margin-left:72.0pt;text-indent:-36.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>With
               your consent or at your discretion</p>
 
