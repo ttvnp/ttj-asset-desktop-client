@@ -27,9 +27,9 @@
               <li>{{ $t('profile.doe') }}</li>
             </ul>
           </v-card-text>
-          <v-container class="px-4 text-xs-center">
-            <v-layout row wrap="">
-              <v-flex xs12 sm6 align-center>
+          <v-container class="px-4">
+            <v-layout row wrap>
+              <v-flex xs12 sm6>
                 <p>{{ $t('profile.facePhoto') }}</p>
                 <div class="image-picker-wrapper">
                   <div>
@@ -39,12 +39,16 @@
                 </div>
               </v-flex>
               <v-flex xs12 sm6>
-                <p>{{ $t('general.sample') }}</p>
+                <p style="margin-left: 40px">{{ $t('general.sample') }}</p>
                 <div>
                   <img class="sample-face-photo" src="@/assets/face_photo_sample.png">
                 </div>
               </v-flex>
             </v-layout>
+            <ul>
+              <li>{{ $t('facePhoto.pointOne') }}</li>
+              <li>{{ $t('facePhoto.pointTwo') }}</li>
+            </ul>
             <v-layout row wrap>
               <v-flex xs12 sm6>
                 <p>{{ $t('profile.address') }}</p>
@@ -56,12 +60,16 @@
                 </div>
               </v-flex>
               <v-flex xs12 sm6>
-                <p style="margin-left: -36px">{{ $t('general.sample') }}</p>
+                <p style="margin-left: 32px">{{ $t('general.sample') }}</p>
                 <div>
                   <img class="sample-address-photo" src="@/assets/address_sample.png">
                 </div>
               </v-flex>
             </v-layout>
+            <ul>
+              <li>{{ $t('addressPhoto.pointOne') }}</li>
+              <li>{{ $t('addressPhoto.pointTwo') }}</li>
+            </ul>
           </v-container>
           <v-container class="px-4">
             <div class="text-xs-center note-id-verified">{{ $t('settingsUploader.onceYouUploadImagesYouWilNotBeAbleToEditYourProfile') }}</div>

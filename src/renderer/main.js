@@ -27,6 +27,14 @@ const en = {
     codeIsRequired: 'Code is required.',
     emailIsRequired: 'Email Address is required'
   },
+  facePhoto: {
+    pointOne: 'Please submit the page containing your photograph and the page',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
+  addressPhoto: {
+    pointOne: 'Please submit the page containing your address information (your home address)',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
   signUp: {
     pleaseSetUpYourWalletFirst: 'Please set up your wallet first.'
   },
@@ -136,6 +144,14 @@ const ja = {
     codeIsRequired: '認証コードを入力してください',
     emailIsRequired: 'メールアドレスを入力してください'
   },
+  facePhoto: {
+    pointOne: 'Please submit the page containing your photograph and the page',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
+  addressPhoto: {
+    pointOne: 'Please submit the page containing your address information (your home address)',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
   signUp: {
     pleaseSetUpYourWalletFirst: 'ウォレットを有効にしてください'
   },
@@ -244,6 +260,14 @@ const vi = {
     passwordIsRequired: 'Hãy nhập mật khẩu',
     codeIsRequired: 'Hãy nhập mã xác nhận.',
     emailIsRequired: 'Hãy nhập địa chỉ mail.'
+  },
+  facePhoto: {
+    pointOne: 'Please submit the page containing your photograph and the page',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
+  addressPhoto: {
+    pointOne: 'Please submit the page containing your address information (your home address)',
+    pointTwo: 'Ensure that all documents are clear and readable'
   },
   signUp: {
     pleaseSetUpYourWalletFirst: 'Hãy tạo ví tiền có giá trị'
