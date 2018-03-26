@@ -39,7 +39,7 @@
                 </div>
               </v-flex>
               <v-flex xs12 sm6>
-                <p style="margin-left: 40px">{{ $t('general.sample') }}</p>
+                <p style="margin-left: 16px">{{ $t('general.sample') }}</p>
                 <div>
                   <img class="sample-face-photo" src="@/assets/face_photo_sample.png">
                 </div>
@@ -49,6 +49,7 @@
               <li>{{ $t('facePhoto.pointOne') }}</li>
               <li>{{ $t('facePhoto.pointTwo') }}</li>
             </ul>
+            <br />
             <v-layout row wrap>
               <v-flex xs12 sm6>
                 <p>{{ $t('profile.address') }}</p>
@@ -60,7 +61,7 @@
                 </div>
               </v-flex>
               <v-flex xs12 sm6>
-                <p style="margin-left: 32px">{{ $t('general.sample') }}</p>
+                <p style="margin-left: 14px">{{ $t('general.sample') }}</p>
                 <div>
                   <img class="sample-address-photo" src="@/assets/address_sample.png">
                 </div>
