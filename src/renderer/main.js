@@ -27,6 +27,14 @@ const en = {
     codeIsRequired: 'Code is required.',
     emailIsRequired: 'Email Address is required'
   },
+  facePhoto: {
+    pointOne: 'Please submit the page containing your photograph and the page',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
+  addressPhoto: {
+    pointOne: 'Please submit the page containing your address information (your home address)',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
   signUp: {
     pleaseSetUpYourWalletFirst: 'Please set up your wallet first.'
   },
@@ -110,6 +118,7 @@ const en = {
     idDocumentUnderReview: 'Under review for ID Document'
   },
   general: {
+    sample: 'Sample',
     noData: 'No Data',
     start: 'START',
     ok: 'OK',
@@ -134,6 +143,14 @@ const ja = {
     passwordIsRequired: 'パスワードを入力してください',
     codeIsRequired: '認証コードを入力してください',
     emailIsRequired: 'メールアドレスを入力してください'
+  },
+  facePhoto: {
+    pointOne: 'Please submit the page containing your photograph and the page',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
+  addressPhoto: {
+    pointOne: 'Please submit the page containing your address information (your home address)',
+    pointTwo: 'Ensure that all documents are clear and readable'
   },
   signUp: {
     pleaseSetUpYourWalletFirst: 'ウォレットを有効にしてください'
@@ -218,6 +235,7 @@ const ja = {
     idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
   general: {
+    sample: 'サンプル',
     noData: 'データが存在しません',
     start: '始める',
     ok: 'OK',
@@ -242,6 +260,14 @@ const vi = {
     passwordIsRequired: 'Hãy nhập mật khẩu',
     codeIsRequired: 'Hãy nhập mã xác nhận.',
     emailIsRequired: 'Hãy nhập địa chỉ mail.'
+  },
+  facePhoto: {
+    pointOne: 'Please submit the page containing your photograph and the page',
+    pointTwo: 'Ensure that all documents are clear and readable'
+  },
+  addressPhoto: {
+    pointOne: 'Please submit the page containing your address information (your home address)',
+    pointTwo: 'Ensure that all documents are clear and readable'
   },
   signUp: {
     pleaseSetUpYourWalletFirst: 'Hãy tạo ví tiền có giá trị'
@@ -326,6 +352,7 @@ const vi = {
     idDocumentUnderReview: 'Đang xem xét dữ liệu ID'
   },
   general: {
+    sample: 'Mẫu vật',
     noData: 'Không có dữ liệu',
     start: 'Bắt đầu',
     ok: 'OK',
