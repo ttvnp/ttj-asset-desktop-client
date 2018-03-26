@@ -320,7 +320,7 @@
 
             <p>&nbsp;</p>
 
-            <p>Effective: January 1, 2018</p>
+            <p>Thi hành ngày 1 tháng 1 năm 2018</p>
           </v-card-text>
         </v-card>
       </v-flex>
