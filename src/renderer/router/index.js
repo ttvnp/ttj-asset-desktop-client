@@ -76,6 +76,11 @@ export default new Router({
       component: require('@/components/SettingsJaTermsOfService').default
     },
     {
+      path: '/settings/vn_terms_of_service',
+      name: 'settingsVnTermsOfService',
+      component: require('@/components/SettingsVnTermsOfService').default
+    },
+    {
       path: '/settings/privacy_policy',
       name: 'settingsPrivacyPolicy',
       component: require('@/components/SettingsPrivacyPolicy').default
