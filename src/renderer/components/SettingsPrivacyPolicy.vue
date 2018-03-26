@@ -35,7 +35,7 @@
 
             <p>&nbsp;</p>
 
-            <p><b><span style='font-size:14.0pt;line-height:115%'>Collection of information</span></b></p>
+            <p style='font-size:14.0pt; font-weight:700;'>Collection of information</p>
 
             <p>&nbsp;</p>
 
@@ -50,30 +50,26 @@
 
             <p>&nbsp;</p>
 
-            <p>&nbsp;</p>
-
             <p><b>The types of information we may collect</b></p>
 
-            <p style='margin-left:36.0pt'>&nbsp;</p>
+            <p style='margin-left:30.0pt'>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Contact
               information: Name, mailing address, phone number, email address.</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Financial
               information: Bank account numbers, credit card numbers and cryptocurrency
               account information.</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Government
               issued ID number: Driver’s license or passport information.</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Biographic
               or demographic information : Date of birth, gender, occupation, employment status.</p>
-
-            <p>&nbsp;</p>
 
             <p>&nbsp;</p>
 
@@ -89,8 +85,6 @@
 
             <p>&nbsp;</p>
 
-            <p>&nbsp;</p>
-
             <p><b>Information We collect automatically</b></p>
 
             <p>&nbsp;</p>
@@ -99,19 +93,19 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Transaction
               information</b>: We collect information about the transaction you complete via
               SEN POINT, including the amount of funds associated with a trade, the types
               of trades executed and other transaction information.</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Location
               information</b>: With your prior consent, we may collect precise geolocation information
               from your mobile device when you visit or use our mobile app. Please refer to
               “Your Choice” below for more information.</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Device
               and log information</b>: We collect information about the computer or mobile device
               you use to access SEN POINT, including device identifiers, mobile network information,
@@ -119,7 +113,7 @@
               your use of SEN POINT, including access times, pages viewed, IP address, other standard
               web log data, and the page visited before and after navigating to our websites.</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Cookies
               and similar tracking technologies</b>:  We may use cookies or other tracking
               technologies to collect information about you when you use SEN POINT including
@@ -133,7 +127,7 @@
 
             <p>&nbsp;</p>
 
-            <p><b>Use of information</b></p>
+            <p style='font-size:14.0pt; font-weight:700;'>Use of information</p>
 
             <p>&nbsp;</p>
 
@@ -141,42 +135,42 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Improve
               SEN POINT and its customer support;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Process
               transactions and send notices about your transactions;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Manage
               your account(s) and send technical notices, updates, security alerts and support
               and administrative messages;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Resolve
               disputes, collect fees, and troubleshoot problems;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Prevent
               potentially prohibited or illegal activities and enforce our user agreements;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Personalize,
               measure and improve the SEN POINT Project Services;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Deliver
               marketing and promotional offers on behalf of SEN POINT and others, including via
               SMS, voice calls or email;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Link
               or combine your personal information with information we obtain from others to
               help understand your needs and provide you with better service; and</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Carry
               out the collection of information for purposes other than the ones previously
               stated and is deemed necessary through the methods indicated in the notification
@@ -184,8 +178,9 @@
 
             <p>&nbsp;</p>
 
-            <p><br>
-              <b>Disclosure of information</b></p>
+            <p>&nbsp;</p>
+
+            <p style='font-size:14.0pt; font-weight:700;'>Disclosure of information</p>
 
             <p>&nbsp;</p>
 
@@ -196,45 +191,47 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(1)<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>(1)<span
               style='font:7.0pt "Times New Roman"'>&nbsp; </span>To service providers that
               perform marketing services on our behalf; and</p>
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(2)<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>(2)<span
               style='font:7.0pt "Times New Roman"'>&nbsp; </span>For our everyday business
               purposes, such as to process transactions, maintain accounts, respond to
               court orders and legal investigations or report to credit bureaus. For
               example, in connection with our everyday business purposes, we may share
               information about you as follows:</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p>&nbsp;</p>
+
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>With
               any party you intend to distribute funds to, or that intends to distribute
               funds to you, via SEN POINT, including information about whether your account
               is active and whether the account has been verified.</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>With
               vendors, consultants and other service providers who need access to your
               information to carry out work on our behalf. These service providers help with
               our business operations such as fraud prevention and technology services.</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>When
               we believe, in our sole discretion, that the disclosure of your information is
               necessary to prevent physical harm or financial loss, to report suspected
               illegal activity, or to investigate violations of or enforce our user
               agreements or other policies and agreements..</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In
               connection with, or during negotiations of, any merger, sale of SEN POINTs
               assets, financing or acquisition or all or a portion of our business to
               another company.</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>With
               your consent or at your discretion</p>
 
@@ -248,23 +245,21 @@
 
             <p>Other than in connection with a merger, sale of SEN POINT assets, financing
             or acquisition, we will not sell or rent any of your information to third
-            parties for their own marketing purposes.<br>
-              <br>
-              Please note that third parties that support our customer identification and
-              anti-fraud controls may retain and use information about you to perform
-              services on our behalf and to improve their services. By using our Services,
-              you consent to the retention and use of such information by these providers
-              to improve their services.<br>
-              <br>
-              We may also share aggregated or de-identified information with our affiliated
-              companies or nonaffiliated third parties, which cannot reasonably be used
-              to identify you.</p>
+            parties for their own marketing purposes.
+            Please note that third parties that support our customer identification and
+            anti-fraud controls may retain and use information about you to perform
+            services on our behalf and to improve their services. By using our Services,
+            you consent to the retention and use of such information by these providers
+            to improve their services.
+            We may also share aggregated or de-identified information with our affiliated
+            companies or nonaffiliated third parties, which cannot reasonably be used
+            to identify you.</p>
 
             <p>&nbsp;</p>
 
             <p>&nbsp;</p>
 
-            <p><b>Analysis service provided by other companies</b></p>
+            <p style='font-size:14.0pt; font-weight:700;'>Analysis service provided by other companies</p>
 
             <p>&nbsp;</p>
 
@@ -278,7 +273,9 @@
               <br>
             </p>
 
-            <p><b>Security</b></p>
+            <p>&nbsp;</p>
+
+            <p style='font-size:14.0pt; font-weight:700;'>Security</p>
 
             <p>&nbsp;</p>
 
@@ -290,11 +287,13 @@
               <br>
             </p>
 
-            <p><b>Your choice</b></p>
+            <p>&nbsp;</p>
 
-            <p
+            <p style='font-size:14.0pt; font-weight:700;'>Your choice</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p>&nbsp;</p>
+
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Account Information</b>
               : You may access and review or update your online account information
               at any time by logging into your account and viewing your profile. If you want to
@@ -306,7 +305,7 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Communications Preferences</b>
               : You may opt out of receiving promotional communications from SEN POINT project by
               following the instructions in those communications. If you opt out of receiving
@@ -315,7 +314,7 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Location</b>
               : Our mobile applications may collect precise geolocation information from your
               mobile device with your prior consent. If you initially consent to our collection
@@ -326,7 +325,7 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>Cookies</b>
               : We use both session and persistent cookies. Session cookies expire when you log
               out of your account or close your browser. Persistent cookies remain on your computer
@@ -343,12 +342,17 @@
 
             <p>&nbsp;</p>
 
-            <p><b>Contact Us</b></p>
+            <p style='font-size:14.0pt; font-weight:700;'>Contact Us</p>
 
             <p>&nbsp;</p>
 
             <p>If you have any questions or concerns regarding this Privacy Policy,
-            please contact us at http://www.ttjworld.com/#/contact-us.</p>
+            please contact us at <a href="/contact-us">Contact US</a>.</p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
           </v-card-text>
         </v-card>
       </v-flex>
@@ -385,4 +389,5 @@
     font-family:"Arial",sans-serif;
     color:black;
   }
+</style>
 </style>
