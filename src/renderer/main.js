@@ -110,6 +110,7 @@ const en = {
     idDocumentUnderReview: 'Under review for ID Document'
   },
   general: {
+    sample: 'Sample',
     noData: 'No Data',
     start: 'START',
     ok: 'OK',
@@ -218,6 +219,7 @@ const ja = {
     idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
   general: {
+    sample: 'サンプル',
     noData: 'データが存在しません',
     start: '始める',
     ok: 'OK',
@@ -326,6 +328,7 @@ const vi = {
     idDocumentUnderReview: 'Đang xem xét dữ liệu ID'
   },
   general: {
+    sample: 'Mẫu vật',
     noData: 'Không có dữ liệu',
     start: 'Bắt đầu',
     ok: 'OK',

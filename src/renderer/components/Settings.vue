@@ -254,7 +254,7 @@ export default {
       router.push({ name: 'settingsProfileEdit' })
     },
     toIdUploader () {
-      if (this.identificationStatus !== 0) { return }
+      // if (this.identificationStatus !== 0) { return }
       router.push({ name: 'settingsIdUploader' })
     },
     toTermsOfService () {

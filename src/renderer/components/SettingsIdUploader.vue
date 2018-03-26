@@ -27,9 +27,9 @@
               <li>{{ $t('profile.doe') }}</li>
             </ul>
           </v-card-text>
-          <v-container class="px-4">
-            <v-layout row wrap>
-              <v-flex xs12 sm6>
+          <v-container class="px-4 text-xs-center">
+            <v-layout row wrap="">
+              <v-flex xs12 sm6 align-center>
                 <p>{{ $t('profile.facePhoto') }}</p>
                 <div class="image-picker-wrapper">
                   <div>
@@ -39,12 +39,26 @@
                 </div>
               </v-flex>
               <v-flex xs12 sm6>
+                <p>{{ $t('general.sample') }}</p>
+                <div>
+                  <img class="sample-face-photo" src="@/assets/face_photo_sample.png">
+                </div>
+              </v-flex>
+            </v-layout>
+            <v-layout row wrap>
+              <v-flex xs12 sm6>
                 <p>{{ $t('profile.address') }}</p>
                 <div class="image-picker-wrapper">
                   <div>
                     <img class="image-avatar" :src="idDocument2ImageURL">
                   </div>
                   <input class="image-picker" type="file" accept="image/*" v-on:change="onChangeImageId2">
+                </div>
+              </v-flex>
+              <v-flex xs12 sm6>
+                <p style="margin-left: -36px">{{ $t('general.sample') }}</p>
+                <div>
+                  <img class="sample-address-photo" src="@/assets/address_sample.png">
                 </div>
               </v-flex>
             </v-layout>
@@ -72,6 +86,7 @@
 </template>
 
 <script>
+import defaultPickerImage from '@/assets/id_document_attach_button.png'
 import router from '@/router'
 import { mapGetters } from 'vuex'
 export default {
@@ -167,14 +182,24 @@ export default {
   mounted () {
     this.$store.dispatch('app/setShowDrawer', true)
     this.$store.dispatch('app/init')
-    this.idDocument1ImageURL = this.currentIdDocument1ImageURL
-    this.idDocument2ImageURL = this.currentIdDocument2ImageURL
+    this.idDocument1ImageURL = defaultPickerImage
+    this.idDocument2ImageURL = defaultPickerImage
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.sample-face-photo {
+  width: 130px;
+  height: 130px;
+}
+.sample-address-photo {
+  width: 185px;
+  height: 185px;
+  margin-left: -36px;
+  margin-top: -36px;
+}
 .image-avatar {
   display: inline-block;
   width: 120px;
