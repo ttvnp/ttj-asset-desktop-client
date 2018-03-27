@@ -81,19 +81,19 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>取引情報</b>
               : 取引に対応する各資金の額、執行された取引のタイプ、およびその他取引情報を含めて、お客様がSEN POINTプロジェクトサービスを介して完了する取引についての情報を収集します。<p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>位置情報</b>
               : 事前にお客様の同意を得て、お客様が当社のモバイルアプリケーションにアクセスするか、それを使用するときにお客様のモバイルデバイスから詳細な地理的位置情報を収集する場合があります。<br> 詳細は下記の「お客様の選択」をご参照ください </p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>デバイスとログ情報</b>
               : 当社は、デバイスの識別子、モバイルネットワーク情報、OSのタイプ、およびご使用ブラウザのタイプを含めて、SEN POINTプロジェクトサービスへのアクセスにご使用されているコンピューターまたはモバイルデバイスについての情報を収集します。また、アクセス時間、表示したページ、IPアドレス、その他の標準的なウェブログデータ、および、当社の各ウェブサイトに移動する前後に訪問したページを含めて、SEN POINTプロジェクトサービスのお客様の使用状況についての情報も記録します</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>クッキーおよび同様の追跡テクノロジー</b>
               : 当社のSEN POINTプロジェクトサービス上での閲覧行動についての情報を含めて、お客様がSEN POINTプロジェクトサービスと交信するときにお客様についての情報を収集するために、当社は、クッキーおよびその他の追跡テクノロジーを使用する場合があります。クッキーとは、当社のウェブサーバーからお客様のコンピューターやモバイルデバイスに送信される小さいデータファイルのことです。これらのファイルによって、たとえば、お客様がSEN POINTプロジェクトサービスにどのように到達し、いつ戻り、どのページ訪問したかをキャプチャーしたり、当社がお客様のブラウザからページリクエストを受け取ったときに既にログオン済みであることを認識したりすることが可能です。</p>
 
@@ -101,7 +101,7 @@
 
             <p>&nbsp;</p>
 
-            <p><b>情報の使用</b></p>
+            <p><b><span style='font-size:14.0pt;line-height:115%'>情報の使用</span></b></p>
 
             <p>&nbsp;</p>
 
@@ -109,37 +109,37 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SEN POINTプロジェクトサービスとカスタマーサポートを提供します/p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>取引を処理し、お客様の取引についての通知を送ります。</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>お客様のアカウントを管理し、技術的な通知、交信、セキュリティアラート、サポート、および管理メッセージを送ります。p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>争議を解決し、手数料を集金し、また、不具合のトラブルシューティングを行います。p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>潜在的に禁止された（または違法な）活動を防止し、利用規約を施行します。</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SEN POINTプロジェクトサービスのパーソナライズ、計測、および改善を行います。</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SMS、音声電話、またはEメールによる場合も含めて、SEN POINTプロジェクトや他社に代行して、マーケティングやプロモーションオファーを配信します。</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>お客様のニーズを理解しやすくし、より良好なサービスをお客様に提供するために、お客様の個人情報を、当社が他社から取得した情報とリンクしたり組み合わせたりします。</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>当社の目的がお客様び個人情報収集によってやむを得ず検討される範囲で、または、収集の時点でSEN POINTプロジェクトサービスにおいて別の方法での通知の内容のとおりに、情報が収集された目的以外の目的を遂行します。<p>
 
             <p>&nbsp;</p>
 
             <p><br>
-              <b>情報の開示</b></p>
+              <b><span style='font-size:14.0pt;line-height:115%'>情報の開示</span></b></p>
 
             <p>&nbsp;</p>
 
@@ -147,27 +147,29 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(1)<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>(1)<span
               style='font:7.0pt "Times New Roman"'>&nbsp; </span>当社に代行してマーケティングサービスを遂行するサービスプロバイダーに対して</p>
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>(2)<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>(2)<span
               style='font:7.0pt "Times New Roman"'>&nbsp; </span>取引を処理するため、アカウントを維持するため、裁判所の命令や法的捜査に対応するため、信用調査機関に報告するためなど、当社の日常的な事業目的のために行う場合があります。たとえば、当社の日常的な事業目的と関連して、当社は、お客様についての情報を次のように共有する場合があります。</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+              <p>&nbsp;</p>
+
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SEN POINTプロジェクトサービスを介してお客様が資金を分配しようとしている対象者、または、お客様に資金を分配しようとしている供給者と（お客様のアカウントがアクティブかどうか、およびアカウントが検証済みかどうかの情報を含みます）。</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>当社に代行して作業を遂行するためにお客様の情報にアクセスする必要のあるベンダー、コンサルタント、およびその他プロバイダー。これらのサービスプロバイダーは、詐欺防止や技術サービスなどの当社業務を支援します。</p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>身体的危害または金融損失を防止するため、違法性の疑われる活動を報告するため、あるいは、ユーザー同意事項またはその他のポリシーや同意事項に対する違反を調査する、もしくは、これらを施行するために、お客様の情報の開示が必要であると、当社が独自の裁量で考えた場合。<p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>合併、SEN POINTプロジェクトの資産の売却、融資、もしくは買収、または、他社に対する当社業務の全部または一部と関連して、あるいはこれらの交渉中に。<p>
 
-            <p style='margin-left:72.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>お客様の同意または裁量によって。</p>
 
             <p>&nbsp;</p>
@@ -188,7 +190,7 @@
 
             <p>&nbsp;</p>
 
-            <p><b>他社によって提供される分析サービス</b></p>
+            <p><b><span style='font-size:14.0pt;line-height:115%'>他社によって提供される分析サービス</span></b></p>
 
             <p>&nbsp;</p>
 
@@ -198,7 +200,9 @@
             <br>
             </p>
 
-            <p><b>セキュリティ</b></p>
+            <p>&nbsp;</p>
+
+            <p><b><span style='font-size:14.0pt;line-height:115%'>セキュリティ</span></b></p>
 
             <p>&nbsp;</p>
 
@@ -208,27 +212,31 @@
             <br>
             </p>
 
-            <p><b>お客様の選択</b></p>
+            <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p><b><span style='font-size:14.0pt;line-height:115%'>お客様の選択</span></b></p>
+
+            <p>&nbsp;</p>
+
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>アカウント情報</b>
               : アカウントにログインしてプロフィールを表示することで、いつでもオンラインアカウント情報にアクセスし、この情報の再確認または更新を行うことができます。アカウントをクローズする場合は、当社にお問い合わせください。 ただし、お客様がアカウントをクローズした場合、たとえば、未納手数料の集金、争議の解決、不具合のトラブルシューティング、調査支援、詐欺行為の防止、または利用規約の強化のために、当社は、法律によって、または、当社の合理的な事業目的で、必要に応じてお客様の情報を保有する場合があることにご注意ください。</p>
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>通信設定</b>
               : プロモーション通信情報内の指示に従って、SEN POINTプロジェクトからのプロモーション通信情報の受け取りを選択できます。 プロモーション通信情報の受け取りを選択した場合、お客様のアカウントまたは現行ビジネス関連事項についてのメッセージなど、「取引上または取引関係に基づくメッセージ」をお送りする場合があります。</p>
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>位置</b>
               : 当社のモバイルアプリケーションは、お客様の事前の同意を得て、お客様のモバイルデバイスから詳細な地理的位置を収集する場合があります。 位置情報の収集について最初に同意した場合、モバイルデバイスのOS設定によってこの情報の収集をあとで停止できる場合があります。標準的なアンインストールプロセスに従ってモバイルデバイスからモバイルアプリケーションを削除することで、位置情報の収集を停止することもできます。</p>
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>クッキー</b>
               : 当社ではセッションクッキーと永続クッキーの両方を使用しています。セッションクッキーは、お客様がアカウントからログアウトするかブラウザを閉じると期限切れとなります。永続クッキーは、お客様が消去しない限り、または別の原因で期限切れにならない限り、お客様のコンピューターやモバイルデバイスに残ります。デフォルトでは、ほとんどのウェブブラウザがクッキーを受け付けるように設定されています。ご使用のブラウザまたはブラウザのアドオンによって許容されると大部分のクッキーを自由に拒否することはできますが、当社のクッキーを削除または無効するよう選択すると、SEN POINTプロジェクトサービスの使用や機能に支障をきたす場合があります。さらに、当社では、お客様のブラウザ設定によって影響されない特定の永続クッキーを使用する場合がありますが、永続クッキーは身元証明と詐欺防止の目的にのみ使用します。クッキーの詳細と、そのブロック、削除、無効化の方法については、ブラウザ上の指示をご参照するか、当社までお問い合わせください。<br>
               <br>
@@ -236,11 +244,15 @@
 
             <p>&nbsp;</p>
 
-            <p><b>問い合わせ</b></p>
+            <p><b><span style='font-size:14.0pt;line-height:115%'>問い合わせ</span></b></p>
 
             <p>&nbsp;</p>
 
-            <p>本プライバシーポリシーに関して疑問点や懸念がある場合には、TTJサイトのContactUS(http://www.ttjworld.com/#/contact-us)にてお問い合わせください。</p>
+            <p>本プライバシーポリシーに関して疑問点や懸念がある場合には、TTJサイトの<a href="/contact-us">Contact US</a>にてお問い合わせください。</p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
           </v-card-text>
         </v-card>
       </v-flex>
