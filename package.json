@@ -1,6 +1,6 @@
 {
   "name": "ttj-asset-desktop-client",
-  "version": "v1.0.9",
+  "version": "v1.0.10",
   "author": "hiroki.tanaka@ttvnp.com",
   "description": "Desktop application for handle assets like \"sen coin\" and \"sen point\"",
   "license": "SEE LICENSE IN LICENSE",
