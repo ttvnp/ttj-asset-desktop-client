@@ -39,6 +39,19 @@
                 </div>
               </v-flex>
               <v-flex xs12 sm6>
+                <p style="margin-left: 16px">{{ $t('general.sample') }}</p>
+                <div>
+                  <img class="sample-face-photo" src="@/assets/face_photo_sample.png">
+                </div>
+              </v-flex>
+            </v-layout>
+            <ul>
+              <li>{{ $t('facePhoto.pointOne') }}</li>
+              <li>{{ $t('facePhoto.pointTwo') }}</li>
+            </ul>
+            <br />
+            <v-layout row wrap>
+              <v-flex xs12 sm6>
                 <p>{{ $t('profile.address') }}</p>
                 <div class="image-picker-wrapper">
                   <div>
@@ -47,7 +60,17 @@
                   <input class="image-picker" type="file" accept="image/*" v-on:change="onChangeImageId2">
                 </div>
               </v-flex>
+              <v-flex xs12 sm6>
+                <p style="margin-left: 14px">{{ $t('general.sample') }}</p>
+                <div>
+                  <img class="sample-address-photo" src="@/assets/address_sample.png">
+                </div>
+              </v-flex>
             </v-layout>
+            <ul>
+              <li>{{ $t('addressPhoto.pointOne') }}</li>
+              <li>{{ $t('addressPhoto.pointTwo') }}</li>
+            </ul>
           </v-container>
           <v-container class="px-4">
             <div class="text-xs-center note-id-verified">{{ $t('settingsUploader.onceYouUploadImagesYouWilNotBeAbleToEditYourProfile') }}</div>
@@ -72,6 +95,7 @@
 </template>
 
 <script>
+import defaultPickerImage from '@/assets/id_document_attach_button.png'
 import router from '@/router'
 import { mapGetters } from 'vuex'
 export default {
@@ -167,14 +191,24 @@ export default {
   mounted () {
     this.$store.dispatch('app/setShowDrawer', true)
     this.$store.dispatch('app/init')
-    this.idDocument1ImageURL = this.currentIdDocument1ImageURL
-    this.idDocument2ImageURL = this.currentIdDocument2ImageURL
+    this.idDocument1ImageURL = defaultPickerImage
+    this.idDocument2ImageURL = defaultPickerImage
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.sample-face-photo {
+  width: 130px;
+  height: 130px;
+}
+.sample-address-photo {
+  width: 185px;
+  height: 185px;
+  margin-left: -36px;
+  margin-top: -36px;
+}
 .image-avatar {
   display: inline-block;
   width: 120px;
