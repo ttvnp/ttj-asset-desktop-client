@@ -33,10 +33,10 @@ Service</span></b></p>
 
             <p>&nbsp;</p>
 
-            <p style='text-indent:12.0pt'>Definitions of terms used for
+            <p>Definitions of terms used for
               this Agreement are as follows.</p>
 
-            <p style='margin-left:30.0pt;text-indent:-18.0pt'>(1)<span
+            <p style='margin-left:20.0pt;text-indent:-20.0pt'>(1)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>“Service” refers
               to the service and its related services provided by TTJ.</p>
 
@@ -230,7 +230,7 @@ Service</span></b></p>
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:12.0pt'>Personal information and User
+            <p>Personal information and User
               information shall be handled in accordance with “SEN POINT
               Policy”.</p>
 
