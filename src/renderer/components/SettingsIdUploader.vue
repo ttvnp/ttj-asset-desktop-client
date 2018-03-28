@@ -41,7 +41,7 @@
               <v-flex xs12 sm6>
                 <p style="margin-left: 16px">{{ $t('general.sample') }}</p>
                 <div>
-                  <img class="sample-face-photo" src="@/assets/face_photo_sample.png">
+                  <img class="sample-face-photo" src="@/assets/passport_sample_face.png">
                 </div>
               </v-flex>
             </v-layout>
@@ -63,7 +63,7 @@
               <v-flex xs12 sm6>
                 <p style="margin-left: 14px">{{ $t('general.sample') }}</p>
                 <div>
-                  <img class="sample-address-photo" src="@/assets/address_sample.png">
+                  <img class="sample-address-photo" src="@/assets/passport_sample_address.png">
                 </div>
               </v-flex>
             </v-layout>
@@ -201,11 +201,9 @@ export default {
 <style scoped>
 .sample-face-photo {
   width: 130px;
-  height: 130px;
 }
 .sample-address-photo {
   width: 185px;
-  height: 185px;
   margin-left: -36px;
   margin-top: -36px;
 }
