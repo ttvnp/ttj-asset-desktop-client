@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div>
     <v-layout>
       <v-flex xs12 sm8>
         <v-card>
