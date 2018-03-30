@@ -41,7 +41,7 @@
               <v-flex xs12 sm6>
                 <p style="margin-left: 16px">{{ $t('general.sample') }}</p>
                 <div>
-                  <img class="sample-face-photo" src="@/assets/passport_sample_face.png">
+                  <img class="sample-face-photo" src="static/passport_sample_face.png">
                 </div>
               </v-flex>
             </v-layout>
@@ -63,7 +63,7 @@
               <v-flex xs12 sm6>
                 <p style="margin-left: 14px">{{ $t('general.sample') }}</p>
                 <div>
-                  <img class="sample-address-photo" src="@/assets/passport_sample_address.png">
+                  <img class="sample-address-photo" src="static/passport_sample_address.png">
                 </div>
               </v-flex>
             </v-layout>
@@ -200,12 +200,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .sample-face-photo {
-  width: 130px;
+  width: 110px;
+  height: 130px;
+  margin-left: 12px;
 }
 .sample-address-photo {
-  width: 185px;
-  margin-left: -36px;
-  margin-top: -36px;
+  width: 105px;
+  height: 120px;
+  margin-left: 8px;
 }
 .image-avatar {
   display: inline-block;
