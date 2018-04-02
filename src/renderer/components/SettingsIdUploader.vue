@@ -201,13 +201,11 @@ export default {
 <style scoped>
 .sample-face-photo {
   width: 110px;
-  height: 130px;
   margin-left: 12px;
 }
 .sample-address-photo {
-  width: 105px;
-  height: 120px;
-  margin-left: 8px;
+  width: 110px;
+  margin-left: 12px;
 }
 .image-avatar {
   display: inline-block;
