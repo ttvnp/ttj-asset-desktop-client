@@ -55,7 +55,7 @@ const en = {
   },
   signUpEnd: {
     accountActivated: 'Account activated',
-    yourAccountHasBeenActivatedPleaseEnjoy: 'Your account has been activated.Please enjoy!'
+    yourAccountHasBeenActivatedPleaseEnjoy: 'Your account has been activated. Please enjoy!'
   },
   home: {
     balanceLabel: 'Balances',
