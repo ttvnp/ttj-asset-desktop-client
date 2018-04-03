@@ -28,12 +28,12 @@ const en = {
     emailIsRequired: 'Email Address is required'
   },
   facePhoto: {
-    pointOne: 'Please submit the page containing your photograph and the page',
-    pointTwo: 'Ensure that all documents are clear and readable'
+    pointOne: 'Please submit the page containing your photograph.',
+    pointTwo: 'Ensure that all documents are clear and readable.'
   },
   addressPhoto: {
-    pointOne: 'Please submit the page containing your address information (your home address)',
-    pointTwo: 'Ensure that all documents are clear and readable'
+    pointOne: 'Please submit the page containing your address information (your home address).',
+    pointTwo: 'Ensure that all documents are clear and readable.'
   },
   signUp: {
     pleaseSetUpYourWalletFirst: 'Please set up your wallet first.'
@@ -55,7 +55,7 @@ const en = {
   },
   signUpEnd: {
     accountActivated: 'Account activated',
-    yourAccountHasBeenActivatedPleaseEnjoy: 'Your account has been activated.Please enjoy!'
+    yourAccountHasBeenActivatedPleaseEnjoy: 'Your account has been activated. Please enjoy!'
   },
   home: {
     balanceLabel: 'Balances',
@@ -145,12 +145,12 @@ const ja = {
     emailIsRequired: 'メールアドレスを入力してください'
   },
   facePhoto: {
-    pointOne: 'Please submit the page containing your photograph and the page',
-    pointTwo: 'Ensure that all documents are clear and readable'
+    pointOne: '顔写真が確認できるページをアップロードしてください。',
+    pointTwo: '資料全面が鮮明に写るようにしてください。'
   },
   addressPhoto: {
-    pointOne: 'Please submit the page containing your address information (your home address)',
-    pointTwo: 'Ensure that all documents are clear and readable'
+    pointOne: '住所が確認できるページをアップロードしてください。',
+    pointTwo: '資料全面が鮮明に写るようにしてください。'
   },
   signUp: {
     pleaseSetUpYourWalletFirst: 'ウォレットを有効にしてください'
@@ -235,7 +235,7 @@ const ja = {
     idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
   general: {
-    sample: 'サンプル',
+    sample: '例',
     noData: 'データが存在しません',
     start: '始める',
     ok: 'OK',

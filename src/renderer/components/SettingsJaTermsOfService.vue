@@ -29,7 +29,7 @@
 
             <p>&nbsp;</p>
 
-            <p style='text-indent:12.0pt'>本規約上で使用する用語の定義は、次に掲げるとおりとします。</p>
+            <p style='margin-left:12.0pt'>本規約上で使用する用語の定義は、次に掲げるとおりとします。</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(1)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>本サービス	当社が運営するサービス及び関連するサービス</p>
@@ -167,7 +167,7 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:12.0pt'>個人情報及び利用者情報については、当社が別途定める「SENtokenプロジェクトサービスプライバシーポリシー」に則り、適正に取り扱うこととします。</p>
+            <p style='margin-left:12.0pt'>個人情報及び利用者情報については、当社が別途定める「SEN POINTプロジェクトサービスプライバシーポリシー」に則り、適正に取り扱うこととします。</p>
 
             <p>&nbsp;</p>
 
