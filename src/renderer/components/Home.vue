@@ -78,6 +78,7 @@
             self.transactionData.totalPageNum = totalPageNum
             self.$store.dispatch('app/setPaymentHistoryLoaded')
             self.$store.dispatch('app/setLoading', false)
+            window.scrollTo(0, 0)
           },
           onError: function (error) {
             console.log(error)

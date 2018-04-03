@@ -14,6 +14,8 @@
           <v-card-text class="desc-privacy-policy">
             <p>本プライバシーポリシーでは、株式会社TTJとその子会社を一括して「当社」が、お客様の情報をどのように収集、使用、開示、保護するかについて説明します。</p>
 
+            <p>&nbsp;</p>
+
             <p>本ポリシーで適用対象とする情報は、お客様がTTJのウェブサイトやモバイルアプリケーション（一括して「SEN POINTプロジェクトサービス」）にアクセスするか、それらを使用するか、あるいは、以下に説明するように別の方法で当社と交信する際に当社が収集する情報です。</p>
 
             <p>&nbsp;</p>
@@ -46,16 +48,16 @@
             <p style='margin-left:36.0pt'>&nbsp;</p>
 
             <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>連絡先情報（お客様の名前、住所、電話番号、Eメールアドレスなど）</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>連絡先情報（お客様の名前、住所、電話番号、Eメールアドレスなど）</p>
 
             <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>金融情報（クレジットカード番号、仮想通貨アカウント情報など）</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>金融情報（クレジットカード番号、仮想通貨アカウント情報など）</p>
 
             <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>政府発行ID番号（運転免許証やパスポート情報など）</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>政府発行ID番号（運転免許証やパスポート情報など）</p>
 
             <p style='margin-left:36.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>バイオグラフィック情報またはデモグラフィック情報（生年月日、性別、職業、就業状況、その他の情報）p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>バイオグラフィック情報またはデモグラフィック情報（生年月日、性別、職業、就業状況、その他の情報）p>
 
             <p>&nbsp;</p>
 
@@ -82,19 +84,25 @@
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>取引情報</b>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>取引情報</b>
               : 取引に対応する各資金の額、執行された取引のタイプ、およびその他取引情報を含めて、お客様がSEN POINTプロジェクトサービスを介して完了する取引についての情報を収集します。<p>
 
+              <p>&nbsp;</p>
+
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>位置情報</b>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>位置情報</b>
               : 事前にお客様の同意を得て、お客様が当社のモバイルアプリケーションにアクセスするか、それを使用するときにお客様のモバイルデバイスから詳細な地理的位置情報を収集する場合があります。<br> 詳細は下記の「お客様の選択」をご参照ください </p>
 
-            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>デバイスとログ情報</b>
-              : 当社は、デバイスの識別子、モバイルネットワーク情報、OSのタイプ、およびご使用ブラウザのタイプを含めて、SEN POINTプロジェクトサービスへのアクセスにご使用されているコンピューターまたはモバイルデバイスについての情報を収集します。また、アクセス時間、表示したページ、IPアドレス、その他の標準的なウェブログデータ、および、当社の各ウェブサイトに移動する前後に訪問したページを含めて、SEN POINTプロジェクトサービスのお客様の使用状況についての情報も記録します</p>
+              <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>クッキーおよび同様の追跡テクノロジー</b>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>デバイスとログ情報</b>
+              : 当社は、デバイスの識別子、モバイルネットワーク情報、OSのタイプ、およびご使用ブラウザのタイプを含めて、SEN POINTプロジェクトサービスへのアクセスにご使用されているコンピューターまたはモバイルデバイスについての情報を収集します。また、アクセス時間、表示したページ、IPアドレス、その他の標準的なウェブログデータ、および、当社の各ウェブサイトに移動する前後に訪問したページを含めて、SEN POINTプロジェクトサービスのお客様の使用状況についての情報も記録します</p>
+
+              <p>&nbsp;</p>
+
+            <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>クッキーおよび同様の追跡テクノロジー</b>
               : 当社のSEN POINTプロジェクトサービス上での閲覧行動についての情報を含めて、お客様がSEN POINTプロジェクトサービスと交信するときにお客様についての情報を収集するために、当社は、クッキーおよびその他の追跡テクノロジーを使用する場合があります。クッキーとは、当社のウェブサーバーからお客様のコンピューターやモバイルデバイスに送信される小さいデータファイルのことです。これらのファイルによって、たとえば、お客様がSEN POINTプロジェクトサービスにどのように到達し、いつ戻り、どのページ訪問したかをキャプチャーしたり、当社がお客様のブラウザからページリクエストを受け取ったときに既にログオン済みであることを認識したりすることが可能です。</p>
 
             <p>&nbsp;</p>
@@ -155,7 +163,7 @@
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(2)<span
               style='font:7.0pt "Times New Roman"'>&nbsp; </span>取引を処理するため、アカウントを維持するため、裁判所の命令や法的捜査に対応するため、信用調査機関に報告するためなど、当社の日常的な事業目的のために行う場合があります。たとえば、当社の日常的な事業目的と関連して、当社は、お客様についての情報を次のように共有する場合があります。</p>
 
-              <p>&nbsp;</p>
+            <p>&nbsp;</p>
 
             <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SEN POINTプロジェクトサービスを介してお客様が資金を分配しようとしている対象者、または、お客様に資金を分配しようとしている供給者と（お客様のアカウントがアクティブかどうか、およびアカウントが検証済みかどうかの情報を含みます）。</p>
@@ -219,25 +227,25 @@
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>アカウント情報</b>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>アカウント情報</b>
               : アカウントにログインしてプロフィールを表示することで、いつでもオンラインアカウント情報にアクセスし、この情報の再確認または更新を行うことができます。アカウントをクローズする場合は、当社にお問い合わせください。 ただし、お客様がアカウントをクローズした場合、たとえば、未納手数料の集金、争議の解決、不具合のトラブルシューティング、調査支援、詐欺行為の防止、または利用規約の強化のために、当社は、法律によって、または、当社の合理的な事業目的で、必要に応じてお客様の情報を保有する場合があることにご注意ください。</p>
 
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>通信設定</b>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>通信設定</b>
               : プロモーション通信情報内の指示に従って、SEN POINTプロジェクトからのプロモーション通信情報の受け取りを選択できます。 プロモーション通信情報の受け取りを選択した場合、お客様のアカウントまたは現行ビジネス関連事項についてのメッセージなど、「取引上または取引関係に基づくメッセージ」をお送りする場合があります。</p>
 
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>位置</b>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>位置</b>
               : 当社のモバイルアプリケーションは、お客様の事前の同意を得て、お客様のモバイルデバイスから詳細な地理的位置を収集する場合があります。 位置情報の収集について最初に同意した場合、モバイルデバイスのOS設定によってこの情報の収集をあとで停止できる場合があります。標準的なアンインストールプロセスに従ってモバイルデバイスからモバイルアプリケーションを削除することで、位置情報の収集を停止することもできます。</p>
 
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b>クッキー</b>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><b>クッキー</b>
               : 当社ではセッションクッキーと永続クッキーの両方を使用しています。セッションクッキーは、お客様がアカウントからログアウトするかブラウザを閉じると期限切れとなります。永続クッキーは、お客様が消去しない限り、または別の原因で期限切れにならない限り、お客様のコンピューターやモバイルデバイスに残ります。デフォルトでは、ほとんどのウェブブラウザがクッキーを受け付けるように設定されています。ご使用のブラウザまたはブラウザのアドオンによって許容されると大部分のクッキーを自由に拒否することはできますが、当社のクッキーを削除または無効するよう選択すると、SEN POINTプロジェクトサービスの使用や機能に支障をきたす場合があります。さらに、当社では、お客様のブラウザ設定によって影響されない特定の永続クッキーを使用する場合がありますが、永続クッキーは身元証明と詐欺防止の目的にのみ使用します。クッキーの詳細と、そのブロック、削除、無効化の方法については、ブラウザ上の指示をご参照するか、当社までお問い合わせください。<br>
               <br>
             </p>

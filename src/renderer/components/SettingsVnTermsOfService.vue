@@ -29,28 +29,28 @@
 
             <p>&nbsp;</p>
 
-            <p style='text-indent:12.0pt'>Định nghĩa từ dùng trong bản hợp đồng này, được đưa ra như sau:p>
+            <p style='text-indent:12.0pt'>Định nghĩa từ dùng trong bản hợp đồng này, được đưa ra như sau:</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(1)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Dịch vụ này  là dịch vụ công ty chúng tôi đang quản lý và các dịch vụ có liên quan</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Dịch vụ này  là dịch vụ công ty chúng tôi đang quản lý và các dịch vụ có liên quan.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(2)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trang web này  là trang web mà nội dung dịch vụ này được đăng tải</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trang web này  là trang web mà nội dung dịch vụ này được đăng tải.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(3)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Nội dung này  gọi chung như là chương trính ví tiền, mã code, màn hình chữ, màn hình tĩnh, màn hình động.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(4)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người sử dụng   là tất cả các vị sử dụng dịch vụ này</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người sử dụng   là tất cả các vị sử dụng dịch vụ này.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(5)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người dùng đăng nhập  là những vị đã hoàn tất đăng ký người dùng tại trang web này p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Người dùng đăng nhập  là những vị đã hoàn tất đăng ký người dùng tại trang web này.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(6)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Địa chỉ mail  là dãy chữ số mà người người dùng có sẵn để sử dụng dịch vụ này</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Địa chỉ mail  là dãy chữ số mà người người dùng có sẵn để sử dụng dịch vụ này.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(7)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Mật khẩu  là mật mã mà người dùng cài đặt phù hợp với ID</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Mật khẩu  là mật mã mà người dùng cài đặt phù hợp với ID.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(8)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Thông tin cá nhân    gọi chung là những thông tin có thế xác nhận rõ địa chỉ, tên, nghề nghiệp, số điện thoại, ngày tháng năm sinh… của người dùng.</p>
@@ -110,16 +110,16 @@
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>1. <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Những vị có mong muốn đăng ký dịch vụ này (bên dưới là “người muốn đăng ký” thì sau khi đồng ý với bản hợp đồng này, thì hãy tiến hành đăng ký bằng cách thức quy định</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Những vị có mong muốn đăng ký dịch vụ này (bên dưới là “người muốn đăng ký” thì sau khi đồng ý với bản hợp đồng này, thì hãy tiến hành đăng ký bằng cách thức quy định.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>2. <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Những vị đã đăng ký thì từ thời điểm công ty tôi chấp nhận đăng ký, và hoàn tất ID đăng ký thì sẽ trở thành người dùng đăng nhập</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Những vị đã đăng ký thì từ thời điểm công ty tôi chấp nhận đăng ký, và hoàn tất ID đăng ký thì sẽ trở thành người dùng đăng nhập.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>3. <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty tôi sẽ tiến hành thông báo liên hệ và cung cấp thông tin khác qua thư cho người dùng.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>4. <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp người muốn đăng ký dùng có liên quan đến bất cứ trường hợp nào sau đây thì cũng có khi công ty tôi bằng phán đoán của mình sẽ không chấp nhận đăng ký. </p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp người muốn đăng ký dùng có liên quan đến bất cứ trường hợp nào sau đây thì cũng có khi công ty tôi bằng phán đoán của mình sẽ không chấp nhận đăng ký.</p>
 
             <p style='margin-left:84.0pt;text-indent:-54.0pt'>Thứ nhất,<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp tiến hành đăng ký không bằng cách do công ty tôi quy định.</p>
@@ -127,14 +127,14 @@
             <p style='margin-left:68.0pt;text-indent:-38.0pt'>Thứ 2,<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp người muốn đăng ký là người đã nhận hình phạt ra khỏi hội vì lí do như vi phạm hợp đồng này trong quá khứ hay vi phạm điều khoản sử dụng công ty quy định.</p>
 
-            <p style='margin-left:68.0pt;text-indent:-38.0pt'>Thứ 3, <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp công ty tôi biết được là tiến hành đăng ký bằng cách thức bất chính</p>
+            <p style='margin-left:68.0pt;text-indent:-38.0pt'>Thứ 3,<span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp công ty tôi biết được là tiến hành đăng ký bằng cách thức bất chính.</p>
 
             <p style='margin-left:68.0pt;text-indent:-38.0pt'>Thứ 4,<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp người muốn sử dụng đăng ký thông tin không phải của mình</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>trường hợp người muốn sử dụng đăng ký thông tin không phải của mình.</p>
 
             <p style='margin-left:68.0pt;text-indent:-38.0pt'>Thứ 5,<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>những trường hợp khác công ty tôi đã biết là không hợp lý</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>những trường hợp khác công ty tôi đã biết là không hợp lý.</p>
 
             <p>&nbsp;</p>
 
@@ -188,19 +188,19 @@
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi chiếm đoạt hoặc hành vi có thể chiếm đoạt tài sản của công ty tôi hay bên thứ 3</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(3)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi gây ra tổn thất kinh tế cho công ty tôi hay bên thứ 3</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi gây ra tổn thất kinh tế cho công ty tôi hay bên thứ 3.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(4)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi đe dọa đối với công ty tôi hoặc bên thứ 3</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi đe dọa đối với công ty tôi hoặc bên thứ 3.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(5)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tạo ra vi rút máy tính, chương trình độc hại spec hoặc những hành vi gây ra những điều này. </p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tạo ra vi rút máy tính, chương trình độc hại spec hoặc những hành vi gây ra những điều này.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(6)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tạo ra gánh nặng quá mức đối với cơ sở hạ tầng dùng trong dịch vụ này.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(7)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tấn công máy chủ, hệ thống, bảo mật trang web của chúng tôi</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi tấn công máy chủ, hệ thống, bảo mật trang web của chúng tôi.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(8)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi cố truy cập dịch vụ của chúng tôi bằng các phương pháp ngoài giao diện chúng tôi cung cấp.</p>
