@@ -69,7 +69,7 @@
 
             <p style='margin-left:30.0pt;text-indent:-16.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Biographic
-              or demographic information : Date of birth, gender, occupation, employment status.</p>
+              or demographic information: Date of birth, gender, occupation, employment status.</p>
 
             <p>&nbsp;</p>
 
@@ -125,7 +125,7 @@
               technologies to collect information about you when you use SEN POINT including
               information regarding your browsing behavior. Cookies are small data files transferred
               from our web servers to your computer or mobile device that enable us to, for example,
-              capture how you arrived at SEN POINT, when you return, which pages onSEN POINT you visit,
+              capture how you arrived at SEN POINT, when you return, which pages on SEN POINT you visit,
               and to recognize that you are already logged on when we receive a page request from
               your browser.</p>
 
@@ -213,7 +213,7 @@
             <p>&nbsp;</p>
 
             <p style='margin-left:44.0pt;text-indent:-15.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;</span>With
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>With
               any party you intend to distribute funds to, or that intends to distribute
               funds to you, via SEN POINT, including information about whether your account
               is active and whether the account has been verified.</p>
@@ -229,17 +229,17 @@
               we believe, in our sole discretion, that the disclosure of your information is
               necessary to prevent physical harm or financial loss, to report suspected
               illegal activity, or to investigate violations of or enforce our user
-              agreements or other policies and agreements..</p>
+              agreements or other policies and agreements.</p>
 
             <p style='margin-left:44.0pt;text-indent:-15.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>In
-              connection with, or during negotiations of, any merger, sale of SEN POINTs
+              connection with, or during negotiations of, any merger, sale of SEN POINT
               assets, financing or acquisition or all or a portion of our business to
               another company.</p>
 
             <p style='margin-left:44.0pt;text-indent:-15.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>With
-              your consent or at your discretion</p>
+              your consent or at your discretion.</p>
 
             <p>&nbsp;</p>
 
@@ -254,7 +254,7 @@
             parties for their own marketing purposes.
             Please note that third parties that support our customer identification and
             anti-fraud controls may retain and use information about you to perform
-            services on our behalf and to improve their services. By using our Services,
+            services on our behalf and to improve their services. By using our services,
             you consent to the retention and use of such information by these providers
             to improve their services.
             We may also share aggregated or de-identified information with our affiliated
@@ -342,7 +342,7 @@
               we may use certain persistent cookies that are not affected by your browser settings,
               but will use such cookies solely for identity verification and fraud prevention purposes.
               For more information about cookies and how to block, delete or disable them, please
-              refer to your browser instructions, or contact us at http://www.ttjworld.com/#/contact-us.<br>
+              refer to your browser instructions, or contact us at <a href="/contact-us">Contact US</a>.<br>
               <br>
             </p>
 

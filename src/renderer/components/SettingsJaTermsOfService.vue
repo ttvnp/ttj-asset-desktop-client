@@ -185,16 +185,16 @@
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>本サービスの利用に際し、当社は、利用者に対し、次に掲げる行為を禁止します。当社において、利用者が禁止事項に違反したと認めた場合、利用者用の一時停止、アカウント停止処分その他当社が必要と判断した措置を取ることができます。 </p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(2)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社または第三者の財産を侵害する行為、または侵害する恐れのある行為 </p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社または第三者の財産を侵害する行為、または侵害する恐れのある行為</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(3)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社または第三者に経済的損害を与える行為p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社または第三者に経済的損害を与える行為</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(4)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社または第三者に対する脅迫的な行為</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(5)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>コンピューターウィルス、有害なプログラムを仕様またはそれを誘発する行為p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>コンピューターウィルス、有害なプログラムを仕様またはそれを誘発する行為</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(6)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>本サービス用インフラ設備に対して過度な負担となるストレスをかける行為</p>
@@ -216,46 +216,46 @@
 
             <p>&nbsp;</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 1 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 1 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社は、本サービスの内容変更、中断、終了によって生じたいかなる損害についても、一切責任を負いません。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 2 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 2 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社は、利用者の本サービスの利用環境について一切関与せず、また一切の責任を負いません。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 3 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 3 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社は、本サービスが利用者の特定の目的に適合すること、期待する機能・商品的価値・正確性・有用性を有すること、利用者による本サービスの利用が利用者に適用のある法令または業界団体の内部規則等に適合すること、および不具合が生じないことについて、何ら保証するものではありません。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 4 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 4 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社は、本サービスが全ての情報端末に対応していることを保証するものではなく、本サービスの利用に供する情報端末のＯＳのバージョンアップ等に伴い、本サービスの動作に不具合が生じる可能性があることにつき、利用者はあらかじめ了承するものとします。当社は、かかる不具合が生じた場合に当社が行うプログラムの修正等により、当該不具合が解消されることを保証するものではありません。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 5 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 5 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>利用者は、AppStore、GooglePlay等のサービスストアの利用規約および運用方針の変更等に伴い、本サービスの一部又は全部の利用が制限される可能性があることをあらかじめ了承するものとします。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 6 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 6 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社は、本サービスを利用したことにより直接的または間接的に利用者に発生した損害について、一切賠償責任を負いません。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 7 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 7 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>当社は、利用者その他の第三者に発生した機会逸失、業務の中断その他いかなる損害（間接損害や逸失利益を含みます）に対して、当社が係る損害の可能性を事前に通知されていたとしても、一切の責任を負いません。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 8 <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>第１項から前項までの規定は、当社に故意または重過失が存する場合又は契約書が消費者契約法上の消費者に該当する場合には適用しません </p>
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 8 <span
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>第１項から前項までの規定は、当社に故意または重過失が存する場合又は契約書が消費者契約法上の消費者に該当する場合には適用しません。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'> 9 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'> 9 <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>前項が適用される場合であっても、当社は、過失（重過失を除きます。）による行為によって利用者に生じた損害のうち、特別な事情から生じた損害については、一切賠償する責任を負わないものとします。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'>10 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'>10 <span
               style='font:7.0pt "Times New Roman"'> </span>本サービスの利用に関し当社が損害賠償責任を負う場合、当該損害が発生した月に利用者から受領した利用額を限度として賠償責任を負うものとします。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'>11 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'>11 <span
               style='font:7.0pt "Times New Roman"'> </span>利用者と他の利用者との間の紛争及びトラブルについて、当社は一切責任を負わないものとします。利用者と他の利用者でトラブルになった場合でも、両者同士の責任で解決するものとし、当社には一切の請求をしないものとします。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'>12 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'>12 <span
               style='font:7.0pt "Times New Roman"'> </span>利用者は、本サービスの利用に関連し、他の利用者に損害を与えた場合または第三者との間に紛争を生じた場合、自己の費用と責任において、かかる損害を賠償またはかかる紛争を解決するものとし、当社には一切の迷惑や損害を与えないものとします。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'>13 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'>13 <span
               style='font:7.0pt "Times New Roman"'> </span>利用者の行為により、第三者から当社が損害賠償等の請求をされた場合には、利用者の費用（弁護士費用）と責任で、これを解決するものとします。当社が、当該第三者に対して、損害賠償金を支払った場合には、利用者は、当社に対して当該損害賠償金を含む一切の費用（弁護士費用及び逸失利益を含む）を支払うものとします。</p>
 
-            <p style='margin-left:26.0pt;text-indent:-14.0pt'>14 <span
+            <p style='margin-left:27.0pt;text-indent:-15.0pt'>14 <span
               style='font:7.0pt "Times New Roman"'> </span>利用者が本サービスの利用に関連して当社に損害を与えた場合、利用者の費用と責任において当社に対して損害を賠償（訴訟費用及び弁護士費用を含む）するものとします。</p>
 
             <p>&nbsp;</p>

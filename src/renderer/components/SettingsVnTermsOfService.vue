@@ -90,7 +90,7 @@
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>1. <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty chúng tôi không nhận ủy thác của người sử dụng, bất cứ lúc nào cũng có thể sửa đổi nội dung của bản hợp đồng này．</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty chúng tôi không nhận ủy thác của người sử dụng, bất cứ lúc nào cũng có thể sửa đổi nội dung của bản hợp đồng này.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>2. <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Công ty chúng tôi khi sửa đổi hợp đồng này, về nội dung sửa đổi đó sẽ thông báo tới người sử dụng bằng cách thức mà công ty quy định.</p>
@@ -151,7 +151,7 @@
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp đã sử dụng dịch vụ này bằng thông tin đăng ký công ty tôi quy định người đã đăng ký sử dụng sẽ có thể sử dụng, về kết quả do việc sử dụng tạo ra hay tất cả trách nhiệm cùng với điều đó đều thuộc về bản thân người đã tiến hành đăng ký sử dụng.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>3. <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp tổn thất do người sử dụng sử dụng ko chính đáng thông tin đăng ký dẫn đến tổn thất cho công ty tôi hay bên thứ 3 thì người sử dụng sẽ bồi thường thiệt hại tương ứng cho công ty tôi và bên thứ 3 có liên quan</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Trường hợp tổn thất do người sử dụng sử dụng ko chính đáng thông tin đăng ký dẫn đến tổn thất cho công ty tôi hay bên thứ 3 thì người sử dụng sẽ bồi thường thiệt hại tương ứng cho công ty tôi và bên thứ 3 có liên quan.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>4. <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Việc quản lý thông tin đăng ký sẽ thuộc trách nhiệm của người sử dụng và công ty tôi không chịu trách nhiệm về bất cứ thiệt hại mà người sử dụng đã gây ra vì thông tin đăng ký không chính xác hoặc sai.</p>
@@ -185,7 +185,7 @@
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi làm tổn hại danh dự hay uy tín của công ty tôi hoặc bên thứ ba, hoặc phân biệt hoặc vu khống không đúng.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(2)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi chiếm đoạt hoặc hành vi có thể chiếm đoạt tài sản của công ty tôi hay bên thứ 3</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi chiếm đoạt hoặc hành vi có thể chiếm đoạt tài sản của công ty tôi hay bên thứ 3.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(3)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Hành vi gây ra tổn thất kinh tế cho công ty tôi hay bên thứ 3.</p>
@@ -229,7 +229,7 @@
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span> Công ty tôi không đảm bảo dịch vụ này sẽ phù hợp với tất cả thiết bị thông tin, về việc cùng với nâng cấp phiên bản OS của thiết bị thông tin sử dụng dịch vụ này thì có khả năng phát sinh lỗi trong thao tác dịch vụ, người sử dụng đã chấp nhận điều này. Trong trường hợp phát sinh lỗi công ty tôi sẽ tiến hành sửa chữa chương trình , nhưng việc các lỗi liên quan có được loại bỏ thì công ty chúng tôi không đảm bảo.</p>
 
             <p style='margin-left:32.0pt;text-indent:-20.0pt'>5. <span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span> Người sử dụng chấp nhận trước rằng cùng với thay đổi hợp đồng sử dụng hay phương châm vận dụng tại cửa hàng dịch vụ như AppStore、GooglePlay thì có khả năng bị giới hạn toàn bộ hoặc một phần dịch vụ này.</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span> Người sử dụng chấp nhận trước rằng cùng với thay đổi hợp đồng sử dụng hay phương châm vận dụng tại cửa hàng dịch vụ như AppStore, GooglePlay thì có khả năng bị giới hạn toàn bộ hoặc một phần dịch vụ này.</p>
 
             <p style='margin-left:32.0pt;text-indent:-20.0pt'>6. <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span> Công ty tôi sẽ không chịu bất cứ trách nhiệm bồi thường về những tổn hại do người sử dụng trực tiếp hay gián tiếp gây ra khi sử dụng dịch vụ này. </p>
