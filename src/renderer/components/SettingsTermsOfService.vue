@@ -51,7 +51,7 @@ Service</span></b></p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(4)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>“User” refers to
-              every person who uses this service</p>
+              every person who uses this service.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(5)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>“Registered
@@ -63,7 +63,7 @@ Service</span></b></p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(7)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>“Password” means
-              an individually set code that corresponds each user’s ID</p>
+              an individually set code that corresponds each user’s ID.</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(8)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>“Personal
@@ -72,7 +72,7 @@ Service</span></b></p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(9)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>“Registration
-              information” is the general term for information registered by users. </p>
+              information” is the general term for information registered by users.</p>
 
             <p>&nbsp;</p>
 
@@ -163,7 +163,7 @@ Service</span></b></p>
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>(4)<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Please be noted
               that TTJ might not approve a registration application in case it falls under
-              any following items</p>
+              any following items.</p>
 
             <p style='margin-left:46.0pt;text-indent:-17.0pt'>a. <span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>A candidate did

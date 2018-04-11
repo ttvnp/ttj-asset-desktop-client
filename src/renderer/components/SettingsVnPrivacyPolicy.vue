@@ -47,7 +47,7 @@
             <p style='margin-left:30.0pt'>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Thông tin liên lạc (tên khách hàng, địa chỉ, số điện thoại, địa chỉ e-mail, ....).</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Thông tin liên lạc (tên khách hàng, địa chỉ, số điện thoại, địa chỉ e-mail, ...).</p>
 
             <p style='margin-left:30.0pt;text-indent:-18.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Thông tin tài chính (số thẻ tín dụng, thông tin tài khoản tiền tệ ảo, v.v ...).<p>
@@ -78,7 +78,7 @@
 
             <p>&nbsp;</p>
 
-            <p>Khi khách hàng truy cập vào dự án SEN POINT hay khi sử dụng dự án này ,Công ty tôi sẽ tự động thu thập thông tin như sau:</p>
+            <p>Khi khách hàng truy cập vào dự án SEN POINT hay khi sử dụng dự án này, Công ty tôi sẽ tự động thu thập thông tin như sau:</p>
 
             <p>&nbsp;</p>
 
@@ -90,7 +90,7 @@
 
             <p style='margin-left:30.0pt;text-indent:-17.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span><b>Thông tin vị trí</b>:
-              Nhận được sự đồng ý của khách hàng từ trước, có trường hợp chúng tôi có thể thu thập thông tin vị trí địa lí cụ thể từ thiết bị di động của khách hàng khi khách hàng truy cập hay sử dụng ứng dụng của công ty tôi. Chi tiết xin hãy tham khảo phần " Lựa chọn của khách hàng" viết bên dưới.<p>
+              Nhận được sự đồng ý của khách hàng từ trước, có trường hợp chúng tôi có thể thu thập thông tin vị trí địa lí cụ thể từ thiết bị di động của khách hàng khi khách hàng truy cập hay sử dụng ứng dụng của công ty tôi. Chi tiết xin hãy tham khảo phần "Lựa chọn của khách hàng" viết bên dưới.<p>
 
             <p>&nbsp;</p>
 
@@ -132,7 +132,7 @@
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Ngăn chặn hoạt động tiềm ẩn đã bị cấm hoặc phạm pháp, và tiến hành thực thi điều khoản sử dụng dịch vụ.</p>
 
             <p style='margin-left:30.0pt;text-indent:-16.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Tiến hành cá nhân hóa, đo lường và cải tiến dự án dịch vụ SEN POINT</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Tiến hành cá nhân hóa, đo lường và cải tiến dự án dịch vụ SEN POINT.</p>
 
             <p style='margin-left:30.0pt;text-indent:-16.0pt'>・<span
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;</span>Đại diện của dự án SEN POINT và các công ty khác sẽ gửi tiếp thị hoặc khuyến mại gồm các trường hợp bằng SMS, điện thoại, hay e-mail.</p>
@@ -155,7 +155,7 @@
             <p>&nbsp;</p>
 
             <p style='margin-left:30.0pt;text-indent:-17.0pt'>(1)<span
-              style='font:7.0pt "Times New Roman"'>&nbsp; </span>Đối với các nhà cung cấp dịch vụ tiến hành các dịch vụ tiếp thị thay cho chúng tôi</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp; </span>Đối với các nhà cung cấp dịch vụ tiến hành các dịch vụ tiếp thị thay cho chúng tôi.</p>
 
             <p>&nbsp;</p>
 
@@ -177,7 +177,7 @@
               style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Liên quan đến một phần hoặc toàn bộ nghiệp vụ đối với việc sáp nhập, mua bán, tài trợ, thu mua tài sản của dự án SEN POINT hay đối với công ty khác, hoặc đang trong quá trình đàm phán.<p>
 
             <p style='margin-left:48.0pt;text-indent:-20.0pt'>・<span
-              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bằng sự đồng ý hoặc theo ý của khách hàng</p>
+              style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Bằng sự đồng ý hoặc theo ý của khách hàng.</p>
 
             <p>&nbsp;</p>
 
