@@ -77,7 +77,7 @@
           </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click.stop="submit" :disabled="!valid || isIdentified">SAVE</v-btn>
+            <v-btn flat color="primary" @click.stop="submit" :disabled="!valid || isIdentified">{{ $t('general.send') }}</v-btn>
           </v-card-actions>
         </v-card>
         <v-dialog v-model="dialog" max-width="290">
