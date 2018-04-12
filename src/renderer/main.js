@@ -50,7 +50,7 @@ const en = {
     registerEmail: 'Register Email',
     pleaseProvideYourEmailAddresToActivateYourAccount: 'Please provide your email address to activate your account.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Once you submit this form, then we will send you a confirmation email.',
-    iAgressWith: 'I agress with ',
+    iAgressWith: 'I agree with ',
     termOfServices: 'terms of services.'
   },
   signUpEnd: {
@@ -187,7 +187,7 @@ const ja = {
   qrCode: {
     qrCodeLabel: 'QRコード',
     assetCode: 'アセットコード',
-    amount: '量',
+    amount: '数量',
     enterHowMuchYouWantToBeReceived: '受取額を入力して下さい',
     AmountMustBeValid: 'Point/Coinを入力して下さい'
   },
@@ -196,8 +196,8 @@ const ja = {
     sendLabel: '送信',
     emailAdress: 'メールアドレス',
     assetCode: 'アセットコード',
-    amount: '量',
-    youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。/nプロフィールページからご本人確認(ID)を申請してください。',
+    amount: '数量',
+    youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。プロフィールページからご本人確認(ID)を申請してください。',
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
@@ -252,36 +252,36 @@ const vi = {
     vietnamese: 'Tiếng Việt'
   },
   validate: {
-    emailMustBeValid: 'Địa chỉ mail không đúng.',
+    emailMustBeValid: 'Địa chỉ email không đúng.',
     amountMustBeValid: 'Số điểm không đúng.'
   },
   require: {
     itemIsRequired: 'Mục bắt buộc',
     passwordIsRequired: 'Hãy nhập mật khẩu',
     codeIsRequired: 'Hãy nhập mã xác nhận.',
-    emailIsRequired: 'Hãy nhập địa chỉ mail.'
+    emailIsRequired: 'Hãy nhập địa chỉ email.'
   },
   facePhoto: {
-    pointOne: 'Please submit the page containing your photograph and the page',
-    pointTwo: 'Ensure that all documents are clear and readable'
+    pointOne: 'Vui lòng gửi tài liệu có kèm ảnh của bạn.',
+    pointTwo: 'EĐảm bảo rằng tất cả các tài liệu đều rõ ràng và dễ đọc.'
   },
   addressPhoto: {
-    pointOne: 'Please submit the page containing your address information (your home address)',
-    pointTwo: 'Ensure that all documents are clear and readable'
+    pointOne: 'Vui lòng gửi tài liệu có kèm thông tin địa chỉ của bạn (địa chỉ nhà).',
+    pointTwo: 'Đảm bảo rằng tất cả các tài liệu đều rõ ràng và dễ đọc.'
   },
   signUp: {
     pleaseSetUpYourWalletFirst: 'Hãy tạo ví tiền có giá trị'
   },
   signUpCode: {
-    verifyEmail: 'Hãy tạo mail có giá trị',
-    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Hãy nhập mã xác nhận đã được ghi trong mail.',
+    verifyEmail: 'Hãy tạo email có giá trị',
+    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Hãy nhập mã xác nhận đã được ghi trong email.',
     code: 'Mã xác nhận',
-    verificationCodeWhichWasSentByEmail: 'Mã xác nhận đã được gửi bằng mail.',
+    verificationCodeWhichWasSentByEmail: 'Mã xác nhận đã được gửi bằng email.',
     passwordOnImport: 'Mật khẩu khi nhập',
     passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Mật khẩu đã được gửi bằng email khi bạn tạo một tài khoản vào lần đầu tiên.'
   },
   signUpEmail: {
-    registerEmail: 'Mail đăng ký',
+    registerEmail: 'Email đăng ký',
     pleaseProvideYourEmailAddresToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Sau khi bạn gửi mẫu đơn này, sau đó chúng tôi sẽ gửi cho bạn email xác nhận.',
     iAgressWith: 'Tôi đồng ý.',
@@ -289,14 +289,14 @@ const vi = {
   },
   signUpEnd: {
     accountActivated: 'Đã kích hoạt tài khoản',
-    yourAccountHasBeenActivatedPleaseEnjoy: 'Tài khoản của bạn đã được kích hoạt. Hãy tận hưởng!'
+    yourAccountHasBeenActivatedPleaseEnjoy: 'Tài khoản của bạn đã được kích hoạt. Hãy sử dụng!'
   },
   home: {
     balanceLabel: 'Số dư tài khoản.',
     paymentHistory: 'Lịch sử thanh toán.'
   },
   menu: {
-    home: 'Nhà',
+    home: 'Home',
     qrCode: 'Mã QR',
     send: 'Gửi',
     settings: 'Cài đặt'
@@ -311,7 +311,7 @@ const vi = {
   send: {
     balances: 'Số dư',
     sendLabel: 'Gửi',
-    emailAdress: 'Địa chỉ mail',
+    emailAdress: 'Địa chỉ email',
     assetCode: 'Mã tài khoản',
     amount: 'Số lượng',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'Bạn không thể sử dụng chức năng này cho đến khi ID của bạn được xác minh.',
@@ -330,20 +330,20 @@ const vi = {
     privacyPolicy: 'Chính sách Bảo mật'
   },
   settingsUploader: {
-    pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh du lịch của bạn lên.',
+    pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',
     theFollowingItemsMustBeClearlyVisible: 'Các mục sau đây phải được rõ ràng.',
     onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'Khi bạn tải ảnh lên, bạn sẽ không thể chỉnh sửa hồ sơ của mình.'
   },
   profile: {
     profileLabel: 'Hồ sơ',
-    emailAddress: 'Địa chỉ mail',
+    emailAddress: 'Địa chỉ email',
     name: 'Tên',
     firstName: 'Họ',
     middleName: 'Tên đệm',
-    lastName: 'Tên chính',
+    lastName: 'Tên',
     address: 'Địa chỉ',
     genderType: 'Giới tính',
-    dob: 'Ngày lập',
+    dob: 'Ngày tháng năm sinh',
     doe: 'Ngày hết hạn',
     cellPhone: 'Số điện thoại di động',
     facePhoto: 'Ảnh đại diện',
