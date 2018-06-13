@@ -1,6 +1,6 @@
 {
   "name": "ttj-asset-desktop-client",
-  "version": "v1.0.11",
+  "version": "v1.0.12",
   "author": "hiroki.tanaka@ttvnp.com",
   "description": "Desktop application for handle assets like \"sen coin\" and \"sen point\"",
   "license": "SEE LICENSE IN LICENSE",
@@ -57,7 +57,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.16.2",
     "big-integer": "^1.6.26",
     "nedb": "^1.8.0",
     "node-rsa": "^0.4.2",
@@ -68,8 +68,8 @@
     "vue-i18n": "^5.0.3",
     "vue-recaptcha": "^1.0.0",
     "vue-router": "^2.5.3",
-    "vuetify": "^0.17.4",
-    "vuex": "^2.3.1"
+    "vuetify": "^0.17.7",
+    "vuex": "^2.5.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
