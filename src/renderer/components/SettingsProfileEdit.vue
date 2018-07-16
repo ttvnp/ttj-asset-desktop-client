@@ -111,7 +111,7 @@
           </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click.stop="submit" :disabled="(isIdentified && identificationStatus === 2) ? submitEnable : !valid">SAVE</v-btn>
+            <v-btn flat color="primary" @click.stop="submit" :disabled="(!isIdentified && identificationStatus === 1) ? submitEnable : !valid">SAVE</v-btn>
           </v-card-actions>
         </v-card>
         <v-dialog v-model="dialog" max-width="290">
@@ -207,7 +207,7 @@ export default {
       router.go(-1)
     },
     onUnderReview () {
-      if (this.identificationStatus === 2) {
+      if (this.identificationStatus === 1) {
         this.isUnderReview = true
       }
     },
