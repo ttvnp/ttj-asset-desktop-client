@@ -19,7 +19,8 @@ const en = {
   },
   validate: {
     emailMustBeValid: 'Email address must be valid.',
-    amountMustBeValid: 'Amount must be valid'
+    amountMustBeValid: 'Amount must be valid',
+    editProfileUnderReview: 'When ID was approved or under review, you can change only the avatar image.'
   },
   require: {
     itemIsRequired: 'Item is required',
@@ -114,7 +115,7 @@ const en = {
     cellPhone: 'Cell phone number',
     facePhoto: 'Face photo',
     uploadIdDocument: 'Upload Your ID Document',
-    idDoucmentApproved: 'ID Document was approved',
+    idDocumentApproved: 'ID Document was approved',
     idDocumentUnderReview: 'Under review for ID Document'
   },
   general: {
@@ -136,7 +137,8 @@ const ja = {
   },
   validate: {
     emailMustBeValid: 'メールアドレスの形式が正しくありません',
-    amountMustBeValid: 'Point/Coinが正しくありません'
+    amountMustBeValid: 'Point/Coinが正しくありません',
+    editProfileUnderReview: 'ご本人確認資料(ID)が承認済あるいは審査中は、プロフィール画像のみ変更できます'
   },
   require: {
     itemIsRequired: '必須項目',
@@ -253,7 +255,8 @@ const vi = {
   },
   validate: {
     emailMustBeValid: 'Địa chỉ email không đúng.',
-    amountMustBeValid: 'Số điểm không đúng.'
+    amountMustBeValid: 'Số điểm không đúng.',
+    editProfileUnderReview: 'Khi ID xác minh chủ tài khoản đã được xác nhận hoặc đang trong khi xét duyệt, thì bạn chỉ có thể thay đổi ảnh đại diện.'
   },
   require: {
     itemIsRequired: 'Mục bắt buộc',
