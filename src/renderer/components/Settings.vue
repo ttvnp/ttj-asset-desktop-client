@@ -220,7 +220,7 @@ export default {
           this.textIdDocument = this.$t('profile.idDocumentUnderReview')
           break
         case 2:
-          this.textIdDocument = this.$t('profile.idDoucmentApproved')
+          this.textIdDocument = this.$t('profile.idDocumentApproved')
           break
         default:
           this.textIdDocument = this.$t('profile.uploadIdDocument')

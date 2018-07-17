@@ -233,7 +233,7 @@ const ja = {
     cellPhone: '電話番号',
     facePhoto: '顔写真',
     uploadIdDocument: '本人確認書類(ID)のアップロード',
-    idDoucmentApproved: 'ご本人確認資料(ID)承認済',
+    idDocumentApproved: 'ご本人確認資料(ID)承認済',
     idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
   general: {
@@ -351,7 +351,7 @@ const vi = {
     cellPhone: 'Số điện thoại di động',
     facePhoto: 'Ảnh đại diện',
     uploadIdDocument: 'Tải dữ liệu ID của bạn lên',
-    idDoucmentApproved: 'Dữ liệu ID đã được phê duyệt',
+    idDocumentApproved: 'Dữ liệu ID đã được phê duyệt',
     idDocumentUnderReview: 'Đang xem xét dữ liệu ID'
   },
   general: {
