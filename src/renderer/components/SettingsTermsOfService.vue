@@ -474,8 +474,14 @@ Service</span></b></p>
     },
     methods: {},
     mounted () {
-      this.$store.dispatch('app/setShowDrawer', true)
-      this.$store.dispatch('app/init')
+      this.$store.dispatch('device/init', {
+        callback: function (isDeviceReady) {
+          if (isDeviceReady) {
+            this.$store.dispatch('app/setShowDrawer', true)
+            this.$store.dispatch('app/init')
+          }
+        }
+      })
     }
   }
 </script>

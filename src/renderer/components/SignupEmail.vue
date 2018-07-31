@@ -31,11 +31,9 @@
             <v-btn block color="primary" @click.stop="submit()" :disabled="!isValidSignup">{{ $t('general.send') }}</v-btn>
             <div class="terms-container">
               <input type="checkbox" name="terms" v-model="isCheckedTerms"/>
-              <span>{{ $t('signUpEmail.iAgressWith') }}<a @click="openTermsAndConditions()">{{ $t('signUpEmail.termOfServices:') }}</a></span>
+              <span>{{ $t('signUpEmail.iAgressWith') }}<a @click="openTermsAndConditions()"> {{ $t('settings.termOfService') }}</a></span>
             </div>
           </v-container>
-          <textViewModal ref="refTextViewModal" :title="$t('settings.termOfService')"
-                         :body="termsOfConditions"></textViewModal>
         </v-card>
       </v-flex>
     </v-layout>
@@ -65,10 +63,7 @@
         emailRules: [
           (v) => !!v || this.$t('require.emailIsRequired'),
           (v) => util.isValidEmailAddress(v) || this.$t('validate.emailMustBeValid')
-        ],
-        termsOfConditions: '<p>The software you are about to use functions as a free, and open source.</p>' +
-        '<p>While the software has undergone beta testing and continues to be improved by feedback from the open-source user and developer community, we cannot guarantee that there will be no bugs in the software. You acknowledge that your use of this software is at your own discretion and in compliance with all applicable laws. You are responsible for safekeeping your passwords, and any other codes you use to access the software.\n</p>' +
-        '<p>To the fullest extent permitted by law, this software is provided as is and no representations or warranties can be made of any kind, express or implied, including but not limited to the warranties of merchantability, fitness or a particular purpose and noninfringement. You assume any and all risks associated with the use of the software. In no event shall the authors of the software, employees and affiliates of Truong Thanh JAPAN, copyright holders, or Truong Thanh JAPAN, Co,.Ltd. be held liable for any claim, damages or other liability, whether in an action of contract, tort, or otherwise, arising from, out of or in connection with the software. We reserve the right to modify this disclaimer from time to time.</p>'
+        ]
       }
     },
     methods: {
@@ -92,7 +87,15 @@
         })
       },
       openTermsAndConditions () {
-        this.$refs.refTextViewModal.open()
+        if (this.$i18n.locale() === 'ja') {
+          router.push({ name: 'settingsJaTermsOfService' })
+          return
+        }
+        if (this.$i18n.locale() === 'vi') {
+          router.push({ name: 'settingsVnTermsOfService' })
+          return
+        }
+        router.push({ name: 'settingsTermsOfService' })
       }
     },
     mounted () {
