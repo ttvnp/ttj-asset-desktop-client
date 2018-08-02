@@ -94,7 +94,8 @@ const en = {
     emailNotification: 'Email Notification',
     idDocument: 'ID Document',
     termOfService: 'Term of Service',
-    privacyPolicy: 'Privacy Policy'
+    privacyPolicy: 'Privacy Policy',
+    logout: 'Logout'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Please upload photo of your travel document.',
@@ -212,7 +213,8 @@ const ja = {
     emailNotification: 'メール通知',
     idDocument: 'ご本人確認資料',
     termOfService: '利用規約',
-    privacyPolicy: 'プライバシーポリシー'
+    privacyPolicy: 'プライバシーポリシー',
+    logout: 'Logout'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
@@ -330,7 +332,8 @@ const vi = {
     emailNotification: 'Thông báo email',
     idDocument: 'Tài liệu ID',
     termOfService: 'Điều khoản Dịch vụ',
-    privacyPolicy: 'Chính sách Bảo mật'
+    privacyPolicy: 'Chính sách Bảo mật',
+    logout: 'Logout'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',

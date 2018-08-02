@@ -186,6 +186,25 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <v-layout class="mt-4">
+      <v-flex xs12 sm10>
+        <v-card>
+          <v-container class="px-4">
+            <v-list two-line>
+              <v-list-tile @click="toLogout()" ripple>
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ $t('settings.logout') }}</v-list-tile-title>
+                </v-list-tile-content>
+                <v-list-tile-action>
+                  <v-icon>keyboard_arrow_right</v-icon>
+                </v-list-tile-action>
+              </v-list-tile>
+            </v-list>
+          </v-container>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 
@@ -278,6 +297,23 @@ export default {
         return
       }
       router.push({ name: 'settingsPrivacyPolicy' })
+    },
+    toLogout () {
+      const self = this
+      this.$store.dispatch('app/setLoading', true)
+      this.$store.dispatch('device/logout', {
+        onSuccess: function () {
+          self.$store.dispatch('app/setLoading', false)
+          self.$store.dispatch('app/setShowDrawer', false)
+          router.push({ name: 'index' })
+        },
+        onError: function (code, message, error) {
+          self.$store.dispatch('app/setLoading', false)
+          if (message) {
+            alert(message)
+          }
+        }
+      })
     }
   },
   watch: {

@@ -1,6 +1,7 @@
 import deviceDB from '@/database/device'
 import deviceApi from '@/api/device'
 import util from '@/util'
+import { stat } from 'fs';
 
 const state = {
   isActivated: false,
@@ -152,7 +153,6 @@ const actions = {
         grantPushNotification: data.grantPushNotification,
         grantEmailNotification: data.grantEmailNotification
       }
-      commit('setDevice', device)
       deviceDB.refresh(device)
       onSuccess()
     }).catch(function (error) {
@@ -173,6 +173,16 @@ const actions = {
   changeLanguage ({ commit, state }, { language }) {
     deviceDB.setLanguageState(language)
     commit('setLanguage', language)
+  },
+  logout ({ commit, state }, { onSuccess, onError }) {
+    deviceApi.logout().then(function (data) {
+      deviceDB.remove().then(function () {
+        state.isActivated = false
+        onSuccess()
+      })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
   }
 }
 
