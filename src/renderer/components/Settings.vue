@@ -304,8 +304,7 @@ export default {
       this.$store.dispatch('device/logout', {
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
-          self.$store.dispatch('app/setShowDrawer', false)
-          router.push({ name: 'index' })
+          router.push({ name: 'signup_email' })
         },
         onError: function (code, message, error) {
           self.$store.dispatch('app/setLoading', false)

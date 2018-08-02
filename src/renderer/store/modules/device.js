@@ -1,7 +1,6 @@
 import deviceDB from '@/database/device'
 import deviceApi from '@/api/device'
 import util from '@/util'
-import { stat } from 'fs';
 
 const state = {
   isActivated: false,
