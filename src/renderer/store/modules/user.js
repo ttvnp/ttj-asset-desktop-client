@@ -158,6 +158,9 @@ const actions = {
     userDB.refresh(user)
     commit('setUser', user)
   },
+  remove ({ commit, state }) {
+    userDB.remove()
+  },
   update ({ commit, state }, { profileImageFile, firstName, middleName, lastName, address, genderType, dateOfBirth, cellphoneNumberNationalCode, cellphoneNumber, onSuccess, onError }) {
     userApi.update({
       profileImageFile,

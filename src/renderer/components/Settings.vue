@@ -181,17 +181,7 @@
                   <v-icon>keyboard_arrow_right</v-icon>
                 </v-list-tile-action>
               </v-list-tile>
-            </v-list>
-          </v-container>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout class="mt-4">
-      <v-flex xs12 sm10>
-        <v-card>
-          <v-container class="px-4">
-            <v-list two-line>
-              <v-list-tile @click="toLogout()" ripple>
+              <v-list-tile @click="dialog=true" ripple>
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
                   <v-list-tile-title>{{ $t('settings.logout') }}</v-list-tile-title>
@@ -205,6 +195,36 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <v-layout row justify-center>
+      <v-dialog
+        v-model="dialog"
+        max-width="460"
+      >
+        <v-card>
+          <v-card-title class="headline">{{ $t('settings.logout') }}</v-card-title>
+          <v-card-text>
+            {{ $t('settings.messageLogout') }}
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="primary darken-1"
+              flat="flat"
+              @click="dialog = false"
+            >
+              {{ $t('general.no') }}
+            </v-btn>
+            <v-btn
+              color="red darken-1"
+              flat="flat"
+              @click="toLogout()"
+            >
+              {{ $t('general.yes') }}
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-layout>
   </div>
 </template>
 
@@ -214,6 +234,7 @@ import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
+      dialog: false,
       grantEmailNotification: false,
       textIdDocument: 'Upload Your ID Document'
     }
@@ -304,7 +325,10 @@ export default {
       this.$store.dispatch('device/logout', {
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
-          router.push({ name: 'signup_email' })
+          self.$store.dispatch('user/remove')
+          self.dialog = false
+          window.onloadCallback = undefined
+          router.push({ name: 'signup' })
         },
         onError: function (code, message, error) {
           self.$store.dispatch('app/setLoading', false)
@@ -359,7 +383,6 @@ export default {
       }
     })
 
-    console.log(this.identificationStatus)
     this.changeTextButtonIdDocument()
   }
 }

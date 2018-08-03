@@ -54,13 +54,7 @@ export default {
   },
   remove () {
     return new Promise(function (resolve, reject) {
-      db.remove({}, { multi: true }, function (err, numRemoved) {
-        if (err) {
-          reject(err)
-        } else {
-          resolve()
-        }
-      })
+      db.remove({}, { multi: true })
     })
   },
   getLanguageState () {

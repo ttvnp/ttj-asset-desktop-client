@@ -175,10 +175,10 @@ const actions = {
   },
   logout ({ commit, state }, { onSuccess, onError }) {
     deviceApi.logout().then(function (data) {
-      deviceDB.remove().then(function () {
-        state.isActivated = false
-        onSuccess()
-      })
+      deviceDB.remove()
+      state.isActivated = false
+      state.device = null
+      onSuccess()
     }).catch(function (error) {
       onError(null, null, error)
     })

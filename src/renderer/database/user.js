@@ -35,5 +35,8 @@ export default {
         }
       })
     })
+  },
+  remove () {
+    db.remove({}, { multi: true })
   }
 }

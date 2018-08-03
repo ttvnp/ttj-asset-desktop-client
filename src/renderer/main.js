@@ -95,7 +95,8 @@ const en = {
     idDocument: 'ID Document',
     termOfService: 'Term of Service',
     privacyPolicy: 'Privacy Policy',
-    logout: 'Logout'
+    logout: 'Logout',
+    messageLogout: 'Are you sure you want to log off?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Please upload photo of your travel document.',
@@ -125,7 +126,9 @@ const en = {
     start: 'START',
     ok: 'OK',
     cancel: 'CANCEL',
-    send: 'SEND'
+    send: 'SEND',
+    yes: 'Yes',
+    no: 'No'
   }
 }
 
@@ -214,7 +217,8 @@ const ja = {
     idDocument: 'ご本人確認資料',
     termOfService: '利用規約',
     privacyPolicy: 'プライバシーポリシー',
-    logout: 'Logout'
+    logout: 'Logout',
+    messageLogout: 'Are you sure want to log off?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
@@ -244,7 +248,9 @@ const ja = {
     start: '始める',
     ok: 'OK',
     cancel: 'キャンセル',
-    send: '送信'
+    send: '送信',
+    yes: 'Yes',
+    no: 'No'
   }
 }
 
@@ -333,7 +339,8 @@ const vi = {
     idDocument: 'Tài liệu ID',
     termOfService: 'Điều khoản Dịch vụ',
     privacyPolicy: 'Chính sách Bảo mật',
-    logout: 'Logout'
+    logout: 'Logout',
+    messageLogout: 'Are you sure you want to log off?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',
@@ -363,7 +370,9 @@ const vi = {
     start: 'Bắt đầu',
     ok: 'OK',
     cancel: 'Hủy',
-    send: 'Gửi'
+    send: 'Gửi',
+    yes: 'Yes',
+    no: 'No'
   }
 }
 
