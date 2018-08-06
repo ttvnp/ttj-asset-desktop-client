@@ -103,7 +103,7 @@
                     v-model="cellphoneNumber"
                     :rules="cellphoneNumberRules"
                     single-line
-                    v-bind:readonly="!isUnderReview"
+                    v-bind:readonly="isUnderReview"
                     @focus="onUnderReview"></v-text-field>
                 </v-flex>
               </v-layout>
