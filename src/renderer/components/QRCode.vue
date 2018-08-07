@@ -22,7 +22,7 @@
                 required
               ></v-select>
               <v-text-field
-                :label="$t('qrCode.assetCode')"
+                :label="$t('qrCode.amount')"
                 v-model="amount"
                 :hint="$t('qrCode.enterHowMuchYouWantToBeReceived')"
                 type="number"
