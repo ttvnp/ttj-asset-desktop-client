@@ -180,10 +180,12 @@ const actions = {
   logout ({ commit, state }, { onSuccess, onError }) {
     deviceApi.logout().then(function (data) {
       deviceDB.remove()
+      deviceDB.removeLanguageDB()
       appDB.remove()
       userDB.remove()
       balanceDB.remove()
       userTransactionDB.remove()
+      userTransactionDB.removeCntDB()
       state.isActivated = false
       state.device = null
       onSuccess()

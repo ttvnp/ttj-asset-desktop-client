@@ -84,5 +84,10 @@ export default {
         }
       })
     })
+  },
+  removeLanguageDB () {
+    return new Promise(function (resolve, reject) {
+      dbLanguage.remove({}, { multi: true })
+    })
   }
 }
