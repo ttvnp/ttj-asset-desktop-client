@@ -325,7 +325,6 @@ export default {
       this.$store.dispatch('device/logout', {
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
-          self.$store.dispatch('user/remove')
           self.dialog = false
           window.onloadCallback = undefined
           router.push({ name: 'signup' })

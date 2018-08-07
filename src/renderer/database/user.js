@@ -37,6 +37,8 @@ export default {
     })
   },
   remove () {
-    db.remove({}, { multi: true })
+    return new Promise(function (resolve, reject) {
+      db.remove({ }, { multi: true })
+    })
   }
 }

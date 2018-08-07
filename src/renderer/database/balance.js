@@ -46,5 +46,10 @@ export default {
         }
       })
     })
+  },
+  remove () {
+    return new Promise(function (resolve, reject) {
+      db.remove({ }, { multi: true })
+    })
   }
 }

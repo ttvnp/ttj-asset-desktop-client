@@ -1,4 +1,8 @@
 import deviceDB from '@/database/device'
+import appDB from '@/database/app'
+import userDB from '@/database/user'
+import balanceDB from '@/database/balance'
+import userTransactionDB from '@/database/user_transaction'
 import deviceApi from '@/api/device'
 import util from '@/util'
 
@@ -176,6 +180,10 @@ const actions = {
   logout ({ commit, state }, { onSuccess, onError }) {
     deviceApi.logout().then(function (data) {
       deviceDB.remove()
+      appDB.remove()
+      userDB.remove()
+      balanceDB.remove()
+      userTransactionDB.remove()
       state.isActivated = false
       state.device = null
       onSuccess()

@@ -217,8 +217,8 @@ const ja = {
     idDocument: 'ご本人確認資料',
     termOfService: '利用規約',
     privacyPolicy: 'プライバシーポリシー',
-    logout: 'Logout',
-    messageLogout: 'Are you sure want to log off?'
+    logout: 'ログアウト',
+    messageLogout: '本当にログオフしてもよろしいですか？'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
@@ -339,8 +339,8 @@ const vi = {
     idDocument: 'Tài liệu ID',
     termOfService: 'Điều khoản Dịch vụ',
     privacyPolicy: 'Chính sách Bảo mật',
-    logout: 'Logout',
-    messageLogout: 'Are you sure you want to log off?'
+    logout: 'Đăng xuất',
+    messageLogout: 'Bạn có chắc chắn bạn muốn ra khỏi mạng?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',
