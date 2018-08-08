@@ -94,5 +94,15 @@ export default {
         }
       })
     })
+  },
+  remove () {
+    return new Promise(function (resolve, reject) {
+      db.remove({}, { multi: true })
+    })
+  },
+  removeCntDB () {
+    return new Promise(function (resolve, reject) {
+      cntDB.remove({}, { multi: true })
+    })
   }
 }

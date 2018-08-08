@@ -1,4 +1,8 @@
 import deviceDB from '@/database/device'
+import appDB from '@/database/app'
+import userDB from '@/database/user'
+import balanceDB from '@/database/balance'
+import userTransactionDB from '@/database/user_transaction'
 import deviceApi from '@/api/device'
 import util from '@/util'
 
@@ -152,7 +156,6 @@ const actions = {
         grantPushNotification: data.grantPushNotification,
         grantEmailNotification: data.grantEmailNotification
       }
-      commit('setDevice', device)
       deviceDB.refresh(device)
       onSuccess()
     }).catch(function (error) {
@@ -173,6 +176,22 @@ const actions = {
   changeLanguage ({ commit, state }, { language }) {
     deviceDB.setLanguageState(language)
     commit('setLanguage', language)
+  },
+  logout ({ commit, state }, { onSuccess, onError }) {
+    deviceApi.logout().then(function (data) {
+      deviceDB.remove()
+      deviceDB.removeLanguageDB()
+      appDB.remove()
+      userDB.remove()
+      balanceDB.remove()
+      userTransactionDB.remove()
+      userTransactionDB.removeCntDB()
+      state.isActivated = false
+      state.device = null
+      onSuccess()
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
   }
 }
 
