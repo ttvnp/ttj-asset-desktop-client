@@ -131,9 +131,9 @@ const en = {
 // for Japanese
 const ja = {
   language: {
-    english: '英語',
-    japanese: '日本語',
-    vietnamese: 'ベトナム語'
+    english: '英語 - English',
+    japanese: '日本語 - Japanese',
+    vietnamese: 'ベトナム語 - Vietnamese'
   },
   validate: {
     emailMustBeValid: 'メールアドレスの形式が正しくありません',
@@ -206,7 +206,7 @@ const ja = {
     enterHowMuchYouWantTosend: '送信額を入力してください'
   },
   settings: {
-    language: '言語設定',
+    language: '言語設定 - Language',
     profile: 'プロフィール',
     notification: '通知設定',
     emailNotification: 'メール通知',
@@ -249,9 +249,9 @@ const ja = {
 // for Vietnamese
 const vi = {
   language: {
-    english: 'Tiếng Anh',
-    japanese: 'Tiếng Nhật',
-    vietnamese: 'Tiếng Việt'
+    english: 'Tiếng Anh - English',
+    japanese: 'Tiếng Nhật - Japanese',
+    vietnamese: 'Tiếng Việt - Vietnamese'
   },
   validate: {
     emailMustBeValid: 'Địa chỉ email không đúng.',
@@ -324,7 +324,7 @@ const vi = {
     enterHowMuchYouWantToSend: ''
   },
   settings: {
-    language: 'Ngôn ngữ',
+    language: 'Ngôn ngữ - Language',
     profile: 'Hồ sơ',
     notification: 'Thông báo',
     emailNotification: 'Thông báo email',
