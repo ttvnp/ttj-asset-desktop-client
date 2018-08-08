@@ -94,7 +94,9 @@ const en = {
     emailNotification: 'Email Notification',
     idDocument: 'ID Document',
     termOfService: 'Term of Service',
-    privacyPolicy: 'Privacy Policy'
+    privacyPolicy: 'Privacy Policy',
+    logout: 'Logout',
+    messageLogout: 'Are you sure you want to log off?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Please upload photo of your travel document.',
@@ -124,16 +126,18 @@ const en = {
     start: 'START',
     ok: 'OK',
     cancel: 'CANCEL',
-    send: 'SEND'
+    send: 'SEND',
+    yes: 'Yes',
+    no: 'No'
   }
 }
 
 // for Japanese
 const ja = {
   language: {
-    english: '英語',
-    japanese: '日本語',
-    vietnamese: 'ベトナム語'
+    english: '英語 - English',
+    japanese: '日本語 - Japanese',
+    vietnamese: 'ベトナム語 - Vietnamese'
   },
   validate: {
     emailMustBeValid: 'メールアドレスの形式が正しくありません',
@@ -206,13 +210,15 @@ const ja = {
     enterHowMuchYouWantTosend: '送信額を入力してください'
   },
   settings: {
-    language: '言語設定',
+    language: '言語設定 - Language',
     profile: 'プロフィール',
     notification: '通知設定',
     emailNotification: 'メール通知',
     idDocument: 'ご本人確認資料',
     termOfService: '利用規約',
-    privacyPolicy: 'プライバシーポリシー'
+    privacyPolicy: 'プライバシーポリシー',
+    logout: 'ログアウト',
+    messageLogout: '本当にログオフしてもよろしいですか？'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
@@ -242,16 +248,18 @@ const ja = {
     start: '始める',
     ok: 'OK',
     cancel: 'キャンセル',
-    send: '送信'
+    send: '送信',
+    yes: 'Yes',
+    no: 'No'
   }
 }
 
 // for Vietnamese
 const vi = {
   language: {
-    english: 'Tiếng Anh',
-    japanese: 'Tiếng Nhật',
-    vietnamese: 'Tiếng Việt'
+    english: 'Tiếng Anh - English',
+    japanese: 'Tiếng Nhật - Japanese',
+    vietnamese: 'Tiếng Việt - Vietnamese'
   },
   validate: {
     emailMustBeValid: 'Địa chỉ email không đúng.',
@@ -324,13 +332,15 @@ const vi = {
     enterHowMuchYouWantToSend: ''
   },
   settings: {
-    language: 'Ngôn ngữ',
+    language: 'Ngôn ngữ - Language',
     profile: 'Hồ sơ',
     notification: 'Thông báo',
     emailNotification: 'Thông báo email',
     idDocument: 'Tài liệu ID',
     termOfService: 'Điều khoản Dịch vụ',
-    privacyPolicy: 'Chính sách Bảo mật'
+    privacyPolicy: 'Chính sách Bảo mật',
+    logout: 'Đăng xuất',
+    messageLogout: 'Bạn có chắc chắn bạn muốn ra khỏi mạng?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',
@@ -360,7 +370,9 @@ const vi = {
     start: 'Bắt đầu',
     ok: 'OK',
     cancel: 'Hủy',
-    send: 'Gửi'
+    send: 'Gửi',
+    yes: 'Yes',
+    no: 'No'
   }
 }
 

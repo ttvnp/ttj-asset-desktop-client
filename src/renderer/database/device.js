@@ -52,6 +52,11 @@ export default {
       })
     })
   },
+  remove () {
+    return new Promise(function (resolve, reject) {
+      db.remove({}, { multi: true })
+    })
+  },
   getLanguageState () {
     return new Promise(function (resolve, reject) {
       dbLanguage.findOne({}, function (err, language) {
@@ -78,6 +83,11 @@ export default {
           })
         }
       })
+    })
+  },
+  removeLanguageDB () {
+    return new Promise(function (resolve, reject) {
+      dbLanguage.remove({}, { multi: true })
     })
   }
 }

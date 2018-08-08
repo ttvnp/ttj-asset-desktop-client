@@ -181,10 +181,49 @@
                   <v-icon>keyboard_arrow_right</v-icon>
                 </v-list-tile-action>
               </v-list-tile>
+              <v-list-tile @click="dialog=true" ripple>
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ $t('settings.logout') }}</v-list-tile-title>
+                </v-list-tile-content>
+                <v-list-tile-action>
+                  <v-icon>keyboard_arrow_right</v-icon>
+                </v-list-tile-action>
+              </v-list-tile>
             </v-list>
           </v-container>
         </v-card>
       </v-flex>
+    </v-layout>
+    <v-layout row justify-center>
+      <v-dialog
+        v-model="dialog"
+        max-width="460"
+      >
+        <v-card>
+          <v-card-title class="headline">{{ $t('settings.logout') }}</v-card-title>
+          <v-card-text>
+            {{ $t('settings.messageLogout') }}
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="primary darken-1"
+              flat="flat"
+              @click="dialog = false"
+            >
+              {{ $t('general.no') }}
+            </v-btn>
+            <v-btn
+              color="red darken-1"
+              flat="flat"
+              @click="toLogout()"
+            >
+              {{ $t('general.yes') }}
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-layout>
   </div>
 </template>
@@ -195,6 +234,7 @@ import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
+      dialog: false,
       grantEmailNotification: false,
       textIdDocument: 'Upload Your ID Document'
     }
@@ -278,6 +318,24 @@ export default {
         return
       }
       router.push({ name: 'settingsPrivacyPolicy' })
+    },
+    toLogout () {
+      const self = this
+      this.$store.dispatch('app/setLoading', true)
+      this.$store.dispatch('device/logout', {
+        onSuccess: function () {
+          self.$store.dispatch('app/setLoading', false)
+          self.dialog = false
+          window.onloadCallback = undefined
+          router.push({ name: 'signup' })
+        },
+        onError: function (code, message, error) {
+          self.$store.dispatch('app/setLoading', false)
+          if (message) {
+            alert(message)
+          }
+        }
+      })
     }
   },
   watch: {
@@ -324,7 +382,6 @@ export default {
       }
     })
 
-    console.log(this.identificationStatus)
     this.changeTextButtonIdDocument()
   }
 }

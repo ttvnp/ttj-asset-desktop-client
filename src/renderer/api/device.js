@@ -54,5 +54,11 @@ export default {
     return util.retryOnAuthError(function (accessToken) {
       return client.withAuth(accessToken).patch(url, formData)
     })
+  },
+  logout () {
+    const url = util.getApiRoot() + '/devices/logout'
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).post(url)
+    })
   }
 }
