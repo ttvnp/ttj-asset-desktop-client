@@ -324,9 +324,14 @@ export default {
       this.$store.dispatch('app/setLoading', true)
       this.$store.dispatch('device/logout', {
         onSuccess: function () {
-          self.$store.dispatch('app/setLoading', false)
+          const app = {
+            loadBalances: false,
+            loadPaymentHistory: false
+          }
           self.dialog = false
           window.onloadCallback = undefined
+          self.$store.dispatch('app/setApp', app)
+          self.$store.dispatch('app/setLoading', false)
           router.push({ name: 'signup' })
         },
         onError: function (code, message, error) {
