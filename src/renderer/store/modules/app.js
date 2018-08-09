@@ -49,6 +49,9 @@ const actions = {
   },
   setLoading ({ commit, state }, value) {
     commit('setLoading', value)
+  },
+  setApp ({ commit, state }, app) {
+    commit('setApp', app)
   }
 }
 
