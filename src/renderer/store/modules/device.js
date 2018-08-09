@@ -156,6 +156,7 @@ const actions = {
         grantPushNotification: data.grantPushNotification,
         grantEmailNotification: data.grantEmailNotification
       }
+      commit('setDevice', device)
       deviceDB.refresh(device)
       onSuccess()
     }).catch(function (error) {
