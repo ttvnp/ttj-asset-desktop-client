@@ -330,8 +330,8 @@ export default {
           }
           self.dialog = false
           window.onloadCallback = undefined
-          self.$store.dispatch('app/setLoading', false)
           self.$store.dispatch('app/setApp', app)
+          self.$store.dispatch('app/setLoading', false)
           router.push({ name: 'signup' })
         },
         onError: function (code, message, error) {
