@@ -181,6 +181,15 @@
                   <v-icon>keyboard_arrow_right</v-icon>
                 </v-list-tile-action>
               </v-list-tile>
+              <v-list-tile @click="toChangePassword" ripple>
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ $t('changePassword.changePasswordLabel') }}</v-list-tile-title>
+                </v-list-tile-content>
+                <v-list-tile-action>
+                  <v-icon>keyboard_arrow_right</v-icon>
+                </v-list-tile-action>
+              </v-list-tile>
               <v-list-tile @click="dialog=true" ripple>
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
@@ -318,6 +327,9 @@ export default {
         return
       }
       router.push({ name: 'settingsPrivacyPolicy' })
+    },
+    toChangePassword () {
+      router.push({ name: 'settingsChangePassword' })
     },
     toLogout () {
       const self = this

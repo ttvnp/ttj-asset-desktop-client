@@ -96,6 +96,11 @@ export default new Router({
       component: require('@/components/SettingsVnPrivacyPolicy').default
     },
     {
+      path: '/settings/change_password',
+      name: 'settingsChangePassword',
+      component: require('@/components/SettingsChangePassword').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

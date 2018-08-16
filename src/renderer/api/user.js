@@ -73,5 +73,15 @@ export default {
       }
       return cli.post(url, formData)
     })
+  },
+  changePassword ({ oldPassword, newPassword, retypePassword }) {
+    const url = util.getApiRoot() + '/users/password_on_import'
+    let formData = new FormData()
+    formData.append('current_password', oldPassword)
+    formData.append('new_password', newPassword)
+    formData.append('new_password2', retypePassword)
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).patch(url, formData)
+    })
   }
 }
