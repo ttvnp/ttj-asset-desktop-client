@@ -340,6 +340,17 @@ const actions = {
     }).catch(function (error) {
       onError(null, null, error)
     })
+  },
+  changePassword ({ commit, state }, { oldPassword, newPassword, retypePassword, onSuccess, onError }) {
+    userApi.changePassword({ oldPassword, newPassword, retypePassword }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.errorCode, data.message, null)
+        return
+      }
+      onSuccess({ data })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
   }
 }
 

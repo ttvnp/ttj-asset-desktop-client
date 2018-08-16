@@ -20,13 +20,18 @@ const en = {
   validate: {
     emailMustBeValid: 'Email address must be valid.',
     amountMustBeValid: 'Amount must be valid',
-    editProfileUnderReview: 'When ID was approved or under review, you can change only the avatar image.'
+    editProfileUnderReview: 'When ID was approved or under review, you can change only the avatar image.',
+    newPasswordValid: 'Password should be more than 6 characters or numbers.',
+    passwordsAreNotMatched: 'New passwords are not matched.'
   },
   require: {
     itemIsRequired: 'Item is required',
     passwordIsRequired: 'Password is required.',
     codeIsRequired: 'Code is required.',
-    emailIsRequired: 'Email Address is required'
+    emailIsRequired: 'Email Address is required.',
+    oldPasswordIsRequired: 'Please input old password.',
+    newPasswordIsRequired: 'Please input new password.',
+    retypePasswordIsRequired: 'Please input retype password.'
   },
   facePhoto: {
     pointOne: 'Please submit the page containing your photograph.',
@@ -120,6 +125,13 @@ const en = {
     idDocumentApproved: 'ID Document was approved',
     idDocumentUnderReview: 'Under review for ID Document'
   },
+  changePassword: {
+    changePasswordLabel: 'Change Password',
+    oldPassword: 'Old Password',
+    newPassword: 'New Password',
+    retypePassword: 'Retype Password',
+    passwordIsNotCorrect: 'Password is not correct.'
+  },
   general: {
     sample: 'Sample',
     noData: 'No Data',
@@ -128,7 +140,8 @@ const en = {
     cancel: 'CANCEL',
     send: 'SEND',
     yes: 'Yes',
-    no: 'No'
+    no: 'No',
+    save: 'save'
   }
 }
 
@@ -142,13 +155,18 @@ const ja = {
   validate: {
     emailMustBeValid: 'メールアドレスの形式が正しくありません',
     amountMustBeValid: 'Point/Coinが正しくありません',
-    editProfileUnderReview: 'ご本人確認資料(ID)が承認済あるいは審査中は、プロフィール画像のみ変更できます'
+    editProfileUnderReview: 'ご本人確認資料(ID)が承認済あるいは審査中は、プロフィール画像のみ変更できます',
+    newPasswordValid: 'パスワードは6文字以上の英数字で設定してください。',
+    passwordsAreNotMatched: '新しいパスワードが一致しません。'
   },
   require: {
     itemIsRequired: '必須項目',
     passwordIsRequired: 'パスワードを入力してください',
     codeIsRequired: '認証コードを入力してください',
-    emailIsRequired: 'メールアドレスを入力してください'
+    emailIsRequired: 'メールアドレスを入力してください',
+    oldPasswordIsRequired: '現在のパスワードを入力してください。',
+    newPasswordIsRequired: '新しいパスワードを入力してください。',
+    retypePasswordIsRequired: '新しいパスワード（確認）を入力してください。'
   },
   facePhoto: {
     pointOne: '顔写真が確認できるページをアップロードしてください。',
@@ -218,7 +236,7 @@ const ja = {
     termOfService: '利用規約',
     privacyPolicy: 'プライバシーポリシー',
     logout: 'ログアウト',
-    messageLogout: '本当にログオフしてもよろしいですか？'
+    messageLogout: 'ログアウトしてもよろしいですか？'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
@@ -242,6 +260,13 @@ const ja = {
     idDocumentApproved: 'ご本人確認資料(ID)承認済',
     idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
+  changePassword: {
+    changePasswordLabel: 'パスワード変更',
+    oldPassword: '現在のパスワード',
+    newPassword: '新しいパスワード',
+    retypePassword: '新しいパスワード（確認）',
+    passwordIsNotCorrect: '現在のパスワードが正しくありません。'
+  },
   general: {
     sample: '例',
     noData: 'データが存在しません',
@@ -250,7 +275,8 @@ const ja = {
     cancel: 'キャンセル',
     send: '送信',
     yes: 'Yes',
-    no: 'No'
+    no: 'No',
+    save: '保存'
   }
 }
 
@@ -264,13 +290,18 @@ const vi = {
   validate: {
     emailMustBeValid: 'Địa chỉ email không đúng.',
     amountMustBeValid: 'Số điểm không đúng.',
-    editProfileUnderReview: 'Khi ID xác minh chủ tài khoản đã được xác nhận hoặc đang trong khi xét duyệt, thì bạn chỉ có thể thay đổi ảnh đại diện.'
+    editProfileUnderReview: 'Khi ID xác minh chủ tài khoản đã được xác nhận hoặc đang trong khi xét duyệt, thì bạn chỉ có thể thay đổi ảnh đại diện.',
+    newPasswordValid: 'Mật khẩu nên được cài đặt 6 ký tự hoặc số.',
+    passwordsAreNotMatched: 'Mật khẩu mới không đồng nhất.'
   },
   require: {
     itemIsRequired: 'Mục bắt buộc',
     passwordIsRequired: 'Hãy nhập mật khẩu',
     codeIsRequired: 'Hãy nhập mã xác nhận.',
-    emailIsRequired: 'Hãy nhập địa chỉ email.'
+    emailIsRequired: 'Hãy nhập địa chỉ email.',
+    oldPasswordIsRequired: 'Vui lòng nhập mật khẩu hiện tại.',
+    newPasswordIsRequired: 'Vui lòng nhập mật khẩu mới.',
+    retypePasswordIsRequired: 'Vui lòng nhập lại mật khẩu.'
   },
   facePhoto: {
     pointOne: 'Vui lòng gửi tài liệu có kèm ảnh của bạn.',
@@ -340,7 +371,7 @@ const vi = {
     termOfService: 'Điều khoản Dịch vụ',
     privacyPolicy: 'Chính sách Bảo mật',
     logout: 'Đăng xuất',
-    messageLogout: 'Bạn có chắc chắn bạn muốn ra khỏi mạng?'
+    messageLogout: 'Bạn có chắc chắn muốn đăng xuất không?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',
@@ -364,6 +395,13 @@ const vi = {
     idDocumentApproved: 'Dữ liệu ID đã được phê duyệt',
     idDocumentUnderReview: 'Đang xem xét dữ liệu ID'
   },
+  changePassword: {
+    changePasswordLabel: 'Thay đổi mật khẩu',
+    oldPassword: 'Mật khẩu hiện nay',
+    newPassword: 'Mật khẩu mới',
+    retypePassword: 'Nhập lại mật khẩu',
+    passwordIsNotCorrect: 'Mật khẩu hiện tại không chính xác.'
+  },
   general: {
     sample: 'Mẫu vật',
     noData: 'Không có dữ liệu',
@@ -372,7 +410,8 @@ const vi = {
     cancel: 'Hủy',
     send: 'Gửi',
     yes: 'Yes',
-    no: 'No'
+    no: 'No',
+    save: 'Lưu'
   }
 }
 
