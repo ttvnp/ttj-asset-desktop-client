@@ -32,7 +32,7 @@
                 v-model="passwordOnImport"
                 :rules="passwordOnImportRules"
                 :hint="$t('signUpCode.passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime')"
-                type="number"
+                type="password"
                 required
               ></v-text-field>
             </v-form>
