@@ -191,7 +191,7 @@ const ja = {
     registerEmail: 'メールアドレスを登録する',
     pleaseProvideYourEmailAddressToActivateYourAccount: '登録されるメールアドレスを入力してください',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: '入力フォームを送信されましたらメールをお送りいたします',
-    iAgreesWith: '同意する',
+    AgreesWith: '同意する',
     termOfServices: '利用規約に '
   },
   signUpEnd: {
