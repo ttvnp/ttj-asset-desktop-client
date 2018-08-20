@@ -90,7 +90,8 @@ const en = {
     youCannotSendToYourSelf: 'You cannot send to yourself',
     amountMustBeLessThanTotal: 'Amount must be less than total',
     areYouSureYouWantToSend: 'Are you sure you want to send {amount} {assetCode} to {email}?',
-    enterHowMuchYouWantToSend: 'Enter how much you want to send.'
+    enterHowMuchYouWantToSend: 'Enter how much you want to send.',
+    paymentSuccess: 'The payment has been submitted.\nPlease wait a moment until the transaction be processed.'
   },
   settings: {
     language: 'Languages',
