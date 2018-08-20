@@ -81,6 +81,7 @@ const en = {
     AmountMustBeValid: 'Amount must be valid'
   },
   send: {
+    password: 'Password',
     balances: 'Balances',
     sendLabel: 'Send',
     emailAdress: 'Email address',
@@ -96,6 +97,8 @@ const en = {
   settings: {
     language: 'Languages',
     profile: 'Profile',
+    security: 'Security',
+    requirePasswordOnSendingAssets: 'Require password to send assets',
     notification: 'Notification',
     emailNotification: 'Email Notification',
     idDocument: 'ID Document',
@@ -217,6 +220,7 @@ const ja = {
     AmountMustBeValid: 'Point/Coinを入力して下さい'
   },
   send: {
+    password: 'パスワード',
     balances: '残高',
     sendLabel: '送信',
     emailAdress: 'メールアドレス',
@@ -226,12 +230,14 @@ const ja = {
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
-    enterHowMuchYouWantTosend: '送信額を入力してください',
+    enterHowMuchYouWantToSend: '送信額を入力してください',
     paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。'
   },
   settings: {
     language: '言語設定 - Language',
     profile: 'プロフィール',
+    security: 'セキュリティ',
+    requirePasswordOnSendingAssets: 'ポイント・コイン送信時にパスワードを入力する',
     notification: '通知設定',
     emailNotification: 'メール通知',
     idDocument: 'ご本人確認資料',
@@ -353,6 +359,7 @@ const vi = {
     AmountMustBeValid: 'Số lượng ko đúng.'
   },
   send: {
+    password: 'Mật khẩu',
     balances: 'Số dư',
     sendLabel: 'Gửi',
     emailAdress: 'Địa chỉ email',
@@ -368,6 +375,8 @@ const vi = {
   settings: {
     language: 'Ngôn ngữ - Language',
     profile: 'Hồ sơ',
+    security: 'Bảo mật',
+    requirePasswordOnSendingAssets: 'Nhập mật khẩu để gửi điểm hoặc Coin',
     notification: 'Thông báo',
     emailNotification: 'Thông báo email',
     idDocument: 'Tài liệu ID',

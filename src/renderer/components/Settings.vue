@@ -90,7 +90,7 @@
               <v-list-tile @click="">
                 <v-list-tile-action></v-list-tile-action>
                 <v-list-tile-content>
-                  <v-list-tile-title>Require password to send assets</v-list-tile-title>
+                  <v-list-tile-title>{{ $t('settings.requirePasswordOnSendingAssets') }}</v-list-tile-title>
                 </v-list-tile-content>
                 <v-list-tile-action>
                   <v-switch v-model="newRequirePasswordOnSend"></v-switch>

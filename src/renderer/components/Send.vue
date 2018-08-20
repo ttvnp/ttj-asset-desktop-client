@@ -42,7 +42,7 @@
                 :disabled="!isIdentified"
               ></v-text-field>
               <v-select
-                 :label="$t('send.assetCode')"
+                :label="$t('send.assetCode')"
                 v-model="assetCode"
                 :items="assetCodes"
                 :rules="[v => !!v || $t('require.itemIsRequired')]"
@@ -72,7 +72,7 @@
               <v-form>
                 <v-text-field 
                 style="width: 248px; margin-left: 16px; margin-right: 16px"
-                label="Password"
+                :label="$t('send.password')"
                 v-model="password"
                 type="password"
                 />
