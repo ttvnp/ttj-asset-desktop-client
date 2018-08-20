@@ -46,17 +46,17 @@ const en = {
   },
   signUpCode: {
     verifyEmail: 'Verify Email',
-    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Please provide verification code which was sent by email.',
+    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Please provide confirmation code sent by email.',
     code: 'Code',
-    verificationCodeWhichWasSentByEmail: 'Verification code which was sent by email.',
-    passwordOnImport: 'Password on import',
-    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Password which was sent by email when you created an account on the first time.'
+    verificationCodeWhichWasSentByEmail: 'Confirmation code sent by email.',
+    passwordOnImport: 'Password',
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Password which was set by yourself or sent by email when you registered at the first time.'
   },
   signUpEmail: {
     registerEmail: 'Register Email',
-    pleaseProvideYourEmailAddresToActivateYourAccount: 'Please provide your email address to activate your account.',
+    pleaseProvideYourEmailAddressToActivateYourAccount: 'Please provide your email address to activate your account.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Once you submit this form, then we will send you a confirmation email.',
-    iAgressWith: 'I agree with ',
+    AgreesWith: 'I agree with ',
     termOfServices: 'terms of services.'
   },
   signUpEnd: {
@@ -83,12 +83,12 @@ const en = {
   send: {
     balances: 'Balances',
     sendLabel: 'Send',
-    emailAdress: 'Email address',
+    emailAddress: 'Email address',
     assetCode: 'Asset code',
     amount: 'Amount',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'You cannot use this function until your ID is verified.',
     youCannotSendToYourSelf: 'You cannot send to yourself',
-    amountMustBeLessThanTotal: 'Amount must be less than total',
+    amountMustBeLessThanTotal: 'You can not send that much.',
     areYouSureYouWantToSend: 'Are you sure you want to send {amount} {assetCode} to {email}?',
     enterHowMuchYouWantToSend: 'Enter how much you want to send.'
   },
@@ -157,16 +157,16 @@ const ja = {
     amountMustBeValid: 'Point/Coinが正しくありません',
     editProfileUnderReview: 'ご本人確認資料(ID)が承認済あるいは審査中は、プロフィール画像のみ変更できます',
     newPasswordValid: 'パスワードは6文字以上の英数字で設定してください。',
-    passwordsAreNotMatched: '新しいパスワードが一致しません。'
+    passwordsAreNotMatched: '新しいパスワードが一致しません'
   },
   require: {
     itemIsRequired: '必須項目',
     passwordIsRequired: 'パスワードを入力してください',
     codeIsRequired: '認証コードを入力してください',
     emailIsRequired: 'メールアドレスを入力してください',
-    oldPasswordIsRequired: '現在のパスワードを入力してください。',
-    newPasswordIsRequired: '新しいパスワードを入力してください。',
-    retypePasswordIsRequired: '新しいパスワード（確認）を入力してください。'
+    oldPasswordIsRequired: '現在のパスワードを入力してください',
+    newPasswordIsRequired: '新しいパスワードを入力してください',
+    retypePasswordIsRequired: '新しいパスワード（確認）を入力してください'
   },
   facePhoto: {
     pointOne: '顔写真が確認できるページをアップロードしてください。',
@@ -181,17 +181,17 @@ const ja = {
   },
   signUpCode: {
     verifyEmail: 'メールアドレスを有効にする',
-    pleaseProvideVerificationCodeWhichWasSentByEmail: 'メールに記載されたVerification code（認証コード）を入力してください',
+    pleaseProvideVerificationCodeWhichWasSentByEmail: 'メールに記載されたConfirmation code（認証コード）を入力してください',
     code: 'コード',
-    verificationCodeWhichWasSentByEmail: 'Verification code（認証コード）.',
-    passwordOnImport: 'Password on import',
-    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: '登録時に送付されたメールに記載されているパスワードを入力してください'
+    verificationCodeWhichWasSentByEmail: 'Confirmation code（認証コード）',
+    passwordOnImport: 'パスワード',
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'パスワードを入力してください'
   },
   signUpEmail: {
     registerEmail: 'メールアドレスを登録する',
-    pleaseProvideYourEmailAddresToActivateYourAccount: '登録されるメールアドレスを入力してください',
+    pleaseProvideYourEmailAddressToActivateYourAccount: '登録されるメールアドレスを入力してください',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: '入力フォームを送信されましたらメールをお送りいたします',
-    iAgressWith: '同意する',
+    iAgreesWith: '同意する',
     termOfServices: '利用規約に '
   },
   signUpEnd: {
@@ -218,7 +218,7 @@ const ja = {
   send: {
     balances: '残高',
     sendLabel: '送信',
-    emailAdress: 'メールアドレス',
+    emailAddress: 'メールアドレス',
     assetCode: 'アセットコード',
     amount: '数量',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。プロフィールページからご本人確認(ID)を申請してください。',
@@ -319,14 +319,14 @@ const vi = {
     pleaseProvideVerificationCodeWhichWasSentByEmail: 'Hãy nhập mã xác nhận đã được ghi trong email.',
     code: 'Mã xác nhận',
     verificationCodeWhichWasSentByEmail: 'Mã xác nhận đã được gửi bằng email.',
-    passwordOnImport: 'Mật khẩu khi nhập',
-    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Mật khẩu đã được gửi bằng email khi bạn tạo một tài khoản vào lần đầu tiên.'
+    passwordOnImport: 'Mật khẩu',
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Vui lòng nhập mật khẩu.'
   },
   signUpEmail: {
     registerEmail: 'Email đăng ký',
-    pleaseProvideYourEmailAddresToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
+    pleaseProvideYourEmailAddressToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Sau khi bạn gửi mẫu đơn này, sau đó chúng tôi sẽ gửi cho bạn email xác nhận.',
-    iAgressWith: 'Tôi đồng ý.',
+    AgreesWith: 'Tôi đồng ý.',
     termOfServices: 'điều khoản dịch vụ.'
   },
   signUpEnd: {
@@ -353,7 +353,7 @@ const vi = {
   send: {
     balances: 'Số dư',
     sendLabel: 'Gửi',
-    emailAdress: 'Địa chỉ email',
+    emailAddress: 'Địa chỉ email',
     assetCode: 'Mã tài khoản',
     amount: 'Số lượng',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'Bạn không thể sử dụng chức năng này cho đến khi ID của bạn được xác minh.',
