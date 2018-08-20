@@ -226,7 +226,8 @@ const ja = {
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
-    enterHowMuchYouWantTosend: '送信額を入力してください'
+    enterHowMuchYouWantTosend: '送信額を入力してください',
+    paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。'
   },
   settings: {
     language: '言語設定 - Language',
@@ -361,7 +362,8 @@ const vi = {
     youCannotSendToYourSelf: 'Bạn không thể gửi cho chính mình.',
     amountMustBeLessThanTotal: 'Số tiền phải nhỏ hơn tổng.',
     areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi.',
-    enterHowMuchYouWantToSend: ''
+    enterHowMuchYouWantToSend: '',
+    paymentSuccess: 'Gửi xong\n'
   },
   settings: {
     language: 'Ngôn ngữ - Language',
