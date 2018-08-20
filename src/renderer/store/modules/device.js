@@ -137,8 +137,8 @@ const actions = {
       onError(null, null, error)
     })
   },
-  updateNotificationSettings ({ commit, state }, { grantPushNotification, grantEmailNotification, onSuccess, onError }) {
-    deviceApi.updateNotificationSettings({ grantPushNotification, grantEmailNotification }).then(function (data) {
+  updateNotificationSettings ({ commit, state }, { grantPushNotification, onSuccess, onError }) {
+    deviceApi.updateNotificationSettings({ grantPushNotification }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message)
         return

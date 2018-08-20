@@ -46,6 +46,14 @@ export default {
       return client.noAuth().post(url, formData)
     })
   },
+  updateNotificationSettings ({ grantPushNotification }) {
+    const url = util.getApiRoot() + '/devices/notification_settings'
+    let formData = new FormData()
+    formData.append('grantPushNotification', grantPushNotification)
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).patch(url, formData)
+    })
+  },
   logout () {
     const url = util.getApiRoot() + '/devices/logout'
     return util.retryOnAuthError(function (accessToken) {
