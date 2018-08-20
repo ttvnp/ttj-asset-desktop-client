@@ -77,6 +77,30 @@
         </v-card>
       </v-flex>
     </v-layout>
+     <v-layout class="mt-4">
+      <v-flex xs12 sm10>
+        <v-card>
+          <v-card-title class="primary white--text" primary-title>
+            <div>
+              <h3 class="headline mb-0">Security</h3>
+            </div>
+          </v-card-title>
+          <v-container class="px-4">
+            <v-list two-line>
+              <v-list-tile @click="">
+                <v-list-tile-action></v-list-tile-action>
+                <v-list-tile-content>
+                  <v-list-tile-title>{{ $t('settings.requirePasswordOnSendingAssets') }}</v-list-tile-title>
+                </v-list-tile-content>
+                <v-list-tile-action>
+                  <v-switch v-model="newRequirePasswordOnSend"></v-switch>
+                </v-list-tile-action>
+              </v-list-tile>
+            </v-list>
+          </v-container>
+        </v-card>
+      </v-flex>
+    </v-layout>
     <v-layout class="mt-4">
       <v-flex xs12 sm10>
         <v-card>
@@ -93,7 +117,7 @@
                   <v-list-tile-title>{{ $t('settings.emailNotification') }}</v-list-tile-title>
                 </v-list-tile-content>
                 <v-list-tile-action>
-                  <v-switch v-model="grantEmailNotification"></v-switch>
+                  <v-switch v-model="newGrantEmailNotification"></v-switch>
                 </v-list-tile-action>
               </v-list-tile>
             </v-list>
@@ -101,38 +125,38 @@
         </v-card>
       </v-flex>
     </v-layout>
-        <v-layout class="mt-4">
-      <v-flex xs12 sm10>
-        <v-card>
-          <v-card-title class="primary white--text" primary-title>
-            <div>
-              <h3 class="headline mb-0">{{ $t('settings.language') }}</h3>
-            </div>
-          </v-card-title>
-          <v-container class="px-4">
-            <v-list two-line>
-              <v-list-tile @click="toEnglish">
-                <v-list-tile-action></v-list-tile-action>
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ $t('language.english') }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-              <v-list-tile @click="toJapanese">
-                <v-list-tile-action></v-list-tile-action>
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ $t('language.japanese') }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-               <v-list-tile @click="toVietnamese">
-                <v-list-tile-action></v-list-tile-action>
-                <v-list-tile-content>
-                  <v-list-tile-title>{{ $t('language.vietnamese') }}</v-list-tile-title>
-                </v-list-tile-content>
-              </v-list-tile>
-            </v-list>
-          </v-container>
-        </v-card>
-      </v-flex>
+      <v-layout class="mt-4">
+        <v-flex xs12 sm10>
+          <v-card>
+            <v-card-title class="primary white--text" primary-title>
+              <div>
+                <h3 class="headline mb-0">{{ $t('settings.language') }}</h3>
+              </div>
+            </v-card-title>
+            <v-container class="px-4">
+              <v-list two-line>
+                <v-list-tile @click="toEnglish">
+                  <v-list-tile-action></v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>{{ $t('language.english') }}</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile @click="toJapanese">
+                  <v-list-tile-action></v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>{{ $t('language.japanese') }}</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+                <v-list-tile @click="toVietnamese">
+                  <v-list-tile-action></v-list-tile-action>
+                  <v-list-tile-content>
+                    <v-list-tile-title>{{ $t('language.vietnamese') }}</v-list-tile-title>
+                  </v-list-tile-content>
+                </v-list-tile>
+              </v-list>
+            </v-container>
+          </v-card>
+        </v-flex>
     </v-layout>
     <v-layout class="mt-4">
       <v-flex xs12 sm10>
@@ -244,7 +268,8 @@ export default {
   data () {
     return {
       dialog: false,
-      grantEmailNotification: false,
+      newRequirePasswordOnSend: false,
+      newGrantEmailNotification: false,
       textIdDocument: 'Upload Your ID Document'
     }
   },
@@ -260,6 +285,8 @@ export default {
     cellphoneNumber: 'user/cellphoneFullNumber',
     isIdentified: 'user/isIdentified',
     identificationStatus: 'user/identificationStatus',
+    grantEmailNotification: 'user/grantEmailNotification',
+    requirePasswordOnSend: 'user/requirePasswordOnSend',
     device: 'device/device'
   }),
   methods: {
@@ -356,14 +383,31 @@ export default {
     }
   },
   watch: {
-    'grantEmailNotification': function (to, from) {
-      const newVal = this.grantEmailNotification
-      if (newVal === this.device.grantEmailNotification) return
+    'newGrantEmailNotification': function (to, from) {
+      const newVal = this.newGrantEmailNotification
+      if (newVal === this.grantEmailNotification) return
       const self = this
       this.$store.dispatch('app/setLoading', true)
-      this.$store.dispatch('device/updateNotificationSettings', {
-        grantPushNotification: this.device.grantPushNotification,
+      this.$store.dispatch('user/updateNotificationSettings', {
         grantEmailNotification: newVal,
+        onSuccess: function () {
+          self.$store.dispatch('app/setLoading', false)
+        },
+        onError: function (code, message, error) {
+          self.$store.dispatch('app/setLoading', false)
+          if (message) {
+            alert(message)
+          }
+        }
+      })
+    },
+    'newRequirePasswordOnSend': function (to, from) {
+      const newVal = this.newRequirePasswordOnSend
+      if (newVal === this.requirePasswordOnSend) return
+      const self = this
+      this.$store.dispatch('app/setLoading', true)
+      this.$store.dispatch('user/updateSecuritySettings', {
+        requirePasswordOnSend: newVal,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
         },
@@ -382,7 +426,8 @@ export default {
     const self = this
     this.$store.dispatch('device/init', { callback: function (isDeviceReady) {
       if (isDeviceReady) {
-        self.grantEmailNotification = self.device.grantEmailNotification
+        self.newGrantEmailNotification = self.grantEmailNotification
+        self.newRequirePasswordOnSend = self.requirePasswordOnSend
       }
     }})
 

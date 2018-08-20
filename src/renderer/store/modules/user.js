@@ -92,6 +92,8 @@ const getters = {
     }
     return url
   },
+  grantEmailNotification: state => state.user === null ? false : state.user.grantEmailNotification,
+  requirePasswordOnSend: state => state.user === null ? false : state.user.requirePasswordOnSend,
   isIdentified: state => state.user === null ? false : state.user.isIdentified,
   identificationStatus: state => state.user === null ? 0 : state.user.identificationStatus,
   transactionsSearchResult: state => state.transactions.searchResult,
@@ -145,7 +147,9 @@ const actions = {
         cellphoneNumber: data.cellphoneNumber,
         isIdentified: data.isIdentified,
         identificationStatus: data.identificationStatus,
-        isEmailVerified: data.isEmailVerified
+        isEmailVerified: data.isEmailVerified,
+        grantEmailNotification: data.grantEmailNotification,
+        requirePasswordOnSend: data.requirePasswordOnSend
       }
       userDB.refresh(user)
       commit('setUser', user)
@@ -193,7 +197,9 @@ const actions = {
         cellphoneNumber: data.cellphoneNumber,
         isIdentified: data.isIdentified,
         identificationStatus: data.identificationStatus,
-        isEmailVerified: data.isEmailVerified
+        isEmailVerified: data.isEmailVerified,
+        grantEmailNotification: data.grantEmailNotification,
+        requirePasswordOnSend: data.requirePasswordOnSend
       }
       userDB.refresh(user)
       commit('setUser', user)
@@ -319,8 +325,8 @@ const actions = {
       onError(null, null, error)
     })
   },
-  createTransaction ({ commit, state }, { emailAddress, assetType, amount, onSuccess, onError }) {
-    userApi.createTransaction({ emailAddress, assetType, amount }).then(function (data) {
+  createTransaction ({ commit, state }, { emailAddress, assetType, amount, password, onSuccess, onError }) {
+    userApi.createTransaction({ emailAddress, assetType, amount, password }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message, null)
         return
@@ -348,6 +354,72 @@ const actions = {
         return
       }
       onSuccess({ data })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  updateNotificationSettings ({ commit, state }, { grantEmailNotification, onSuccess, onError }) {
+    userApi.updateNotificationSettings({ grantEmailNotification }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message)
+        return
+      }
+      const user = {
+        emailAddress: data.emailAddress,
+        profileImageID: data.profileImageID,
+        profileImageURL: data.profileImageURL,
+        idDocument1ImageURL: data.idDocument1ImageURL,
+        idDocument2ImageURL: data.idDocument2ImageURL,
+        firstName: data.firstName,
+        middleName: data.middleName,
+        lastName: data.lastName,
+        address: data.address,
+        genderType: data.genderType,
+        dateOfBirth: data.dateOfBirth,
+        cellphoneNumberNationalCode: data.cellphoneNumberNationalCode,
+        cellphoneNumber: data.cellphoneNumber,
+        isIdentified: data.isIdentified,
+        identificationStatus: data.identificationStatus,
+        isEmailVerified: data.isEmailVerified,
+        grantEmailNotification: data.grantEmailNotification,
+        requirePasswordOnSend: data.requirePasswordOnSend
+      }
+      commit('setUser', user)
+      userDB.refresh(user)
+      onSuccess()
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  updateSecuritySettings ({ commit, state }, { requirePasswordOnSend, onSuccess, onError }) {
+    userApi.updateSecuritySettings({ requirePasswordOnSend }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message)
+        return
+      }
+      const user = {
+        emailAddress: data.emailAddress,
+        profileImageID: data.profileImageID,
+        profileImageURL: data.profileImageURL,
+        idDocument1ImageURL: data.idDocument1ImageURL,
+        idDocument2ImageURL: data.idDocument2ImageURL,
+        firstName: data.firstName,
+        middleName: data.middleName,
+        lastName: data.lastName,
+        address: data.address,
+        genderType: data.genderType,
+        dateOfBirth: data.dateOfBirth,
+        cellphoneNumberNationalCode: data.cellphoneNumberNationalCode,
+        cellphoneNumber: data.cellphoneNumber,
+        isIdentified: data.isIdentified,
+        identificationStatus: data.identificationStatus,
+        isEmailVerified: data.isEmailVerified,
+        grantEmailNotification: data.grantEmailNotification,
+        requirePasswordOnSend: data.requirePasswordOnSend
+      }
+      commit('setUser', user)
+      userDB.refresh(user)
+      onSuccess()
     }).catch(function (error) {
       onError(null, null, error)
     })

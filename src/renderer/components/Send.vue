@@ -42,7 +42,7 @@
                 :disabled="!isIdentified"
               ></v-text-field>
               <v-select
-                 :label="$t('send.assetCode')"
+                :label="$t('send.assetCode')"
                 v-model="assetCode"
                 :items="assetCodes"
                 :rules="[v => !!v || $t('require.itemIsRequired')]"
@@ -68,6 +68,16 @@
         <v-dialog v-model="dialog" max-width="290">
           <v-card>
             <v-card-text>{{dialogDesc}}</v-card-text>
+            <div v-if="requirePasswordOnSend === true">
+              <v-form>
+                <v-text-field 
+                style="width: 248px; margin-left: 16px; margin-right: 16px"
+                :label="$t('send.password')"
+                v-model="password"
+                type="password"
+                />
+              </v-form>
+            </div>
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn color="darken-1" flat="flat" @click.native="dialog = false">{{ $t('general.cancel') }}</v-btn>
@@ -113,6 +123,7 @@ export default {
           return limit.compare(amnt) >= 0 || this.$t('send.amountMustBeLessThanTotal')
         }
       ],
+      password: '',
       infoMessage: '',
       errMessage: '',
       dialog: false,
@@ -124,7 +135,8 @@ export default {
     loadBalances: 'app/loadBalances',
     isIdentified: 'user/isIdentified',
     balances: 'user/balances',
-    userEmailAddress: 'user/emailAddress'
+    userEmailAddress: 'user/emailAddress',
+    requirePasswordOnSend: 'user/requirePasswordOnSend'
   }),
   components: {
     UserBalance: UserBalance
@@ -166,12 +178,15 @@ export default {
         emailAddress: this.email,
         assetType: this.assetCode,
         amount: this.amount,
+        password: this.password,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
+          self.infoMessage = self.$t('send.paymentSuccess')
         },
         onError: function (code, message, error) {
           self.$store.dispatch('app/setLoading', false)
           self.errMessage = ''
+          self.password = ''
           if (message) {
             self.errMessage = message
           }
