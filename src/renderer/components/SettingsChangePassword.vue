@@ -63,7 +63,7 @@ export default {
       newPassword: '',
       newPasswordRules: [
         v => !!v || this.$t('require.newPasswordIsRequired'),
-        v => (v.length > 6) || this.$t('validate.newPasswordValid')
+        v => (v.length > 5) || this.$t('validate.newPasswordValid')
       ],
       retypePassword: '',
       retypePasswordRules: [
