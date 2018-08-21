@@ -82,7 +82,7 @@
         <v-card>
           <v-card-title class="primary white--text" primary-title>
             <div>
-              <h3 class="headline mb-0">Security</h3>
+              <h3 class="headline mb-0">{{ $t('settings.security') }}</h3>
             </div>
           </v-card-title>
           <v-container class="px-4">
