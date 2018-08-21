@@ -20,13 +20,18 @@ const en = {
   validate: {
     emailMustBeValid: 'Email address must be valid.',
     amountMustBeValid: 'Amount must be valid',
-    editProfileUnderReview: 'When ID was approved or under review, you can change only the avatar image.'
+    editProfileUnderReview: 'When ID was approved or under review, you can change only the avatar image.',
+    newPasswordValid: 'Password should be more than 6 characters or numbers.',
+    passwordsAreNotMatched: 'New passwords are not matched.'
   },
   require: {
     itemIsRequired: 'Item is required',
     passwordIsRequired: 'Password is required.',
     codeIsRequired: 'Code is required.',
-    emailIsRequired: 'Email Address is required'
+    emailIsRequired: 'Email Address is required.',
+    oldPasswordIsRequired: 'Please input old password.',
+    newPasswordIsRequired: 'Please input new password.',
+    retypePasswordIsRequired: 'Please input retype password.'
   },
   facePhoto: {
     pointOne: 'Please submit the page containing your photograph.',
@@ -41,17 +46,17 @@ const en = {
   },
   signUpCode: {
     verifyEmail: 'Verify Email',
-    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Please provide verification code which was sent by email.',
+    pleaseProvideVerificationCodeWhichWasSentByEmail: 'Please provide confirmation code sent by email.',
     code: 'Code',
-    verificationCodeWhichWasSentByEmail: 'Verification code which was sent by email.',
-    passwordOnImport: 'Password on import',
-    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Password which was sent by email when you created an account on the first time.'
+    verificationCodeWhichWasSentByEmail: 'Confirmation code sent by email.',
+    passwordOnImport: 'Password',
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Password which was set by yourself or sent by email when you registered at the first time.'
   },
   signUpEmail: {
     registerEmail: 'Register Email',
-    pleaseProvideYourEmailAddresToActivateYourAccount: 'Please provide your email address to activate your account.',
+    pleaseProvideYourEmailAddressToActivateYourAccount: 'Please provide your email address to activate your account.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Once you submit this form, then we will send you a confirmation email.',
-    iAgressWith: 'I agree with ',
+    AgreesWith: 'I agree with ',
     termOfServices: 'terms of services.'
   },
   signUpEnd: {
@@ -76,20 +81,24 @@ const en = {
     AmountMustBeValid: 'Amount must be valid'
   },
   send: {
+    password: 'Password',
     balances: 'Balances',
     sendLabel: 'Send',
-    emailAdress: 'Email address',
+    emailAddress: 'Email address',
     assetCode: 'Asset code',
     amount: 'Amount',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'You cannot use this function until your ID is verified.',
     youCannotSendToYourSelf: 'You cannot send to yourself',
-    amountMustBeLessThanTotal: 'Amount must be less than total',
+    amountMustBeLessThanTotal: 'You can not send that much.',
     areYouSureYouWantToSend: 'Are you sure you want to send {amount} {assetCode} to {email}?',
-    enterHowMuchYouWantToSend: 'Enter how much you want to send.'
+    enterHowMuchYouWantToSend: 'Enter how much you want to send.',
+    paymentSuccess: 'The payment has been submitted.\nPlease wait a moment until the transaction be processed.'
   },
   settings: {
     language: 'Languages',
     profile: 'Profile',
+    security: 'Security',
+    requirePasswordOnSendingAssets: 'Require password to send assets',
     notification: 'Notification',
     emailNotification: 'Email Notification',
     idDocument: 'ID Document',
@@ -120,6 +129,13 @@ const en = {
     idDocumentApproved: 'ID Document was approved',
     idDocumentUnderReview: 'Under review for ID Document'
   },
+  changePassword: {
+    changePasswordLabel: 'Change Password',
+    oldPassword: 'Old Password',
+    newPassword: 'New Password',
+    retypePassword: 'Retype Password',
+    passwordIsNotCorrect: 'Password is not correct.'
+  },
   general: {
     sample: 'Sample',
     noData: 'No Data',
@@ -128,7 +144,8 @@ const en = {
     cancel: 'CANCEL',
     send: 'SEND',
     yes: 'Yes',
-    no: 'No'
+    no: 'No',
+    save: 'save'
   }
 }
 
@@ -142,13 +159,18 @@ const ja = {
   validate: {
     emailMustBeValid: 'メールアドレスの形式が正しくありません',
     amountMustBeValid: 'Point/Coinが正しくありません',
-    editProfileUnderReview: 'ご本人確認資料(ID)が承認済あるいは審査中は、プロフィール画像のみ変更できます'
+    editProfileUnderReview: 'ご本人確認資料(ID)が承認済あるいは審査中は、プロフィール画像のみ変更できます',
+    newPasswordValid: 'パスワードは6文字以上の英数字で設定してください。',
+    passwordsAreNotMatched: '新しいパスワードが一致しません'
   },
   require: {
     itemIsRequired: '必須項目',
     passwordIsRequired: 'パスワードを入力してください',
     codeIsRequired: '認証コードを入力してください',
-    emailIsRequired: 'メールアドレスを入力してください'
+    emailIsRequired: 'メールアドレスを入力してください',
+    oldPasswordIsRequired: '現在のパスワードを入力してください',
+    newPasswordIsRequired: '新しいパスワードを入力してください',
+    retypePasswordIsRequired: '新しいパスワード（確認）を入力してください'
   },
   facePhoto: {
     pointOne: '顔写真が確認できるページをアップロードしてください。',
@@ -163,17 +185,17 @@ const ja = {
   },
   signUpCode: {
     verifyEmail: 'メールアドレスを有効にする',
-    pleaseProvideVerificationCodeWhichWasSentByEmail: 'メールに記載されたVerification code（認証コード）を入力してください',
+    pleaseProvideVerificationCodeWhichWasSentByEmail: 'メールに記載されたConfirmation code（認証コード）を入力してください',
     code: 'コード',
-    verificationCodeWhichWasSentByEmail: 'Verification code（認証コード）.',
-    passwordOnImport: 'Password on import',
-    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: '登録時に送付されたメールに記載されているパスワードを入力してください'
+    verificationCodeWhichWasSentByEmail: 'Confirmation code（認証コード）',
+    passwordOnImport: 'パスワード',
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'パスワードを入力してください'
   },
   signUpEmail: {
     registerEmail: 'メールアドレスを登録する',
-    pleaseProvideYourEmailAddresToActivateYourAccount: '登録されるメールアドレスを入力してください',
+    pleaseProvideYourEmailAddressToActivateYourAccount: '登録されるメールアドレスを入力してください',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: '入力フォームを送信されましたらメールをお送りいたします',
-    iAgressWith: '同意する',
+    AgreesWith: '同意する',
     termOfServices: '利用規約に '
   },
   signUpEnd: {
@@ -198,27 +220,31 @@ const ja = {
     AmountMustBeValid: 'Point/Coinを入力して下さい'
   },
   send: {
+    password: 'パスワード',
     balances: '残高',
     sendLabel: '送信',
-    emailAdress: 'メールアドレス',
+    emailAddress: 'メールアドレス',
     assetCode: 'アセットコード',
     amount: '数量',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。プロフィールページからご本人確認(ID)を申請してください。',
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
-    enterHowMuchYouWantTosend: '送信額を入力してください'
+    enterHowMuchYouWantToSend: '送信額を入力してください',
+    paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。'
   },
   settings: {
     language: '言語設定 - Language',
     profile: 'プロフィール',
+    security: 'セキュリティ',
+    requirePasswordOnSendingAssets: 'ポイント・コイン送信時にパスワードを入力する',
     notification: '通知設定',
     emailNotification: 'メール通知',
     idDocument: 'ご本人確認資料',
     termOfService: '利用規約',
     privacyPolicy: 'プライバシーポリシー',
     logout: 'ログアウト',
-    messageLogout: '本当にログオフしてもよろしいですか？'
+    messageLogout: 'ログアウトしてもよろしいですか？'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
@@ -242,6 +268,13 @@ const ja = {
     idDocumentApproved: 'ご本人確認資料(ID)承認済',
     idDocumentUnderReview: 'ご本人確認資料(ID)審査中'
   },
+  changePassword: {
+    changePasswordLabel: 'パスワード変更',
+    oldPassword: '現在のパスワード',
+    newPassword: '新しいパスワード',
+    retypePassword: '新しいパスワード（確認）',
+    passwordIsNotCorrect: '現在のパスワードが正しくありません。'
+  },
   general: {
     sample: '例',
     noData: 'データが存在しません',
@@ -250,7 +283,8 @@ const ja = {
     cancel: 'キャンセル',
     send: '送信',
     yes: 'Yes',
-    no: 'No'
+    no: 'No',
+    save: '保存'
   }
 }
 
@@ -264,13 +298,18 @@ const vi = {
   validate: {
     emailMustBeValid: 'Địa chỉ email không đúng.',
     amountMustBeValid: 'Số điểm không đúng.',
-    editProfileUnderReview: 'Khi ID xác minh chủ tài khoản đã được xác nhận hoặc đang trong khi xét duyệt, thì bạn chỉ có thể thay đổi ảnh đại diện.'
+    editProfileUnderReview: 'Khi ID xác minh chủ tài khoản đã được xác nhận hoặc đang trong khi xét duyệt, thì bạn chỉ có thể thay đổi ảnh đại diện.',
+    newPasswordValid: 'Mật khẩu nên được cài đặt 6 ký tự hoặc số.',
+    passwordsAreNotMatched: 'Mật khẩu mới không đồng nhất.'
   },
   require: {
     itemIsRequired: 'Mục bắt buộc',
     passwordIsRequired: 'Hãy nhập mật khẩu',
     codeIsRequired: 'Hãy nhập mã xác nhận.',
-    emailIsRequired: 'Hãy nhập địa chỉ email.'
+    emailIsRequired: 'Hãy nhập địa chỉ email.',
+    oldPasswordIsRequired: 'Vui lòng nhập mật khẩu hiện tại.',
+    newPasswordIsRequired: 'Vui lòng nhập mật khẩu mới.',
+    retypePasswordIsRequired: 'Vui lòng nhập lại mật khẩu.'
   },
   facePhoto: {
     pointOne: 'Vui lòng gửi tài liệu có kèm ảnh của bạn.',
@@ -288,14 +327,14 @@ const vi = {
     pleaseProvideVerificationCodeWhichWasSentByEmail: 'Hãy nhập mã xác nhận đã được ghi trong email.',
     code: 'Mã xác nhận',
     verificationCodeWhichWasSentByEmail: 'Mã xác nhận đã được gửi bằng email.',
-    passwordOnImport: 'Mật khẩu khi nhập',
-    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Mật khẩu đã được gửi bằng email khi bạn tạo một tài khoản vào lần đầu tiên.'
+    passwordOnImport: 'Mật khẩu',
+    passwordWhichWasSentByEmailWhenYouCreatedAnAccountOnTheFirstTime: 'Vui lòng nhập mật khẩu.'
   },
   signUpEmail: {
     registerEmail: 'Email đăng ký',
-    pleaseProvideYourEmailAddresToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
+    pleaseProvideYourEmailAddressToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Sau khi bạn gửi mẫu đơn này, sau đó chúng tôi sẽ gửi cho bạn email xác nhận.',
-    iAgressWith: 'Tôi đồng ý.',
+    AgreesWith: 'Tôi đồng ý.',
     termOfServices: 'điều khoản dịch vụ.'
   },
   signUpEnd: {
@@ -320,27 +359,31 @@ const vi = {
     AmountMustBeValid: 'Số lượng ko đúng.'
   },
   send: {
+    password: 'Mật khẩu',
     balances: 'Số dư',
     sendLabel: 'Gửi',
-    emailAdress: 'Địa chỉ email',
+    emailAddress: 'Địa chỉ email',
     assetCode: 'Mã tài khoản',
     amount: 'Số lượng',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'Bạn không thể sử dụng chức năng này cho đến khi ID của bạn được xác minh.',
     youCannotSendToYourSelf: 'Bạn không thể gửi cho chính mình.',
     amountMustBeLessThanTotal: 'Số tiền phải nhỏ hơn tổng.',
     areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi.',
-    enterHowMuchYouWantToSend: ''
+    enterHowMuchYouWantToSend: '',
+    paymentSuccess: 'Gửi xong\n'
   },
   settings: {
     language: 'Ngôn ngữ - Language',
     profile: 'Hồ sơ',
+    security: 'Bảo mật',
+    requirePasswordOnSendingAssets: 'Nhập mật khẩu để gửi điểm hoặc Coin',
     notification: 'Thông báo',
     emailNotification: 'Thông báo email',
     idDocument: 'Tài liệu ID',
     termOfService: 'Điều khoản Dịch vụ',
     privacyPolicy: 'Chính sách Bảo mật',
     logout: 'Đăng xuất',
-    messageLogout: 'Bạn có chắc chắn bạn muốn ra khỏi mạng?'
+    messageLogout: 'Bạn có chắc chắn muốn đăng xuất không?'
   },
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',
@@ -364,6 +407,13 @@ const vi = {
     idDocumentApproved: 'Dữ liệu ID đã được phê duyệt',
     idDocumentUnderReview: 'Đang xem xét dữ liệu ID'
   },
+  changePassword: {
+    changePasswordLabel: 'Thay đổi mật khẩu',
+    oldPassword: 'Mật khẩu hiện nay',
+    newPassword: 'Mật khẩu mới',
+    retypePassword: 'Nhập lại mật khẩu',
+    passwordIsNotCorrect: 'Mật khẩu hiện tại không chính xác.'
+  },
   general: {
     sample: 'Mẫu vật',
     noData: 'Không có dữ liệu',
@@ -372,7 +422,8 @@ const vi = {
     cancel: 'Hủy',
     send: 'Gửi',
     yes: 'Yes',
-    no: 'No'
+    no: 'No',
+    save: 'Lưu'
   }
 }
 

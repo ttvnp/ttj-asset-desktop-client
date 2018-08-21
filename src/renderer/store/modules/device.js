@@ -46,8 +46,7 @@ const actions = {
               accessTokenExpiry: data.accessTokenExpiry,
               isActivated: data.isActivated,
               deviceToken: data.deviceToken,
-              grantPushNotification: data.grantPushNotification,
-              grantEmailNotification: data.grantEmailNotification
+              grantPushNotification: data.grantPushNotification
             }
             deviceDB.refresh(newDevice)
             commit('setDevice', newDevice)
@@ -85,8 +84,7 @@ const actions = {
         accessTokenExpiry: data.accessTokenExpiry,
         isActivated: data.isActivated,
         deviceToken: data.deviceToken,
-        grantPushNotification: data.grantPushNotification,
-        grantEmailNotification: data.grantEmailNotification
+        grantPushNotification: data.grantPushNotification
       }
       deviceDB.refresh(device)
       commit('setDevice', device)
@@ -130,8 +128,7 @@ const actions = {
         accessTokenExpiry: data.device.accessTokenExpiry,
         isActivated: data.device.isActivated,
         deviceToken: data.device.deviceToken,
-        grantPushNotification: data.device.grantPushNotification,
-        grantEmailNotification: data.device.grantEmailNotification
+        grantPushNotification: data.device.grantPushNotification
       }
       commit('setDevice', device)
       deviceDB.refresh(device)
@@ -140,8 +137,8 @@ const actions = {
       onError(null, null, error)
     })
   },
-  updateNotificationSettings ({ commit, state }, { grantPushNotification, grantEmailNotification, onSuccess, onError }) {
-    deviceApi.updateNotificationSettings({ grantPushNotification, grantEmailNotification }).then(function (data) {
+  updateNotificationSettings ({ commit, state }, { grantPushNotification, onSuccess, onError }) {
+    deviceApi.updateNotificationSettings({ grantPushNotification }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message)
         return
@@ -153,8 +150,7 @@ const actions = {
         accessTokenExpiry: data.accessTokenExpiry,
         isActivated: data.isActivated,
         deviceToken: data.deviceToken,
-        grantPushNotification: data.grantPushNotification,
-        grantEmailNotification: data.grantEmailNotification
+        grantPushNotification: data.grantPushNotification
       }
       commit('setDevice', device)
       deviceDB.refresh(device)
