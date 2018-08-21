@@ -28,19 +28,19 @@
                 v-model="firstName"
                 :rules="firstNameRules"
                 counter="200"
-                :disabled="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-text-field label="Middle Name"
                 v-model="middleName"
                 :rules="middleNameRules"
                 counter="200"
-                :disabled="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-text-field label="Last Name"
                 v-model="lastName"
                 :rules="lastNameRules"
                 counter="200"
-                :disabled="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-text-field
                 label="Address"
@@ -48,13 +48,14 @@
                 :rules="addressRules"
                 counter="1000"
                 multi-line
-                :disabled="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-select
                 label="Gender"
                 v-model="genderType"
                 :items="genderTypes"
-                :disabled="isUnderReview"></v-select>
+                :disabled="isUnderReview || isIdentified"
+              ></v-select>
               <v-flex xs12 sm6>
                 <v-menu
                   lazy
@@ -66,14 +67,14 @@
                   :nudge-right="40"
                   max-width="290px"
                   min-width="290px"
-                  :disabled="isUnderReview"
+                  :disabled="isUnderReview || isIdentified"
                 >
                   <v-text-field
                     slot="activator"
                     label="Date of birth"
                     v-model="dateOfBirth"
                     :rules="dateOfBirthRules"
-                    :disabled="isUnderReview"
+                    :disabled="isUnderReview || isIdentified"
                   ></v-text-field>
                   <v-date-picker v-model="date" @input="dateOfBirth = formatDate($event)" no-title scrollable actions>
                     <template slot-scope="{ save, cancel }">
@@ -94,7 +95,7 @@
                     :rules="cellphoneNumberNationalCodeRules"
                     prepend-icon="phone"
                     label="Country"
-                    :disabled="isUnderReview"
+                    :disabled="isUnderReview || isIdentified"
                   ></v-select>
                 </v-flex>
                 <v-flex xs12 sm8>
@@ -103,7 +104,7 @@
                     v-model="cellphoneNumber"
                     :rules="cellphoneNumberRules"
                     single-line
-                    :disabled="isUnderReview"
+                    :disabled="isUnderReview || isIdentified"
                     @focus="onUnderReview"></v-text-field>
                 </v-flex>
               </v-layout>

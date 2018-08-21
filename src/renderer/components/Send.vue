@@ -102,7 +102,7 @@ export default {
       valid: false,
       email: '',
       emailRules: [
-        (v) => !!v || 'Email Address is required',
+        (v) => !!v || this.$t('require.emailIsRequired'),
         (v) => util.isValidEmailAddress(v) || this.$t('validate.emailMustBeValid'),
         (v) => v !== this.userEmailAddress || this.$t('send.youCannotSendToYourSelf')
       ],
