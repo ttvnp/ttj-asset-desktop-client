@@ -200,7 +200,7 @@ export default {
       router.go(-1)
     },
     onUnderReview () {
-      if (this.identificationStatus === 2) {
+      if (this.identificationStatus === 1) {
         this.isUnderReview = true
         this.errMessage = this.$t('validate.editProfileUnderReview')
       }
