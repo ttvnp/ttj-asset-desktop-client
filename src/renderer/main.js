@@ -56,7 +56,7 @@ const en = {
     registerEmail: 'Register Email',
     pleaseProvideYourEmailAddressToActivateYourAccount: 'Please provide your email address to activate your account.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Once you submit this form, then we will send you a confirmation email.',
-    AgreesWith: 'I agree with ',
+    agreeWith: 'I agree with ',
     termOfServices: 'terms of services.'
   },
   signUpEnd: {
@@ -195,7 +195,7 @@ const ja = {
     registerEmail: 'メールアドレスを登録する',
     pleaseProvideYourEmailAddressToActivateYourAccount: '登録されるメールアドレスを入力してください',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: '入力フォームを送信されましたらメールをお送りいたします',
-    AgreesWith: '同意する',
+    agreeWith: '同意する',
     termOfServices: '利用規約に '
   },
   signUpEnd: {
@@ -334,7 +334,7 @@ const vi = {
     registerEmail: 'Email đăng ký',
     pleaseProvideYourEmailAddressToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Sau khi bạn gửi mẫu đơn này, sau đó chúng tôi sẽ gửi cho bạn email xác nhận.',
-    AgreesWith: 'Tôi đồng ý.',
+    agreeWith: 'Tôi đồng ý.',
     termOfServices: 'điều khoản dịch vụ.'
   },
   signUpEnd: {

@@ -7,7 +7,7 @@
             <div>
               <h3 class="headline mb-0">{{ $t('signUpEmail.registerEmail') }}</h3>
               <div>
-                <span>{{ $t('signUpEmail.pleaseProvideYourEmailAddresToActivateYourAccount') }}</span><br/>
+                <span>{{ $t('signUpEmail.pleaseProvideYourEmailAddressToActivateYourAccount') }}</span><br/>
                 <span>{{ $t('signUpEmail.onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail') }}</span>
               </div>
             </div>
@@ -31,7 +31,7 @@
             <v-btn block color="primary" @click.stop="submit()" :disabled="!isValidSignup">{{ $t('general.send') }}</v-btn>
             <div class="terms-container">
               <input type="checkbox" name="terms" v-model="isCheckedTerms"/>
-              <span>{{ $t('signUpEmail.iAgressWith') }}<a @click="openTermsAndConditions()"> {{ $t('settings.termOfService') }}</a></span>
+              <span>{{ $t('signUpEmail.agreeWith') }}<a @click="openTermsAndConditions()"> {{ $t('settings.termOfService') }}</a></span>
             </div>
           </v-container>
         </v-card>

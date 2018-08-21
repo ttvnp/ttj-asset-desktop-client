@@ -73,6 +73,7 @@
                 <v-text-field 
                 style="width: 248px; margin-left: 16px; margin-right: 16px"
                 :label="$t('send.password')"
+                :rules="passwordRule"
                 v-model="password"
                 type="password"
                 />
@@ -124,6 +125,9 @@ export default {
         }
       ],
       password: '',
+      passwordRule: [
+        (v) => !!v || this.$t('require.passwordIsRequired')
+      ],
       infoMessage: '',
       errMessage: '',
       dialog: false,
@@ -181,6 +185,7 @@ export default {
         password: this.password,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
+          self.password = ''
           self.infoMessage = self.$t('send.paymentSuccess')
         },
         onError: function (code, message, error) {
