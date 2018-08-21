@@ -11,28 +11,30 @@
                 <h3 class="headline mb-0">{{ $t('changePassword.changePasswordLabel') }}</h3>
             </div>
           </v-card-title>
+          <v-card-text>
+            <v-form v-model="valid" style="margin-top: 8px;">
+              <v-text-field 
+                :label="$t('changePassword.oldPassword')"
+                v-model="oldPassword"
+                :rules="oldPasswordRules"
+                type="password" />
+              <v-text-field 
+                :label="$t('changePassword.newPassword')"
+                v-model="newPassword"
+                :rules="newPasswordRules"
+                type="password" />
+              <v-text-field 
+                :label="$t('changePassword.retypePassword')"
+                v-model="retypePassword"
+                :rules="retypePasswordRules"
+                type="password" />
+            </v-form>
+            <v-card-actions class="px-4 pb-4">
+                <v-spacer></v-spacer>
+                <v-btn flat color="primary" @click.stop="save" :disabled="!valid">{{ $t('general.save') }}</v-btn>
+            </v-card-actions>
+          </v-card-text>
         </v-card>
-        <v-form v-model="valid" style="margin-top: 8px;">
-          <v-text-field 
-            :label="$t('changePassword.oldPassword')"
-            v-model="oldPassword"
-            :rules="oldPasswordRules"
-            type="password" />
-          <v-text-field 
-            :label="$t('changePassword.newPassword')"
-            v-model="newPassword"
-            :rules="newPasswordRules"
-            type="password" />
-          <v-text-field 
-            :label="$t('changePassword.retypePassword')"
-            v-model="retypePassword"
-            :rules="retypePasswordRules"
-            type="password" />
-        </v-form>
-        <v-card-actions class="px-4 pb-4">
-            <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click.stop="save" :disabled="!valid">{{ $t('general.save') }}</v-btn>
-        </v-card-actions>
         <v-dialog v-model="dialog" max-width="290">
           <v-card>
             <v-card-text>{{dialogDesc}}</v-card-text>
