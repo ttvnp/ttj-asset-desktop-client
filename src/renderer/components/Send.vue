@@ -174,7 +174,7 @@ export default {
       })
     },
     submit () {
-      if (!this.valid || !this.isIdentified) return
+      if (!this.valid || !this.isIdentified || this.password === '') return
       this.dialog = false
       const self = this
       this.$store.dispatch('app/setLoading', true)
@@ -186,6 +186,7 @@ export default {
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
           self.password = ''
+          self.errMessage = ''
           self.infoMessage = self.$t('send.paymentSuccess')
         },
         onError: function (code, message, error) {
@@ -194,6 +195,9 @@ export default {
           self.password = ''
           if (message) {
             self.errMessage = message
+            if (code === 119) {
+              self.errMessage = self.$t('changePassword.passwordIsNotCorrect')
+            }
           }
         }
       })
