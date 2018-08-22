@@ -87,18 +87,20 @@
         })
       },
       openTermsAndConditions () {
+        let tos = 'settingsTermsOfService'
         if (this.$i18n.locale() === 'ja') {
-          router.push({ name: 'settingsJaTermsOfService' })
-          return
+          tos = 'settingsJaTermsOfService'
         }
         if (this.$i18n.locale() === 'vi') {
-          router.push({ name: 'settingsVnTermsOfService' })
-          return
+          tos = 'settingsVnTermsOfService'
         }
-        router.push({ name: 'settingsTermsOfService' })
+        history.pushState({ email: this.email, isCheckedTerms: this.isCheckedTerms }, 'signUpEmail')
+        router.push({ name: tos })
       }
     },
     mounted () {
+      this.email = history.state.email
+      this.isCheckedTerms = history.state.isCheckedTerms
       const self = this
       this.$store.dispatch('device/init', {
         callback: function (isDeviceReady) {
