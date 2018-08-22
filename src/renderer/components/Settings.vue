@@ -8,7 +8,7 @@
               <h3 class="headline mb-0">{{ $t('settings.profile') }}</h3>
             </div>
             <v-spacer></v-spacer>
-            <v-btn dark icon @click="toEdit" :disabled="isIdentified">
+            <v-btn dark icon @click="toEdit">
               <v-icon>edit</v-icon>
             </v-btn>
           </v-card-title>
