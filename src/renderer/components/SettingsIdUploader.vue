@@ -113,6 +113,12 @@ export default {
     }
   },
   computed: mapGetters({
+    firstName: 'user/firstName',
+    lastName: 'user/lastName',
+    address: 'user/address',
+    dateOfBirth: 'user/dateOfBirth',
+    genderType: 'user/genderType',
+    cellphoneFullNumber: 'user/cellphoneFullNumber',
     currentIdDocument1ImageURL: 'user/idDocument1ImageURL',
     currentIdDocument2ImageURL: 'user/idDocument2ImageURL',
     isIdentified: 'user/isIdentified',
@@ -121,6 +127,9 @@ export default {
   methods: {
     back () {
       router.go(-1)
+    },
+    hasAllNecessaryInfo () {
+      return (this.firstName !== '' && this.lastName !== '' && this.address !== '' && this.dateOfBirth !== '' && this.genderType !== '' && this.cellphoneFullNumber !== '')
     },
     onChangeImageId1 (event) {
       this.idDocumentImageChanged(event, 1)
@@ -162,6 +171,10 @@ export default {
       reader.readAsDataURL(imageFile)
     },
     submit () {
+      if (!this.hasAllNecessaryInfo()) {
+        this.errMessage = this.$t('settingsUploader.hasAllNecessaryInfo')
+        return
+      }
       if (!this.valid) return
       this.dialog = false
       const self = this
