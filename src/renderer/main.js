@@ -56,7 +56,7 @@ const en = {
     registerEmail: 'Register Email',
     pleaseProvideYourEmailAddressToActivateYourAccount: 'Please provide your email address to activate your account.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Once you submit this form, then we will send you a confirmation email.',
-    AgreesWith: 'I agree with ',
+    agreeWith: 'I agree with ',
     termOfServices: 'terms of services.'
   },
   signUpEnd: {
@@ -110,7 +110,8 @@ const en = {
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Please upload photo of your travel document.',
     theFollowingItemsMustBeClearlyVisible: 'The following items must be clearly visible.',
-    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'Once you upload images, you will not be able to edit your profile.'
+    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'Once you upload images, you will not be able to edit your profile.',
+    hasAllNecessaryInfo: 'Please input all the profile information before sending ID document.'
   },
   profile: {
     profileLabel: 'Profile',
@@ -195,7 +196,7 @@ const ja = {
     registerEmail: 'メールアドレスを登録する',
     pleaseProvideYourEmailAddressToActivateYourAccount: '登録されるメールアドレスを入力してください',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: '入力フォームを送信されましたらメールをお送りいたします',
-    AgreesWith: '同意する',
+    agreeWith: '同意する',
     termOfServices: '利用規約に '
   },
   signUpEnd: {
@@ -249,7 +250,8 @@ const ja = {
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'ご本人確認書類をアップロードしてください。',
     theFollowingItemsMustBeClearlyVisible: '以下の項目が確認できるようにしてください。',
-    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'ご本人確認を申請されますとプロフィールは変更できません。'
+    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'ご本人確認を申請されますとプロフィールは変更できません。',
+    hasAllNecessaryInfo: 'ご本人確認資料(ID)を送信される前に全てのプロフィール情報を入力してください。'
   },
   profile: {
     profileLabel: 'プロフィール',
@@ -334,7 +336,7 @@ const vi = {
     registerEmail: 'Email đăng ký',
     pleaseProvideYourEmailAddressToActivateYourAccount: 'Vui lòng cung cấp địa chỉ email của bạn để kích hoạt tài khoản.',
     onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail: 'Sau khi bạn gửi mẫu đơn này, sau đó chúng tôi sẽ gửi cho bạn email xác nhận.',
-    AgreesWith: 'Tôi đồng ý.',
+    agreeWith: 'Tôi đồng ý.',
     termOfServices: 'điều khoản dịch vụ.'
   },
   signUpEnd: {
@@ -388,7 +390,8 @@ const vi = {
   settingsUploader: {
     pleaseUploadPhotoOfTravelDocument: 'Xin vui lòng tải ảnh đại diện của bạn lên.',
     theFollowingItemsMustBeClearlyVisible: 'Các mục sau đây phải được rõ ràng.',
-    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'Khi bạn tải ảnh lên, bạn sẽ không thể chỉnh sửa hồ sơ của mình.'
+    onceYouUploadImagesYouWilNotBeAbleToEditYourProfile: 'Khi bạn tải ảnh lên, bạn sẽ không thể chỉnh sửa hồ sơ của mình.',
+    hasAllNecessaryInfo: 'Vui lòng nhập toàn bộ thông tin profile trước khi gửi tài liệu ID'
   },
   profile: {
     profileLabel: 'Hồ sơ',

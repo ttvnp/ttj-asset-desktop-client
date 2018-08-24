@@ -28,19 +28,19 @@
                 v-model="firstName"
                 :rules="firstNameRules"
                 counter="200"
-                :readonly="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-text-field label="Middle Name"
                 v-model="middleName"
                 :rules="middleNameRules"
                 counter="200"
-                :readonly="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-text-field label="Last Name"
                 v-model="lastName"
                 :rules="lastNameRules"
                 counter="200"
-                :readonly="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-text-field
                 label="Address"
@@ -48,13 +48,14 @@
                 :rules="addressRules"
                 counter="1000"
                 multi-line
-                :readonly="isUnderReview"
+                :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-select
                 label="Gender"
                 v-model="genderType"
                 :items="genderTypes"
-                :disabled="isUnderReview"></v-select>
+                :disabled="isUnderReview || isIdentified"
+              ></v-select>
               <v-flex xs12 sm6>
                 <v-menu
                   lazy
@@ -66,14 +67,14 @@
                   :nudge-right="40"
                   max-width="290px"
                   min-width="290px"
-                  :disabled="isUnderReview"
+                  :disabled="isUnderReview || isIdentified"
                 >
                   <v-text-field
                     slot="activator"
                     label="Date of birth"
                     v-model="dateOfBirth"
                     :rules="dateOfBirthRules"
-                    :disabled="isUnderReview"
+                    :disabled="isUnderReview || isIdentified"
                   ></v-text-field>
                   <v-date-picker v-model="date" @input="dateOfBirth = formatDate($event)" no-title scrollable actions>
                     <template slot-scope="{ save, cancel }">
@@ -94,7 +95,7 @@
                     :rules="cellphoneNumberNationalCodeRules"
                     prepend-icon="phone"
                     label="Country"
-                    :disabled="isUnderReview"
+                    :disabled="isUnderReview || isIdentified"
                   ></v-select>
                 </v-flex>
                 <v-flex xs12 sm8>
@@ -103,7 +104,7 @@
                     v-model="cellphoneNumber"
                     :rules="cellphoneNumberRules"
                     single-line
-                    v-bind:readonly="isUnderReview"
+                    :disabled="isUnderReview || isIdentified"
                     @focus="onUnderReview"></v-text-field>
                 </v-flex>
               </v-layout>
@@ -142,23 +143,19 @@ export default {
       profileImageFile: null,
       firstName: '',
       firstNameRules: [
-        (v) => (!v || v.length <= 200) || 'First name must be less than 200 characters',
-        () => (!this.isUnderReview) || this.$t('validate.editProfileUnderReview')
+        (v) => (!v || v.length <= 200) || 'First name must be less than 200 characters'
       ],
       middleName: '',
       middleNameRules: [
-        (v) => (!v || v.length <= 200) || 'Middle name must be less than 200 characters',
-        () => (!this.isUnderReview) || this.$t('validate.editProfileUnderReview')
+        (v) => (!v || v.length <= 200) || 'Middle name must be less than 200 characters'
       ],
       lastName: '',
       lastNameRules: [
-        (v) => (!v || v.length <= 200) || 'Last name must be less than 200 characters',
-        () => (!this.isUnderReview) || this.$t('validate.editProfileUnderReview')
+        (v) => (!v || v.length <= 200) || 'Last name must be less than 200 characters'
       ],
       address: '',
       addressRules: [
-        (v) => (!v || v.length <= 1000) || 'Address must be less than 1000 characters',
-        () => (!this.isUnderReview) || this.$t('validate.editProfileUnderReview')
+        (v) => (!v || v.length <= 1000) || 'Address must be less than 1000 characters'
       ],
       genderType: '',
       genderTypes: [
@@ -169,20 +166,17 @@ export default {
       menu: false,
       dateOfBirth: '',
       dateOfBirthRules: [
-        (v) => (!v || v.length <= 11) || 'Date of birth is incorrect format',
-        () => (!this.isUnderReview) || this.$t('validate.editProfileUnderReview')
+        (v) => (!v || v.length <= 11) || 'Date of birth is incorrect format'
       ],
       cellphoneNumberNationalCode: '',
       cellphoneNumberNationalCodeRules: [
         (v) => (!v || !isNaN(v)) || 'National code of cellphone must include only digit',
-        (v) => (!v || v === '81' || v === '84') || 'National code of cellphone you chosen is incorrect',
-        () => (!this.isUnderReview) || this.$t('validate.editProfileUnderReview')
+        (v) => (!v || v === '81' || v === '84') || 'National code of cellphone you chosen is incorrect'
       ],
       cellphoneNumber: '',
       cellphoneNumberRules: [
         (v) => (!v || v.length <= 12) || 'Cellphone number must be less than 12 characters',
-        (v) => (!v || !isNaN(v)) || 'Cellphone number must include only digit',
-        () => (!this.isUnderReview) || this.$t('validate.editProfileUnderReview')
+        (v) => (!v || !isNaN(v)) || 'Cellphone number must include only digit'
       ],
       dialog: false,
       dialogDesc: '',
@@ -209,6 +203,7 @@ export default {
     onUnderReview () {
       if (this.identificationStatus === 1) {
         this.isUnderReview = true
+        this.errMessage = this.$t('validate.editProfileUnderReview')
       }
     },
     profileImageChanged (event) {

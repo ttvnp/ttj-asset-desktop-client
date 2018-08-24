@@ -7,7 +7,7 @@
             <div>
               <h3 class="headline mb-0">{{ $t('signUpEmail.registerEmail') }}</h3>
               <div>
-                <span>{{ $t('signUpEmail.pleaseProvideYourEmailAddresToActivateYourAccount') }}</span><br/>
+                <span>{{ $t('signUpEmail.pleaseProvideYourEmailAddressToActivateYourAccount') }}</span><br/>
                 <span>{{ $t('signUpEmail.onceYouSubmitThisFormThenWeWillSendYouAConfirmationEmail') }}</span>
               </div>
             </div>
@@ -31,7 +31,7 @@
             <v-btn block color="primary" @click.stop="submit()" :disabled="!isValidSignup">{{ $t('general.send') }}</v-btn>
             <div class="terms-container">
               <input type="checkbox" name="terms" v-model="isCheckedTerms"/>
-              <span>{{ $t('signUpEmail.iAgressWith') }}<a @click="openTermsAndConditions()"> {{ $t('settings.termOfService') }}</a></span>
+              <span>{{ $t('signUpEmail.agreeWith') }}<a @click="openTermsAndConditions()"> {{ $t('settings.termOfService') }}</a></span>
             </div>
           </v-container>
         </v-card>
@@ -87,18 +87,20 @@
         })
       },
       openTermsAndConditions () {
+        let tos = 'settingsTermsOfService'
         if (this.$i18n.locale() === 'ja') {
-          router.push({ name: 'settingsJaTermsOfService' })
-          return
+          tos = 'settingsJaTermsOfService'
         }
         if (this.$i18n.locale() === 'vi') {
-          router.push({ name: 'settingsVnTermsOfService' })
-          return
+          tos = 'settingsVnTermsOfService'
         }
-        router.push({ name: 'settingsTermsOfService' })
+        history.pushState({ email: this.email, isCheckedTerms: this.isCheckedTerms }, 'signUpEmail')
+        router.push({ name: tos })
       }
     },
     mounted () {
+      this.email = history.state.email
+      this.isCheckedTerms = history.state.isCheckedTerms
       const self = this
       this.$store.dispatch('device/init', {
         callback: function (isDeviceReady) {

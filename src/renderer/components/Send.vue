@@ -73,6 +73,7 @@
                 <v-text-field 
                 style="width: 248px; margin-left: 16px; margin-right: 16px"
                 :label="$t('send.password')"
+                :rules="passwordRule"
                 v-model="password"
                 type="password"
                 />
@@ -101,7 +102,7 @@ export default {
       valid: false,
       email: '',
       emailRules: [
-        (v) => !!v || 'Email Address is required',
+        (v) => !!v || this.$t('require.emailIsRequired'),
         (v) => util.isValidEmailAddress(v) || this.$t('validate.emailMustBeValid'),
         (v) => v !== this.userEmailAddress || this.$t('send.youCannotSendToYourSelf')
       ],
@@ -124,6 +125,9 @@ export default {
         }
       ],
       password: '',
+      passwordRule: [
+        (v) => !!v || this.$t('require.passwordIsRequired')
+      ],
       infoMessage: '',
       errMessage: '',
       dialog: false,
@@ -171,6 +175,9 @@ export default {
     },
     submit () {
       if (!this.valid || !this.isIdentified) return
+      if (this.requirePasswordOnSend) {
+        if (this.password === '') return
+      }
       this.dialog = false
       const self = this
       this.$store.dispatch('app/setLoading', true)
@@ -181,6 +188,8 @@ export default {
         password: this.password,
         onSuccess: function () {
           self.$store.dispatch('app/setLoading', false)
+          self.password = ''
+          self.errMessage = ''
           self.infoMessage = self.$t('send.paymentSuccess')
         },
         onError: function (code, message, error) {
@@ -189,6 +198,9 @@ export default {
           self.password = ''
           if (message) {
             self.errMessage = message
+            if (code === 119) {
+              self.errMessage = self.$t('changePassword.passwordIsNotCorrect')
+            }
           }
         }
       })
