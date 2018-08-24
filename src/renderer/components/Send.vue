@@ -174,7 +174,10 @@ export default {
       })
     },
     submit () {
-      if (!this.valid || !this.isIdentified || this.password === '') return
+      if (!this.valid || !this.isIdentified) return
+      if (this.requirePasswordOnSend) {
+        if (this.password === '') return
+      }
       this.dialog = false
       const self = this
       this.$store.dispatch('app/setLoading', true)
