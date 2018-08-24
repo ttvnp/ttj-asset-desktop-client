@@ -119,6 +119,8 @@ export default {
     dateOfBirth: 'user/dateOfBirth',
     genderType: 'user/genderType',
     cellphoneFullNumber: 'user/cellphoneFullNumber',
+    cellphoneNumberNationalCode: 'user/cellphoneNumberNationalCode',
+    cellphoneNumber: 'user/cellphoneNumber',
     currentIdDocument1ImageURL: 'user/idDocument1ImageURL',
     currentIdDocument2ImageURL: 'user/idDocument2ImageURL',
     isIdentified: 'user/isIdentified',
@@ -129,7 +131,7 @@ export default {
       router.go(-1)
     },
     hasAllNecessaryInfo () {
-      return (this.firstName !== '' && this.lastName !== '' && this.address !== '' && this.dateOfBirth !== '' && this.genderType !== '' && this.cellphoneFullNumber !== '')
+      return (this.firstName !== '' && this.lastName !== '' && this.address !== '' && this.dateOfBirth !== '' && this.genderType !== '' && this.cellphoneFullNumber !== '' && this.cellphoneNumberNationalCode !== '' && this.cellphoneNumber !== '')
     },
     onChangeImageId1 (event) {
       this.idDocumentImageChanged(event, 1)
