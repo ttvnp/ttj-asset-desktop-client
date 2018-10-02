@@ -18,9 +18,17 @@
       <v-flex xs12 sm10>
         <v-card>
           <v-card-title class="primary white--text" primary-title>
-            <div>
+            <v-flex sm7>
               <h3 class="headline mb-0">{{ $t('send.sendLabel') }}</h3>
-            </div>
+            </v-flex>
+            <v-flex sm5>
+              <v-select
+                :items="sendByItems"
+                v-model="sendByItem"
+                @change="changeSendBy"
+                solo
+                ></v-select>
+            </v-flex>
           </v-card-title>
           <v-container v-if="infoMessage.length > 0">
             <v-alert color="success" icon="check_circle" value="true">
@@ -32,7 +40,7 @@
               {{errMessage}}
             </v-alert>
           </v-container>
-          <v-container class="px-4">
+          <v-container v-if="!isStellar" class="px-4">
             <v-form v-model="valid">
               <v-text-field
                  :label="$t('profile.emailAddress')"
@@ -60,6 +68,39 @@
             </v-form>
             <p class="text-xs-center note-id-verified" v-show="!isIdentified">{{ $t('send.youCannotUseThisFunctionUntilYourIdIsVerified') }}</p>
           </v-container>
+          <!-- send by stellar address -->
+          <v-container v-if="isStellar">
+            <v-form v-model="valid">
+              <v-text-field
+                 :label="$t('profile.address')"
+                v-model="strAccountId"
+                 :rules="strAccountRules"
+                required
+                :disabled="!isIdentified"
+              ></v-text-field>
+              <v-text-field
+                :label="$t('send.memo_optional')"
+                v-model="strMemoText"
+                :disabled="!isIdentified"
+              ></v-text-field>
+              <v-select
+                :label="$t('send.assetCode')"
+                v-model="assetCode"
+                :items="assetCodes"
+                :rules="[v => !!v || $t('require.itemIsRequired')]"
+                required
+                :disabled="!isIdentified"
+              ></v-select>
+              <v-text-field :label="$t('send.amount')"
+                v-model="amount"
+                :hint="$t('send.enterHowMuchYouWantToSend')"
+                type="number"
+                :rules="amountRules"
+                required
+                :disabled="!isIdentified"
+              ></v-text-field>
+            </v-form>
+          </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>
             <v-btn flat color="primary" @click.stop="confirm()" :disabled="!valid || !isIdentified">{{ $t('send.sendLabel') }}</v-btn>
@@ -67,10 +108,10 @@
         </v-card>
         <v-dialog v-model="dialog" max-width="290">
           <v-card>
-            <v-card-text>{{dialogDesc}}</v-card-text>
+            <v-card-text class="dialog-wrap" v-html="this.dialogDesc"></v-card-text>
             <div v-if="requirePasswordOnSend === true">
               <v-form>
-                <v-text-field 
+                <v-text-field
                 style="width: 248px; margin-left: 16px; margin-right: 16px"
                 :label="$t('send.password')"
                 :rules="passwordRule"
@@ -99,6 +140,7 @@ import bigInt from 'big-integer'
 export default {
   data () {
     return {
+      isStellar: false,
       valid: false,
       email: '',
       emailRules: [
@@ -106,6 +148,13 @@ export default {
         (v) => util.isValidEmailAddress(v) || this.$t('validate.emailMustBeValid'),
         (v) => v !== this.userEmailAddress || this.$t('send.youCannotSendToYourSelf')
       ],
+      strAccountId: '',
+      strAccountRules: [
+        (v) => !!v || this.$t('require.addressIsRequired')
+      ],
+      strMemoText: '',
+      sendByItems: [this.$t('qrCode.byEmail'), this.$t('qrCode.byStellarAddress')],
+      sendByItem: this.$t('qrCode.byEmail'),
       assetCode: '',
       assetCodes: ['SNP', 'SNC'],
       amount: '',
@@ -146,31 +195,47 @@ export default {
     UserBalance: UserBalance
   },
   methods: {
+    changeSendBy (item) {
+      this.isStellar = item === this.sendByItems[1]
+    },
     onUserBalanceLoaded () {
       this.$store.dispatch('app/setBalancesLoaded')
     },
     confirm () {
       if (!this.valid || !this.isIdentified) return
       const self = this
-      this.$store.dispatch('app/setLoading', true)
-      this.$store.dispatch('user/getTargetUser', {
-        emailAddress: this.email,
-        onSuccess: function () {
-          self.$store.dispatch('app/setLoading', false)
-          self.dialogDesc = self.$t('send.areYouSureYouWantToSend', {
-            amount: self.amount,
-            assetCode: self.assetCode,
-            email: self.email
-          })
-          self.dialog = true
-        },
-        onError: function (code, message, error) {
-          self.$store.dispatch('app/setLoading', false)
-          self.errMessage = ''
-          if (message) {
-            self.errMessage = message
+      if (!this.isStellar) {
+        this.$store.dispatch('app/setLoading', true)
+        this.$store.dispatch('user/getTargetUser', {
+          emailAddress: this.email,
+          onSuccess: function () {
+            self.$store.dispatch('app/setLoading', false)
+            self.dialogDesc = self.$t('send.areYouSureYouWantToSend', {
+              amount: self.amount,
+              assetCode: self.assetCode,
+              email: self.email
+            })
+            self.dialog = true
+          },
+          onError: function (code, message, error) {
+            self.$store.dispatch('app/setLoading', false)
+            self.errMessage = ''
+            if (message) {
+              self.errMessage = message
+            }
           }
-        }
+        })
+        return
+      }
+      this.dialog = true
+      let address = this.strAccountId + `<br/>${this.$t('qrCode.memo')} ${this.strMemoText}`
+      if (this.strMemoText === '') {
+        address = this.strAccountId
+      }
+      this.dialogDesc = self.$t('send.areYouSureYouWantToSendToStellar', {
+        amount: this.amount,
+        assetCode: this.assetCode,
+        address: address
       })
     },
     submit () {
@@ -181,8 +246,35 @@ export default {
       this.dialog = false
       const self = this
       this.$store.dispatch('app/setLoading', true)
-      this.$store.dispatch('user/createTransaction', {
-        emailAddress: this.email,
+      if (!this.isStellar) {
+        this.$store.dispatch('user/createTransaction', {
+          emailAddress: this.email,
+          assetType: this.assetCode,
+          amount: this.amount,
+          password: this.password,
+          onSuccess: function () {
+            self.$store.dispatch('app/setLoading', false)
+            self.password = ''
+            self.errMessage = ''
+            self.infoMessage = self.$t('send.paymentSuccess')
+          },
+          onError: function (code, message, error) {
+            self.$store.dispatch('app/setLoading', false)
+            self.errMessage = ''
+            self.password = ''
+            if (message) {
+              self.errMessage = message
+              if (code === 119) {
+                self.errMessage = self.$t('changePassword.passwordIsNotCorrect')
+              }
+            }
+          }
+        })
+        return
+      }
+      this.$store.dispatch('user/createExternalTransaction', {
+        strAccountId: this.strAccountId,
+        strMemoText: this.strMemoText,
         assetType: this.assetCode,
         amount: this.amount,
         password: this.password,
@@ -217,5 +309,10 @@ export default {
 <style scoped>
   .note-id-verified {
     color: red;
+  }
+  .dialog-wrap {
+    overflow-wrap: break-word;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 </style>

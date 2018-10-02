@@ -314,6 +314,17 @@ const actions = {
       })
     }
   },
+  getStrAccount ({ commit, state }, { onSuccess, onError }) {
+    userApi.getStrAccount().then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      onSuccess({data})
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
   getTargetUser ({ commit, state }, { emailAddress, onSuccess, onError }) {
     userApi.getTargetUser({ emailAddress }).then(function (data) {
       if (data.exitCode !== 0) {
@@ -342,6 +353,29 @@ const actions = {
         balanceDB.updateBalance(balance)
         commit('setBalance', balance)
       }
+      onSuccess({ data })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  createExternalTransaction ({ commit, state }, { strAccountId, strMemoText, assetType, amount, password, onSuccess, onError }) {
+    userApi.createExternalTransaction({ strAccountId, strMemoText, assetType, amount, password }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      const userTransaction = data.userTransaction
+      userTransactionDB.upsert(userTransaction)
+      for (let i = 0; i < data.balances.length; i++) {
+        const b = data.balances[i]
+        const balance = {
+          assetType: b.assetType,
+          amount: b.amount + ''
+        }
+        balanceDB.updateBalance(balance)
+        commit('setBalance', balance)
+      }
+      console.log(data)
       onSuccess({ data })
     }).catch(function (error) {
       onError(null, null, error)
