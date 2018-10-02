@@ -31,7 +31,8 @@ const en = {
     emailIsRequired: 'Email Address is required.',
     oldPasswordIsRequired: 'Please input old password.',
     newPasswordIsRequired: 'Please input new password.',
-    retypePasswordIsRequired: 'Please input retype password.'
+    retypePasswordIsRequired: 'Please input retype password.',
+    addressIsRequired: 'Please input address.'
   },
   facePhoto: {
     pointOne: 'Please submit the page containing your photograph.',
@@ -65,7 +66,8 @@ const en = {
   },
   home: {
     balanceLabel: 'Balances',
-    paymentHistory: 'Payment History'
+    paymentHistory: 'Payment History',
+    accountIdAddress: 'AccountID(Address): '
   },
   menu: {
     home: 'Home',
@@ -78,9 +80,15 @@ const en = {
     assetCode: 'Asset Code',
     amount: 'Amount',
     enterHowMuchYouWantToBeReceived: 'Enter how much you want to be received.',
-    AmountMustBeValid: 'Amount must be valid'
+    AmountMustBeValid: 'Amount must be valid',
+    address: 'Address:',
+    note: `Note: Don't send any asset except "SNC" and "SNP"`,
+    byEmail: 'By Email',
+    byStellarAddress: 'By Stellar Address',
+    memo: 'Memo:'
   },
   send: {
+    memo_optional: 'Memo (Optional)',
     password: 'Password',
     balances: 'Balances',
     sendLabel: 'Send',
@@ -91,6 +99,7 @@ const en = {
     youCannotSendToYourSelf: 'You cannot send to yourself',
     amountMustBeLessThanTotal: 'You can not send that much.',
     areYouSureYouWantToSend: 'Are you sure you want to send {amount} {assetCode} to {email}?',
+    areYouSureYouWantToSendToStellar: 'Are you sure you want to send {amount} {assetCode} to stellar account?<br/>Account ID(Address) {address}',
     enterHowMuchYouWantToSend: 'Enter how much you want to send.',
     paymentSuccess: 'The payment has been submitted.\nPlease wait a moment until the transaction be processed.'
   },
@@ -171,7 +180,8 @@ const ja = {
     emailIsRequired: 'メールアドレスを入力してください',
     oldPasswordIsRequired: '現在のパスワードを入力してください',
     newPasswordIsRequired: '新しいパスワードを入力してください',
-    retypePasswordIsRequired: '新しいパスワード（確認）を入力してください'
+    retypePasswordIsRequired: '新しいパスワード（確認）を入力してください',
+    addressIsRequired: 'アドレスを入力してください。'
   },
   facePhoto: {
     pointOne: '顔写真が確認できるページをアップロードしてください。',
@@ -205,7 +215,8 @@ const ja = {
   },
   home: {
     balanceLabel: '残高',
-    paymentHistory: '支払い履歴'
+    paymentHistory: '支払い履歴',
+    accountIdAddress: 'アカウントID(住所): '
   },
   menu: {
     home: 'Home',
@@ -218,9 +229,15 @@ const ja = {
     assetCode: 'アセットコード',
     amount: '数量',
     enterHowMuchYouWantToBeReceived: '受取額を入力して下さい',
-    AmountMustBeValid: 'Point/Coinを入力して下さい'
+    AmountMustBeValid: 'Point/Coinを入力して下さい',
+    address: '住所:',
+    note: '備考: SNCとSNP以外は送信しないでください。',
+    byEmail: 'メールアドレス',
+    byStellarAddress: 'Stellarアドレス',
+    memo: 'メモ:'
   },
   send: {
+    memo_optional: 'メモ（オプション)',
     password: 'パスワード',
     balances: '残高',
     sendLabel: '送信',
@@ -231,6 +248,7 @@ const ja = {
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
+    areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/>アカウントID (住所): {address}',
     enterHowMuchYouWantToSend: '送信額を入力してください',
     paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。'
   },
@@ -311,7 +329,8 @@ const vi = {
     emailIsRequired: 'Hãy nhập địa chỉ email.',
     oldPasswordIsRequired: 'Vui lòng nhập mật khẩu hiện tại.',
     newPasswordIsRequired: 'Vui lòng nhập mật khẩu mới.',
-    retypePasswordIsRequired: 'Vui lòng nhập lại mật khẩu.'
+    retypePasswordIsRequired: 'Vui lòng nhập lại mật khẩu.',
+    addressIsRequired: 'Hãy nhập địa chỉ.'
   },
   facePhoto: {
     pointOne: 'Vui lòng gửi tài liệu có kèm ảnh của bạn.',
@@ -345,7 +364,8 @@ const vi = {
   },
   home: {
     balanceLabel: 'Số dư tài khoản.',
-    paymentHistory: 'Lịch sử thanh toán.'
+    paymentHistory: 'Lịch sử thanh toán.',
+    accountIdAddress: 'Mã Tài Khoản(Địa chỉ): '
   },
   menu: {
     home: 'Home',
@@ -358,9 +378,15 @@ const vi = {
     assetCode: 'Mã tài sản',
     amount: 'Số lượng',
     enterHowMuchYouWantToBeReceived: 'Nhập số tiền bạn muốn nhận được.',
-    AmountMustBeValid: 'Số lượng ko đúng.'
+    AmountMustBeValid: 'Số lượng ko đúng.',
+    address: 'Địa chỉ:',
+    note: 'Chú ý: không gửi bất kỳ cái gì trừ "SNC" vả "SNP".',
+    byEmail: 'Bằng Email',
+    byStellarAddress: 'Bằng Địa chỉ Stellar',
+    memo: 'Ghi chú:'
   },
   send: {
+    memo_optional: 'Ghi chú (không bắt buộc)',
     password: 'Mật khẩu',
     balances: 'Số dư',
     sendLabel: 'Gửi',
@@ -371,6 +397,7 @@ const vi = {
     youCannotSendToYourSelf: 'Bạn không thể gửi cho chính mình.',
     amountMustBeLessThanTotal: 'Số tiền phải nhỏ hơn tổng.',
     areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi.',
+    areYouSureYouWantToSendToStellar: 'Bạn có chắc chắn muốn gửi {amount} {assetCode} tới tài khoản Stellar này không? <br/>Mã Tài Khoản (Địa chỉ): {address}',
     enterHowMuchYouWantToSend: '',
     paymentSuccess: 'Gửi xong\n'
   },

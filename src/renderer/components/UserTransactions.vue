@@ -70,6 +70,9 @@ export default {
       if (name.length === 0) {
         name = userTransaction.targetUserEmailAddress
       }
+      if (name === '') {
+        name = this.$t('home.accountIdAddress') + userTransaction.targetStrAccountID
+      }
       return name
     },
     getSubTitle (userTransaction) {
