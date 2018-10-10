@@ -150,7 +150,8 @@ export default {
       ],
       strAccountId: '',
       strAccountRules: [
-        (v) => !!v || this.$t('require.addressIsRequired')
+        (v) => !!v || this.$t('require.addressIsRequired'),
+        (v) => util.isValidStellarAccountID(v) || this.$t('validate.addressMustBeValid')
       ],
       strMemoText: '',
       sendByItems: [this.$t('qrCode.byEmail'), this.$t('qrCode.byStellarAddress')],
@@ -293,6 +294,8 @@ export default {
             if (code === 119) {
               self.errMessage = self.$t('changePassword.passwordIsNotCorrect')
             }
+          } else {
+            self.errMessage = self.$t(error.message)
           }
         }
       })

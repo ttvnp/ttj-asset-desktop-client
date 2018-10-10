@@ -22,7 +22,9 @@ const en = {
     amountMustBeValid: 'Amount must be valid',
     editProfileUnderReview: 'When ID was approved or under review, you can change only the avatar image.',
     newPasswordValid: 'Password should be more than 6 characters or numbers.',
-    passwordsAreNotMatched: 'New passwords are not matched.'
+    passwordsAreNotMatched: 'New passwords are not matched.',
+    addressMustBeValid: 'Address must be valid.',
+    insufficientTrustLimit: 'Trust line must be set at receiving account.'
   },
   require: {
     itemIsRequired: 'Item is required',
@@ -171,7 +173,9 @@ const ja = {
     amountMustBeValid: 'Point/Coinが正しくありません',
     editProfileUnderReview: 'ご本人確認資料(ID)が承認済あるいは審査中は、プロフィール画像のみ変更できます',
     newPasswordValid: 'パスワードは6文字以上の英数字で設定してください。',
-    passwordsAreNotMatched: '新しいパスワードが一致しません'
+    passwordsAreNotMatched: '新しいパスワードが一致しません',
+    addressMustBeValid: 'アドレスの形式が正しくありません',
+    insufficientTrustLimit: '送信先のアカウントのTrust lineが正しく設定されていません'
   },
   require: {
     itemIsRequired: '必須項目',
@@ -320,7 +324,9 @@ const vi = {
     amountMustBeValid: 'Số điểm không đúng.',
     editProfileUnderReview: 'Khi ID xác minh chủ tài khoản đã được xác nhận hoặc đang trong khi xét duyệt, thì bạn chỉ có thể thay đổi ảnh đại diện.',
     newPasswordValid: 'Mật khẩu nên được cài đặt 6 ký tự hoặc số.',
-    passwordsAreNotMatched: 'Mật khẩu mới không đồng nhất.'
+    passwordsAreNotMatched: 'Mật khẩu mới không đồng nhất.',
+    addressMustBeValid: 'Địa chỉ Stellar address không đúng.',
+    insufficientTrustLimit: 'Trust line must be set at receiving account.'
   },
   require: {
     itemIsRequired: 'Mục bắt buộc',

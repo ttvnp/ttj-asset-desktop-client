@@ -6,6 +6,7 @@ import userApi from '@/api/user'
 import defaultProfileImagePrimary from '@/assets/user_default_profile.png'
 import defaultProfileImageNormal from '@/assets/user_default_profile_grey.png'
 import defaultIdDocumentImage from '@/assets/id_document_attach_button.png'
+import util from '@/util'
 
 const state = {
   user: null,
@@ -359,7 +360,13 @@ const actions = {
     })
   },
   createExternalTransaction ({ commit, state }, { strAccountId, strMemoText, assetType, amount, password, onSuccess, onError }) {
-    userApi.createExternalTransaction({ strAccountId, strMemoText, assetType, amount, password }).then(function (data) {
+    // validate trust limit
+    util.loadTrustLimit(strAccountId, config.livenet, config.issuerAccountID, assetType).then(function (trustLimit) {
+      if (util.compareNumber(trustLimit, amount) < 0) {
+        throw new Error('validate.insufficientTrustLimit')
+      }
+      return userApi.createExternalTransaction({ strAccountId, strMemoText, assetType, amount, password })
+    }).then(function (data) {
       if (data.exitCode !== 0) {
         onError(data.code, data.message, null)
         return
