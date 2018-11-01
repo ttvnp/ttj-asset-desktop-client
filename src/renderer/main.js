@@ -24,7 +24,7 @@ const en = {
     newPasswordValid: 'Password should be more than 6 characters or numbers.',
     passwordsAreNotMatched: 'New passwords are not matched.',
     addressMustBeValid: 'Address must be valid.',
-    insufficientTrustLimit: 'Trust line must be set at receiving account.'
+    insufficientTrustLimit: 'Trustline must be set at receiving account.'
   },
   require: {
     itemIsRequired: 'Item is required',
@@ -175,7 +175,7 @@ const ja = {
     newPasswordValid: 'パスワードは6文字以上の英数字で設定してください。',
     passwordsAreNotMatched: '新しいパスワードが一致しません',
     addressMustBeValid: 'アドレスの形式が正しくありません',
-    insufficientTrustLimit: '送信先のアカウントのTrust lineが正しく設定されていません'
+    insufficientTrustLimit: '送信先のアカウントのTrustlineが正しく設定されていません'
   },
   require: {
     itemIsRequired: '必須項目',
@@ -220,7 +220,7 @@ const ja = {
   home: {
     balanceLabel: '残高',
     paymentHistory: '支払い履歴',
-    accountIdAddress: 'アカウントID(住所): '
+    accountIdAddress: 'アカウントID(アドレス): '
   },
   menu: {
     home: 'Home',
@@ -234,7 +234,7 @@ const ja = {
     amount: '数量',
     enterHowMuchYouWantToBeReceived: '受取額を入力して下さい',
     AmountMustBeValid: 'Point/Coinを入力して下さい',
-    address: '住所:',
+    address: 'アドレス:',
     note: '備考: SNCとSNP以外は送信しないでください。',
     byEmail: 'メールアドレス',
     byStellarAddress: 'Stellarアドレス',
@@ -252,7 +252,7 @@ const ja = {
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
-    areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/>アカウントID (住所): {address}',
+    areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/>アカウントID (アドレス): {address}',
     enterHowMuchYouWantToSend: '送信額を入力してください',
     paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。'
   },
@@ -326,7 +326,7 @@ const vi = {
     newPasswordValid: 'Mật khẩu nên được cài đặt 6 ký tự hoặc số.',
     passwordsAreNotMatched: 'Mật khẩu mới không đồng nhất.',
     addressMustBeValid: 'Địa chỉ Stellar address không đúng.',
-    insufficientTrustLimit: 'Trust line must be set at receiving account.'
+    insufficientTrustLimit: 'Trustline must be set at receiving account.'
   },
   require: {
     itemIsRequired: 'Mục bắt buộc',
