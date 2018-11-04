@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'development') {
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
-  : `app://ttj-asset-desktop-client/index.html`
+  : `app://localhost/index.html`
 
 function createWindow () {
   /**
@@ -32,7 +32,7 @@ function createWindow () {
 
   if (process.env.NODE_ENV !== 'development') {
     protocol.registerFileProtocol('app', (request, callback) => {
-      const url = request.url.substr('app://ttj-asset-desktop-client/'.length)
+      const url = request.url.substr('app://localhost/'.length)
       callback({path: path.normalize(`${__dirname}/${url}`)})
     }, (error) => {
       if (error) console.error('Failed to register protocol')
