@@ -16,7 +16,7 @@ const removeDecimal = function (numStr) {
 
 export default {
   isValidEmailAddress (emailAddress) {
-    return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(emailAddress)
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailAddress)
   },
   isValidAmountFormat (secret) {
     return /^[1-9][0-9]*$/.test(secret)
