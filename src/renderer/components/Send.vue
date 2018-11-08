@@ -72,7 +72,7 @@
           <v-container v-if="isStellar">
             <v-form v-model="valid">
               <v-text-field
-                 :label="$t('profile.address')"
+                 :label="$t('send.address')"
                 v-model="strAccountId"
                  :rules="strAccountRules"
                 required

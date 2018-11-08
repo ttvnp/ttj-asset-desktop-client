@@ -248,6 +248,7 @@ const ja = {
     emailAddress: 'メールアドレス',
     assetCode: 'アセットコード',
     amount: '数量',
+    address: 'アドレス',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。プロフィールページからご本人確認(ID)を申請してください。',
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
