@@ -24,26 +24,29 @@
               <input class="image-picker" type="file" accept="image/*" v-on:change="profileImageChanged">
             </div>
             <v-form v-model="valid">
-              <v-text-field label="First Name"
+              <v-text-field
+                :label="$t('profile.firstName')"
                 v-model="firstName"
                 :rules="firstNameRules"
                 counter="200"
                 :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
-              <v-text-field label="Middle Name"
+              <v-text-field
+                :label="$t('profile.middleName')"
                 v-model="middleName"
                 :rules="middleNameRules"
                 counter="200"
                 :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
-              <v-text-field label="Last Name"
+              <v-text-field
+                :label="$t('profile.lastName')"
                 v-model="lastName"
                 :rules="lastNameRules"
                 counter="200"
                 :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-text-field
-                label="Address"
+                :label="$t('profile.address')"
                 v-model="address"
                 :rules="addressRules"
                 counter="1000"
@@ -51,7 +54,7 @@
                 :disabled="isUnderReview || isIdentified"
                 @focus="onUnderReview"></v-text-field>
               <v-select
-                label="Gender"
+                :label="$t('profile.genderType')"
                 v-model="genderType"
                 :items="genderTypes"
                 :disabled="isUnderReview || isIdentified"
@@ -71,7 +74,7 @@
                 >
                   <v-text-field
                     slot="activator"
-                    label="Date of birth"
+                    :label="$t('profile.dob')"
                     v-model="dateOfBirth"
                     :rules="dateOfBirthRules"
                     :disabled="isUnderReview || isIdentified"
@@ -80,8 +83,8 @@
                     <template slot-scope="{ save, cancel }">
                       <v-card-actions>
                         <v-spacer></v-spacer>
-                        <v-btn flat color="primary" @click="cancel">Cancel</v-btn>
-                        <v-btn flat color="primary" @click="save">OK</v-btn>
+                        <v-btn flat color="primary" @click="cancel">{{ $t('general.cancel') }}</v-btn>
+                        <v-btn flat color="primary" @click="save">{{ $t('general.ok') }}</v-btn>
                       </v-card-actions>
                     </template>
                   </v-date-picker>
@@ -94,13 +97,12 @@
                     v-model="cellphoneNumberNationalCode"
                     :rules="cellphoneNumberNationalCodeRules"
                     prepend-icon="phone"
-                    label="Country"
+                    :label="$t('profile.cellPhone')"
                     :disabled="isUnderReview || isIdentified"
                   ></v-select>
                 </v-flex>
                 <v-flex xs12 sm8>
                   <v-text-field
-                    label="Phone number"
                     v-model="cellphoneNumber"
                     :rules="cellphoneNumberRules"
                     single-line
