@@ -26,7 +26,9 @@ const debugConfig = {
                 'nsc9EXajZrVqcpb2gCx0tIzfCA+HlQq0abSuVchpEVWmA2Gt2Veej2RcEk/jJqUy\n' +
                 'y3qbFBUTA/r5jOPX8E0aWQHAkjIreoxa5jmrWEFPeKySD3uPDy7vM35qNNTFR4QN\n' +
                 'BQIDAQAB\n' +
-                '-----END PUBLIC KEY-----'
+                '-----END PUBLIC KEY-----',
+  livenet: false,
+  issuerAccountID: 'GDNIKJNWHONPWZ2C4EAUKNO3BPGLT3AR6SOQRFMN57UZYEKC4CQXXXS3'
 }
 
 const releaseConfig = {
@@ -43,7 +45,9 @@ const releaseConfig = {
                 'pIa//W7L0s0BfbilxtsF/+H77FSw1g9kvwi/7Ulx9VPLmh+NQ00a4sZ36IDhSm5V\n' +
                 'fcZT000CdrEd+I77HRgW1ADQeRUaxtEYf1YDRR8E5hrYs1EbZmUyvAOa6P7NwwME\n' +
                 'KwIDAQAB\n' +
-                '-----END PUBLIC KEY-----'
+                '-----END PUBLIC KEY-----',
+  livenet: true,
+  issuerAccountID: 'GDPOR42X2YKWL74CCOLTZKWP4RZYYPN3JBYBJF4QVXHVVRQQNPX34O67'
 }
 
 const jsonConcat = function (o1, o2) {

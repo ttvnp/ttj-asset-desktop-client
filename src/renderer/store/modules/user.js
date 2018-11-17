@@ -6,6 +6,7 @@ import userApi from '@/api/user'
 import defaultProfileImagePrimary from '@/assets/user_default_profile.png'
 import defaultProfileImageNormal from '@/assets/user_default_profile_grey.png'
 import defaultIdDocumentImage from '@/assets/id_document_attach_button.png'
+import util from '@/util'
 
 const state = {
   user: null,
@@ -314,6 +315,17 @@ const actions = {
       })
     }
   },
+  getStrAccount ({ commit, state }, { onSuccess, onError }) {
+    userApi.getStrAccount().then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      onSuccess({data})
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
   getTargetUser ({ commit, state }, { emailAddress, onSuccess, onError }) {
     userApi.getTargetUser({ emailAddress }).then(function (data) {
       if (data.exitCode !== 0) {
@@ -342,6 +354,35 @@ const actions = {
         balanceDB.updateBalance(balance)
         commit('setBalance', balance)
       }
+      onSuccess({ data })
+    }).catch(function (error) {
+      onError(null, null, error)
+    })
+  },
+  createExternalTransaction ({ commit, state }, { strAccountId, strMemoText, assetType, amount, password, onSuccess, onError }) {
+    // validate trust limit
+    util.loadTrustLimit(strAccountId, config.livenet, config.issuerAccountID, assetType).then(function (trustLimit) {
+      if (util.compareNumber(trustLimit, amount) < 0) {
+        throw new Error('validate.insufficientTrustLimit')
+      }
+      return userApi.createExternalTransaction({ strAccountId, strMemoText, assetType, amount, password })
+    }).then(function (data) {
+      if (data.exitCode !== 0) {
+        onError(data.code, data.message, null)
+        return
+      }
+      const userTransaction = data.userTransaction
+      userTransactionDB.upsert(userTransaction)
+      for (let i = 0; i < data.balances.length; i++) {
+        const b = data.balances[i]
+        const balance = {
+          assetType: b.assetType,
+          amount: b.amount + ''
+        }
+        balanceDB.updateBalance(balance)
+        commit('setBalance', balance)
+      }
+      console.log(data)
       onSuccess({ data })
     }).catch(function (error) {
       onError(null, null, error)

@@ -8,6 +8,12 @@ export default {
       return client.withAuth(accessToken).get(url)
     })
   },
+  getStrAccount () {
+    const url = util.getApiRoot() + '/users/str_receive_account'
+    return util.retryOnAuthError(function (accessToken) {
+      return client.withAuth(accessToken).get(url)
+    })
+  },
   update ({ profileImageFile, firstName, middleName, lastName, address, genderType, dateOfBirth, cellphoneNumberNationalCode, cellphoneNumber }) {
     const url = util.getApiRoot() + '/users'
     let formData = new FormData()
@@ -64,6 +70,22 @@ export default {
     const url = util.getApiRoot() + '/users/transactions'
     let formData = new FormData()
     formData.append('emailAddress', emailAddress)
+    formData.append('assetType', assetType)
+    formData.append('amount', amount)
+    formData.append('password', password)
+    return util.retryOnAuthError(function (accessToken, credential) {
+      const cli = client.withAuth(accessToken)
+      if (credential) {
+        cli.defaults.headers.common['credential'] = util.encrypt(credential)
+      }
+      return cli.post(url, formData)
+    })
+  },
+  createExternalTransaction ({ strAccountId, strMemoText, assetType, amount, password }) {
+    const url = util.getApiRoot() + '/users/transactions_external'
+    let formData = new FormData()
+    formData.append('strAccountID', strAccountId)
+    formData.append('strMemoText', strMemoText)
     formData.append('assetType', assetType)
     formData.append('amount', amount)
     formData.append('password', password)
