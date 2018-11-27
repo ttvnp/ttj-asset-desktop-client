@@ -117,6 +117,7 @@
                 :rules="passwordRule"
                 v-model="password"
                 type="password"
+                @keypress.13="submit()"
                 />
               </v-form>
             </div>
