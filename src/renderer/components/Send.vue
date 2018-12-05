@@ -110,7 +110,7 @@
           <v-card>
             <v-card-text class="dialog-wrap" v-html="this.dialogDesc"></v-card-text>
             <div v-if="requirePasswordOnSend === true">
-              <v-form>
+              <div>
                 <v-text-field
                 style="width: 248px; margin-left: 16px; margin-right: 16px"
                 :label="$t('send.password')"
@@ -119,7 +119,7 @@
                 type="password"
                 @keypress.13="submit()"
                 />
-              </v-form>
+              </div>
             </div>
             <v-card-actions>
               <v-spacer></v-spacer>
