@@ -9,7 +9,7 @@
             </div>
           </v-card-title>
           <v-container>
-            <user-balance :forceRefresh="!loadBalances" v-on:loaded="onUserBalanceLoaded"></user-balance>
+            <user-balance :forceRefresh="isRefresh" v-on:loaded="onUserBalanceLoaded"></user-balance>
           </v-container>
         </v-card>
       </v-flex>
@@ -49,6 +49,7 @@
     }),
     data () {
       return {
+        isRefresh: true,
         transactionData: {
           userTransactions: [],
           totalCnt: 0,
