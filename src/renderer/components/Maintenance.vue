@@ -11,6 +11,7 @@
 <script>
 export default {
   mounted () {
+    this.$store.dispatch('app/setLoading', false)
     this.$store.dispatch('app/setShowDrawer', false)
   }
 }
