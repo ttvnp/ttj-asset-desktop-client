@@ -1,6 +1,6 @@
 'use strict'
 
-import { app, BrowserWindow, protocol } from 'electron'
+import { app, Menu, BrowserWindow, protocol } from 'electron'
 import path from 'path'
 
 /**
@@ -48,7 +48,40 @@ function createWindow () {
   })
 }
 
-app.on('ready', createWindow)
+function createMenu() {
+  const edit = {
+    label: 'Edit',
+    submenu: [
+      {
+        label: 'Cut',
+        accelerator: 'CmdOrCtrl+X',
+        role: 'cut'
+      },
+      {
+        label: 'Copy',
+        accelerator: 'CmdOrCtrl+C',
+        role: 'copy'
+      },
+      {
+        label: 'Paste',
+        accelerator: 'CmdOrCtrl+V',
+        role: 'paste'
+      },
+      {
+        label: 'Select All',
+        accelerator: 'CmdOrCtrl+A',
+        role: 'selectAll'
+      }
+    ]
+  }
+  const template = [edit]
+  Menu.setApplicationMenu(Menu.buildFromTemplate(template))
+}
+
+app.on('ready', () => {
+  createWindow()
+  createMenu()
+})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
