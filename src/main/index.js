@@ -49,6 +49,12 @@ function createWindow () {
 }
 
 function createMenu() {
+  const application = {
+    label: "Application",
+    submenu: [
+      { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+    ]
+  }
   const edit = {
     label: 'Edit',
     submenu: [
@@ -74,7 +80,7 @@ function createMenu() {
       }
     ]
   }
-  const template = [edit]
+  const template = [application, edit]
   Menu.setApplicationMenu(Menu.buildFromTemplate(template))
 }
 
