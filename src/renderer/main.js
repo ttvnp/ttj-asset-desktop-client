@@ -23,7 +23,7 @@ const en = {
     editProfileUnderReview: 'When ID was approved or under review, you can change only the avatar image.',
     newPasswordValid: 'Password should be more than 6 characters or numbers.',
     passwordsAreNotMatched: 'New passwords are not matched.',
-    addressMustBeValid: 'Address must be valid.',
+    addressMustBeValid: 'The address is invalid. Please input the correct address.',
     insufficientTrustLimit: 'Trustline must be set at receiving account.'
   },
   require: {
@@ -70,7 +70,7 @@ const en = {
   home: {
     balanceLabel: 'Balances',
     paymentHistory: 'Payment History',
-    accountIdAddress: 'AccountID(Address): '
+    accountIdAddress: 'AccountID (SNC Address): '
   },
   menu: {
     home: 'Home',
@@ -84,7 +84,7 @@ const en = {
     amount: 'Amount',
     enterHowMuchYouWantToBeReceived: 'Enter how much you want to be received.',
     AmountMustBeValid: 'Amount must be valid',
-    address: 'Address:',
+    address: 'SNC Address:',
     note: `Note: Don't send any asset except "SNC" and "SNP"`,
     byEmail: 'By Email',
     byStellarAddress: 'By SNC Address',
@@ -98,7 +98,7 @@ const en = {
     emailAddress: 'Email address',
     assetCode: 'Asset code',
     amount: 'Amount',
-    address: 'Address',
+    address: 'AccountID (SNC Address)',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'You cannot use this function until your ID is verified.',
     youCannotSendToYourSelf: 'You cannot send to yourself',
     amountMustBeLessThanTotal: 'You can not send that much.',
@@ -188,7 +188,7 @@ const ja = {
     oldPasswordIsRequired: '現在のパスワードを入力してください',
     newPasswordIsRequired: '新しいパスワードを入力してください',
     retypePasswordIsRequired: '新しいパスワード（確認）を入力してください',
-    addressIsRequired: 'アドレスを入力してください。',
+    addressIsRequired: 'アカウントID (SNCアドレス)を入力してください。',
     memoIsRequired: 'このアドレスに送信する場合はメモを入力してください。'
   },
   facePhoto: {
@@ -224,7 +224,7 @@ const ja = {
   home: {
     balanceLabel: '残高',
     paymentHistory: '支払い履歴',
-    accountIdAddress: 'アカウントID(アドレス): '
+    accountIdAddress: 'アカウントID (SNCアドレス): '
   },
   menu: {
     home: 'Home',
@@ -238,7 +238,7 @@ const ja = {
     amount: '数量',
     enterHowMuchYouWantToBeReceived: '受取額を入力して下さい',
     AmountMustBeValid: 'Point/Coinを入力して下さい',
-    address: 'アドレス:',
+    address: 'アカウントID (SNCアドレス):',
     note: '備考: SNCとSNP以外は送信しないでください。',
     byEmail: 'メールアドレス',
     byStellarAddress: 'SNCアドレス',
@@ -252,12 +252,12 @@ const ja = {
     emailAddress: 'メールアドレス',
     assetCode: 'アセットコード',
     amount: '数量',
-    address: 'アドレス',
+    address: 'アカウントID (SNCアドレス)',
     youCannotUseThisFunctionUntilYourIdIsVerified: 'ご本人確認(ID)が承認されるまでこのサービスは利用できません。プロフィールページからご本人確認(ID)を申請してください。',
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
-    areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/>アカウントID (アドレス): {address}',
+    areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/><br/>アカウントID (SNCアドレス): {address}',
     enterHowMuchYouWantToSend: '送信額を入力してください',
     paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。',
     confirmMessageSNC: 'XLMアドレスには送信できません。SNCアドレスが正しく入力されていることを確認してください。'
