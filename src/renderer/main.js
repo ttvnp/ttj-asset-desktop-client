@@ -34,7 +34,8 @@ const en = {
     oldPasswordIsRequired: 'Please input old password.',
     newPasswordIsRequired: 'Please input new password.',
     retypePasswordIsRequired: 'Please input retype password.',
-    addressIsRequired: 'Please input address.'
+    addressIsRequired: 'Please input address.',
+    memoIsRequired: 'Memo is required for this address.'
   },
   facePhoto: {
     pointOne: 'Please submit the page containing your photograph.',
@@ -86,7 +87,7 @@ const en = {
     address: 'Address:',
     note: `Note: Don't send any asset except "SNC" and "SNP"`,
     byEmail: 'By Email',
-    byStellarAddress: 'By Stellar Address',
+    byStellarAddress: 'By SNC Address',
     memo: 'Memo:'
   },
   send: {
@@ -104,7 +105,8 @@ const en = {
     areYouSureYouWantToSend: 'Are you sure you want to send {amount} {assetCode} to {email}?',
     areYouSureYouWantToSendToStellar: 'Are you sure you want to send {amount} {assetCode} to stellar account?<br/>Account ID(Address) {address}',
     enterHowMuchYouWantToSend: 'Enter how much you want to send.',
-    paymentSuccess: 'The payment has been submitted.\nPlease wait a moment until the transaction be processed.'
+    paymentSuccess: 'The payment has been submitted.\nPlease wait a moment until the transaction be processed.',
+    confirmMessageSNC: 'Don\'t send coins to XLM address. Please make sure to send to SNC address.'
   },
   settings: {
     language: 'Languages',
@@ -186,7 +188,8 @@ const ja = {
     oldPasswordIsRequired: '現在のパスワードを入力してください',
     newPasswordIsRequired: '新しいパスワードを入力してください',
     retypePasswordIsRequired: '新しいパスワード（確認）を入力してください',
-    addressIsRequired: 'アドレスを入力してください。'
+    addressIsRequired: 'アドレスを入力してください。',
+    memoIsRequired: 'このアドレスに送信する場合はメモを入力してください。'
   },
   facePhoto: {
     pointOne: '顔写真が確認できるページをアップロードしてください。',
@@ -238,7 +241,7 @@ const ja = {
     address: 'アドレス:',
     note: '備考: SNCとSNP以外は送信しないでください。',
     byEmail: 'メールアドレス',
-    byStellarAddress: 'Stellarアドレス',
+    byStellarAddress: 'SNCアドレス',
     memo: 'メモ:'
   },
   send: {
@@ -256,7 +259,8 @@ const ja = {
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
     areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/>アカウントID (アドレス): {address}',
     enterHowMuchYouWantToSend: '送信額を入力してください',
-    paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。'
+    paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。',
+    confirmMessageSNC: 'XLMアドレスには送信できません。SNCアドレスが正しく入力されていることを確認してください。'
   },
   settings: {
     language: '言語設定 - Language',
@@ -338,7 +342,8 @@ const vi = {
     oldPasswordIsRequired: 'Vui lòng nhập mật khẩu hiện tại.',
     newPasswordIsRequired: 'Vui lòng nhập mật khẩu mới.',
     retypePasswordIsRequired: 'Vui lòng nhập lại mật khẩu.',
-    addressIsRequired: 'Hãy nhập địa chỉ.'
+    addressIsRequired: 'Hãy nhập địa chỉ.',
+    memoIsRequired: 'Vui lòng nhập Memo cho địa chỉ này.'
   },
   facePhoto: {
     pointOne: 'Vui lòng gửi tài liệu có kèm ảnh của bạn.',
@@ -390,7 +395,7 @@ const vi = {
     address: 'Địa chỉ:',
     note: 'Chú ý: không gửi bất kỳ cái gì trừ "SNC" vả "SNP".',
     byEmail: 'Bằng Email',
-    byStellarAddress: 'Bằng Địa chỉ Stellar',
+    byStellarAddress: 'Bằng Địa chỉ SNC',
     memo: 'Ghi chú:'
   },
   send: {
@@ -408,7 +413,8 @@ const vi = {
     areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi.',
     areYouSureYouWantToSendToStellar: 'Bạn có chắc chắn muốn gửi {amount} {assetCode} tới tài khoản Stellar này không? <br/>Mã Tài Khoản (Địa chỉ): {address}',
     enterHowMuchYouWantToSend: '',
-    paymentSuccess: 'Gửi xong\n'
+    paymentSuccess: 'Gửi xong\n',
+    confirmMessageSNC: 'Vui lòng đừng gửi vào địa chỉ XLM. Hãy đảm bảo rằng bạn gửi vào địa chỉ SNC.'
   },
   settings: {
     language: 'Ngôn ngữ - Language',

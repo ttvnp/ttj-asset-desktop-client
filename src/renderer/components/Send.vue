@@ -103,9 +103,21 @@
           </v-container>
           <v-card-actions class="px-4 pb-4">
             <v-spacer></v-spacer>
-            <v-btn flat color="primary" @click.stop="confirm()" :disabled="!valid || !isIdentified">{{ $t('send.sendLabel') }}</v-btn>
+            <v-btn flat color="primary" @click.stop="isStellar ? showConfirmSNC() : confirm()" :disabled="!valid || !isIdentified">{{ $t('send.sendLabel') }}</v-btn>
           </v-card-actions>
         </v-card>
+        <v-dialog 
+          v-model="dialogSNC"
+          max-width="290">
+          <v-card>
+            <v-card-text class="dialog-wrap" v-html="$t('send.confirmMessageSNC')"></v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="darken-1" flat="flat" @click.native="dialogSNC = false">{{ $t('general.cancel') }}</v-btn>
+              <v-btn color="primary" flat="flat" @click.native="confirmSNC()">{{ $t('general.send') }}</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
         <v-dialog v-model="dialog" max-width="290">
           <v-card>
             <v-card-text class="dialog-wrap" v-html="this.dialogDesc"></v-card-text>
@@ -138,6 +150,7 @@ import UserBalance from '@/components/UserBalance'
 import { mapGetters } from 'vuex'
 import util from '@/util'
 import bigInt from 'big-integer'
+import config from '@/config'
 export default {
   data () {
     return {
@@ -182,6 +195,7 @@ export default {
       infoMessage: '',
       errMessage: '',
       dialog: false,
+      dialogSNC: false,
       dialogTitle: '',
       dialogDesc: ''
     }
@@ -203,7 +217,19 @@ export default {
     onUserBalanceLoaded () {
       this.$store.dispatch('app/setBalancesLoaded')
     },
+    showConfirmSNC () {
+      if (this.strMemoText === '' && (this.strAccountId === config.sencoinAddress || this.strAccountId === config.sencoinexAddress)) {
+        this.errMessage = this.$t('require.memoIsRequired')
+        return
+      }
+      this.dialogSNC = true
+    },
+    confirmSNC () {
+      this.dialogSNC = false
+      this.confirm()
+    },
     confirm () {
+      this.errMessage = ''
       if (!this.valid || !this.isIdentified) return
       const self = this
       if (!this.isStellar) {
