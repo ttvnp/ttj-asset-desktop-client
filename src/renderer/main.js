@@ -106,7 +106,7 @@ const en = {
     areYouSureYouWantToSendToStellar: 'Are you sure you want to send {amount} {assetCode} to stellar account?<br/>Account ID(Address) {address}',
     enterHowMuchYouWantToSend: 'Enter how much you want to send.',
     paymentSuccess: 'The payment has been submitted.\nPlease wait a moment until the transaction be processed.',
-    confirmMessageSNC: 'Don\'t send coins to XLM address. Please make sure to send to SNC address.'
+    confirmMessageSNC: 'Please make sure to input SNC address correctly and tap SEND button.<br/><br/><span style="color:red">*You can not send any assets to XLM address.</span>'
   },
   settings: {
     language: 'Languages',
@@ -260,7 +260,7 @@ const ja = {
     areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/><br/>アカウントID (SNCアドレス): {address}',
     enterHowMuchYouWantToSend: '送信額を入力してください',
     paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。',
-    confirmMessageSNC: 'XLMアドレスには送信できません。SNCアドレスが正しく入力されていることを確認してください。'
+    confirmMessageSNC: 'SNCアドレスが正しく入力されていることを確認した上で、送信ボタンを押してください。<br/><br/><span style="color:red">※XMLアドレスには送信できません。</span>'
   },
   settings: {
     language: '言語設定 - Language',
@@ -414,7 +414,7 @@ const vi = {
     areYouSureYouWantToSendToStellar: 'Bạn có chắc chắn muốn gửi {amount} {assetCode} tới tài khoản Stellar này không? <br/>Mã Tài Khoản (Địa chỉ): {address}',
     enterHowMuchYouWantToSend: '',
     paymentSuccess: 'Gửi xong\n',
-    confirmMessageSNC: 'Vui lòng đừng gửi vào địa chỉ XLM. Hãy đảm bảo rằng bạn gửi vào địa chỉ SNC.'
+    confirmMessageSNC: 'Vui lòng kiểm tra lại địa chỉ SNC đã chính xác chưa và bấm Gửi.<br/><br/><span style="color:red">*Bạn không thể gửi vào địa chỉ XLM.</span>'
   },
   settings: {
     language: 'Ngôn ngữ - Language',
