@@ -103,7 +103,7 @@ const en = {
     youCannotSendToYourSelf: 'You cannot send to yourself',
     amountMustBeLessThanTotal: 'You can not send that much.',
     areYouSureYouWantToSend: 'Are you sure you want to send {amount} {assetCode} to {email}?',
-    areYouSureYouWantToSendToStellar: 'Are you sure you want to send {amount} {assetCode} to stellar account?<br/><br/>Account ID(Address) {address}<br/>',
+    areYouSureYouWantToSendToStellar: 'Are you sure you want to send {amount} {assetCode} to stellar account?<br/><br/>Account ID(Address) {address}',
     enterHowMuchYouWantToSend: 'Enter how much you want to send.',
     paymentSuccess: 'The payment has been submitted.\nPlease wait a moment until the transaction be processed.',
     confirmMessageSNC: 'Please make sure to input SNC address correctly and tap SEND button.<br/><br/><span style="color:red">* You can not send any assets to XLM address.</span>'
@@ -257,7 +257,7 @@ const ja = {
     youCannotSendToYourSelf: '自身のアカウントには送信できません',
     amountMustBeLessThanTotal: '保有量の範囲内で設定してください',
     areYouSureYouWantToSend: '{amount} {assetCode}を{email}に送信してもよろしいですか？',
-    areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/><br/>アカウントID (SNCアドレス): {address}<br/>',
+    areYouSureYouWantToSendToStellar: '{amount} {assetCode} を以下のStellarアカウントに送信しますか? <br/><br/>アカウントID (SNCアドレス): {address}',
     enterHowMuchYouWantToSend: '送信額を入力してください',
     paymentSuccess: '送信が完了しました。\n取引が反映されるまで少々時間が掛かりますので、暫く経ってから再度ご確認ください。',
     confirmMessageSNC: 'SNCアドレスが正しく入力されていることを確認した上で、送信ボタンを押してください。<br/><br/><span style="color:red">※ XMLアドレスには送信できません。</span>'
@@ -411,7 +411,7 @@ const vi = {
     youCannotSendToYourSelf: 'Bạn không thể gửi cho chính mình.',
     amountMustBeLessThanTotal: 'Số tiền phải nhỏ hơn tổng.',
     areYouSureYouWantToSend: 'Bạn có chắc chắn bạn muốn gửi.',
-    areYouSureYouWantToSendToStellar: 'Bạn có chắc chắn muốn gửi {amount} {assetCode} tới tài khoản Stellar này không? <br/><br/>Mã Tài Khoản (Địa chỉ): {address}<br/>',
+    areYouSureYouWantToSendToStellar: 'Bạn có chắc chắn muốn gửi {amount} {assetCode} tới tài khoản Stellar này không? <br/><br/>Mã Tài Khoản (Địa chỉ): {address}',
     enterHowMuchYouWantToSend: '',
     paymentSuccess: 'Gửi xong\n',
     confirmMessageSNC: 'Vui lòng kiểm tra lại địa chỉ SNC đã chính xác chưa và bấm Gửi.<br/><br/><span style="color:red">* Bạn không thể gửi vào địa chỉ XLM.</span>'
